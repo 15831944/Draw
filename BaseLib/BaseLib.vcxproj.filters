@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{e2bb4b63-60d8-4173-bb20-b175d2a42e6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{09c0f200-9456-4b5a-8848-cf593c717fef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01 Dlg">
+      <UniqueIdentifier>{a1c46e17-4be7-442a-962e-6cc1a6317d5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00 Loadini">
+      <UniqueIdentifier>{8b8edaba-ad84-49b8-b628-a7e58a49fd98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BaseLib.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgTabCtrl.cpp">
+      <Filter>01 Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseDialog.cpp">
+      <Filter>01 Dlg</Filter>
+    </ClCompile>
+    <ClCompile Include="MSGInfo.cpp">
+      <Filter>00 Loadini</Filter>
+    </ClCompile>
+    <ClCompile Include="MSGFunction.cpp">
+      <Filter>00 Loadini</Filter>
+    </ClCompile>
+    <ClCompile Include="MSGParser.cpp">
+      <Filter>00 Loadini</Filter>
+    </ClCompile>
+    <ClCompile Include="Test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseLib.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaderPost.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaderPre.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjInfo.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseLibVer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgTabCtrl.h">
+      <Filter>01 Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseDialog.h">
+      <Filter>01 Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="MSGInfo.h">
+      <Filter>00 Loadini</Filter>
+    </ClInclude>
+    <ClInclude Include="MSGFunction.h">
+      <Filter>00 Loadini</Filter>
+    </ClInclude>
+    <ClInclude Include="MSGParser.h">
+      <Filter>00 Loadini</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseDlg.h">
+      <Filter>01 Dlg</Filter>
+    </ClInclude>
+    <ClInclude Include="Test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BaseLib.def">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="res\BaseLib.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BaseLib.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
