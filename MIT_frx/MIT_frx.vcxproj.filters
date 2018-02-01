@@ -1,0 +1,816 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>..Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>..Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="MIT_frx.cpp">
+      <Filter>..Generated</Filter>
+    </ClCompile>
+    <ClCompile Include="MDialog.cpp">
+      <Filter>GUI\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MVisualManager.cpp">
+      <Filter>BCG\Ribbon\VisualManager</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorUtil.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="ColorLib.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupList.cpp">
+      <Filter>GUI\GroupList</Filter>
+    </ClCompile>
+    <ClCompile Include="MLayeredWindow.cpp">
+      <Filter>GUI\LayeredWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="MLayeredButton.cpp">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="MLayeredComboBox.cpp">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="MLayeredEdit.cpp">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="MLayeredHeaderCtrl.cpp">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="MLayeredDockingControlBar.cpp">
+      <Filter>GUI\LayeredWindow\DockingControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="MLayeredProp.cpp">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="MLayeredPropList.cpp">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="MLayeredSliderCtrl.cpp">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="MLayeredTabbedControlBar.cpp">
+      <Filter>GUI\LayeredWindow\DockingControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="MLayeredToolbar.cpp">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="MLayeredMiniFrameWnd.cpp">
+      <Filter>GUI\LayeredWindow\MiniFrameWnd</Filter>
+    </ClCompile>
+    <ClCompile Include="MLayeredMultiMiniFrameWnd.cpp">
+      <Filter>GUI\LayeredWindow\MiniFrameWnd</Filter>
+    </ClCompile>
+    <ClCompile Include="MLayeredTabWnd.cpp">
+      <Filter>GUI\LayeredWindow\TabWnd</Filter>
+    </ClCompile>
+    <ClCompile Include="MControlBarMenuEditor.cpp">
+      <Filter>GUI\LayeredWindow\DockingControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="MAutoHideButton.cpp">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="MRibbonButton.cpp">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="MRibbonMainButton.cpp">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="MAutoHideToolBar.cpp">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="MRibbonMainPanel.cpp">
+      <Filter>BCG\Ribbon\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MRibbonPanelMenu.cpp">
+      <Filter>BCG\Ribbon\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="FadeEffect.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="MSwitchDockablePane.cpp">
+      <Filter>GUI\DockPane</Filter>
+    </ClCompile>
+    <ClCompile Include="MSwitchDockablePaneManager.cpp">
+      <Filter>GUI\DockPane</Filter>
+    </ClCompile>
+    <ClCompile Include="MBaseDockWnd.cpp">
+      <Filter>GUI\DockPane</Filter>
+    </ClCompile>
+    <ClCompile Include="MRibbonBar.cpp">
+      <Filter>BCG\Ribbon\RibbonBar</Filter>
+    </ClCompile>
+    <ClCompile Include="MRibbonCategory.cpp">
+      <Filter>BCG\Ribbon\Category</Filter>
+    </ClCompile>
+    <ClCompile Include="MRibbonButtonsGroup.cpp">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="MRibbonCaptionButton.cpp">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="MRibbonTab.cpp">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="MRibbonContextCaption.cpp">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="MRibbonStatusBar.cpp">
+      <Filter>BCG\Ribbon\StatusBar</Filter>
+    </ClCompile>
+    <ClCompile Include="MTableBar.cpp">
+      <Filter>GUI\Grid\DockBar</Filter>
+    </ClCompile>
+    <ClCompile Include="MTableDB.cpp">
+      <Filter>GUI\Grid\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="MTBDialogBase.cpp">
+      <Filter>GUI\Grid\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MTBSortDialog.cpp">
+      <Filter>GUI\Grid\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MTBSort.cpp">
+      <Filter>GUI\Grid\Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="MPreTBSort2G.cpp">
+      <Filter>GUI\Grid\Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="MPostTBSort.cpp">
+      <Filter>GUI\Grid\Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="excel9.cpp">
+      <Filter>Utility\Excel</Filter>
+    </ClCompile>
+    <ClCompile Include="MSExcel.cpp">
+      <Filter>Utility\Excel</Filter>
+    </ClCompile>
+    <ClCompile Include="MTextProgressCtrl.cpp">
+      <Filter>GUI\Progress</Filter>
+    </ClCompile>
+    <ClCompile Include="MTableManager.cpp">
+      <Filter>GUI\Grid\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="MProgressCtrl.cpp">
+      <Filter>GUI\Progress</Filter>
+    </ClCompile>
+    <ClCompile Include="MTableExportToExcel.cpp">
+      <Filter>GUI\Grid\Export</Filter>
+    </ClCompile>
+    <ClCompile Include="MTBProgressCtrl.cpp">
+      <Filter>GUI\Grid\ProgressCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="MPreTBSort3G.cpp">
+      <Filter>GUI\Grid\Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="MChartCtrl.cpp">
+      <Filter>GUI\Chart\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="MChartBar.cpp">
+      <Filter>GUI\Chart\DockBar</Filter>
+    </ClCompile>
+    <ClCompile Include="MChartManager.cpp">
+      <Filter>GUI\Chart\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="MTBClipBoard.cpp">
+      <Filter>GUI\Grid\ClipBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="MTabbedChildFrm.cpp">
+      <Filter>GUI\ChildFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="MExportToChartDlg.cpp">
+      <Filter>GUI\Chart\ExportToChartDlg</Filter>
+    </ClCompile>
+    <ClCompile Include="MGridItem.cpp">
+      <Filter>GUI\Grid\GridItem</Filter>
+    </ClCompile>
+    <ClCompile Include="MGridCheckItem.cpp">
+      <Filter>GUI\Grid\GridItem</Filter>
+    </ClCompile>
+    <ClCompile Include="MGridComboBoxItem.cpp">
+      <Filter>GUI\Grid\GridItem</Filter>
+    </ClCompile>
+    <ClCompile Include="MPostTable.cpp">
+      <Filter>GUI\Grid\Table</Filter>
+    </ClCompile>
+    <ClCompile Include="MPreTable.cpp">
+      <Filter>GUI\Grid\Table</Filter>
+    </ClCompile>
+    <ClCompile Include="MTable.cpp">
+      <Filter>GUI\Grid\Table</Filter>
+    </ClCompile>
+    <ClCompile Include="MPostTableDB.cpp">
+      <Filter>GUI\Grid\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="MPreTableDB2G.cpp">
+      <Filter>GUI\Grid\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="MPreTableDB3G.cpp">
+      <Filter>GUI\Grid\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="MTBIndexCache.cpp">
+      <Filter>GUI\Grid\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="MGridColumnsInfo.cpp">
+      <Filter>GUI\Grid\Table</Filter>
+    </ClCompile>
+    <ClCompile Include="MGridRow.cpp">
+      <Filter>GUI\Grid\Table</Filter>
+    </ClCompile>
+    <ClCompile Include="MTBColumn.cpp">
+      <Filter>GUI\Grid\Schema</Filter>
+    </ClCompile>
+    <ClCompile Include="MTBPostClipBoard.cpp">
+      <Filter>GUI\Grid\ClipBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="MTBPreClipboard2G.cpp">
+      <Filter>GUI\Grid\ClipBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="MGridDataMapComboItem.cpp">
+      <Filter>GUI\Grid\GridItem</Filter>
+    </ClCompile>
+    <ClCompile Include="MEditTable.cpp">
+      <Filter>GUI\Grid\Table</Filter>
+    </ClCompile>
+    <ClCompile Include="MTBStyleTable.cpp">
+      <Filter>GUI\Grid\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="ITBDataMap.cpp">
+      <Filter>GUI\Grid\DataMap</Filter>
+    </ClCompile>
+    <ClCompile Include="MTBDataMap.cpp">
+      <Filter>GUI\Grid\DataMap</Filter>
+    </ClCompile>
+    <ClCompile Include="MChartVisualObject.cpp">
+      <Filter>GUI\Chart\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="MTBStyleDialog.cpp">
+      <Filter>GUI\Grid\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MTBActiveDialog.cpp">
+      <Filter>GUI\Grid\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="MGridButtonItem.cpp">
+      <Filter>GUI\Grid\GridItem</Filter>
+    </ClCompile>
+    <ClCompile Include="MPropList.cpp">
+      <Filter>GUI\Properties</Filter>
+    </ClCompile>
+    <ClCompile Include="MCustomProperties.cpp">
+      <Filter>GUI\Properties\CustomProp</Filter>
+    </ClCompile>
+    <ClCompile Include="MTBProgressCtrlHelper.cpp">
+      <Filter>GUI\Grid\ProgressCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="MTBMessageCtrl.cpp">
+      <Filter>GUI\Grid\MessageCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="MMemDC.cpp">
+      <Filter>BCG\MemDC</Filter>
+    </ClCompile>
+    <ClCompile Include="MPropertiesWnd.cpp">
+      <Filter>GUI\Properties</Filter>
+    </ClCompile>
+    <ClCompile Include="IPropertySet.cpp">
+      <Filter>GUI\Properties</Filter>
+    </ClCompile>
+    <ClCompile Include="MCoolButton.cpp">
+      <Filter>GUI\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="MTabCtrl.cpp">
+      <Filter>GUI\TabCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvertAccelIDToString.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dllmain.h">
+      <Filter>..Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaderPost.h">
+      <Filter>..Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaderPre.h">
+      <Filter>..Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>..Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>..Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjInfo.h">
+      <Filter>..Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="MIT_frxVer.h">
+      <Filter>..Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="MDialog.h">
+      <Filter>GUI\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="MVisualManager.h">
+      <Filter>BCG\Ribbon\VisualManager</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorUtil.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorLib.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupList.h">
+      <Filter>GUI\GroupList</Filter>
+    </ClInclude>
+    <ClInclude Include="MLayeredWindow.h">
+      <Filter>GUI\LayeredWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="MLayeredButton.h">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="MLayeredComboBox.h">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="MLayeredEdit.h">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="MLayeredHeaderCtrl.h">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="MLayeredDockingControlBar.h">
+      <Filter>GUI\LayeredWindow\DockingControlBar</Filter>
+    </ClInclude>
+    <ClInclude Include="MLayeredProp.h">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="MLayeredPropList.h">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="MLayeredSliderCtrl.h">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="MLayeredTabbedControlBar.h">
+      <Filter>GUI\LayeredWindow\DockingControlBar</Filter>
+    </ClInclude>
+    <ClInclude Include="MLayeredToolbar.h">
+      <Filter>GUI\LayeredWindow\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="MLayeredMultiMiniFrameWnd.h">
+      <Filter>GUI\LayeredWindow\MiniFrameWnd</Filter>
+    </ClInclude>
+    <ClInclude Include="MLayeredMiniFrameWnd.h">
+      <Filter>GUI\LayeredWindow\MiniFrameWnd</Filter>
+    </ClInclude>
+    <ClInclude Include="MLayeredTabWnd.h">
+      <Filter>GUI\LayeredWindow\TabWnd</Filter>
+    </ClInclude>
+    <ClInclude Include="MControlBarMenuEditor.h">
+      <Filter>GUI\LayeredWindow\DockingControlBar</Filter>
+    </ClInclude>
+    <ClInclude Include="MAutoHideButton.h">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="MRibbonButton.h">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="MRibbonMainButton.h">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="MAutoHideToolBar.h">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="MRibbonMainPanel.h">
+      <Filter>BCG\Ribbon\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="MRibbonPanelMenu.h">
+      <Filter>BCG\Ribbon\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="FadeEffect.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="MSwitchDockablePane.h">
+      <Filter>GUI\DockPane</Filter>
+    </ClInclude>
+    <ClInclude Include="MSwitchDockablePaneManager.h">
+      <Filter>GUI\DockPane</Filter>
+    </ClInclude>
+    <ClInclude Include="MBaseDockWnd.h">
+      <Filter>GUI\DockPane</Filter>
+    </ClInclude>
+    <ClInclude Include="MRibbonBar.h">
+      <Filter>BCG\Ribbon\RibbonBar</Filter>
+    </ClInclude>
+    <ClInclude Include="MRibbonCategory.h">
+      <Filter>BCG\Ribbon\Category</Filter>
+    </ClInclude>
+    <ClInclude Include="MRibbonButtonsGroup.h">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="MRibbonCaptionButton.h">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="MRibbonTab.h">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="MRibbonContextCaption.h">
+      <Filter>BCG\Ribbon\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="MRibbonStatusBar.h">
+      <Filter>BCG\Ribbon\StatusBar</Filter>
+    </ClInclude>
+    <ClInclude Include="MTableBar.h">
+      <Filter>GUI\Grid\DockBar</Filter>
+    </ClInclude>
+    <ClInclude Include="MTableDB.h">
+      <Filter>GUI\Grid\DB</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBDialogBase.h">
+      <Filter>GUI\Grid\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBSortDialog.h">
+      <Filter>GUI\Grid\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBSort.h">
+      <Filter>GUI\Grid\Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="MPreTBSort2G.h">
+      <Filter>GUI\Grid\Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="MPostTBSort.h">
+      <Filter>GUI\Grid\Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="ITable.h">
+      <Filter>GUI\Grid\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ITBSort.h">
+      <Filter>GUI\Grid\Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="excel9.h">
+      <Filter>Utility\Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="MSExcel.h">
+      <Filter>Utility\Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="XLEnum.h">
+      <Filter>Utility\Excel</Filter>
+    </ClInclude>
+    <ClInclude Include="MTextProgressCtrl.h">
+      <Filter>GUI\Progress</Filter>
+    </ClInclude>
+    <ClInclude Include="MTableManager.h">
+      <Filter>GUI\Grid\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="MProgressCtrl.h">
+      <Filter>GUI\Progress</Filter>
+    </ClInclude>
+    <ClInclude Include="MTableExportToExcel.h">
+      <Filter>GUI\Grid\Export</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBProgressCtrl.h">
+      <Filter>GUI\Grid\ProgressCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="ITBProgressCtrl.h">
+      <Filter>GUI\Grid\ProgressCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBSchema.h">
+      <Filter>GUI\Grid\Schema</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBColumn.h">
+      <Filter>GUI\Grid\Schema</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBConvertor.h">
+      <Filter>GUI\Grid\Schema</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniDBBase.h">
+      <Filter>GUI\Grid\Temp</Filter>
+    </ClInclude>
+    <ClInclude Include="MFastDivider.h">
+      <Filter>GUI\Grid\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="MPreTBSort3G.h">
+      <Filter>GUI\Grid\Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="MChartCtrl.h">
+      <Filter>GUI\Chart\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="MChartBar.h">
+      <Filter>GUI\Chart\DockBar</Filter>
+    </ClInclude>
+    <ClInclude Include="MChartManager.h">
+      <Filter>GUI\Chart\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBClipBoard.h">
+      <Filter>GUI\Grid\ClipBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="MTabbedChildFrm.h">
+      <Filter>GUI\ChildFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="MExportToChartDlg.h">
+      <Filter>GUI\Chart\ExportToChartDlg</Filter>
+    </ClInclude>
+    <ClInclude Include="MGridItem.h">
+      <Filter>GUI\Grid\GridItem</Filter>
+    </ClInclude>
+    <ClInclude Include="MGridCheckItem.h">
+      <Filter>GUI\Grid\GridItem</Filter>
+    </ClInclude>
+    <ClInclude Include="MGridComboBoxItem.h">
+      <Filter>GUI\Grid\GridItem</Filter>
+    </ClInclude>
+    <ClInclude Include="MPostTable.h">
+      <Filter>GUI\Grid\Table</Filter>
+    </ClInclude>
+    <ClInclude Include="MPreTable.h">
+      <Filter>GUI\Grid\Table</Filter>
+    </ClInclude>
+    <ClInclude Include="MTable.h">
+      <Filter>GUI\Grid\Table</Filter>
+    </ClInclude>
+    <ClInclude Include="MPostTableDB.h">
+      <Filter>GUI\Grid\DB</Filter>
+    </ClInclude>
+    <ClInclude Include="MPreTableDB2G.h">
+      <Filter>GUI\Grid\DB</Filter>
+    </ClInclude>
+    <ClInclude Include="MPreTableDB3G.h">
+      <Filter>GUI\Grid\DB</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBChangedFromTable.h">
+      <Filter>GUI\Grid\DB</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBIndexCache.h">
+      <Filter>GUI\Grid\DB</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBListMap.h">
+      <Filter>GUI\Grid\DB</Filter>
+    </ClInclude>
+    <ClInclude Include="MGridRow.h">
+      <Filter>GUI\Grid\Table</Filter>
+    </ClInclude>
+    <ClInclude Include="MGridColumnsInfo.h">
+      <Filter>GUI\Grid\Table</Filter>
+    </ClInclude>
+    <ClInclude Include="ITBClipboard.h">
+      <Filter>GUI\Grid\ClipBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBPostClipBoard.h">
+      <Filter>GUI\Grid\ClipBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBPreClipboard2G.h">
+      <Filter>GUI\Grid\ClipBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="MGridDataMapComboItem.h">
+      <Filter>GUI\Grid\GridItem</Filter>
+    </ClInclude>
+    <ClInclude Include="MEditTable.h">
+      <Filter>GUI\Grid\Table</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBStyleTable.h">
+      <Filter>GUI\Grid\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="ITBDataMap.h">
+      <Filter>GUI\Grid\DataMap</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBDataMap.h">
+      <Filter>GUI\Grid\DataMap</Filter>
+    </ClInclude>
+    <ClInclude Include="MChartVisualObject.h">
+      <Filter>GUI\Chart\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBStyleDialog.h">
+      <Filter>GUI\Grid\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBActiveDialog.h">
+      <Filter>GUI\Grid\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="MIT_frxRes.h">
+      <Filter>..Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="MIT_frx.h">
+      <Filter>..Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtDllInstanceSwitcher.h">
+      <Filter>..Generated</Filter>
+    </ClInclude>
+    <ClInclude Include="MGridButtonItem.h">
+      <Filter>GUI\Grid\GridItem</Filter>
+    </ClInclude>
+    <ClInclude Include="MPropList.h">
+      <Filter>GUI\Properties</Filter>
+    </ClInclude>
+    <ClInclude Include="MCustomproperties.h">
+      <Filter>GUI\Properties\CustomProp</Filter>
+    </ClInclude>
+    <ClInclude Include="ITBMessageCtrl.h">
+      <Filter>GUI\Grid\MessageCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBProgressCtrlHelper.h">
+      <Filter>GUI\Grid\ProgressCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="MTBMessageCtrl.h">
+      <Filter>GUI\Grid\MessageCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="MMemDC.h">
+      <Filter>BCG\MemDC</Filter>
+    </ClInclude>
+    <ClInclude Include="MPropertiesWnd.h">
+      <Filter>GUI\Properties</Filter>
+    </ClInclude>
+    <ClInclude Include="IPropertySet.h">
+      <Filter>GUI\Properties</Filter>
+    </ClInclude>
+    <ClInclude Include="MCoolButton.h">
+      <Filter>GUI\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="IBaseMenu.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="IMenuManager.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="MTabCtrl.h">
+      <Filter>GUI\TabCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="ConvertAccelIDToString.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="..Generated">
+      <UniqueIdentifier>{6947f7a6-19a4-4423-8b31-296a642cfc98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{ebc102eb-729b-4a8f-a681-c6e8539bb576}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{71170082-9c03-4da3-bf08-da81ceb4ce8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Dialog">
+      <UniqueIdentifier>{c45b6454-8e62-44a4-bbd5-b11bb7e11e54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid">
+      <UniqueIdentifier>{5f404368-935e-4d42-b37c-222e9a3c4fc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid\Common">
+      <UniqueIdentifier>{ec559425-a707-4870-824c-a436a1a57fd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\GroupList">
+      <UniqueIdentifier>{1bba9ef5-a14a-489f-8687-0c52ddc6d8f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\LayeredWindow">
+      <UniqueIdentifier>{ae0e40b9-ade7-4825-8ccf-89883db54d61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\LayeredWindow\Control">
+      <UniqueIdentifier>{d85ba034-9b27-460b-97fb-00484d38a5f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\LayeredWindow\DockingControlBar">
+      <UniqueIdentifier>{4c4fa0e5-3f42-428c-9c04-1036cefe9434}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\LayeredWindow\MiniFrameWnd">
+      <UniqueIdentifier>{75713bb1-3bf1-4b2e-977f-42b1820671b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\LayeredWindow\TabWnd">
+      <UniqueIdentifier>{3aebd038-0104-4ba6-9423-73d9ffc733ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BCG">
+      <UniqueIdentifier>{0be1565b-39dc-4d6a-8dc4-77cca1186892}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BCG\Ribbon">
+      <UniqueIdentifier>{833d360f-7559-4b15-92ed-0d40f58a38b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BCG\Ribbon\Button">
+      <UniqueIdentifier>{52c92919-78ab-4b3c-ba4a-c019bda4e0e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BCG\Ribbon\Menu">
+      <UniqueIdentifier>{baa51521-c5b1-4f63-99b3-eadfea247229}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BCG\Ribbon\VisualManager">
+      <UniqueIdentifier>{91a0873e-deae-429e-bde1-3f02078b30a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\DockPane">
+      <UniqueIdentifier>{cba0da6c-68bd-4739-9650-82358fbe86b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BCG\Ribbon\Category">
+      <UniqueIdentifier>{f52a8a28-a3bd-45ae-aa2b-d97a9df7e077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BCG\Ribbon\RibbonBar">
+      <UniqueIdentifier>{a493b3b1-d982-4a43-829d-431e7df0eca2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BCG\Ribbon\StatusBar">
+      <UniqueIdentifier>{145f2cfc-5c4d-476f-845b-b5ccb71bb2b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid\DockBar">
+      <UniqueIdentifier>{83a137df-94b3-4db0-8ddc-9d5808742187}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid\Sort">
+      <UniqueIdentifier>{68ae06cc-8d0f-4873-87a9-d8f29f82f0b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid\DB">
+      <UniqueIdentifier>{10fee701-5e81-4e1b-a8ce-8029b0fb5736}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid\Dialog">
+      <UniqueIdentifier>{c20ac54a-f5ef-448a-afd0-31862d170676}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Excel">
+      <UniqueIdentifier>{4c76d9cf-2668-4071-95bd-b0c1667f9f3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Progress">
+      <UniqueIdentifier>{29153de1-02f8-4d78-a900-9521ac59f7fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid\Manager">
+      <UniqueIdentifier>{8bea5aff-a691-47e2-8646-d09eb18da772}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid\Export">
+      <UniqueIdentifier>{df9aabc6-95b0-4864-adb5-fee643c8270e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid\Schema">
+      <UniqueIdentifier>{2fd6ba9a-7508-4016-8045-ba1da7c1dd54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid\Temp">
+      <UniqueIdentifier>{371185f6-ba2b-4e40-8ba1-85ae5cbb22de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Chart">
+      <UniqueIdentifier>{3b9085ff-c7b3-4858-a192-a4065287ecab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Chart\Control">
+      <UniqueIdentifier>{e5c17866-5c64-462b-acf2-c4dd642d4ce4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Chart\DockBar">
+      <UniqueIdentifier>{41ac2ee2-d474-440d-af92-98db27356556}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Chart\Manager">
+      <UniqueIdentifier>{6498e49e-1763-4736-9e32-d68d6e9a8fc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid\ClipBoard">
+      <UniqueIdentifier>{70090e5a-d2dd-4747-992a-0c3ff7aa4fe1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\ChildFrame">
+      <UniqueIdentifier>{812d6c24-7687-469b-adba-316be97f486a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Chart\ExportToChartDlg">
+      <UniqueIdentifier>{303d0e57-34cc-4d13-9bdd-77274d22c61d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid\GridItem">
+      <UniqueIdentifier>{8cec1055-1686-4a3b-bbdf-9fe45e4b3443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid\Table">
+      <UniqueIdentifier>{3f625ba8-ab6b-46b5-b6df-97ede9f23f85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid\DataMap">
+      <UniqueIdentifier>{b5091dfd-8ed4-4ba8-8351-6bd604f3c812}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..Resource">
+      <UniqueIdentifier>{04c7f7ee-8637-4659-a73d-71f23839df50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..Resource Files">
+      <UniqueIdentifier>{1bee5df5-9c8b-4946-a62c-51305aee07f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Properties">
+      <UniqueIdentifier>{d588c6d3-d59b-41d7-8ae0-ccd277fd2065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Properties\CustomProp">
+      <UniqueIdentifier>{bfe67337-cd9a-4436-8e73-85cad37554fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid\ProgressCtrl">
+      <UniqueIdentifier>{816efa44-0584-4582-a5a7-ee51d87132ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Grid\MessageCtrl">
+      <UniqueIdentifier>{dc82d96c-f764-4e28-a305-6b8824afe683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BCG\MemDC">
+      <UniqueIdentifier>{b5841aac-0e59-487b-8f44-19cc8a565377}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Button">
+      <UniqueIdentifier>{cafb21f5-5b58-4199-890d-976c42cae7ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{446d9417-d14c-4472-bcea-6a467902861a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\TabCtrl">
+      <UniqueIdentifier>{3b8ab22b-1dcb-4645-bee2-f85c67bc658f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MIT_frx.def">
+      <Filter>..Generated</Filter>
+    </None>
+    <None Include="res\MIT_frx.rc2">
+      <Filter>..Resource</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MIT_frx.rc">
+      <Filter>..Resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\empty.bmp">
+      <Filter>..Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
