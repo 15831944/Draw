@@ -16,11 +16,14 @@ public:
 private:
 	CArray<CDialog*,CDialog*> m_aDialog;
 	int m_nCurTab;
-
+	CWnd* m_pPlaceHolderWnd;
+	CRect m_rPlaceHolder;
 private:
 	void CloseCurTab();
 	void OpenNewTab();
+	void GetDialogPos(CRect& rect);
 public:
+	BOOL SetPlaceHolder(CWnd* pPlaceHolder, BOOL bResize = TRUE);
 	int AddTab(CDialog* pDlg,LPCTSTR szTabName,UINT nIDD);
 	BOOL ShowTab(int nPos);
 	DECLARE_MESSAGE_MAP()

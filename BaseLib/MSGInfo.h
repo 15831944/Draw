@@ -7,13 +7,13 @@
 	{
 		typedef std::vector<CString> file_vect;
 	public:
-		static CMSGInfo* Instance();
+		//static CMSGInfo* Instance();
 		~CMSGInfo(void);
 
-	private:
+	//private:
 		CMSGInfo(void);
 	private:
-		static CMSGInfo* m_pInstance;
+		//static CMSGInfo* m_pInstance;
 		file_vect _file;
 		void LoadMessage();
 		CString GetProgramPath();

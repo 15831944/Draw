@@ -116,6 +116,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_AFXEXT;WIN32;_WINDOWS;_x64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -191,6 +192,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="02Base\DeRectangle.cpp" />
+    <ClCompile Include="02Base\Element.cpp" />
+    <ClCompile Include="02Base\Line.cpp" />
+    <ClCompile Include="02Base\Rectangle.cpp" />
     <ClCompile Include="BaseDialog.cpp" />
     <ClCompile Include="BaseLib.cpp" />
     <ClCompile Include="DlgTabCtrl.cpp" />
@@ -206,6 +211,12 @@
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="02Base\DeRectangle.h" />
+    <ClInclude Include="02Base\Element.h" />
+    <ClInclude Include="02Base\ElementColor.h" />
+    <ClInclude Include="02Base\ElementType.h" />
+    <ClInclude Include="02Base\Line.h" />
+    <ClInclude Include="02Base\Rectangle.h" />
     <ClInclude Include="BaseDialog.h" />
     <ClInclude Include="BaseDlg.h" />
     <ClInclude Include="BaseLib.h" />
