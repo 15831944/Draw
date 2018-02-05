@@ -7,9 +7,10 @@
 #define DRAW			  _T("DRAW")
 #define TEST			  _T("TEST")
 #define _CTRL			  _T("ctrl_")
+#define CMD				  _T("cmd")
 #define _INI_			  _T(".ini")
 const CString strLangRoot = _T("Language\\");
-CMSGInfo* CMSGInfo::m_pInstance = 0;
+//CMSGInfo* CMSGInfo::m_pInstance = 0;
 //using namespace lib;
 CMSGInfo::CMSGInfo(void)
 {
@@ -18,21 +19,21 @@ CMSGInfo::CMSGInfo(void)
 	_file.push_back(file_vect::value_type(DATAMGR));
 	_file.push_back(file_vect::value_type(TEST));
 	_file.push_back(file_vect::value_type(DRAW));
+	_file.push_back(file_vect::value_type(CMD));
 	LoadMessage();
 }
 
-CMSGInfo * CMSGInfo::Instance()
-{
-	if (m_pInstance == nullptr)
-		m_pInstance = new CMSGInfo;
-	return m_pInstance;
-}
+//CMSGInfo * CMSGInfo::Instance()
+//{
+//	if (m_pInstance == nullptr)
+//		m_pInstance = new CMSGInfo;
+//	return m_pInstance;
+//}
 
 CMSGInfo::~CMSGInfo(void)
 {
-	if (m_pInstance)
-		delete m_pInstance;
-	m_pInstance = 0;
+	_file.clear();
+	CMSGFunction::Clear();
 }
 
 void CMSGInfo::LoadMessage()

@@ -20,9 +20,10 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{F4D523C4-8CD2-4798-9333-788F15F5B9B5}</ProjectGuid>
-    <RootNamespace>test</RootNamespace>
+    <ProjectGuid>{EFF7B9D1-2028-48C6-B07E-59B7A3B07279}</ProjectGuid>
+    <RootNamespace>DataMgr</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>DB</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -75,20 +76,6 @@
     <IntDir>$(SolutionDir)\..\tmp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <ConformanceMode>true</ConformanceMode>
-      <PreprocessorDefinitions>_AFXEXT;_x64;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-    </ClCompile>
-    <Link>
-      <ImportLibrary>..\..\lib\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
-      <SubSystem>Windows</SubSystem>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -96,6 +83,20 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PreprocessorDefinitions>_AFXEXT;WIN32;_WINDOWS;_DEBUG;_USRDLL;_X64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./common/;./DBBase/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <ImportLibrary>..\..\lib\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -126,25 +127,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="HeaderPost.h" />
-    <ClInclude Include="HeaderPre.h" />
-    <ClInclude Include="ProjInfo.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Test.h" />
-    <ClInclude Include="testinclude.h" />
-    <ClInclude Include="testVer.h" />
-    <ClInclude Include="testvsgit.h" />
+    <ClInclude Include="common\DataMgrInc.h" />
+    <ClInclude Include="common\DataMgrVer.h" />
+    <ClInclude Include="common\HeaderPost.h" />
+    <ClInclude Include="common\HeaderPre.h" />
+    <ClInclude Include="common\ProjInfo.h" />
+    <ClInclude Include="common\stdafx.h" />
+    <ClInclude Include="DBBase\ClassBase.h" />
+    <ClInclude Include="DBBase\ClassPool.h" />
+    <ClInclude Include="DBBase\DataBase.h" />
+    <ClInclude Include="DBBase\DataObserver.h" />
+    <ClInclude Include="DBBase\DataPool.h" />
+    <ClInclude Include="DBBase\DBDefault.h" />
+    <ClInclude Include="DBBase\DBMgr.h" />
+    <ClInclude Include="DBBase\Observer.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="common\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Test.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="test.rc" />
+    <ClCompile Include="DBBase\ClassBase.cpp" />
+    <ClCompile Include="DBBase\ClassPool.cpp" />
+    <ClCompile Include="DBBase\DataBase.cpp" />
+    <ClCompile Include="DBBase\DataObserver.cpp" />
+    <ClCompile Include="DBBase\DataPool.cpp" />
+    <ClCompile Include="DBBase\DBMgr.cpp" />
+    <ClCompile Include="DBBase\Observer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,6 +4,7 @@
 #include "stdafx.h"
 
 #include "BaseLib.h"
+#include "MSGInfo.h"
 
 static AFX_EXTENSION_MODULE baselibdll = { NULL, NULL };
 
@@ -12,7 +13,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 {
 	// Remove this if you use lpReserved
 	UNREFERENCED_PARAMETER(lpReserved);
-
+	static CMSGInfo* m_pMSGInfo = nullptr;
 	if (dwReason == DLL_PROCESS_ATTACH)
 	{
 		TRACE0("WG_DGN.DLL Initializing!\n");
@@ -27,9 +28,12 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 		/*XMultiLang* pLangTranslate = new XMultiLang;
 		pLangTranslate->LoadResourceHeaderByDLL(IDR_WGDGN_RESHEADER,_T("Binary"), hInstance);
 		INIResourceManager::AppendMap(_T("wg_dgn"), pLangTranslate);*/
+		if (m_pMSGInfo) { delete m_pMSGInfo; m_pMSGInfo = nullptr; }
+		m_pMSGInfo = new CMSGInfo;
 	}
 	else if (dwReason == DLL_PROCESS_DETACH)
 	{
+		if (m_pMSGInfo) { delete m_pMSGInfo; m_pMSGInfo = nullptr; }
 		TRACE0("WG_DGN.DLL Terminating!\n");
 		// Terminate the library before destructors are called
 		AfxTermExtensionModule(baselibdll);

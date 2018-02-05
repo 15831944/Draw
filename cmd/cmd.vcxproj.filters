@@ -13,8 +13,14 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="01">
+      <UniqueIdentifier>{ac31af39-5756-47f9-a42c-4fbc4ba6049d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cmdVer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="HeaderPost.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -30,32 +36,41 @@
     <ClInclude Include="resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Test.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="CMPropertiesDlg.h">
+      <Filter>01</Filter>
     </ClInclude>
-    <ClInclude Include="testVer.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="CMaterialPage.h">
+      <Filter>01</Filter>
     </ClInclude>
-    <ClInclude Include="testinclude.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="CMSectionPage.h">
+      <Filter>01</Filter>
     </ClInclude>
-    <ClInclude Include="testvsgit.h">
-      <Filter>源文件</Filter>
+    <ClInclude Include="CMatPageItemDlg.h">
+      <Filter>01</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>头文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Test.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CMPropertiesDlg.cpp">
+      <Filter>01</Filter>
+    </ClCompile>
+    <ClCompile Include="CMaterialPage.cpp">
+      <Filter>01</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSectionPage.cpp">
+      <Filter>01</Filter>
+    </ClCompile>
+    <ClCompile Include="CMatPageItemDlg.cpp">
+      <Filter>01</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="test.rc">
+    <ResourceCompile Include="cmd.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
   </ItemGroup>

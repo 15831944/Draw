@@ -11,6 +11,7 @@
 		static void AddFile(LPCTSTR filePath);
 		static bool LoadFile();
 		static void Reset();
+		static void Clear();
 		static CString GetValue(LPCTSTR lpszID);
 	};
 //}

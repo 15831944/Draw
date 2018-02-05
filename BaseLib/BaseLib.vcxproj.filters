@@ -25,6 +25,9 @@
     <Filter Include="00 Loadini">
       <UniqueIdentifier>{8b8edaba-ad84-49b8-b628-a7e58a49fd98}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02 Base">
+      <UniqueIdentifier>{f666a937-538c-4ae0-a505-52d9e6e1eca7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -53,6 +56,18 @@
     </ClCompile>
     <ClCompile Include="Test.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="02Base\DeRectangle.cpp">
+      <Filter>02 Base</Filter>
+    </ClCompile>
+    <ClCompile Include="02Base\Element.cpp">
+      <Filter>02 Base</Filter>
+    </ClCompile>
+    <ClCompile Include="02Base\Line.cpp">
+      <Filter>02 Base</Filter>
+    </ClCompile>
+    <ClCompile Include="02Base\Rectangle.cpp">
+      <Filter>02 Base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +115,24 @@
     </ClInclude>
     <ClInclude Include="Test.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="02Base\ElementColor.h">
+      <Filter>02 Base</Filter>
+    </ClInclude>
+    <ClInclude Include="02Base\ElementType.h">
+      <Filter>02 Base</Filter>
+    </ClInclude>
+    <ClInclude Include="02Base\DeRectangle.h">
+      <Filter>02 Base</Filter>
+    </ClInclude>
+    <ClInclude Include="02Base\Element.h">
+      <Filter>02 Base</Filter>
+    </ClInclude>
+    <ClInclude Include="02Base\Line.h">
+      <Filter>02 Base</Filter>
+    </ClInclude>
+    <ClInclude Include="02Base\Rectangle.h">
+      <Filter>02 Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

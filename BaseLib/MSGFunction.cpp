@@ -35,3 +35,12 @@ void CMSGFunction::Reset()
 	if(pg_parse == NULL) pg_parse = new CMSGParser();
 	pg_parse->Clear();
 }
+
+void CMSGFunction::Clear()
+{
+	if (pg_parse)
+	{
+		delete pg_parse;
+		pg_parse = nullptr;
+	}
+}

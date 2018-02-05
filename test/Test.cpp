@@ -14,7 +14,7 @@ IMPLEMENT_DYNAMIC(MTest, CDialog)
 MTest::MTest(CWnd* pParent /*=NULL*/)
 	: CDialog(IDD_DIALOG1, pParent)
 {
-
+	int n = 3;
 }
 
 MTest::~MTest()
