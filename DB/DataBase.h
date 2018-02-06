@@ -1,5 +1,5 @@
 #pragma once
-#include "../common/HeaderPre.h"
+#include "HeaderPre.h"
 typedef UINT T_KEY;
 
 class __MY_EXT_CLASS__ CDataBase
@@ -13,4 +13,4 @@ public:
 public:
 	const T_KEY m_nKey;
 };
-#include "../common/HeaderPost.h"
+#include "HeaderPost.h"

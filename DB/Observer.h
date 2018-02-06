@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-#include "../common/HeaderPre.h"
+#include "HeaderPre.h"
 
 class __MY_EXT_CLASS__ CObserver
 {
@@ -23,4 +23,4 @@ public:
 private:
 	std::vector<CObserver*> m_pObserver;
 };
-#include "../common/HeaderPost.h"
+#include "HeaderPost.h"

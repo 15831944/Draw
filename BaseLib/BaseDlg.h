@@ -3,4 +3,4 @@
 
 #include "BaseLibVer.h"
 #include "BaseDialog.h"
-#define CDialog dlg::CBaseDialog
+//#define CDialog dlg::CBaseDialog

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="DBDoc.cpp">
+      <Filter>03 db control\00 DB interface</Filter>
+    </ClCompile>
+    <ClCompile Include="AttrCtrl.cpp">
+      <Filter>03 db control\03 attribute ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="DataMemb.cpp">
+      <Filter>03 db control\data member</Filter>
+    </ClCompile>
+    <ClCompile Include="DB_MATL.cpp">
+      <Filter>05 data</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>01 Common</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassBase.cpp">
+      <Filter>02 DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassPool.cpp">
+      <Filter>02 DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase.cpp">
+      <Filter>02 DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="DataObserver.cpp">
+      <Filter>02 DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="DataPool.cpp">
+      <Filter>02 DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Observer.cpp">
+      <Filter>02 DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="DBMgr.cpp">
+      <Filter>02 DataBase</Filter>
+    </ClCompile>
+    <ClCompile Include="MatlDB.cpp">
+      <Filter>06 DBase</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DBDoc.h">
+      <Filter>03 db control\00 DB interface</Filter>
+    </ClInclude>
+    <ClInclude Include="DB_ST_DT_MATL.h">
+      <Filter>04 struct\post</Filter>
+    </ClInclude>
+    <ClInclude Include="DB_ST_DT.h">
+      <Filter>04 struct\post</Filter>
+    </ClInclude>
+    <ClInclude Include="AttrCtrl.h">
+      <Filter>03 db control\03 attribute ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="DataMemb.h">
+      <Filter>03 db control\data member</Filter>
+    </ClInclude>
+    <ClInclude Include="DB_MATL.h">
+      <Filter>05 data</Filter>
+    </ClInclude>
+    <ClInclude Include="DataMgrInc.h">
+      <Filter>01 Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DataMgrVer.h">
+      <Filter>01 Common</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaderPost.h">
+      <Filter>01 Common</Filter>
+    </ClInclude>
+    <ClInclude Include="HeaderPre.h">
+      <Filter>01 Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ProjInfo.h">
+      <Filter>01 Common</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>01 Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassBase.h">
+      <Filter>02 DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassPool.h">
+      <Filter>02 DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="DataBase.h">
+      <Filter>02 DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="DataObserver.h">
+      <Filter>02 DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="DataPool.h">
+      <Filter>02 DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Observer.h">
+      <Filter>02 DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="DBMgr.h">
+      <Filter>02 DataBase</Filter>
+    </ClInclude>
+    <ClInclude Include="MatlDB.h">
+      <Filter>06 DBase</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="01 Common">
+      <UniqueIdentifier>{057b7f94-0d19-404f-baf4-17af3f3b3c7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02 DataBase">
+      <UniqueIdentifier>{b93ab535-dae7-40cf-a3a4-2ce5e37fcbcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03 db control">
+      <UniqueIdentifier>{13f3cc23-390f-4884-95be-0a6b3c367dd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03 db control\00 DB interface">
+      <UniqueIdentifier>{88f1e118-ec37-4292-8f9c-87f9ea7bb8e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03 db control\03 attribute ctrl">
+      <UniqueIdentifier>{81fd03d3-6832-469f-a26a-b9c63ddb0494}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04 struct">
+      <UniqueIdentifier>{d13ca893-691f-4bac-a0db-3b81d5cfff73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04 struct\post">
+      <UniqueIdentifier>{663b1aa6-51ee-4281-a750-0928e95bb26a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03 db control\data member">
+      <UniqueIdentifier>{098990d7-6975-49ee-81f9-0137d418ed19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05 data">
+      <UniqueIdentifier>{93900817-08f0-42e7-9abb-d1f0194aaf8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06 DBase">
+      <UniqueIdentifier>{9cb4b076-796a-43b1-9674-640d4b343973}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03 db control\01">
+      <UniqueIdentifier>{77295e6e-328c-4fbd-95e3-22e0e3291bdc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClInclude Include="CMaterialPage.h" />
     <ClInclude Include="CMatPageItemDlg.h" />
+    <ClInclude Include="CMDlgBase.h" />
     <ClInclude Include="cmdVer.h" />
     <ClInclude Include="CMPropertiesDlg.h" />
     <ClInclude Include="CMSectionPage.h" />
+    <ClInclude Include="ExportFunc.h" />
     <ClInclude Include="HeaderPost.h" />
     <ClInclude Include="HeaderPre.h" />
     <ClInclude Include="ProjInfo.h" />
@@ -141,9 +143,11 @@
   <ItemGroup>
     <ClCompile Include="CMaterialPage.cpp" />
     <ClCompile Include="CMatPageItemDlg.cpp" />
+    <ClCompile Include="CMDlgBase.cpp" />
     <ClCompile Include="CMPropertiesDlg.cpp" />
     <ClCompile Include="CMSectionPage.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="ExportFunc.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>

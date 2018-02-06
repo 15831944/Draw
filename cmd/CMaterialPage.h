@@ -3,13 +3,14 @@
 
 
 // CCMaterialPage 对话框
+#include "../DB/DBDoc.h"
 
 class CCMaterialPage : public CDialog
 {
 	DECLARE_DYNAMIC(CCMaterialPage)
 
 public:
-	CCMaterialPage(CWnd* pParent = NULL);   // 标准构造函数
+	CCMaterialPage(CDBDoc* pDoc, CWnd* pParent = NULL);   // 标准构造函数
 	virtual ~CCMaterialPage();
 
 //// 对话框数据
@@ -23,6 +24,7 @@ protected:
 	DECLARE_MESSAGE_MAP()
 private:
 	CListCtrl m_List;
+	CDBDoc* m_pDoc;
 public:
 	afx_msg void OnNMDblclkCmdMpMatList(NMHDR *pNMHDR, LRESULT *pResult);
 	afx_msg void OnModify();

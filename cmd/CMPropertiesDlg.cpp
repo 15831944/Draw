@@ -2,6 +2,7 @@
 //
 
 #include "stdafx.h"
+#include "resource.h"
 #include "CMPropertiesDlg.h"
 #include "afxdialogex.h"
 
@@ -9,13 +10,14 @@
 #include "CMaterialPage.h"
 #include "CMSectionPage.h"
 
+#define CDialog CCMDlgBase
 
-IMPLEMENT_DYNAMIC(CCMPropertiesDlg, CDialog)
+//IMPLEMENT_DYNAMIC(CCMPropertiesDlg, CDialog)
 
 CCMPropertiesDlg::CCMPropertiesDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(IDD_CMD_PROPERTIES_DLG, pParent)
 {
-
+	m_nActivePage = 0;
 }
 
 CCMPropertiesDlg::~CCMPropertiesDlg()
@@ -44,8 +46,8 @@ END_MESSAGE_MAP()
 BOOL CCMPropertiesDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
-	m_pMaterial = new CCMaterialPage(this);
-	m_pSection = new CCMSectionPage(this);
+	m_pMaterial = new CCMaterialPage(m_pDoc,this);
+	m_pSection = new CCMSectionPage(m_pDoc,this);
 	m_wndTab.AddTab(m_pMaterial, _LS(IDS_CMD_PJST_Material), CCMaterialPage::IDD);
 	m_wndTab.AddTab(m_pSection, _LS(IDS_CMD_PJST_Section), CCMSectionPage::IDD);
 	m_wndTab.SetPlaceHolder(GetDlgItem(IDC_CMD_PLACEHOLDER));

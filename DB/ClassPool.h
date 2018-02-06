@@ -1,7 +1,7 @@
 #pragma once
 #include "ClassBase.h"
 
-#include "../common/HeaderPre.h"
+#include "HeaderPre.h"
 
 class __MY_EXT_CLASS__ ClassPool
 {
@@ -17,4 +17,4 @@ private:
 	const T_KEY m_nKey;
 };
 
-#include "../common/HeaderPost.h"
+#include "HeaderPost.h"

@@ -3,7 +3,7 @@
 
 #include "Observer.h"
 #include "DataBase.h"
-#include "../common/HeaderPre.h"
+#include "HeaderPre.h"
 
 
 class __MY_EXT_CLASS__ CDataObserver : public CObserver
@@ -30,4 +30,4 @@ public:
 private:
 	BOOL NotifyCmdData(int nCmd, const CDataBase* pNewData, const CDataBase* pOldData = nullptr);
 };
-#include "../common/HeaderPost.h"
+#include "HeaderPost.h"

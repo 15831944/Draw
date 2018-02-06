@@ -199,6 +199,7 @@
     <ClCompile Include="BaseDialog.cpp" />
     <ClCompile Include="BaseLib.cpp" />
     <ClCompile Include="DlgTabCtrl.cpp" />
+    <ClCompile Include="DlgUtil.cpp" />
     <ClCompile Include="MSGFunction.cpp" />
     <ClCompile Include="MSGInfo.cpp" />
     <ClCompile Include="MSGParser.cpp" />
@@ -221,6 +222,7 @@
     <ClInclude Include="BaseDlg.h" />
     <ClInclude Include="BaseLib.h" />
     <ClInclude Include="DlgTabCtrl.h" />
+    <ClInclude Include="DlgUtil.h" />
     <ClInclude Include="MSGFunction.h" />
     <ClInclude Include="MSGInfo.h" />
     <ClInclude Include="MSGParser.h" />

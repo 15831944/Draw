@@ -2,7 +2,7 @@
 
 #include "DataObserver.h"
 #include "DataPool.h"
-#include "../common/HeaderPre.h"
+#include "HeaderPre.h"
 class ClassPool;
 class __MY_EXT_CLASS__ ClassBase
 {
@@ -35,4 +35,4 @@ private:
 	const T_KEY m_nKey;
 };
 
-#include "../common/HeaderPost.h"
+#include "HeaderPost.h"

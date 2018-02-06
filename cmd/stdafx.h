@@ -39,6 +39,7 @@
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
 #include "ProjInfo.h"
+//#include "../DB/DB_ST_DT.h"
 
 #if _DEBUG
 #define _CRTDBG_MAP_ALLOC
@@ -48,9 +49,10 @@
 typedef UINT T_KEY;
 
 //#include "../cmd/cmdVer.h"
-#include "resource.h"
+
 
 #include "../BaseLib/BaseLibVer.h"
 #include "../BaseLib/MSGFunction.h"
+#include "../DB/DataMgrVer.h"
 
 

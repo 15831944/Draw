@@ -2,7 +2,7 @@
 #include <map>
 #include "ClassPool.h"
 
-#include "../common/HeaderPre.h"
+#include "HeaderPre.h"
 class __MY_EXT_CLASS__ IDBMgr
 {
 public:
@@ -21,4 +21,4 @@ private:
 	static IDBMgr* g_Instance;
 	std::map<T_KEY, ClassPool*>m_Pool;
 };
-#include "../common/HeaderPost.h"
+#include "HeaderPost.h"

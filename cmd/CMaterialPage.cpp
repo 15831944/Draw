@@ -2,6 +2,7 @@
 //
 
 #include "stdafx.h"
+#include "resource.h"
 #include "CMaterialPage.h"
 #include "afxdialogex.h"
 #include "CMatPageItemDlg.h"
@@ -11,10 +12,10 @@
 
 IMPLEMENT_DYNAMIC(CCMaterialPage, CDialog)
 
-CCMaterialPage::CCMaterialPage(CWnd* pParent /*=NULL*/)
+CCMaterialPage::CCMaterialPage(CDBDoc* pDoc, CWnd* pParent /*=NULL*/)
 	: CDialog(IDD_CMD_MATERIAL_PAGE, pParent)
 {
-
+	m_pDoc = pDoc;
 }
 
 CCMaterialPage::~CCMaterialPage()
@@ -54,7 +55,7 @@ void CCMaterialPage::OnModify()
 
 void CCMaterialPage::OnAdd()
 {
-	CCMatPageItemDlg dlg;
+	CCMatPageItemDlg dlg(m_pDoc);
 	dlg.DoModal();
 }
 

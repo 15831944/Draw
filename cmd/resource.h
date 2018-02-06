@@ -2,7 +2,7 @@
 // Microsoft Visual C++ 生成的包含文件。
 // 供 cmd.rc 使用
 //
-#define IDD_CMD_PROPERTIES_DLG          9
+#define IDD_CMD_PROPERTIES_DLG          10
 #define IDD_CMD_MATERIAL_PAGE           103
 #define IDD_CMD_SECTION_PAGE            105
 #define IDD_CMD_MP_ITEM_DLG             107
