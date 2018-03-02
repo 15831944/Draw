@@ -30,6 +30,16 @@ CString CMSGFunction::GetValue(LPCTSTR lpszID)
 	return pg_parse->GetValue( strID );
 }
 
+CString CMSGFunction::RemoveQuote(LPCTSTR lpszStr)
+{
+	CString strMsg = lpszStr;
+	int nLen = strMsg.GetLength();
+	if (nLen < 2) return strMsg;
+	if (strMsg.GetAt(0) != '\'') return strMsg;
+	if (strMsg.GetAt(nLen - 1) != '\'') return strMsg;
+	return strMsg.Mid(1, nLen - 2);
+}
+
 void CMSGFunction::Reset()
 {
 	if(pg_parse == NULL) pg_parse = new CMSGParser();

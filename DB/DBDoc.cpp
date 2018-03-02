@@ -13,6 +13,8 @@ CDBDoc::CDBDoc()
 	m_pMatlDB = new CMatlDB(this);
 	
 	m_pAttrCtrl->initialize();
+
+	m_pMatlDB->initialize();
 }
 
 CDBDoc * CDBDoc::GetDocPoint()

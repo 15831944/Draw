@@ -1,5 +1,6 @@
 #pragma once
 #define _LS(ResID)	CMSGFunction::GetValue(CString(#ResID))
+#define _ULS(String) CMSGFunction::RemoveQuote(CString(#String))
 #include "HeaderPre.h"
 //namespace lib
 //{
@@ -13,6 +14,7 @@
 		static void Reset();
 		static void Clear();
 		static CString GetValue(LPCTSTR lpszID);
+		static CString RemoveQuote(LPCTSTR lpszStr);
 	};
 //}
 #include "HeaderPost.h"
