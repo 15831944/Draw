@@ -3,8 +3,6 @@
 #include "DataMemb.h"
 #include "AttrCtrl.h"
 
-
-
 CAttrCtrl::CAttrCtrl(CDBDoc* pDoc)
 {
 	m_pDoc = pDoc;
@@ -17,7 +15,7 @@ CAttrCtrl::~CAttrCtrl()
 
 void CAttrCtrl::initialize()
 {
-	m_pDataMemb = m_pDoc->m_memb;
+	//m_pDataMemb = m_pDoc->m_memb;
 }
 
 T_MATL_K CAttrCtrl::GetStartNumMatl()

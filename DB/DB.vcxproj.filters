@@ -8,7 +8,7 @@
       <Filter>03 db control\03 attribute ctrl</Filter>
     </ClCompile>
     <ClCompile Include="DataMemb.cpp">
-      <Filter>03 db control\data member</Filter>
+      <Filter>03 db control\member</Filter>
     </ClCompile>
     <ClCompile Include="DB_MATL.cpp">
       <Filter>05 data</Filter>
@@ -40,6 +40,15 @@
     <ClCompile Include="MatlDB.cpp">
       <Filter>06 DBase</Filter>
     </ClCompile>
+    <ClCompile Include="DataCtrl.cpp">
+      <Filter>03 db control\02 data ctrl</Filter>
+    </ClCompile>
+    <ClCompile Include="EditData.cpp">
+      <Filter>03 db control\01 editdata</Filter>
+    </ClCompile>
+    <ClCompile Include="UndoCtrl.cpp">
+      <Filter>03 db control\undo/redo</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DBDoc.h">
@@ -55,7 +64,7 @@
       <Filter>03 db control\03 attribute ctrl</Filter>
     </ClInclude>
     <ClInclude Include="DataMemb.h">
-      <Filter>03 db control\data member</Filter>
+      <Filter>03 db control\member</Filter>
     </ClInclude>
     <ClInclude Include="DB_MATL.h">
       <Filter>05 data</Filter>
@@ -102,6 +111,15 @@
     <ClInclude Include="MatlDB.h">
       <Filter>06 DBase</Filter>
     </ClInclude>
+    <ClInclude Include="DataCtrl.h">
+      <Filter>03 db control\02 data ctrl</Filter>
+    </ClInclude>
+    <ClInclude Include="EditData.h">
+      <Filter>03 db control\01 editdata</Filter>
+    </ClInclude>
+    <ClInclude Include="UndoCtrl.h">
+      <Filter>03 db control\undo/redo</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="01 Common">
@@ -125,17 +143,23 @@
     <Filter Include="04 struct\post">
       <UniqueIdentifier>{663b1aa6-51ee-4281-a750-0928e95bb26a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="03 db control\data member">
-      <UniqueIdentifier>{098990d7-6975-49ee-81f9-0137d418ed19}</UniqueIdentifier>
-    </Filter>
     <Filter Include="05 data">
       <UniqueIdentifier>{93900817-08f0-42e7-9abb-d1f0194aaf8a}</UniqueIdentifier>
     </Filter>
     <Filter Include="06 DBase">
       <UniqueIdentifier>{9cb4b076-796a-43b1-9674-640d4b343973}</UniqueIdentifier>
     </Filter>
-    <Filter Include="03 db control\01">
+    <Filter Include="03 db control\member">
+      <UniqueIdentifier>{098990d7-6975-49ee-81f9-0137d418ed19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03 db control\02 data ctrl">
+      <UniqueIdentifier>{d38137cd-5288-47d4-8809-bc9f75da7f68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03 db control\01 editdata">
       <UniqueIdentifier>{77295e6e-328c-4fbd-95e3-22e0e3291bdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03 db control\undo/redo">
+      <UniqueIdentifier>{1fa25a14-dab3-44c6-9d0c-37dbc5361761}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

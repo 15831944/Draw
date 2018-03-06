@@ -1,6 +1,5 @@
 #pragma once
 
-#include "DB_ST_DT.h"
 #include "HeaderPre.h"
 
 class CDataMemb;
@@ -11,13 +10,12 @@ class __MY_EXT_CLASS__ CAttrCtrl
 private:
 	CAttrCtrl(CDBDoc* pDoc);
 	~CAttrCtrl();
-private:
-	
-	CDataMemb* m_pDataMemb;
-	CDBDoc* m_pDoc;
 	void initialize();
-public:
+private:
 	T_MATL_K GetStartNumMatl();
+private:
+	CDBDoc * m_pDoc;
+	CDataMemb* m_pDataMemb;
 };
-
 #include "HeaderPost.h"
+

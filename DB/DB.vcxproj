@@ -131,6 +131,7 @@
     <ClInclude Include="ClassBase.h" />
     <ClInclude Include="ClassPool.h" />
     <ClInclude Include="DataBase.h" />
+    <ClInclude Include="DataCtrl.h" />
     <ClInclude Include="DataMemb.h" />
     <ClInclude Include="DataMgrInc.h" />
     <ClInclude Include="DataMgrVer.h" />
@@ -141,29 +142,34 @@
     <ClInclude Include="DB_MATL.h" />
     <ClInclude Include="DB_ST_DT.h" />
     <ClInclude Include="DB_ST_DT_MATL.h" />
+    <ClInclude Include="EditData.h" />
     <ClInclude Include="HeaderPost.h" />
     <ClInclude Include="HeaderPre.h" />
     <ClInclude Include="MatlDB.h" />
     <ClInclude Include="Observer.h" />
     <ClInclude Include="ProjInfo.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="UndoCtrl.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AttrCtrl.cpp" />
     <ClCompile Include="ClassBase.cpp" />
     <ClCompile Include="ClassPool.cpp" />
     <ClCompile Include="DataBase.cpp" />
+    <ClCompile Include="DataCtrl.cpp" />
     <ClCompile Include="DataMemb.cpp" />
     <ClCompile Include="DataObserver.cpp" />
     <ClCompile Include="DataPool.cpp" />
     <ClCompile Include="DBDoc.cpp" />
     <ClCompile Include="DBMgr.cpp" />
     <ClCompile Include="DB_MATL.cpp" />
+    <ClCompile Include="EditData.cpp" />
     <ClCompile Include="MatlDB.cpp" />
     <ClCompile Include="Observer.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="UndoCtrl.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

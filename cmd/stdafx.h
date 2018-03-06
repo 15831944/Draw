@@ -39,7 +39,7 @@
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
 #include "ProjInfo.h"
-//#include "../DB/DB_ST_DT.h"
+#include "../DB/DB_ST_DT.h"
 
 #if _DEBUG
 #define _CRTDBG_MAP_ALLOC

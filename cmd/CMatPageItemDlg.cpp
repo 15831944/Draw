@@ -5,6 +5,7 @@
 #include "resource.h"
 #include "CMatPageItemDlg.h"
 #include "../BaseLib/DlgUtil.h"
+#include "../DB/MatlDB.h"
 
 //#include "afxdialogex.h"
 
@@ -50,15 +51,17 @@ void CCMatPageItemDlg::DoDataExchange(CDataExchange* pDX)
 	CDialog::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_EDIT1, m_wndID);
 	DDX_Control(pDX, IDC_CMD_MP_ITEM_TYPE, m_wndType);
-	DDX_Control(pDX, IDC_CMD_MP_ITEM_CODE, m_wndSteelCode);
-	DDX_Control(pDX, IDC_CMD_MP_ITEM_CODE2, m_wndConcrCode);
+	DDX_Control(pDX, IDC_CMD_MP_ITEM_CODE, m_wndConcrCode);
+	DDX_Control(pDX, IDC_CMD_MP_ITEM_CODE2, m_wndSteelCode);
 	DDX_Control(pDX, IDC_CMD_FRAME, m_wndStlCodeFrame);
-	
+	DDX_Control(pDX, IDC_CMD_MP_ITEM_CBO2, m_wndSteelName);
 }
 
 
 BEGIN_MESSAGE_MAP(CCMatPageItemDlg, CDialog)
 	ON_CBN_SELCHANGE(IDC_CMD_MP_ITEM_TYPE, &CCMatPageItemDlg::OnChangeType)
+	ON_BN_CLICKED(IDOK, &CCMatPageItemDlg::OnBtnOk)
+	ON_CBN_SELCHANGE(IDC_CMD_MP_ITEM_CODE2, &CCMatPageItemDlg::OnChangeSteelCode)
 END_MESSAGE_MAP()
 
 
@@ -72,7 +75,6 @@ void CCMatPageItemDlg::OnOK()
 	CDialog::OnOK();
 }
 
-
 void CCMatPageItemDlg::OnCancel()
 {
 	// TODO: 在此添加专用代码和/或调用基类
@@ -80,12 +82,11 @@ void CCMatPageItemDlg::OnCancel()
 	CDialog::OnCancel();
 }
 
-
 BOOL CCMatPageItemDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 
-	m_Key = m_pDoc->m_pAttrCtrl->GetStartNumMatl();
+	//m_Key = m_pDoc->m_pAttrCtrl->GetStartNumMatl();
 	m_Data.initialize();
 	m_Data.Type = CCM_TYPE_STEEL;
 
@@ -130,9 +131,19 @@ void CCMatPageItemDlg::SetCode(CComboBox* pCombo, const CString & strType)
 		pCombo->AddString(aDesignCodeList[i]);
 }
 
+void CCMatPageItemDlg::SetNameCombo(CComboBox* pCombo, const CString& strType, const CString& csCode)
+{
+	pCombo->ResetContent();
+	CArray<CString, CString&> aNameList;
+	if (strType == CCM_TYPE_STEEL)
+		m_pDoc->m_pMatlDB->GetSteelNameList(csCode, aNameList);
+	for (int i = 0; i < aNameList.GetSize(); i++)
+		pCombo->AddString(aNameList[i]);
+}
+
 void CCMatPageItemDlg::SetSteelCode(int nTypeIndex)
 {
-	if (nTypeIndex == CCM_TYPE_STEEL_I || nTypeIndex == CCM_TYPE_SRC_I)SetCode(&m_wndConcrCode, CCM_TYPE_STEEL);
+	if (nTypeIndex == CCM_TYPE_STEEL_I || nTypeIndex == CCM_TYPE_SRC_I)SetCode(&m_wndSteelCode, CCM_TYPE_STEEL);
 	else if (nTypeIndex == CCM_TYPE_ALUMI_I)SetCode(&m_wndConcrCode, CCM_TYPE_ALUMNI);
 	else if (nTypeIndex == CCM_TYPE_USER_I)SetCode(&m_wndConcrCode, CCM_TYPE_USER);
 	else if (nTypeIndex == CCM_TYPE_CONCR_I)m_wndSteelCode.ResetContent();
@@ -227,7 +238,6 @@ CString CCMatPageItemDlg::GetTypeCode(int nTypeIndex) const
 	return  _T("");
 }
 
-
 void CCMatPageItemDlg::OnChangeType()
 {
 	DWORD dwType;
@@ -236,4 +246,17 @@ void CCMatPageItemDlg::OnChangeType()
 	ChangeBitmap(nTypeIndex);
 	m_Data.Type = GetTypeCode(nTypeIndex);
 	ShowDataToDlg();
+}
+
+void CCMatPageItemDlg::OnBtnOk()
+{
+
+	CDialog::OnOK();
+}
+
+void CCMatPageItemDlg::OnChangeSteelCode()
+{
+	CString csCode;
+	m_wndSteelCode.GetWindowText(csCode);
+	SetNameCombo(&m_wndSteelName, m_Data.Type, csCode);
 }

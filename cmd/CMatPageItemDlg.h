@@ -32,6 +32,7 @@ private:
 	void ShowDataToDlg();
 	void SetTypeCombo();
 	void SetCode(CComboBox* pCombo, const CString& strType);
+	void SetNameCombo(CComboBox* pCombo, const CString& strType, const CString& strCode);
 	void SetSteelCode(int nTypeIndex);
 	void SetConcrCode(int nTypeIndex);
 	void SetFrameName(int nTypeIndex);
@@ -50,5 +51,9 @@ private:
 	CComboBox m_wndType;
 	CComboBox m_wndSteelCode;
 	CComboBox m_wndConcrCode;
+	CComboBox m_wndSteelName;
 	CArray<UINT, UINT> m_aCtrlThermalSteel, m_aCtrlThermalConc;
+public:
+	afx_msg void OnBtnOk();
+	afx_msg void OnChangeSteelCode();
 };
