@@ -43,6 +43,7 @@ private:
 	CString GetTypeCode(int nTypeIndex)const;
 private:
 	CEdit m_wndID;
+	CEdit m_wndName;
 public:
 	afx_msg void OnChangeType();
 	
@@ -56,4 +57,8 @@ private:
 public:
 	afx_msg void OnBtnOk();
 	afx_msg void OnChangeSteelCode();
+	afx_msg void OnChangeSteelName();
+	afx_msg void OnChangeName();
+	
+	
 };

@@ -10,9 +10,6 @@
     <ClCompile Include="DataMemb.cpp">
       <Filter>03 db control\member</Filter>
     </ClCompile>
-    <ClCompile Include="DB_MATL.cpp">
-      <Filter>05 data</Filter>
-    </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>01 Common</Filter>
     </ClCompile>
@@ -49,25 +46,25 @@
     <ClCompile Include="UndoCtrl.cpp">
       <Filter>03 db control\undo/redo</Filter>
     </ClCompile>
+    <ClCompile Include="ViewBuff.cpp">
+      <Filter>03 db control\view</Filter>
+    </ClCompile>
+    <ClCompile Include="UndoRedo.cpp">
+      <Filter>03 db control\undo/redo</Filter>
+    </ClCompile>
+    <ClCompile Include="DB_MATL.cpp">
+      <Filter>05 data\Property</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DBDoc.h">
       <Filter>03 db control\00 DB interface</Filter>
-    </ClInclude>
-    <ClInclude Include="DB_ST_DT_MATL.h">
-      <Filter>04 struct\post</Filter>
-    </ClInclude>
-    <ClInclude Include="DB_ST_DT.h">
-      <Filter>04 struct\post</Filter>
     </ClInclude>
     <ClInclude Include="AttrCtrl.h">
       <Filter>03 db control\03 attribute ctrl</Filter>
     </ClInclude>
     <ClInclude Include="DataMemb.h">
       <Filter>03 db control\member</Filter>
-    </ClInclude>
-    <ClInclude Include="DB_MATL.h">
-      <Filter>05 data</Filter>
     </ClInclude>
     <ClInclude Include="DataMgrInc.h">
       <Filter>01 Common</Filter>
@@ -120,6 +117,27 @@
     <ClInclude Include="UndoCtrl.h">
       <Filter>03 db control\undo/redo</Filter>
     </ClInclude>
+    <ClInclude Include="ViewBuff.h">
+      <Filter>03 db control\view</Filter>
+    </ClInclude>
+    <ClInclude Include="UndoRedo.h">
+      <Filter>03 db control\undo/redo</Filter>
+    </ClInclude>
+    <ClInclude Include="DB_ST_DT_MATL.h">
+      <Filter>04 struct</Filter>
+    </ClInclude>
+    <ClInclude Include="DB_ST_DT.h">
+      <Filter>04 struct</Filter>
+    </ClInclude>
+    <ClInclude Include="DB_ST_DT_CMD.h">
+      <Filter>04 struct</Filter>
+    </ClInclude>
+    <ClInclude Include="DB_MATL.h">
+      <Filter>05 data\Property</Filter>
+    </ClInclude>
+    <ClInclude Include="DB_MATLU.h">
+      <Filter>05 data\Property</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="01 Common">
@@ -160,6 +178,12 @@
     </Filter>
     <Filter Include="03 db control\undo/redo">
       <UniqueIdentifier>{1fa25a14-dab3-44c6-9d0c-37dbc5361761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03 db control\view">
+      <UniqueIdentifier>{6b5c2850-6981-474a-b1db-947a603bd2ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05 data\Property">
+      <UniqueIdentifier>{f781dd52-41b7-4040-9ce1-a8d907315414}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

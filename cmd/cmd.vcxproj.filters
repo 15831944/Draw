@@ -17,15 +17,15 @@
     <Filter Include="00 common base">
       <UniqueIdentifier>{bcc2fd76-03d0-454a-9386-4e34aa88ebf8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02 Properties\02 Section">
+      <UniqueIdentifier>{f8bf6215-7537-428b-bf6d-e834efb92923}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMPropertiesDlg.h">
       <Filter>02 Properties\01 Material</Filter>
     </ClInclude>
     <ClInclude Include="CMaterialPage.h">
-      <Filter>02 Properties\01 Material</Filter>
-    </ClInclude>
-    <ClInclude Include="CMSectionPage.h">
       <Filter>02 Properties\01 Material</Filter>
     </ClInclude>
     <ClInclude Include="CMatPageItemDlg.h">
@@ -55,15 +55,15 @@
     <ClInclude Include="ExportFunc.h">
       <Filter>01 Common Base Files</Filter>
     </ClInclude>
+    <ClInclude Include="CMSectionPage.h">
+      <Filter>02 Properties\02 Section</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CMPropertiesDlg.cpp">
       <Filter>02 Properties\01 Material</Filter>
     </ClCompile>
     <ClCompile Include="CMaterialPage.cpp">
-      <Filter>02 Properties\01 Material</Filter>
-    </ClCompile>
-    <ClCompile Include="CMSectionPage.cpp">
       <Filter>02 Properties\01 Material</Filter>
     </ClCompile>
     <ClCompile Include="CMatPageItemDlg.cpp">
@@ -80,6 +80,9 @@
     </ClCompile>
     <ClCompile Include="ExportFunc.cpp">
       <Filter>01 Common Base Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSectionPage.cpp">
+      <Filter>02 Properties\02 Section</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

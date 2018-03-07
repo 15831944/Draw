@@ -3,6 +3,7 @@
 
 class CDBDoc;
 class CDataMemb;
+class CUndoCtrl;
 class __MY_EXT_CLASS__ CEditData
 {
 	friend class CDBDoc;
@@ -17,6 +18,7 @@ private:
 private:
 	CDBDoc * m_pDoc;
 	CDataMemb* m_pDataMemb;
+	CUndoCtrl* m_pUndoCtrl;
 };
 
 

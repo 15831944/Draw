@@ -6,7 +6,8 @@
 #include "CMatPageItemDlg.h"
 #include "../BaseLib/DlgUtil.h"
 #include "../DB/MatlDB.h"
-
+#include "../DB/DataCtrl.h"
+#include "../DB/AttrCtrl.h"
 //#include "afxdialogex.h"
 
 #define CCM_TYPE_STEEL  _ULS(S)
@@ -55,6 +56,7 @@ void CCMatPageItemDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CMD_MP_ITEM_CODE2, m_wndSteelCode);
 	DDX_Control(pDX, IDC_CMD_FRAME, m_wndStlCodeFrame);
 	DDX_Control(pDX, IDC_CMD_MP_ITEM_CBO2, m_wndSteelName);
+	DDX_Control(pDX, IDC_EDIT2, m_wndName);
 }
 
 
@@ -62,6 +64,8 @@ BEGIN_MESSAGE_MAP(CCMatPageItemDlg, CDialog)
 	ON_CBN_SELCHANGE(IDC_CMD_MP_ITEM_TYPE, &CCMatPageItemDlg::OnChangeType)
 	ON_BN_CLICKED(IDOK, &CCMatPageItemDlg::OnBtnOk)
 	ON_CBN_SELCHANGE(IDC_CMD_MP_ITEM_CODE2, &CCMatPageItemDlg::OnChangeSteelCode)
+	ON_EN_CHANGE(IDC_EDIT2, &CCMatPageItemDlg::OnChangeName)
+	ON_CBN_SELCHANGE(IDC_CMD_MP_ITEM_CBO2, &CCMatPageItemDlg::OnChangeSteelName)
 END_MESSAGE_MAP()
 
 
@@ -70,8 +74,7 @@ END_MESSAGE_MAP()
 
 void CCMatPageItemDlg::OnOK()
 {
-	// TODO: 在此添加专用代码和/或调用基类
-
+	if (!m_pDoc->m_pDataCtrl->AddMatl(m_Key, m_Data))return;
 	CDialog::OnOK();
 }
 
@@ -86,7 +89,7 @@ BOOL CCMatPageItemDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 
-	//m_Key = m_pDoc->m_pAttrCtrl->GetStartNumMatl();
+	m_Key = m_pDoc->m_pAttrCtrl->GetStartNumMatl();
 	m_Data.initialize();
 	m_Data.Type = CCM_TYPE_STEEL;
 
@@ -250,7 +253,7 @@ void CCMatPageItemDlg::OnChangeType()
 
 void CCMatPageItemDlg::OnBtnOk()
 {
-
+	m_pDoc->m_pDataCtrl->AddMatl(m_Key, m_Data);
 	CDialog::OnOK();
 }
 
@@ -258,5 +261,23 @@ void CCMatPageItemDlg::OnChangeSteelCode()
 {
 	CString csCode;
 	m_wndSteelCode.GetWindowText(csCode);
+	m_Data.Data1.CodeName = csCode;
 	SetNameCombo(&m_wndSteelName, m_Data.Type, csCode);
 }
+
+void CCMatPageItemDlg::OnChangeSteelName()
+{
+	CString csName;
+	m_wndSteelName.GetWindowText(csName);
+	m_Data.Data1.CodeMatlName = csName;
+}
+
+
+void CCMatPageItemDlg::OnChangeName()
+{
+	CString csName;
+	m_wndName.GetWindowText(csName);
+	m_Data.Name = csName;
+}
+
+

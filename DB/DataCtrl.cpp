@@ -21,7 +21,7 @@ BOOL CDataCtrl::EndEdit(BOOL bEnd /* = TRUE */)
 {
 	if (bEnd)
 		m_pUndoCtrl->CloseEditDB();
-	return FALSE;
+	return TRUE;
 }
 
 BOOL CDataCtrl::AddMatl(T_MATL_K Key, const T_MATL_D& rData)
@@ -40,9 +40,9 @@ BOOL CDataCtrl::AddMatl(CArray<T_MATL_K, T_MATL_K>& rKey, CArray<T_MATL_D, const
 	ASSERT(nCount == rData.GetSize());
 	for (int i = 0; i < nCount; i++)
 	{
-		if (m_pEditData->AddMatl(rKey[i], rData[i]))
+		if (!m_pEditData->AddMatl(rKey[i], rData[i]))
 			return FALSE;
 	}
-	return TRUE;
+	return EndEdit();
 }
 

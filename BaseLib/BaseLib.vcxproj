@@ -198,8 +198,11 @@
     <ClCompile Include="02Base\Rectangle.cpp" />
     <ClCompile Include="BaseDialog.cpp" />
     <ClCompile Include="BaseLib.cpp" />
+    <ClCompile Include="CompFunc.cpp" />
     <ClCompile Include="DlgTabCtrl.cpp" />
     <ClCompile Include="DlgUtil.cpp" />
+    <ClCompile Include="DocBase.cpp" />
+    <ClCompile Include="ModelessDlgCtrl.cpp" />
     <ClCompile Include="MSGFunction.cpp" />
     <ClCompile Include="MSGInfo.cpp" />
     <ClCompile Include="MSGParser.cpp" />
@@ -221,8 +224,11 @@
     <ClInclude Include="BaseDialog.h" />
     <ClInclude Include="BaseDlg.h" />
     <ClInclude Include="BaseLib.h" />
+    <ClInclude Include="CompFunc.h" />
     <ClInclude Include="DlgTabCtrl.h" />
     <ClInclude Include="DlgUtil.h" />
+    <ClInclude Include="DocBase.h" />
+    <ClInclude Include="ModelessDlgCtrl.h" />
     <ClInclude Include="MSGFunction.h" />
     <ClInclude Include="MSGInfo.h" />
     <ClInclude Include="MSGParser.h" />

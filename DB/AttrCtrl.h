@@ -12,10 +12,14 @@ private:
 	~CAttrCtrl();
 	void initialize();
 private:
-	T_MATL_K GetStartNumMatl();
-private:
 	CDBDoc * m_pDoc;
 	CDataMemb* m_pDataMemb;
+public:
+	T_MATL_K GetStartNumMatl();
+	int GetCountMatl();
+	POSITION GetStartMatl();
+	void GetNextMatl(POSITION& rNextPostion, T_MATL_K& Key, T_MATL_D& rData);
+	BOOL GetMatl(T_MATL_K Key, T_MATL_D& rData);
 };
 #include "HeaderPost.h"
 

@@ -35,6 +35,7 @@ private:
 	CCMSectionPage * m_pSection;
 	int m_nActivePage = 0;
 	virtual BOOL OnInitDialog();
+	virtual void OnUpdate(CWnd* pSender, LPARAM lParam, CObject* pHint);
 };
 #include "HeaderPost.h"
 #include "afxcmn.h"

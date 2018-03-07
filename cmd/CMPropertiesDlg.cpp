@@ -54,3 +54,17 @@ BOOL CCMPropertiesDlg::OnInitDialog()
 	m_wndTab.ShowTab(m_nActivePage);
 	return TRUE; 
 }
+
+void CCMPropertiesDlg::OnUpdate(CWnd* pSender, LPARAM lParam, CObject* pHint)
+{
+	switch (lParam)
+	{
+	case D_UPDATE_BUFFER_AFTER:
+	case D_UPDATE_BUFFER_BEFFORE:
+		break;
+	default:
+		break;
+	}
+	m_pMaterial->OnUpdate();
+	m_pSection->OnUpdate();
+}

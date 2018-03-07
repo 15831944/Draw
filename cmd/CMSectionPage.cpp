@@ -32,3 +32,7 @@ END_MESSAGE_MAP()
 
 
 // CCMSectionPage 消息处理程序
+void CCMSectionPage::OnUpdate()
+{
+
+}

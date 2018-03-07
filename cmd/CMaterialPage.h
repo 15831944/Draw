@@ -25,9 +25,16 @@ protected:
 private:
 	CListCtrl m_List;
 	CDBDoc* m_pDoc;
+private:
+	void InsertItem(T_MATL_K Key, const T_MATL_D& rData);
 public:
 	afx_msg void OnNMDblclkCmdMpMatList(NMHDR *pNMHDR, LRESULT *pResult);
 	afx_msg void OnModify();
 	afx_msg void OnAdd();
 	afx_msg void OnDelete();
+	void OnUpdate();
+	void SetHeaderTitle(BOOL bInit = TRUE);
+	void MakeItemEx();
+	virtual BOOL OnInitDialog();
+	CString DataToStr(int i, T_MATL_K Key, const T_MATL_D& rData);
 };

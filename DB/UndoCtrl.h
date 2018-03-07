@@ -9,6 +9,7 @@ private:
 	void initialize();
 public:
 	void CloseEditDB();
+	void AddUndoMatl(int nCmd, T_MATL_K Key, T_MATL_D& rData);
 private:
 	CDBDoc * m_pDoc;
 };

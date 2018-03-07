@@ -48,6 +48,7 @@
 #endif
 typedef UINT T_KEY;
 
+#include "../BaseLib/BaseLibVer.h"
 
 
 

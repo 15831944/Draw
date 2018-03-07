@@ -23,18 +23,24 @@ struct T_MATL_STEEL
 };
 struct T_MATL_ALL
 {
-	CString CodeName;
+	CString CodeName;//¹æ·¶
+	CString CodeMatlName;//Êý¾Ý¿â
 	void Initial()
 	{
 		CodeName.Empty();
+		CodeMatlName.Empty();
 	}
 };
 struct T_MATL_D
 {
 	CString Type;
+	CString Name;
+	T_MATL_ALL Data1;
 	void initialize()
 	{
+		Name.Empty();
 		Type.Empty();
+		Data1.Initial();
 	}
 };
 
@@ -78,5 +84,16 @@ struct T_MATD_D
 		Data1.Initial();
 	}
 };
-const int HASHSIZEMATL = 11;
+
+struct T_MATL_UDRD_D
+{
+	T_MATL_K Key;
+	T_MATL_D data;
+};
+struct T_MATD_UDRD_D
+{
+	T_MATL_K Key;
+	T_MATD_D data;
+};
 #pragma pack(pop)
+const int HASHSIZEMATL = 11;

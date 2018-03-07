@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -20,10 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{EFF7B9D1-2028-48C6-B07E-59B7A3B07279}</ProjectGuid>
-    <RootNamespace>DataMgr</RootNamespace>
+    <ProjectGuid>{A5E3D6DF-C028-4C5E-87C6-90AF1D405E00}</ProjectGuid>
+    <RootNamespace>msg</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
-    <ProjectName>DB</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -40,11 +39,10 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -71,12 +69,8 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)\..\bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)\..\tmp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <TargetName>$(ProjectName)d</TargetName>
-  </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
@@ -84,19 +78,13 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <PreprocessorDefinitions>_AFXEXT;WIN32;_WINDOWS;_DEBUG;_USRDLL;_x64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <Link>
-      <ImportLibrary>..\..\lib\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
-    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -127,55 +115,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AttrCtrl.h" />
-    <ClInclude Include="ClassBase.h" />
-    <ClInclude Include="ClassPool.h" />
-    <ClInclude Include="DataBase.h" />
-    <ClInclude Include="DataCtrl.h" />
-    <ClInclude Include="DataMemb.h" />
-    <ClInclude Include="DataMgrInc.h" />
-    <ClInclude Include="DataMgrVer.h" />
-    <ClInclude Include="DataObserver.h" />
-    <ClInclude Include="DataPool.h" />
-    <ClInclude Include="DBDoc.h" />
-    <ClInclude Include="DBMgr.h" />
-    <ClInclude Include="DB_MATL.h" />
-    <ClInclude Include="DB_MATLU.h" />
-    <ClInclude Include="DB_ST_DT.h" />
-    <ClInclude Include="DB_ST_DT_CMD.h" />
-    <ClInclude Include="DB_ST_DT_MATL.h" />
-    <ClInclude Include="EditData.h" />
-    <ClInclude Include="HeaderPost.h" />
-    <ClInclude Include="HeaderPre.h" />
-    <ClInclude Include="MatlDB.h" />
-    <ClInclude Include="Observer.h" />
-    <ClInclude Include="ProjInfo.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="UndoCtrl.h" />
-    <ClInclude Include="UndoRedo.h" />
-    <ClInclude Include="ViewBuff.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="AttrCtrl.cpp" />
-    <ClCompile Include="ClassBase.cpp" />
-    <ClCompile Include="ClassPool.cpp" />
-    <ClCompile Include="DataBase.cpp" />
-    <ClCompile Include="DataCtrl.cpp" />
-    <ClCompile Include="DataMemb.cpp" />
-    <ClCompile Include="DataObserver.cpp" />
-    <ClCompile Include="DataPool.cpp" />
-    <ClCompile Include="DBDoc.cpp" />
-    <ClCompile Include="DBMgr.cpp" />
-    <ClCompile Include="DB_MATL.cpp" />
-    <ClCompile Include="EditData.cpp" />
-    <ClCompile Include="MatlDB.cpp" />
-    <ClCompile Include="Observer.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="UndoCtrl.cpp" />
-    <ClCompile Include="UndoRedo.cpp" />
-    <ClCompile Include="ViewBuff.cpp" />
+    <None Include="..\..\bin\x64\Debug\Language\BaseLib.ini" />
+    <None Include="..\..\bin\x64\Debug\Language\ctrl_cmd.ini" />
+    <None Include="..\..\bin\x64\Debug\Language\ctrl_DRAW.ini" />
+    <None Include="..\..\bin\x64\Debug\Language\ctrl_TEST.ini" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
