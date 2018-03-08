@@ -21,6 +21,8 @@ void CUndoCtrl::CloseEditDB()
 {
 	//m_pDoc->UpdateViews(D_UPDATE_BUFFER_BEFFORE);
 	m_pDoc->UpdateViews(D_UPDATE_BUFFER_AFTER);
+	m_pDoc->DoUndoOnly();
+
 }
 
 void CUndoCtrl::AddUndoMatl(int nCmd, T_MATL_K Key, T_MATL_D& rData)
@@ -30,4 +32,9 @@ void CUndoCtrl::AddUndoMatl(int nCmd, T_MATL_K Key, T_MATL_D& rData)
 	data_ur.Key = Key;
 	data_ur.data = rData;
 	pvMemb->Add(m_pDoc->m_vbuff->AddBuffer(UR_MATL_ADD), data_ur);
+}
+
+void CUndoCtrl::UndoRedo(CUndoRedo* pViewbf)
+{
+	pViewbf->ClearBuffer();
 }

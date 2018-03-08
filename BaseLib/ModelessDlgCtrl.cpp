@@ -17,6 +17,18 @@ void CModelessDlgCtrl::Add(UINT nIDTemplate, CDialog* pDlg)
 	m_aDlgList.Add(tmp);
 }
 
+void CModelessDlgCtrl::Remove(CDialog* pDlg)
+{
+	for (int i = 0; i < m_aDlgList.GetSize(); i++)
+	{
+		if (m_aDlgList.GetAt(i).pDlg == pDlg)
+		{
+			m_aDlgList.RemoveAt(i);
+			return;
+		}
+	}
+}
+
 void CModelessDlgCtrl::UpdateAllDlgs(CWnd* pWnd, LPARAM lHint, CObject* pHint)
 {
 	if (m_aDlgList.GetSize() <= 0)return;

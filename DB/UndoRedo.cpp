@@ -28,3 +28,9 @@ int CUndoRedo::AddBuffer(int nCmd)
 	m_uridx.AddTail(m_idx);
 	return m_nBuffer;
 }
+
+void CUndoRedo::ClearBuffer()
+{
+	m_uridx.RemoveAll();
+	m_urbuf.RemoveAll();
+}

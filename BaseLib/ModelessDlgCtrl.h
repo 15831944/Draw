@@ -17,6 +17,7 @@ public:
 	CModelessDlgCtrl();
 	~CModelessDlgCtrl();
 	void Add(UINT nIDTemplate, CDialog* pDlg);
+	void Remove(CDialog* pDlg);
 	void UpdateAllDlgs(CWnd* pWnd, LPARAM lHint, CObject* pHint);
 private:
 	CArray<SDlgCtrlNode, SDlgCtrlNode&>m_aDlgList;

@@ -54,3 +54,8 @@ void CDBDoc::UpdateAllViews(CView* pSender, LPARAM lHint, CObject* pHint)
 	m_pDlgCtrl->UpdateAllDlgs(NULL, lHint, NULL);
 	CDocBase::UpdateAllViews(pSender, lHint, pHint);
 }
+
+void CDBDoc::DoUndoOnly()
+{
+	m_pUndoCtrl->UndoRedo(m_vbuff);
+}

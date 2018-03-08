@@ -15,8 +15,9 @@ CCMDlgBase::~CCMDlgBase()
 
 
 BEGIN_MESSAGE_MAP(CCMDlgBase, CDialog)
-	
+	ON_WM_SYSCOMMAND()
 	ON_MESSAGE(WM_UPDATE_MODELESS_DLG, &CCMDlgBase::OnUpdateDlg)
+
 END_MESSAGE_MAP()
 
 BOOL CCMDlgBase::Create(UINT nIDTemplate, CWnd* pParentWnd)
@@ -32,15 +33,26 @@ BOOL CCMDlgBase::Create(UINT nIDTemplate, CWnd* pParentWnd)
 	return bResult;
 }
 
-
-void CCMDlgBase::PostNcDestroy()
-{
-	delete this;
-}
-
 void CCMDlgBase::OnUpdate(CWnd* pSender, LPARAM lParam, CObject* pHint)
 {
 	//virtual;override this member function
+}
+
+void CCMDlgBase::PostNcDestroy()
+{
+	m_pDoc->m_pDlgCtrl->Remove(this);
+	delete this;
+}
+
+afx_msg void CCMDlgBase::OnSysCommand(UINT nID, LPARAM lParam)
+{
+	if (nID == SC_CLOSE)
+	{
+		DestroyWindow();
+		return;
+	}
+
+	CDialog::OnSysCommand(nID, lParam);
 }
 
 afx_msg LRESULT CCMDlgBase::OnUpdateDlg(WPARAM wParam, LPARAM lParam)

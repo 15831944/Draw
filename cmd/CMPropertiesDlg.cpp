@@ -68,3 +68,9 @@ void CCMPropertiesDlg::OnUpdate(CWnd* pSender, LPARAM lParam, CObject* pHint)
 	m_pMaterial->OnUpdate();
 	m_pSection->OnUpdate();
 }
+
+
+void CCMPropertiesDlg::OnCancel()
+{
+	DestroyWindow();
+}

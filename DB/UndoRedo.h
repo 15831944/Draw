@@ -8,6 +8,8 @@ public:
 	~CUndoRedo();
 	int GetCount()const;
 	int AddBuffer(int nCmd);
+	void ClearBuffer();
+public:
 	CList<T_UDRD_BUFFER, T_UDRD_BUFFER&>m_urbuf;
 	CDB_MATLU m_matl;
 private:
