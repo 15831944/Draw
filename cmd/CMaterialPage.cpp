@@ -75,6 +75,7 @@ void CCMaterialPage::OnModify()
 void CCMaterialPage::OnAdd()
 {
 	CCMatPageItemDlg dlg(m_pDoc);
+	dlg.SetInitPos(D_INIT_POS_RT);
 	dlg.DoModal();
 }
 

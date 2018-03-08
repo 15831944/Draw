@@ -27,7 +27,7 @@
 #define CCM_TYPE_SRC_I    2
 #define CCM_TYPE_ALUMI_I  3
 #define CCM_TYPE_USER_I   4
-
+#define CDialog CDialogMove
 IMPLEMENT_DYNAMIC(CCMatPageItemDlg, CDialog)
 
 CCMatPageItemDlg::CCMatPageItemDlg(CDBDoc* pDoc, CWnd* pParent /*=NULL*/)
@@ -55,6 +55,7 @@ void CCMatPageItemDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CMD_MP_ITEM_CODE, m_wndConcrCode);
 	DDX_Control(pDX, IDC_CMD_MP_ITEM_CODE2, m_wndSteelCode);
 	DDX_Control(pDX, IDC_CMD_FRAME, m_wndStlCodeFrame);
+	DDX_Control(pDX, IDC_CMD_MP_ITEM_CBO, m_wndConcName);
 	DDX_Control(pDX, IDC_CMD_MP_ITEM_CBO2, m_wndSteelName);
 	DDX_Control(pDX, IDC_EDIT2, m_wndName);
 }
@@ -64,6 +65,7 @@ BEGIN_MESSAGE_MAP(CCMatPageItemDlg, CDialog)
 	ON_CBN_SELCHANGE(IDC_CMD_MP_ITEM_TYPE, &CCMatPageItemDlg::OnChangeType)
 	ON_BN_CLICKED(IDOK, &CCMatPageItemDlg::OnBtnOk)
 	ON_CBN_SELCHANGE(IDC_CMD_MP_ITEM_CODE2, &CCMatPageItemDlg::OnChangeSteelCode)
+	ON_EN_CHANGE(IDC_EDIT1, &CCMatPageItemDlg::OnChangeID)
 	ON_EN_CHANGE(IDC_EDIT2, &CCMatPageItemDlg::OnChangeName)
 	ON_CBN_SELCHANGE(IDC_CMD_MP_ITEM_CBO2, &CCMatPageItemDlg::OnChangeSteelName)
 END_MESSAGE_MAP()
@@ -94,8 +96,8 @@ BOOL CCMatPageItemDlg::OnInitDialog()
 	m_Data.Type = CCM_TYPE_STEEL;
 
 	//GetDefaultCode();
+	SetAutoChangeNameFlag(m_Data.Name);
 	SetTypeCombo();
-	
 	ShowDataToDlg();
 	return TRUE;  
 }
@@ -219,6 +221,23 @@ void CCMatPageItemDlg::ChangeDlgCtrls()
 #pragma endregion 22
 }
 
+void CCMatPageItemDlg::SetAutoChangeNameFlag(CString csName)
+{
+	if (csName == _T(""))
+		m_bAutoChangeName = TRUE;
+	else
+	{
+		CString csTempSteelName, csTemtpConcName;
+		m_wndSteelName.GetWindowText(csTempSteelName);
+		m_wndConcName.GetWindowText(csTemtpConcName);
+		if(csTempSteelName == csName || csTemtpConcName == csName)
+			m_bAutoChangeName = TRUE;
+		else
+			m_bAutoChangeName = FALSE;
+	}
+		
+}
+
 int CCMatPageItemDlg::GetTypeIndex(CString strType) const
 {
 	if (strType == CCM_TYPE_STEEL) return CCM_TYPE_STEEL_I;
@@ -241,6 +260,27 @@ CString CCMatPageItemDlg::GetTypeCode(int nTypeIndex) const
 	return  _T("");
 }
 
+BOOL CCMatPageItemDlg::CheckData()
+{
+	int nId;
+	CString csName;
+	if (!m_wndID.GetEditValue(nId))
+	{
+		AfxMessageBox(_LS(IDS_WG_CMD__ADDD__Error___Invalid_material_number_));
+		return FALSE;
+	}
+
+	m_wndName.GetWindowText(csName);
+	csName.TrimLeft(); csName.TrimRight();
+	if (csName == _T(""))
+	{
+		AfxMessageBox(_LS(IDS_WG_CMD__ADDD__Error___Missing_material_name_));
+		return FALSE;
+	}
+	m_Data.Name = csName;
+	return TRUE;
+}
+
 void CCMatPageItemDlg::OnChangeType()
 {
 	DWORD dwType;
@@ -253,6 +293,7 @@ void CCMatPageItemDlg::OnChangeType()
 
 void CCMatPageItemDlg::OnBtnOk()
 {
+	if (!CheckData())return;
 	m_pDoc->m_pDataCtrl->AddMatl(m_Key, m_Data);
 	CDialog::OnOK();
 }
@@ -270,14 +311,26 @@ void CCMatPageItemDlg::OnChangeSteelName()
 	CString csName;
 	m_wndSteelName.GetWindowText(csName);
 	m_Data.Data1.CodeMatlName = csName;
+	if (m_bAutoChangeName)
+	{
+		m_Data.Name = csName;
+		m_wndName.SetWindowText(csName);
+	}
 }
 
+void CCMatPageItemDlg::OnChangeID()
+{
+	int nId;
+	if (m_wndID.GetEditValue(nId))
+		m_Key = nId;
+}
 
 void CCMatPageItemDlg::OnChangeName()
 {
 	CString csName;
 	m_wndName.GetWindowText(csName);
-	m_Data.Name = csName;
+	//m_Data.Name = csName;
+	SetAutoChangeNameFlag(csName);
 }
 
 

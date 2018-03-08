@@ -1,8 +1,8 @@
 #pragma once
 #include "../DB/DBdoc.h"
 #include "afxwin.h"
-
-class CCMatPageItemDlg : public CDialog
+#include "../BaseLib/base_ControlEx.h"
+class CCMatPageItemDlg : public CDialogMove
 {
 	DECLARE_DYNAMIC(CCMatPageItemDlg)
 
@@ -38,26 +38,29 @@ private:
 	void SetFrameName(int nTypeIndex);
 	void ChangeBitmap(int nBitmap);
 	void ChangeDlgCtrls();
-
+	void SetAutoChangeNameFlag(CString csName);
 	int GetTypeIndex(CString strType)const;
 	CString GetTypeCode(int nTypeIndex)const;
 private:
-	CEdit m_wndID;
-	CEdit m_wndName;
-public:
-	afx_msg void OnChangeType();
-	
+	CFormulaEdit m_wndID;
+	CFormulaEdit m_wndName;
 private:
+	BOOL m_bAutoChangeName;
 	CStatic m_wndStlCodeFrame;
 	CComboBox m_wndType;
 	CComboBox m_wndSteelCode;
 	CComboBox m_wndConcrCode;
+	CComboBox m_wndConcName;
 	CComboBox m_wndSteelName;
 	CArray<UINT, UINT> m_aCtrlThermalSteel, m_aCtrlThermalConc;
+private:
+	BOOL CheckData();
 public:
+	afx_msg void OnChangeType();
 	afx_msg void OnBtnOk();
 	afx_msg void OnChangeSteelCode();
 	afx_msg void OnChangeSteelName();
+	afx_msg void OnChangeID();
 	afx_msg void OnChangeName();
 	
 	

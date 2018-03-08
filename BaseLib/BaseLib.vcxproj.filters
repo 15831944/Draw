@@ -5,9 +5,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Common">
-      <UniqueIdentifier>{e2bb4b63-60d8-4173-bb20-b175d2a42e6f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01 Dlg">
       <UniqueIdentifier>{a1c46e17-4be7-442a-962e-6cc1a6317d5f}</UniqueIdentifier>
     </Filter>
@@ -25,6 +22,15 @@
     </Filter>
     <Filter Include="02 Base\PrintPreview">
       <UniqueIdentifier>{ddcfa149-2926-4816-bb70-cc5a21fd0170}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{e2bb4b63-60d8-4173-bb20-b175d2a42e6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="wg_base">
+      <UniqueIdentifier>{35d9fd3a-d933-4d2b-9391-a7fef8dadee3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ParserLib">
+      <UniqueIdentifier>{15ea91d1-f498-4a18-a2f2-033edcd23e65}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +84,18 @@
     </ClCompile>
     <ClCompile Include="CompFunc.cpp">
       <Filter>03 UtilLib</Filter>
+    </ClCompile>
+    <ClCompile Include="SpinBtnExCtrl.cpp">
+      <Filter>03 UtilLib</Filter>
+    </ClCompile>
+    <ClCompile Include="PL_Parser.cpp">
+      <Filter>ParserLib</Filter>
+    </ClCompile>
+    <ClCompile Include="PL_symbolTable.cpp">
+      <Filter>ParserLib</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogMove.cpp">
+      <Filter>01 Dlg</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +173,21 @@
     </ClInclude>
     <ClInclude Include="CompFunc.h">
       <Filter>03 UtilLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SpinBtnExCtrl.h">
+      <Filter>03 UtilLib</Filter>
+    </ClInclude>
+    <ClInclude Include="base_ControlEx.h">
+      <Filter>wg_base</Filter>
+    </ClInclude>
+    <ClInclude Include="PL_Parser.h">
+      <Filter>ParserLib</Filter>
+    </ClInclude>
+    <ClInclude Include="PL_SymbolTable.h">
+      <Filter>ParserLib</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogMove.h">
+      <Filter>01 Dlg</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

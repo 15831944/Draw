@@ -199,6 +199,7 @@
     <ClCompile Include="BaseDialog.cpp" />
     <ClCompile Include="BaseLib.cpp" />
     <ClCompile Include="CompFunc.cpp" />
+    <ClCompile Include="DialogMove.cpp" />
     <ClCompile Include="DlgTabCtrl.cpp" />
     <ClCompile Include="DlgUtil.cpp" />
     <ClCompile Include="DocBase.cpp" />
@@ -206,6 +207,9 @@
     <ClCompile Include="MSGFunction.cpp" />
     <ClCompile Include="MSGInfo.cpp" />
     <ClCompile Include="MSGParser.cpp" />
+    <ClCompile Include="PL_Parser.cpp" />
+    <ClCompile Include="PL_symbolTable.cpp" />
+    <ClCompile Include="SpinBtnExCtrl.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -224,7 +228,9 @@
     <ClInclude Include="BaseDialog.h" />
     <ClInclude Include="BaseDlg.h" />
     <ClInclude Include="BaseLib.h" />
+    <ClInclude Include="base_ControlEx.h" />
     <ClInclude Include="CompFunc.h" />
+    <ClInclude Include="DialogMove.h" />
     <ClInclude Include="DlgTabCtrl.h" />
     <ClInclude Include="DlgUtil.h" />
     <ClInclude Include="DocBase.h" />
@@ -234,8 +240,11 @@
     <ClInclude Include="MSGParser.h" />
     <ClInclude Include="HeaderPost.h" />
     <ClInclude Include="HeaderPre.h" />
+    <ClInclude Include="PL_Parser.h" />
+    <ClInclude Include="PL_SymbolTable.h" />
     <ClInclude Include="ProjInfo.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="SpinBtnExCtrl.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="BaseLibVer.h" />

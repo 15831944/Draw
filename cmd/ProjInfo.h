@@ -3,3 +3,4 @@
 
 
 #include "../BaseLib/DlgTabCtrl.h"
+#include "../BaseLib/DialogMove.h"
