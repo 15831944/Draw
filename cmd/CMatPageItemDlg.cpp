@@ -65,6 +65,7 @@ BEGIN_MESSAGE_MAP(CCMatPageItemDlg, CDialog)
 	ON_CBN_SELCHANGE(IDC_CMD_MP_ITEM_TYPE, &CCMatPageItemDlg::OnChangeType)
 	ON_BN_CLICKED(IDOK, &CCMatPageItemDlg::OnBtnOk)
 	ON_CBN_SELCHANGE(IDC_CMD_MP_ITEM_CODE2, &CCMatPageItemDlg::OnChangeSteelCode)
+	ON_CBN_SELCHANGE(IDC_CMD_MP_ITEM_CODE, &CCMatPageItemDlg::OnChangeConcrCode)
 	ON_EN_CHANGE(IDC_EDIT1, &CCMatPageItemDlg::OnChangeID)
 	ON_EN_CHANGE(IDC_EDIT2, &CCMatPageItemDlg::OnChangeName)
 	ON_CBN_SELCHANGE(IDC_CMD_MP_ITEM_CBO2, &CCMatPageItemDlg::OnChangeSteelName)
@@ -190,6 +191,8 @@ void CCMatPageItemDlg::ChangeDlgCtrls()
 	SetFrameName(nTypeIndex);
 	SetConcrCode(nTypeIndex);
 	SetSteelCode(nTypeIndex);
+	SetNameCombo(&m_wndSteelName, m_Data.Type, m_Data.Data1.CodeName);
+	SetNameCombo(&m_wndConcName, m_Data.Type, m_Data.Data1.CodeName);
 	BOOL bThermalSteel = FALSE;
 	BOOL bThermalConc = FALSE;
 	if (nTypeIndex == CCM_TYPE_STEEL_I)
@@ -278,6 +281,7 @@ BOOL CCMatPageItemDlg::CheckData()
 		return FALSE;
 	}
 	m_Data.Name = csName;
+
 	return TRUE;
 }
 
@@ -304,6 +308,14 @@ void CCMatPageItemDlg::OnChangeSteelCode()
 	m_wndSteelCode.GetWindowText(csCode);
 	m_Data.Data1.CodeName = csCode;
 	SetNameCombo(&m_wndSteelName, m_Data.Type, csCode);
+}
+
+void CCMatPageItemDlg::OnChangeConcrCode()
+{
+	CString csCode;
+	m_wndConcrCode.GetWindowText(csCode);
+	m_Data.Data1.CodeName = csCode;
+	SetNameCombo(&m_wndConcName, m_Data.Type, csCode);
 }
 
 void CCMatPageItemDlg::OnChangeSteelName()

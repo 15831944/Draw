@@ -15,8 +15,17 @@ CDB_MATL::~CDB_MATL()
 
 void CDB_MATL::Add(T_MATL_K Key, T_MATL_D& rData)
 {
+	T_MATL_D data;
 	m_matl.SetAt(Key, rData);
-	m_nStartNum++;
+	if (Key == m_nStartNum)
+	{
+		while (1)
+		{
+			m_nStartNum++;
+			if (!Get(m_nStartNum, data))break;
+		}
+	}
+	//if (Key > m_nStartNum)m_nStartNum = Key;
 }
 
 BOOL CDB_MATL::Get(T_MATL_K Key, T_MATL_D& rData)

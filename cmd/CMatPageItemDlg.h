@@ -59,6 +59,7 @@ public:
 	afx_msg void OnChangeType();
 	afx_msg void OnBtnOk();
 	afx_msg void OnChangeSteelCode();
+	afx_msg void OnChangeConcrCode();
 	afx_msg void OnChangeSteelName();
 	afx_msg void OnChangeID();
 	afx_msg void OnChangeName();

@@ -9,7 +9,6 @@ class CCMaterialPage;
 class CCMSectionPage;
 class __MY_EXT_CLASS__ CCMPropertiesDlg : public CCMDlgBase
 {
-	//DECLARE_DYNAMIC(CCMPropertiesDlg)
 
 public:
 	CCMPropertiesDlg(CWnd* pParent = NULL);   // 标准构造函数

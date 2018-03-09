@@ -42,7 +42,7 @@ END_MESSAGE_MAP()
 void CCMaterialPage::InsertItem(T_MATL_K Key, const T_MATL_D& rData)
 {
 	const int COLCOUNT = 5;
-	LV_ITEM lvitem;
+	LVITEM lvitem;
 	CString str;
 	int ItemTemp = m_List.GetItemCount();
 	for (int i = 0; i < COLCOUNT; i++)
@@ -53,7 +53,7 @@ void CCMaterialPage::InsertItem(T_MATL_K Key, const T_MATL_D& rData)
 		lvitem.pszText = str.GetBuffer(0);
 		lvitem.mask = LVIF_TEXT;
 		if (i == 0)
-			m_List.InsertItem(&lvitem);
+			ItemTemp = m_List.InsertItem(&lvitem);
 		else
 			m_List.SetItem(&lvitem);
 		str.ReleaseBuffer();
@@ -129,12 +129,13 @@ void CCMaterialPage::SetHeaderTitle(BOOL bInit)
 	for (int i = 0; i < COLCOUNT; i++)
 	{
 		lvcolumn.mask = LVCF_FMT | LVCF_SUBITEM | LVCF_TEXT | LVCF_WIDTH;
-		/*if (i == 0)lvcolumn.fmt = LVCFMT_LEFT;
-		else */lvcolumn.fmt = LVCFMT_LEFT;
+		if (i == 0)lvcolumn.fmt = LVCFMT_RIGHT;
+		else lvcolumn.fmt = LVCFMT_LEFT;
 		lvcolumn.iSubItem = i;
 		lvcolumn.cx = nColWidth[i];
 		lvcolumn.pszText = aTitle[i].GetBuffer(0);
 		m_List.InsertColumn(i, &lvcolumn);
+		m_List.SetColumn(i, &lvcolumn);
 	}
 }
 
@@ -153,13 +154,14 @@ void CCMaterialPage::MakeItemEx()
 		m_pDoc->m_pAttrCtrl->GetNextMatl(pos, Key, Data);
 		KeyBuffer[nCount++] = Key;
 	}
-	qsort(KeyBuffer, nItemCount, sizeof(T_MATL_K), CCompFunc::UINTAsc);
+	//qsort(KeyBuffer, nItemCount, sizeof(T_MATL_K), CCompFunc::UINTAsc);
 	for (nCount = 0; nCount < nItemCount; nCount++)
 	{
 		Key = KeyBuffer[nCount];
 		m_pDoc->m_pAttrCtrl->GetMatl(Key, Data);
 		InsertItem(Key, Data);
 	}
+	delete KeyBuffer;
 }
 
 BOOL CCMaterialPage::OnInitDialog()
@@ -173,7 +175,7 @@ BOOL CCMaterialPage::OnInitDialog()
 CString CCMaterialPage::DataToStr(int i, T_MATL_K Key, const T_MATL_D& rData)
 {
 	CString str;
-	if (i == 0)str.Format(_T("%d"), Key);
+	if (i == 0)str.Format(_T("%6d"), Key);
 	else if (i == 1)str = rData.Name;
 	else if (i == 2)
 	{
