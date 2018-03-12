@@ -59,3 +59,13 @@ void CDBDoc::DoUndoOnly()
 {
 	m_pUndoCtrl->UndoRedo(m_vbuff);
 }
+
+void CDBDoc::DoRedo()
+{
+	
+}
+
+void CDBDoc::DoUndo()
+{
+	
+}

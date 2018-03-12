@@ -32,7 +32,7 @@ private:
 //private:
 	CCMaterialPage * m_pMaterial;
 	CCMSectionPage * m_pSection;
-	int m_nActivePage = 0;
+	int m_nActivePage;
 	virtual BOOL OnInitDialog();
 	virtual void OnUpdate(CWnd* pSender, LPARAM lParam, CObject* pHint);
 	virtual void OnCancel();

@@ -37,6 +37,9 @@ public:
 	void UpdateViews(LPARAM lUpdataType);
 	void UpdateAllViews(CView* pSender, LPARAM lHint, CObject* pHint = NULL);
 	void DoUndoOnly();
+protected:
+	void DoRedo();
+	void DoUndo();
 	DECLARE_MESSAGE_MAP()
 };
 #include "HeaderPost.h"
