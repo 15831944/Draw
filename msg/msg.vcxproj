@@ -77,6 +77,9 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -117,6 +120,7 @@
   <ItemGroup>
     <None Include="..\..\bin\x64\Debug\Language\BaseLib.ini" />
     <None Include="..\..\bin\x64\Debug\Language\ctrl_cmd.ini" />
+    <None Include="..\..\bin\x64\Debug\Language\ctrl_db.ini" />
     <None Include="..\..\bin\x64\Debug\Language\ctrl_DRAW.ini" />
     <None Include="..\..\bin\x64\Debug\Language\ctrl_TEST.ini" />
   </ItemGroup>

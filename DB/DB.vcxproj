@@ -91,11 +91,12 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <PreprocessorDefinitions>_AFXEXT;WIN32;_WINDOWS;_DEBUG;_USRDLL;_x64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_AFXEXT;WIN32;_WINDOWS;_DEBUG;_x64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <ImportLibrary>..\..\lib\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -169,6 +170,7 @@
     <ClCompile Include="DBDoc.cpp" />
     <ClCompile Include="DBMgr.cpp" />
     <ClCompile Include="DB_MATL.cpp" />
+    <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="EditData.cpp" />
     <ClCompile Include="MatlDB.cpp" />
     <ClCompile Include="Observer.cpp" />

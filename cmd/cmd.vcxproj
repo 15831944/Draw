@@ -88,6 +88,7 @@
       <ImportLibrary>..\..\lib\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <SubSystem>Windows</SubSystem>
       <ModuleDefinitionFile>.\cmd.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -165,4 +166,9 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="cmd.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

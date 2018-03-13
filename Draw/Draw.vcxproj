@@ -123,6 +123,7 @@
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>BaseLibd.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>../../lib/Debug/x64</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>

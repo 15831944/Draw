@@ -87,6 +87,7 @@
     <Link>
       <ImportLibrary>..\..\lib\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

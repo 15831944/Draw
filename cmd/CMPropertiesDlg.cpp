@@ -74,3 +74,4 @@ void CCMPropertiesDlg::OnCancel()
 {
 	DestroyWindow();
 }
+

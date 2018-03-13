@@ -2,11 +2,10 @@
 // Microsoft Visual C++ 生成的包含文件。
 // 供 DB.rc 使用
 //
-#define IDD_DB_UDRD_LIST_DLG            101
+#define IDD_DB_UDRD_LIST_DLG            1005
 #define IDC_LIST1                       1001
 #define IDC_DB_UDRD_BTN                 1002
 #define IDC_DB_UDRD_CANCEL              1003
-#define IDC_BUTTON3                     1004
 #define IDC_DB_UDRD_REMOVE              1004
 
 // Next default values for new objects

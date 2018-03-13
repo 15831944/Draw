@@ -11,13 +11,14 @@ public:
 	void ClearBuffer();
 public:
 	CList<T_UDRD_BUFFER, T_UDRD_BUFFER&>m_urbuf;
+	CList<T_UDRD_INDEX, T_UDRD_INDEX&>m_uridx;
 	CDB_MATLU m_matl;
 private:
 	int m_nBuffer;
 	int m_nIndex;
 	T_UDRD_INDEX m_idx;
 	T_UDRD_BUFFER m_buf;
-	CList<T_UDRD_INDEX, T_UDRD_INDEX&>m_uridx;
+
 	void IncreaseBuffer() { m_nBuffer++; }
 	void IncreaseIndex() { m_nIndex++; }
 };

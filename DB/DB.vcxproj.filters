@@ -58,6 +58,9 @@
     <ClCompile Include="UndoRedoDlg.cpp">
       <Filter>21 ui</Filter>
     </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>01 Common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DBDoc.h">

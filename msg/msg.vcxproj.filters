@@ -18,5 +18,8 @@
     <None Include="..\..\bin\x64\Debug\Language\ctrl_TEST.ini">
       <Filter>Message File</Filter>
     </None>
+    <None Include="..\..\bin\x64\Debug\Language\ctrl_db.ini">
+      <Filter>Message File</Filter>
+    </None>
   </ItemGroup>
 </Project>

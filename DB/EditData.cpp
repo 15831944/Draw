@@ -25,7 +25,10 @@ BOOL CEditData::AddMatl(T_MATL_K Key, T_MATL_D& rData)
 	T_MATL_D tempData;
 	BOOL bExist = m_pDataMemb->m_matl.Get(Key, tempData);
 	if (bExist)
+	{
+		AfxMessageBox(_LS(IDS_DB_MATL_EXIST));
 		return FALSE;
+	}
 	else
 	{
 		m_pUndoCtrl->AddUndoMatl(UR_MATL_ADD, Key, rData);

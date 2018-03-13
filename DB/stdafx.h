@@ -49,6 +49,6 @@
 typedef UINT T_KEY;
 
 #include "../BaseLib/BaseLibVer.h"
-
+#include "../BaseLib/MSGFunction.h"
 
 

@@ -32,6 +32,7 @@ void CUndoCtrl::AddUndoMatl(int nCmd, T_MATL_K Key, T_MATL_D& rData)
 	data_ur.Key = Key;
 	data_ur.data = rData;
 	pvMemb->Add(m_pDoc->m_vbuff->AddBuffer(UR_MATL_ADD), data_ur);
+	m_pDoc->m_undo->AddBuffer(UR_MATL_ADD);
 }
 
 void CUndoCtrl::UndoRedo(CUndoRedo* pViewbf)

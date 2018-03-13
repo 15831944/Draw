@@ -14,6 +14,9 @@ IMPLEMENT_DYNCREATE(CDBDoc, CDocBase)
 CDBDoc* CDBDoc::m_pDBDoc = NULL;
 CDBDoc::CDBDoc()
 {
+	m_bIsUndoRedoVisible = FALSE;
+	m_pUndoRedoDlg = 0;
+
 	m_pDBDoc = this;
 	m_undo = new CUndoRedo();
 	m_vbuff = new CUndoRedo();
@@ -43,7 +46,10 @@ BEGIN_MESSAGE_MAP(CDBDoc, CDocBase)
 
 END_MESSAGE_MAP()
 
-
+void CDBDoc::CloseUDRDVisible()
+{
+	m_bIsUndoRedoVisible = FALSE;
+}
 void CDBDoc::UpdateViews(LPARAM lUpdataType)
 {
 	UpdateAllViews(NULL, lUpdataType);

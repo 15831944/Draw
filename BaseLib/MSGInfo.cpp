@@ -2,12 +2,13 @@
 #include "MSGInfo.h"
 #include "MSGFunction.h"
 
-#define BASELIB			  _T("BaseLib")
-#define DATAMGR			  _T("DataMgr")
+#define BASELIB			_T("BaseLib")
+#define DATAMGR			_T("DataMgr")
 #define DRAW			  _T("DRAW")
 #define TEST			  _T("TEST")
 #define _CTRL			  _T("ctrl_")
 #define CMD				  _T("cmd")
+#define DB					_T("db")
 #define _INI_			  _T(".ini")
 const CString strLangRoot = _T("Language\\");
 //CMSGInfo* CMSGInfo::m_pInstance = 0;
@@ -20,6 +21,7 @@ CMSGInfo::CMSGInfo(void)
 	_file.push_back(file_vect::value_type(TEST));
 	_file.push_back(file_vect::value_type(DRAW));
 	_file.push_back(file_vect::value_type(CMD));
+	_file.push_back(file_vect::value_type(DB));
 	LoadMessage();
 }
 
