@@ -18,6 +18,7 @@ CDBDoc::CDBDoc()
 	m_pUndoRedoDlg = 0;
 
 	m_pDBDoc = this;
+	m_redo  = new CUndoRedo();
 	m_undo = new CUndoRedo();
 	m_vbuff = new CUndoRedo();
 
@@ -63,7 +64,7 @@ void CDBDoc::UpdateAllViews(CView* pSender, LPARAM lHint, CObject* pHint)
 
 void CDBDoc::DoUndoOnly()
 {
-	m_pUndoCtrl->UndoRedo(m_vbuff);
+	m_pUndoCtrl->UndoRedo(m_undo,m_vbuff);
 }
 
 void CDBDoc::DoRedo()
@@ -73,5 +74,5 @@ void CDBDoc::DoRedo()
 
 void CDBDoc::DoUndo()
 {
-	
+	m_pUndoCtrl->UndoRedo(m_undo,m_vbuff);
 }

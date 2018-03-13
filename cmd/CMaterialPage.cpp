@@ -6,6 +6,8 @@
 #include "CMaterialPage.h"
 #include "afxdialogex.h"
 #include "CMatPageItemDlg.h"
+#include "../DB/DBDoc.h"
+#include "../DB/DataCtrl.h"
 
 #include "../DB/ViewBuff.h"
 #include "../BaseLib/CompFunc.h"
@@ -59,7 +61,17 @@ void CCMaterialPage::InsertItem(T_MATL_K Key, const T_MATL_D& rData)
 		str.ReleaseBuffer();
 	}
 }
-
+void CCMaterialPage::DeleteItem(T_MATL_K Key)
+{
+	CString str;
+	str.Format(_T("%6d"),Key);
+	LVFINDINFO FindInfo;
+	FindInfo.flags = LVFI_STRING;
+	FindInfo.psz = str.GetBuffer(0);
+	int nItem = m_List.FindItem(&FindInfo);
+	if(nItem != -1)m_List.DeleteItem(nItem);
+	str.ReleaseBuffer();
+}
 // CCMaterialPage 消息处理程序
 void CCMaterialPage::OnNMDblclkCmdMpMatList(NMHDR *pNMHDR, LRESULT *pResult)
 {
@@ -81,7 +93,10 @@ void CCMaterialPage::OnAdd()
 
 void CCMaterialPage::OnDelete()
 {
-	// TODO: 在此添加控件通知处理程序代码
+	T_MATL_K Key;
+	int item = m_List.GetNextItem(-1,LVNI_ALL | LVNI_SELECTED);
+	Key = _wtol(m_List.GetItemText(item,0));
+	m_pDoc->m_pDataCtrl->DelMatl(Key);
 }
 
 void CCMaterialPage::OnUpdate()
@@ -99,11 +114,14 @@ void CCMaterialPage::OnUpdate()
 		buffer_ur = pViewBuff->GetNextBuffer(pos);
 		int nCmd = buffer_ur.nCmd;
 		int nKey = buffer_ur.nKey;
+		pViewBuff->GetMatl(nKey, Key, Data);
 		switch (nCmd)
 		{
 		case UR_MATL_ADD:
-			pViewBuff->GetMatl(nKey, Key, Data);
 			InsertItem(Key, Data);
+			break;
+		case UR_MATL_DEL:
+			DeleteItem(Key);
 			break;
 		default:
 			break;

@@ -42,3 +42,9 @@ BOOL CAttrCtrl::GetMatl(T_MATL_K Key, T_MATL_D& rData)
 {
 	return m_pDataMemb->m_matl.Get(Key, rData);
 }
+
+BOOL CAttrCtrl::ExistMatl(T_MATL_K Key)
+{
+	T_MATL_D data;
+	return m_pDataMemb->m_matl.Get(Key,data);
+}

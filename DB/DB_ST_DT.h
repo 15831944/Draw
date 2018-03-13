@@ -20,3 +20,7 @@ struct T_UDRD_BUFFER//UndoRedo
 	int nCmd;
 	int nKey;
 };
+enum
+{
+	CMDTYPE_REMOVE_ANALYSIS
+};

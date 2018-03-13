@@ -11,24 +11,26 @@ CUndoRedo::~CUndoRedo() {}
 
 int CUndoRedo::GetCount()const
 {
-	return static_cast<int>(m_uridx.GetCount());
+	return static_cast<int>(m_urbuf.GetCount());
 }
 
 int CUndoRedo::AddBuffer(int nCmd)
 {
 	IncreaseBuffer();
-	IncreaseIndex();
-	m_idx.Index = m_nIndex;
-	m_idx.nCommandType = nCmd;
-	m_idx.strCmd = _T("Ìí¼Ó²ÄÁÏ");
 	m_buf.nCmd = nCmd;
 	m_buf.Index = m_nIndex;
 	m_buf.nKey = m_nBuffer;
 	m_urbuf.AddTail(m_buf);
-	m_uridx.AddTail(m_idx);
 	return m_nBuffer;
 }
-
+void CUndoRedo::StartCmd(const CString& strCmd,int nCommandType)
+{
+	IncreaseIndex();
+	m_idx.Index = m_nIndex;
+	m_idx.nCommandType = nCommandType;
+	m_idx.strCmd = strCmd;
+	m_uridx.AddTail(m_idx);
+}
 void CUndoRedo::ClearBuffer()
 {
 	m_uridx.RemoveAll();

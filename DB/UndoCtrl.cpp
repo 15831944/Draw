@@ -16,7 +16,11 @@ void CUndoCtrl::initialize()
 {
 	
 }
-
+BOOL CUndoCtrl::StartEditDB(const CString& strCmd,int nCommandType)
+{
+	m_pDoc->m_undo->StartCmd(strCmd,nCommandType);
+	return TRUE;
+}
 void CUndoCtrl::CloseEditDB()
 {
 	//m_pDoc->UpdateViews(D_UPDATE_BUFFER_BEFFORE);
@@ -31,11 +35,11 @@ void CUndoCtrl::AddUndoMatl(int nCmd, T_MATL_K Key, T_MATL_D& rData)
 	T_MATL_UDRD_D data_ur;
 	data_ur.Key = Key;
 	data_ur.data = rData;
-	pvMemb->Add(m_pDoc->m_vbuff->AddBuffer(UR_MATL_ADD), data_ur);
-	m_pDoc->m_undo->AddBuffer(UR_MATL_ADD);
+	pvMemb->Add(m_pDoc->m_vbuff->AddBuffer(nCmd), data_ur);//view
+	m_pDoc->m_undo->AddBuffer(nCmd);//undo
 }
-
-void CUndoCtrl::UndoRedo(CUndoRedo* pViewbf)
+void CUndoCtrl::UndoRedo(CUndoRedo* pUndo,CUndoRedo* pViewbf)
 {
-	pViewbf->ClearBuffer();
+	if(pViewbf!=NULL)pViewbf->ClearBuffer();
+
 }

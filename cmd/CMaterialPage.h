@@ -27,6 +27,7 @@ private:
 	CDBDoc* m_pDoc;
 private:
 	void InsertItem(T_MATL_K Key, const T_MATL_D& rData);
+	void DeleteItem(T_MATL_K Key);
 public:
 	afx_msg void OnNMDblclkCmdMpMatList(NMHDR *pNMHDR, LRESULT *pResult);
 	afx_msg void OnModify();

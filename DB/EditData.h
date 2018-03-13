@@ -15,6 +15,7 @@ private:
 
 	BOOL AddMatl(T_MATL_K Key, T_MATL_D& rData);
 	BOOL AddMatd(T_MATL_K Key, T_MATD_D& rData);
+	BOOL DelMatl(T_MATL_K Key);
 private:
 	CDBDoc * m_pDoc;
 	CDataMemb* m_pDataMemb;

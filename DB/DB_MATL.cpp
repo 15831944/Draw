@@ -33,7 +33,14 @@ BOOL CDB_MATL::Get(T_MATL_K Key, T_MATL_D& rData)
 	BOOL bRet = m_matl.Lookup(Key, rData);
 	return bRet;
 }
-
+BOOL CDB_MATL::Del(T_MATL_K Key)
+{
+	BOOL bRet = m_matl.RemoveKey(Key);
+	if(bRet)
+		if(Key < m_nStartNum)
+			m_nStartNum = Key;
+	return bRet;
+}
 
 int CDB_MATL::GetCount()
 {

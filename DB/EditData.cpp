@@ -20,27 +20,24 @@ void CEditData::initialize()
 
 BOOL CEditData::AddMatl(T_MATL_K Key, T_MATL_D& rData)
 {
-	T_MATD_D DataDesign;
-	DataDesign.Initialize();
-	T_MATL_D tempData;
-	BOOL bExist = m_pDataMemb->m_matl.Get(Key, tempData);
-	if (bExist)
-	{
-		AfxMessageBox(_LS(IDS_DB_MATL_EXIST));
-		return FALSE;
-	}
-	else
-	{
-		m_pUndoCtrl->AddUndoMatl(UR_MATL_ADD, Key, rData);
-		m_pDataMemb->m_matl.Add(Key, rData);
-	}
+	//T_MATD_D DataDesign;
+	//DataDesign.Initialize();
+	//T_MATL_D tempData;
+	m_pUndoCtrl->AddUndoMatl(UR_MATL_ADD, Key, rData);
+	m_pDataMemb->m_matl.Add(Key, rData);
 		
 	//if (!AddMatd(Key, DataDesign))return FALSE;
 	return TRUE;
 }
-
 BOOL CEditData::AddMatd(T_MATL_K Key, T_MATD_D& rData)
 {
 	m_pDataMemb->m_matl.AddDesign(Key, rData);
 	return FALSE;
+}
+BOOL CEditData::DelMatl(T_MATL_K Key)
+{
+	T_MATL_D data;
+	m_pUndoCtrl->AddUndoMatl(UR_MATL_DEL,Key,data);
+	m_pDataMemb->m_matl.Del(Key);
+	return TRUE;
 }

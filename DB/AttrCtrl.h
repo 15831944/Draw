@@ -20,6 +20,7 @@ public:
 	POSITION GetStartMatl();
 	void GetNextMatl(POSITION& rNextPostion, T_MATL_K& Key, T_MATL_D& rData);
 	BOOL GetMatl(T_MATL_K Key, T_MATL_D& rData);
+	BOOL ExistMatl(T_MATL_K Key);
 };
 #include "HeaderPost.h"
 

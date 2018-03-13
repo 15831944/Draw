@@ -8,6 +8,7 @@ public:
 	~CDB_MATLU() {}
 public:
 	void Add(T_UDRD_KEY Key, T_MATL_UDRD_D& rData) { m_matl.SetAt(Key, rData); }
+	void Del(T_UDRD_KEY Key){m_matl.RemoveKey(Key);}
 	BOOL Get(T_UDRD_KEY Key, T_MATL_UDRD_D& rData) { return m_matl.Lookup(Key, rData); }
 	int GetCount() { return static_cast<int>(m_matl.GetCount()); }
 	void AddDesign(T_UDRD_KEY Key, const T_MATD_UDRD_D& rData) { m_matlDesign.SetAt(Key, rData); }

@@ -69,18 +69,11 @@ BEGIN_MESSAGE_MAP(CCMatPageItemDlg, CDialog)
 	ON_EN_CHANGE(IDC_EDIT1, &CCMatPageItemDlg::OnChangeID)
 	ON_EN_CHANGE(IDC_EDIT2, &CCMatPageItemDlg::OnChangeName)
 	ON_CBN_SELCHANGE(IDC_CMD_MP_ITEM_CBO2, &CCMatPageItemDlg::OnChangeSteelName)
+	ON_BN_CLICKED(IDCANCEL2, &CCMatPageItemDlg::OnApply)
 END_MESSAGE_MAP()
 
 
 // CCMatPageItemDlg 消息处理程序
-
-
-void CCMatPageItemDlg::OnOK()
-{
-	if (!m_pDoc->m_pDataCtrl->AddMatl(m_Key, m_Data))return;
-	CDialog::OnOK();
-}
-
 void CCMatPageItemDlg::OnCancel()
 {
 	// TODO: 在此添加专用代码和/或调用基类
@@ -294,12 +287,18 @@ void CCMatPageItemDlg::OnChangeType()
 	m_Data.Type = GetTypeCode(nTypeIndex);
 	ShowDataToDlg();
 }
-
-void CCMatPageItemDlg::OnBtnOk()
+void CCMatPageItemDlg::OnApply()
 {
 	if (!CheckData())return;
 	m_pDoc->m_pDataCtrl->AddMatl(m_Key, m_Data);
-	CDialog::OnOK();
+	OnInitDialog();
+
+}
+void CCMatPageItemDlg::OnBtnOk()
+{
+	if (!CheckData())return;
+	if(m_pDoc->m_pDataCtrl->AddMatl(m_Key, m_Data))
+		CDialog::OnOK();
 }
 
 void CCMatPageItemDlg::OnChangeSteelCode()
@@ -344,5 +343,4 @@ void CCMatPageItemDlg::OnChangeName()
 	//m_Data.Name = csName;
 	SetAutoChangeNameFlag(csName);
 }
-
 

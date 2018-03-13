@@ -8,7 +8,9 @@ public:
 	~CUndoRedo();
 	int GetCount()const;
 	int AddBuffer(int nCmd);
+	void StartCmd(const CString& strCmd,int nCommandType);
 	void ClearBuffer();
+
 public:
 	CList<T_UDRD_BUFFER, T_UDRD_BUFFER&>m_urbuf;
 	CList<T_UDRD_INDEX, T_UDRD_INDEX&>m_uridx;

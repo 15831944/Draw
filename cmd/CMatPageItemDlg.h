@@ -18,7 +18,7 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
 
 	DECLARE_MESSAGE_MAP()
-	virtual void OnOK();
+	
 	virtual void OnCancel();
 public:
 	virtual BOOL OnInitDialog();
@@ -57,6 +57,7 @@ private:
 	BOOL CheckData();
 public:
 	afx_msg void OnChangeType();
+	afx_msg void OnApply();
 	afx_msg void OnBtnOk();
 	afx_msg void OnChangeSteelCode();
 	afx_msg void OnChangeConcrCode();
@@ -65,4 +66,5 @@ public:
 	afx_msg void OnChangeName();
 	
 	
+
 };

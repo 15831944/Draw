@@ -11,6 +11,7 @@ public:
 public:
 	void Add(T_MATL_K Key, T_MATL_D& rData);
 	BOOL Get(T_MATL_K Key, T_MATL_D& rData);
+	BOOL Del(T_MATL_K Key);
 	int GetCount();
 	void AddDesign(T_MATL_K Key,const T_MATD_D& rData);
 	BOOL GetDesign(T_MATL_K Key, T_MATD_D& rData);

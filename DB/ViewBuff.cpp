@@ -34,7 +34,6 @@ void CViewBuff::GetMatl(int nKey, T_MATL_K& rKey, T_MATL_D& rData)
 	rKey = udata.Key;
 	rData = udata.data;
 }
-
 void CViewBuff::initialize()
 {
 

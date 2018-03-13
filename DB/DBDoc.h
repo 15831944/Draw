@@ -35,6 +35,7 @@ public:
 	static CDBDoc* GetDocPoint();
 
 	CUndoRedo * m_undo;				//undo buffer
+	CUndoRedo * m_redo;				//redo buffer
 private:
 	CUndoRedo * m_vbuff;			//update view buffer
 public:
@@ -42,7 +43,6 @@ public:
 	void UpdateViews(LPARAM lUpdataType);
 	void UpdateAllViews(CView* pSender, LPARAM lHint, CObject* pHint = NULL);
 	void DoUndoOnly();
-protected:
 	void DoRedo();
 	void DoUndo();
 	DECLARE_MESSAGE_MAP()
