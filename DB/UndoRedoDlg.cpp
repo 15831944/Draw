@@ -77,7 +77,18 @@ void CUndoRedoDlg::AddUndoCommands()
 }
 void CUndoRedoDlg::AddRedoCommands()
 {
-	
+	T_UDRD_INDEX data;
+	CString strTemp,strData;
+	int nCount = 0;
+	POSITION pos = m_pDoc->m_redo->m_uridx.GetTailPosition();
+	while(pos != NULL)
+	{
+		data = m_pDoc->m_redo->m_uridx.GetPrev(pos);
+		nCount++;
+		strTemp.Format(_T("%d. "),nCount);
+		strData = strTemp + data.strCmd;
+		m_List.AddString(strData);
+	}
 }
 
 // CUndoRedoDlg 消息处理程序
@@ -118,24 +129,24 @@ void CUndoRedoDlg::SetDlgMode(CDBDoc* pDoc,BOOL bIsUndo,int xPos,int yPos)
 }
 void CUndoRedoDlg::OnUndoRedo()
 {
-	int nCount = m_List.GetCount();
+	int nCount = m_List.GetSelCount();
 	if(nCount == 0)return;//ASSERT(nCount!=0);
 	if(m_bIsUndo)
 	{
-		int nUndoCount = m_pDoc->m_undo->GetCount();
+		int nUndoCount = static_cast<int>(m_pDoc->m_undo->GetCountidx());
 		for(int i = 0;i < nCount;i++)
 		{
 			m_pDoc->DoUndo();
-			if(m_pDoc->m_undo->GetCount() == nUndoCount)break;
+			if(m_pDoc->m_undo->GetCountidx() == nUndoCount)break;
 		}
 	}
 	else
 	{
-		int nUndoCount = m_pDoc->m_redo->GetCount();
+		int nUndoCount = m_pDoc->m_redo->GetCountidx();
 		for(int i = 0;i < nCount;i++)
 		{
 			m_pDoc->DoRedo();
-			if(m_pDoc->m_redo->GetCount() == nUndoCount)break;
+			if(m_pDoc->m_redo->GetCountidx() == nUndoCount)break;
 		}
 	}
 	DestroyWindow();

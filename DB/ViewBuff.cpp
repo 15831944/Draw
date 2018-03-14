@@ -14,7 +14,7 @@ CViewBuff::~CViewBuff()
 
 int CViewBuff::GetCount()
 {
-	return m_pDoc->m_vbuff->GetCount();
+	return m_pDoc->m_vbuff->GetCountbuf();
 }
 
 POSITION CViewBuff::GetStartBuffer()

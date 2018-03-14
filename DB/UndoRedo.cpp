@@ -9,11 +9,14 @@ CUndoRedo::CUndoRedo()
 
 CUndoRedo::~CUndoRedo() {}
 
-int CUndoRedo::GetCount()const
+int CUndoRedo::GetCountidx()const
+{
+	return static_cast<int>(m_uridx.GetCount());
+}
+int CUndoRedo::GetCountbuf()const
 {
 	return static_cast<int>(m_urbuf.GetCount());
 }
-
 int CUndoRedo::AddBuffer(int nCmd)
 {
 	IncreaseBuffer();

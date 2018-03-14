@@ -23,7 +23,7 @@ BOOL CEditData::AddMatl(T_MATL_K Key, T_MATL_D& rData)
 	//T_MATD_D DataDesign;
 	//DataDesign.Initialize();
 	//T_MATL_D tempData;
-	m_pUndoCtrl->AddUndoMatl(UR_MATL_ADD, Key, rData);
+	m_pUndoCtrl->AddUndoMatl(UR_MATL_DEL, Key, rData);
 	m_pDataMemb->m_matl.Add(Key, rData);
 		
 	//if (!AddMatd(Key, DataDesign))return FALSE;
@@ -37,7 +37,8 @@ BOOL CEditData::AddMatd(T_MATL_K Key, T_MATD_D& rData)
 BOOL CEditData::DelMatl(T_MATL_K Key)
 {
 	T_MATL_D data;
-	m_pUndoCtrl->AddUndoMatl(UR_MATL_DEL,Key,data);
+	m_pDataMemb->m_matl.Get(Key,data);
+	m_pUndoCtrl->AddUndoMatl(UR_MATL_ADD,Key,data);
 	m_pDataMemb->m_matl.Del(Key);
 	return TRUE;
 }

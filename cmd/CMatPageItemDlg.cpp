@@ -84,7 +84,7 @@ void CCMatPageItemDlg::OnCancel()
 BOOL CCMatPageItemDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
-
+	m_wndName.SetWindowText(CString(_T("")));
 	m_Key = m_pDoc->m_pAttrCtrl->GetStartNumMatl();
 	m_Data.initialize();
 	m_Data.Type = CCM_TYPE_STEEL;
@@ -274,7 +274,34 @@ BOOL CCMatPageItemDlg::CheckData()
 		return FALSE;
 	}
 	m_Data.Name = csName;
-
+	CString csType;
+	m_wndType.GetWindowText(csType);
+	if(csType == CCM_STEEL)
+	{
+		if(m_wndSteelCode.GetCount() == 0)
+		{
+			AfxMessageBox(_LS(IDS_WG_CMD__ADDD__Error___Missing_material_STEEL_CODE));
+			return FALSE;
+		}
+		else if(m_wndSteelName.GetCount() == 0)
+		{
+			AfxMessageBox(_LS(IDS_WG_CMD__ADDD__Error___Missing_material_STEEL_NAME));
+			return FALSE;
+		}
+	}
+	else if(csType == CCM_CONCR)
+	{
+		if(m_wndConcrCode.GetCount() == 0)
+		{
+			AfxMessageBox(_LS(IDS_WG_CMD__ADDD__Error___Missing_material_CONC_CODE));
+			return FALSE;
+		}
+		else if(m_wndConcName.GetCount() == 0)
+		{
+			AfxMessageBox(_LS(IDS_WG_CMD__ADDD__Error___Missing_material_CONC_NAME));
+			return FALSE;
+	}
+	}
 	return TRUE;
 }
 

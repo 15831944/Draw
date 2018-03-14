@@ -54,6 +54,7 @@ void CDBDoc::CloseUDRDVisible()
 void CDBDoc::UpdateViews(LPARAM lUpdataType)
 {
 	UpdateAllViews(NULL, lUpdataType);
+
 }
 
 void CDBDoc::UpdateAllViews(CView* pSender, LPARAM lHint, CObject* pHint)
@@ -64,15 +65,17 @@ void CDBDoc::UpdateAllViews(CView* pSender, LPARAM lHint, CObject* pHint)
 
 void CDBDoc::DoUndoOnly()
 {
-	m_pUndoCtrl->UndoRedo(m_undo,m_vbuff);
+	m_pUndoCtrl->UndoRedo(m_undo,m_redo,NULL,m_memb);
 }
 
 void CDBDoc::DoRedo()
 {
-	
+	m_pUndoCtrl->UndoRedo(m_redo,m_undo,m_vbuff,m_memb,TRUE);
+	UpdateViews(D_UPDATE_BUFFER_AFTER);
 }
 
 void CDBDoc::DoUndo()
 {
-	m_pUndoCtrl->UndoRedo(m_undo,m_vbuff);
+	m_pUndoCtrl->UndoRedo(m_undo,m_redo,m_vbuff,m_memb,TRUE);
+	UpdateViews(D_UPDATE_BUFFER_AFTER);
 }
