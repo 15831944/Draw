@@ -11,16 +11,19 @@ private:
 	CAttrCtrl(CDBDoc* pDoc);
 	~CAttrCtrl();
 	void initialize();
-private:
-	CDBDoc * m_pDoc;
-	CDataMemb* m_pDataMemb;
 public:
 	T_MATL_K GetStartNumMatl();
+	T_SECT_K GetStartNumSect();
 	int GetCountMatl();
 	POSITION GetStartMatl();
+	//POSITION
 	void GetNextMatl(POSITION& rNextPostion, T_MATL_K& Key, T_MATL_D& rData);
 	BOOL GetMatl(T_MATL_K Key, T_MATL_D& rData);
 	BOOL ExistMatl(T_MATL_K Key);
+	BOOL ExistSect(T_SECT_K Key);
+private:
+	CDBDoc * m_pDoc;
+	CDataMemb* m_pDataMemb;
 };
 #include "HeaderPost.h"
 

@@ -67,3 +67,30 @@ void CDlgUtil::CtrlEnableDisable(CWnd * pParent, const CArray<UINT, UINT>& aCtrl
 		else pWnd->EnableWindow(SW_HIDE);
 	}
 }
+void CDlgUtil::CtrlRadioSetCheck(CWnd* pParent, const CArray<UINT, UINT>& aCtrlID, int nCheck)
+{
+	CButton* pWnd;
+	for(int i = 0;i<aCtrlID.GetSize();i++)
+	{
+		pWnd = (CButton*)pParent->GetDlgItem(aCtrlID[i]);
+		if(pWnd == 0 || pWnd->GetSafeHwnd() == 0)
+			continue;
+		pWnd->SetCheck(i == nCheck);
+	}
+}
+void CDlgUtil::CtrlRadioGetCheck(CWnd* pParent, const CArray<UINT, UINT>& aCtrlID, int& nCheck)
+{
+	CButton* pWnd;
+	nCheck = -1;
+	for(int i = 0;i<aCtrlID.GetSize();i++)
+	{
+		pWnd = (CButton*)pParent->GetDlgItem(aCtrlID[i]);
+		if(pWnd == 0 || pWnd->GetSafeHwnd() == 0)
+			continue;
+		if(pWnd->GetCheck())
+		{
+			nCheck = i;
+			return;
+		}
+	}
+}

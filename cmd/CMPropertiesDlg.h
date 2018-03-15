@@ -35,7 +35,7 @@ private:
 	int m_nActivePage;
 	virtual BOOL OnInitDialog();
 	virtual void OnUpdate(CWnd* pSender, LPARAM lParam, CObject* pHint);
-	virtual void OnCancel();
+	//virtual void OnCancel();
 };
 #include "HeaderPost.h"
 #include "afxcmn.h"

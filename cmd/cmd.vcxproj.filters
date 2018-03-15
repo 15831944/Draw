@@ -58,6 +58,12 @@
     <ClInclude Include="CMSectionPage.h">
       <Filter>02 Properties\02 Section</Filter>
     </ClInclude>
+    <ClInclude Include="CMSectViewWnd.h">
+      <Filter>02 Properties\02 Section</Filter>
+    </ClInclude>
+    <ClInclude Include="CMSectPageItemDlg.h">
+      <Filter>02 Properties\02 Section</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CMPropertiesDlg.cpp">
@@ -84,6 +90,12 @@
     <ClCompile Include="CMSectionPage.cpp">
       <Filter>02 Properties\02 Section</Filter>
     </ClCompile>
+    <ClCompile Include="CMSectViewWnd.cpp">
+      <Filter>02 Properties\02 Section</Filter>
+    </ClCompile>
+    <ClCompile Include="CMSectPageItemDlg.cpp">
+      <Filter>02 Properties\02 Section</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="cmd.rc">
@@ -104,6 +116,66 @@
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="res\cmd_matl5.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Sec01.BMP">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Sec02.BMP">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Sec03.BMP">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Sec04.BMP">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Sec05.BMP">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Sec06.BMP">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Sec07.BMP">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Sec08.BMP">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Sec09.BMP">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Sec10.BMP">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SecRegIcon01.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SecRegIcon02.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SecRegIcon03.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SecRegIcon04.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SecRegIcon05.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SecRegIcon07.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SecRegIcon08.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SecRegIcon09.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SecRegIcon10.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\SecSrcIcon06.bmp">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>

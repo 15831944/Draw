@@ -15,6 +15,10 @@ public:
 	BOOL AddMatl(CArray<T_MATL_K, T_MATL_K>& rKey, CArray<T_MATL_D, const T_MATL_D&>& rData);
 	BOOL DelMatl(T_MATL_K Key);
 	BOOL DelMatl(CArray<T_MATL_K, T_MATL_K>& rKey);
+	BOOL AddSect(T_SECT_K Key, const T_SECT_D& rData);
+	BOOL AddSect(CArray<T_SECT_K, T_SECT_K>& rKey, CArray<T_SECT_D, const T_SECT_D&>& rData);
+	BOOL DelSect(T_SECT_K Key);
+	BOOL DelSect(CArray<T_SECT_K, T_SECT_K>& rKey);
 private:
 	CDataCtrl(CDBDoc* pDoc);
 	~CDataCtrl();

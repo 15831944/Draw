@@ -142,9 +142,11 @@
     <ClInclude Include="DBMgr.h" />
     <ClInclude Include="DB_MATL.h" />
     <ClInclude Include="DB_MATLU.h" />
+    <ClInclude Include="DB_SECT.h" />
     <ClInclude Include="DB_ST_DT.h" />
     <ClInclude Include="DB_ST_DT_CMD.h" />
     <ClInclude Include="DB_ST_DT_MATL.h" />
+    <ClInclude Include="DB_ST_DT_SECT.h" />
     <ClInclude Include="EditData.h" />
     <ClInclude Include="HeaderPost.h" />
     <ClInclude Include="HeaderPre.h" />
@@ -152,6 +154,8 @@
     <ClInclude Include="Observer.h" />
     <ClInclude Include="ProjInfo.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="SectDB.h" />
+    <ClInclude Include="SectUtil.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="UndoCtrl.h" />
     <ClInclude Include="UndoRedo.h" />
@@ -170,10 +174,13 @@
     <ClCompile Include="DBDoc.cpp" />
     <ClCompile Include="DBMgr.cpp" />
     <ClCompile Include="DB_MATL.cpp" />
+    <ClCompile Include="DB_SECT.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="EditData.cpp" />
     <ClCompile Include="MatlDB.cpp" />
     <ClCompile Include="Observer.cpp" />
+    <ClCompile Include="SectDB.cpp" />
+    <ClCompile Include="SectUtil.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>

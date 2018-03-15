@@ -18,10 +18,22 @@ CCMPropertiesDlg::CCMPropertiesDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(IDD_CMD_PROPERTIES_DLG, pParent)
 {
 	m_nActivePage = 0;
+	m_pMaterial = 0;
+	m_pSection = 0;
 }
 
 CCMPropertiesDlg::~CCMPropertiesDlg()
 {
+	if(m_pMaterial)
+	{
+		delete m_pMaterial;
+		m_pMaterial = 0;
+	}
+	if(m_pSection)
+	{
+		delete m_pSection;
+		m_pSection = 0;
+	}
 }
 
 void CCMPropertiesDlg::DoDataExchange(CDataExchange* pDX)
@@ -33,6 +45,7 @@ void CCMPropertiesDlg::DoDataExchange(CDataExchange* pDX)
 void CCMPropertiesDlg::SetActivePage(int SelectPage)
 {
 	m_nActivePage = SelectPage;
+	m_wndTab.ShowTab(m_nActivePage);
 }
 
 
@@ -70,8 +83,8 @@ void CCMPropertiesDlg::OnUpdate(CWnd* pSender, LPARAM lParam, CObject* pHint)
 }
 
 
-void CCMPropertiesDlg::OnCancel()
-{
-	DestroyWindow();
-}
+//void CCMPropertiesDlg::OnCancel()
+//{
+//	DestroyWindow();
+//}
 

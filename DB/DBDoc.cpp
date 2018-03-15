@@ -5,6 +5,7 @@
 #include "DataCtrl.h"
 #include "DataMemb.h"
 #include "MatlDB.h"
+#include "SectDB.h"
 #include "ViewBuff.h"
 #include "UndoRedo.h"
 #include "DBDoc.h"
@@ -28,6 +29,7 @@ CDBDoc::CDBDoc()
 	m_pAttrCtrl = new CAttrCtrl(this);
 	m_pDataCtrl = new CDataCtrl(this);
 	m_pMatlDB = new CMatlDB(this);
+	m_pSectDB = new CSectDB(this);
 	m_pViewBuff = new CViewBuff(this);
 	//
 	m_pEditData->initialize();
@@ -35,6 +37,7 @@ CDBDoc::CDBDoc()
 	m_pAttrCtrl->initialize();
 	m_pDataCtrl->initialize();
 	m_pMatlDB->initialize();
+	m_pSectDB->initialize();
 	m_pViewBuff->initialize();
 }
 

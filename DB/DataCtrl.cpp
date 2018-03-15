@@ -77,3 +77,52 @@ BOOL CDataCtrl::DelMatl(CArray<T_MATL_K, T_MATL_K>& rKey)
 	}
 	return EndEdit(TRUE);
 }
+BOOL CDataCtrl::AddSect(T_SECT_K Key, const T_SECT_D& rData)
+{ 
+	CArray<T_SECT_K, T_SECT_K> aKey;
+	CArray<T_SECT_D, const T_SECT_D&> aData;
+	aKey.Add(Key);
+	aData.Add(rData);
+	return AddSect(aKey, aData);
+}
+BOOL CDataCtrl::AddSect(CArray<T_SECT_K, T_SECT_K>& rKey, CArray<T_SECT_D, const T_SECT_D &>& rData)
+{
+	int nCount = (int)rKey.GetSize();
+	if (nCount == 0)return FALSE;
+	ASSERT(nCount == rData.GetSize());
+	if(!StartEdit(_LS(IDS_DB_DATACTRL_Add_Section),CMDTYPE_REMOVE_ANALYSIS))return FALSE;
+	for (int i = 0; i < nCount; i++)
+	{
+		if(m_pAttrCtrl->ExistSect(rKey[i]))
+		{
+			AfxMessageBox(_LS(IDS_DB_MATL_EXIST));
+			continue;
+		}
+		if (!m_pEditData->AddSect(rKey[i], rData[i]))
+			return FALSE;
+	}
+	return EndEdit();
+}
+BOOL CDataCtrl::DelSect(T_SECT_K Key)
+{
+	CArray<T_SECT_K,T_SECT_K> rKey;
+	rKey.Add(Key);
+	return DelSect(rKey);
+}
+BOOL CDataCtrl::DelSect(CArray<T_SECT_K, T_SECT_K>& rKey)
+{
+	int nCount = static_cast<int>(rKey.GetCount());
+	ASSERT(nCount != 0);
+	if(!StartEdit(_LS(IDS_DB_DATACTRL_Delete_Section),CMDTYPE_REMOVE_ANALYSIS))return FALSE;
+	for(int i=0;i<nCount;i++)
+	{
+		if(!m_pAttrCtrl->ExistSect(rKey[i]))
+		{
+			AfxMessageBox(_LS(IDS_DB_SECT_NOEXIST));
+			continue;
+		}
+		if(!m_pEditData->DelSect(rKey[i]))
+			return FALSE;
+	}
+	return EndEdit(TRUE);
+}

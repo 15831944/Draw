@@ -1,8 +1,9 @@
 #pragma once
-
-
 #include "../DB/DBDoc.h"
-
+#include "afxwin.h"
+#include "CMSectViewWnd.h"
+#include "afxcmn.h"
+class CCMSectViewWnd;
 class CCMSectionPage : public CDialog
 {
 	DECLARE_DYNAMIC(CCMSectionPage)
@@ -17,10 +18,19 @@ public:
 //#endif
 private:
 	CDBDoc * m_pDoc;
+	CListCtrl m_List;
+	T_SECT_K m_Key;
+	T_SECT_D m_Data;
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
 	
 	DECLARE_MESSAGE_MAP()
+private:
+	CCMSectViewWnd m_wndSectView;
+	virtual BOOL OnInitDialog();
+	afx_msg void OnItemchanged(NMHDR *pNMHDR, LRESULT *pResult);
+	afx_msg void OnAdd();
 public:
 	void OnUpdate();
+	
 };

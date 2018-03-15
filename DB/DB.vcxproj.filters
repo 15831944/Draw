@@ -61,6 +61,15 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>01 Common</Filter>
     </ClCompile>
+    <ClCompile Include="DB_SECT.cpp">
+      <Filter>05 data\Property</Filter>
+    </ClCompile>
+    <ClCompile Include="SectDB.cpp">
+      <Filter>06 DBase</Filter>
+    </ClCompile>
+    <ClCompile Include="SectUtil.cpp">
+      <Filter>11 section</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DBDoc.h">
@@ -148,6 +157,18 @@
     <ClInclude Include="UndoRedoDlg.h">
       <Filter>21 ui</Filter>
     </ClInclude>
+    <ClInclude Include="DB_ST_DT_SECT.h">
+      <Filter>04 struct</Filter>
+    </ClInclude>
+    <ClInclude Include="DB_SECT.h">
+      <Filter>05 data\Property</Filter>
+    </ClInclude>
+    <ClInclude Include="SectDB.h">
+      <Filter>06 DBase</Filter>
+    </ClInclude>
+    <ClInclude Include="SectUtil.h">
+      <Filter>11 section</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="01 Common">
@@ -197,6 +218,9 @@
     </Filter>
     <Filter Include="21 ui">
       <UniqueIdentifier>{119b7ff6-4b97-41dc-b273-b93b743870b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="11 section">
+      <UniqueIdentifier>{c0f9d87b-892e-459b-aa34-ee7ee85e23b3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

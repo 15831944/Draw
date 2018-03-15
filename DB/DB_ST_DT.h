@@ -1,5 +1,6 @@
 #pragma once
 #include "DB_ST_DT_MATL.h"//material  ≤ƒ¡œ
+#include "DB_ST_DT_SECT.h"//section		Ωÿ√Ê
 #include "DB_ST_DT_CMD.h"
 typedef unsigned int T_UDRD_KEY;
 //Update Message

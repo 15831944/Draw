@@ -13,6 +13,8 @@ public:
 	static BOOL CobxGetItemDataByCurSel(CComboBox& cobx, DWORD& nItemData);
 	static void CtrlShowHide(CWnd* pParent, const CArray<UINT, UINT>& aCtrlID, BOOL bShow);
 	static void CtrlEnableDisable(CWnd* pParent, const CArray<UINT, UINT>& aCtrlID, BOOL bShow);
+	static void CtrlRadioSetCheck(CWnd* pParent, const CArray<UINT,UINT>& aCtrlID, int nCheck);
+	static void CtrlRadioGetCheck(CWnd* pParent, const CArray<UINT,UINT>& aCtrlID, int& nCheck);
 };
 
 

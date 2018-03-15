@@ -134,6 +134,8 @@
     <ClInclude Include="cmdVer.h" />
     <ClInclude Include="CMPropertiesDlg.h" />
     <ClInclude Include="CMSectionPage.h" />
+    <ClInclude Include="CMSectPageItemDlg.h" />
+    <ClInclude Include="CMSectViewWnd.h" />
     <ClInclude Include="ExportFunc.h" />
     <ClInclude Include="HeaderPost.h" />
     <ClInclude Include="HeaderPre.h" />
@@ -147,6 +149,8 @@
     <ClCompile Include="CMDlgBase.cpp" />
     <ClCompile Include="CMPropertiesDlg.cpp" />
     <ClCompile Include="CMSectionPage.cpp" />
+    <ClCompile Include="CMSectPageItemDlg.cpp" />
+    <ClCompile Include="CMSectViewWnd.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="ExportFunc.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -162,6 +166,26 @@
     <Image Include="res\cmd_matl3.bmp" />
     <Image Include="res\cmd_matl4.bmp" />
     <Image Include="res\cmd_matl5.bmp" />
+    <Image Include="res\Sec01.BMP" />
+    <Image Include="res\Sec02.BMP" />
+    <Image Include="res\Sec03.BMP" />
+    <Image Include="res\Sec04.BMP" />
+    <Image Include="res\Sec05.BMP" />
+    <Image Include="res\Sec06.BMP" />
+    <Image Include="res\Sec07.BMP" />
+    <Image Include="res\Sec08.BMP" />
+    <Image Include="res\Sec09.BMP" />
+    <Image Include="res\Sec10.BMP" />
+    <Image Include="res\SecRegIcon01.bmp" />
+    <Image Include="res\SecRegIcon02.bmp" />
+    <Image Include="res\SecRegIcon03.bmp" />
+    <Image Include="res\SecRegIcon04.bmp" />
+    <Image Include="res\SecRegIcon05.bmp" />
+    <Image Include="res\SecRegIcon07.bmp" />
+    <Image Include="res\SecRegIcon08.bmp" />
+    <Image Include="res\SecRegIcon09.bmp" />
+    <Image Include="res\SecRegIcon10.bmp" />
+    <Image Include="res\SecSrcIcon06.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

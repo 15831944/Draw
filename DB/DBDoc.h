@@ -3,6 +3,7 @@
 #include "HeaderPre.h"
 class CDataMemb;
 class CMatlDB;
+class CSectDB;
 class CAttrCtrl;
 class CDataCtrl;
 class CEditData;
@@ -30,6 +31,7 @@ public:
 	CAttrCtrl * m_pAttrCtrl;
 	CDataCtrl* m_pDataCtrl;
 	CMatlDB* m_pMatlDB;
+	CSectDB* m_pSectDB;
 	CDataMemb* m_memb;
 	CViewBuff* m_pViewBuff;
 	static CDBDoc* GetDocPoint();
