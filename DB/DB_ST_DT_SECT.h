@@ -41,10 +41,13 @@ const int D_SECT_SIZE_NUM_MAX = 8;
 struct T_SECT_SECTBASE_D
 {
 	CString Shape;
+	CString SName;//GB-YB
+
 	double dSize[D_SECT_SIZE_NUM_MAX];
 	void initialize()
 	{
 		Shape.Empty();
+		SName.Empty();
 		for(int i = 0;i<D_SECT_SIZE_NUM_MAX;i++)
 			dSize[i] = 0.0;
 	}

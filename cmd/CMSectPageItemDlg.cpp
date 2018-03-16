@@ -56,6 +56,7 @@ void CCMSectPageItemDlg::DoDataExchange(CDataExchange* pDX)
 	{
 		DDX_Control(pDX, aFirstID[i],m_wndFirstSize[i]);
 	}
+	DDX_Control(pDX, IDC_CMD_SP_ID_CBO_NAME, m_wndFirstName);
 }
 
 BOOL CCMSectPageItemDlg::OnInitDialog()
@@ -63,6 +64,9 @@ BOOL CCMSectPageItemDlg::OnInitDialog()
 	CDialog::OnInitDialog();
 	InitControls();
 	m_Key = m_pDoc->m_pAttrCtrl->GetStartNumSect();
+	CString str;
+	str.Format(_T("%d"),m_Key);
+	m_wndID.SetWindowText(str);
 	ShowDataToDlg();
 	return TRUE;
 }
@@ -76,12 +80,14 @@ END_MESSAGE_MAP()
 void CCMSectPageItemDlg::InitControls()
 {
 	SetSectionShapeCombo();
-	m_cboType.SetCurSel(1);
+	m_cboType.SetCurSel(2);
 	CDlgUtil::CtrlEnableDisable(this,m_aCtrlDBUser,0);
 	m_wndBuiltUp.EnableWindow(FALSE);
-
+	
 	SetDBNameList();
 	m_wndDB.SetCurSel(0);
+
+	OnChangeShape();
 }
 void CCMSectPageItemDlg::SetSectionShapeCombo()
 {
@@ -145,11 +151,9 @@ void CCMSectPageItemDlg::SetDBNameList()
 }
 void CCMSectPageItemDlg::ShowDataToDlg()
 {
-	CString str;
-	str.Format(_T("%d"),m_Key);
-	m_wndID.SetWindowText(str);
 	CDlgUtil::CtrlRadioSetCheck(this,m_aCtrlDB,1);
 	SetFirstSectData();
+	SetFirstNameCombo();
 }
 void CCMSectPageItemDlg::SetFirstSectData()
 {
@@ -161,6 +165,15 @@ void CCMSectPageItemDlg::SetFirstSectData()
 		csValue.Format(_T("%d"),pSect->dSize[i]);
 		m_wndFirstSize[i].SetWindowText(csValue);
 	}
+}
+void CCMSectPageItemDlg::SetFirstNameCombo()
+{
+	m_wndFirstName.ResetContent();
+	CArray<CString,CString&> aSectNameList;
+	m_pDoc->m_pSectDB->GetSectNameList(m_Data.SectI.Shape,aSectNameList);
+	int nCount = static_cast<int>(aSectNameList.GetCount());
+	for(int i = 0;i<nCount;i++)
+		m_wndFirstName.AddString(aSectNameList.GetAt(i));
 }
 // CCMSectPageItemDlg 消息处理程序
 
@@ -192,4 +205,6 @@ void CCMSectPageItemDlg::OnChangeShape()
 	int nCurShapeIndex = CSectUtil::GetShapeIndexFromNameReg(m_Data.SectI.Shape);
 	if(nShapeIndex == nCurShapeIndex)return;
 	m_Data.SectI.Shape = CSectUtil::GetShapeNameFromIndexReg(nShapeIndex);
+
+	ShowDataToDlg();
 }

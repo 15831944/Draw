@@ -28,20 +28,24 @@ private:
 	CComboBoxEx m_cboType;
 	CComboBox m_wndDB;
 	CButton m_wndBuiltUp;
+	CComboBox m_wndFirstName;
+	CEdit m_wndFirstSize[8];
+
 	CArray<UINT,UINT>	m_aCtrlDB;
 	CArray<UINT,UINT> m_aCtrlDBUser;
 	CArray<UINT,UINT> m_aCtrlDBUser2;
 	
-	CEdit m_wndFirstSize[8];
 private:
 	void InitControls();
 	void SetSectionShapeCombo();
 	void SetDBNameList();
 	void ShowDataToDlg();
 	void SetFirstSectData();
+	void SetFirstNameCombo();
 public:
 	virtual void OnOk();
 	afx_msg void OnApply();
 	afx_msg void OnRadio();
 	afx_msg void OnChangeShape();
+	
 };

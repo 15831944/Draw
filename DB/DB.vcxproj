@@ -72,8 +72,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)\..\bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)\..\tmp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\tmp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -95,7 +95,7 @@
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <ImportLibrary>..\..\lib\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ImportLibrary>..\lib\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>

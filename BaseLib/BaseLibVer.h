@@ -7,15 +7,15 @@
 
 #ifdef _DEBUG
  #ifdef _x64
-   #pragma comment(lib, "../../Lib/Debug/x64/BaseLibd.lib")
+   #pragma comment(lib, "../Lib/Debug/x64/BaseLibd.lib")
  #else
-   #pragma comment(lib, "..\\..\\Lib\\Debug\\x86\\BaseLibd.lib")
+   #pragma comment(lib, "..\\Lib\\Debug\\x86\\BaseLibd.lib")
   #endif
 #else
   #ifdef _x64
-   #pragma comment(lib, "..\\..\\Lib\\Release\\x64\\BaseLib.lib")
+   #pragma comment(lib, "..\\Lib\\Release\\x64\\BaseLib.lib")
   #else
-   #pragma comment(lib, "..\\..\\Lib\\Release\\x86\\BaseLib.lib")
+   #pragma comment(lib, "..\\Lib\\Release\\x86\\BaseLib.lib")
   #endif
 #endif
 

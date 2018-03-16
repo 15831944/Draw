@@ -82,3 +82,13 @@ void CDBDoc::DoUndo()
 	m_pUndoCtrl->UndoRedo(m_undo,m_redo,m_vbuff,m_memb,TRUE);
 	UpdateViews(D_UPDATE_BUFFER_AFTER);
 }
+CString CDBDoc::GetProgramPath()
+{
+	CString ProgramPath;
+	::GetModuleFileName(NULL,ProgramPath.GetBuffer(_MAX_PATH),_MAX_PATH);
+	ProgramPath.ReleaseBuffer();
+	int nFind =ProgramPath.ReverseFind('\\');
+	ASSERT(nFind != -1);
+	if(nFind !=-1)ProgramPath = ProgramPath.Left(nFind+1);
+	return ProgramPath;
+}

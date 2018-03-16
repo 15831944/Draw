@@ -47,6 +47,7 @@ public:
 	void DoUndoOnly();
 	void DoRedo();
 	void DoUndo();
+	CString GetProgramPath();
 	DECLARE_MESSAGE_MAP()
 };
 #include "HeaderPost.h"

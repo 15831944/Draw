@@ -79,8 +79,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)\..\bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)\..\tmp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\tmp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -117,12 +117,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_x64;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>./common/;../BaseLib/02Base;../BaseLib/;../cmd/</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./;../BaseLib/02Base;../BaseLib/;../cmd/</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>BaseLibd.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>../../lib/Debug/x64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../lib/Debug/x64</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Midl>
