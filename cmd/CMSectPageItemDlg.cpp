@@ -76,18 +76,23 @@ BEGIN_MESSAGE_MAP(CCMSectPageItemDlg, CDialog)
 	ON_BN_CLICKED(IDC_CMD_SP_ID_USER_RADIO, &CCMSectPageItemDlg::OnRadio)
 	ON_BN_CLICKED(IDC_CMD_SP_ID_DB_RADIO, &CCMSectPageItemDlg::OnRadio)
 	ON_CBN_SELCHANGE(IDC_CMD_SP_ID_TYPE, &CCMSectPageItemDlg::OnChangeShape)
+	ON_CBN_SELCHANGE(IDC_CMD_SP_ID_CODE, &CCMSectPageItemDlg::OnChangeDB)
 END_MESSAGE_MAP()
 void CCMSectPageItemDlg::InitControls()
 {
 	SetSectionShapeCombo();
-	m_cboType.SetCurSel(2);
+	int nShapeIndex = D_SECT_SHAPE_REG_H;
+	m_cboType.SetCurSel(nShapeIndex);
+	CString str;
+	m_cboType.GetWindowText(str);
 	CDlgUtil::CtrlEnableDisable(this,m_aCtrlDBUser,0);
 	m_wndBuiltUp.EnableWindow(FALSE);
 	
 	SetDBNameList();
 	m_wndDB.SetCurSel(0);
-
-	OnChangeShape();
+	m_wndDB.GetWindowText(m_Data.SectI.SName);
+	m_Data.SectI.Shape = CSectUtil::GetShapeNameFromIndexReg(nShapeIndex);
+	ChangeBitmap();
 }
 void CCMSectPageItemDlg::SetSectionShapeCombo()
 {
@@ -154,6 +159,7 @@ void CCMSectPageItemDlg::ShowDataToDlg()
 	CDlgUtil::CtrlRadioSetCheck(this,m_aCtrlDB,1);
 	SetFirstSectData();
 	SetFirstNameCombo();
+	//OnChangeShape();
 }
 void CCMSectPageItemDlg::SetFirstSectData()
 {
@@ -170,10 +176,20 @@ void CCMSectPageItemDlg::SetFirstNameCombo()
 {
 	m_wndFirstName.ResetContent();
 	CArray<CString,CString&> aSectNameList;
-	m_pDoc->m_pSectDB->GetSectNameList(m_Data.SectI.Shape,aSectNameList);
+	m_pDoc->m_pSectDB->GetSectNameList(m_Data.SectI.SName,m_Data.SectI.Shape,aSectNameList);
 	int nCount = static_cast<int>(aSectNameList.GetCount());
 	for(int i = 0;i<nCount;i++)
 		m_wndFirstName.AddString(aSectNameList.GetAt(i));
+}
+void CCMSectPageItemDlg::ChangeBitmap()
+{
+	int nShapeIndex = CSectUtil::GetShapeIndexFromNameReg(m_Data.SectI.Shape);
+	if(nShapeIndex < 0)
+	{
+		AfxMessageBox(_LS(IDS_WG_CMD__ADDD__Error___Invalid_regular_section_s));
+		return;
+	}
+
 }
 // CCMSectPageItemDlg 消息处理程序
 
@@ -205,6 +221,13 @@ void CCMSectPageItemDlg::OnChangeShape()
 	int nCurShapeIndex = CSectUtil::GetShapeIndexFromNameReg(m_Data.SectI.Shape);
 	if(nShapeIndex == nCurShapeIndex)return;
 	m_Data.SectI.Shape = CSectUtil::GetShapeNameFromIndexReg(nShapeIndex);
-
+	ChangeBitmap();
 	ShowDataToDlg();
+}
+
+
+void CCMSectPageItemDlg::OnChangeDB()
+{
+	m_wndDB.GetWindowText(m_Data.SectI.SName);
+	//OnChangeShape();
 }

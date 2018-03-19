@@ -12,6 +12,7 @@ class CModelessDlgCtrl;
 class CViewBuff;
 class CUndoRedo;
 class CUndoRedoDlg;
+extern __declspec(dllexport) void ConverCharStr(char chSource[],CString& strDestin,int nChar);
 class __MY_EXT_CLASS__ CDBDoc : public CDocBase
 {
 	//friend class CEditData;

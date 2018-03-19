@@ -42,10 +42,11 @@ private:
 	void ShowDataToDlg();
 	void SetFirstSectData();
 	void SetFirstNameCombo();
+	void ChangeBitmap();
 public:
 	virtual void OnOk();
 	afx_msg void OnApply();
 	afx_msg void OnRadio();
 	afx_msg void OnChangeShape();
-	
+	afx_msg void OnChangeDB();
 };

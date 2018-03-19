@@ -11,6 +11,15 @@
 #include "DBDoc.h"
 
 #include "../BaseLib/ModelessDlgCtrl.h"
+
+extern __declspec(dllexport) void ConverCharStr(char chSource[],CString& strDestin,int nChar)
+{
+	/*memcpy(strDestin.GetBuffer(nChar),chSource,nChar);
+	int * ppp = (int*)&strDestin;*/
+	strDestin = chSource;
+	strDestin.ReleaseBuffer(nChar);
+	strDestin.TrimRight();
+}
 IMPLEMENT_DYNCREATE(CDBDoc, CDocBase)
 CDBDoc* CDBDoc::m_pDBDoc = NULL;
 CDBDoc::CDBDoc()
