@@ -2,9 +2,10 @@
 #include "resource.h"
 #include "afxwin.h"
 #include "afxcmn.h"
-
+#include "../BaseLib/ControlEx.h"
 // CCMSectPageItemDlg ¶Ô»°¿ò
 class CDBDoc;
+class CCobxAutoFill;
 class CCMSectPageItemDlg : public CDialog
 {
 	DECLARE_DYNAMIC(CCMSectPageItemDlg)
@@ -27,8 +28,10 @@ private:
 	CImageList* m_pImageList;
 	CComboBoxEx m_cboType;
 	CComboBox m_wndDB;
+	CBitmap m_Bitmap;
 	CButton m_wndBuiltUp;
-	CComboBox m_wndFirstName;
+	CCobxAutoFill m_wndFirstName;
+	//CComboBox m_wndFirstName;
 	CEdit m_wndFirstSize[8];
 
 	CArray<UINT,UINT>	m_aCtrlDB;
@@ -49,4 +52,5 @@ public:
 	afx_msg void OnRadio();
 	afx_msg void OnChangeShape();
 	afx_msg void OnChangeDB();
+	afx_msg void OnChangeFirstName();
 };

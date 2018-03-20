@@ -6,10 +6,12 @@
 #include "afxdialogex.h"
 #include "../DB/SectDB.h"
 #include "../BaseLib/DlgUtil.h"
+
 #include "../DB/DBDoc.h"
 #include "../DB/AttrCtrl.h"
 #include "../DB/DataCtrl.h"
 #include "../DB/SectUtil.h"
+#include "../DB/DB_ST_DT_SECT.h"
 // CCMSectPageItemDlg 对话框
 
 IMPLEMENT_DYNAMIC(CCMSectPageItemDlg, CDialog)
@@ -51,12 +53,14 @@ void CCMSectPageItemDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CMD_SP_ID_ID, m_wndID);
 	DDX_Control(pDX, IDC_CMD_SP_ID_BUILTUP, m_wndBuiltUp);
 	DDX_Control(pDX, IDC_CMD_SP_ID_CODE, m_wndDB);
+	DDX_Control(pDX, IDC_CMD_SP_ID_CBO_NAME, m_wndFirstName);
+	//DDX_Control(pDX, IDC_CMD_SP_ID_BMP, m_Bitmap);
 	UINT aFirstID[] = {IDC_EDIT1,IDC_EDIT2,IDC_EDIT3,IDC_EDIT4,IDC_EDIT5,IDC_EDIT6,IDC_EDIT7,IDC_EDIT8};
 	for(int i = 0;i<8;i++)
 	{
 		DDX_Control(pDX, aFirstID[i],m_wndFirstSize[i]);
 	}
-	DDX_Control(pDX, IDC_CMD_SP_ID_CBO_NAME, m_wndFirstName);
+	
 }
 
 BOOL CCMSectPageItemDlg::OnInitDialog()
@@ -68,6 +72,7 @@ BOOL CCMSectPageItemDlg::OnInitDialog()
 	str.Format(_T("%d"),m_Key);
 	m_wndID.SetWindowText(str);
 	ShowDataToDlg();
+
 	return TRUE;
 }
 
@@ -77,6 +82,7 @@ BEGIN_MESSAGE_MAP(CCMSectPageItemDlg, CDialog)
 	ON_BN_CLICKED(IDC_CMD_SP_ID_DB_RADIO, &CCMSectPageItemDlg::OnRadio)
 	ON_CBN_SELCHANGE(IDC_CMD_SP_ID_TYPE, &CCMSectPageItemDlg::OnChangeShape)
 	ON_CBN_SELCHANGE(IDC_CMD_SP_ID_CODE, &CCMSectPageItemDlg::OnChangeDB)
+	ON_CBN_SELCHANGE(IDC_CMD_SP_ID_CBO_NAME, &CCMSectPageItemDlg::OnChangeFirstName)
 END_MESSAGE_MAP()
 void CCMSectPageItemDlg::InitControls()
 {
@@ -87,10 +93,11 @@ void CCMSectPageItemDlg::InitControls()
 	m_cboType.GetWindowText(str);
 	CDlgUtil::CtrlEnableDisable(this,m_aCtrlDBUser,0);
 	m_wndBuiltUp.EnableWindow(FALSE);
-	
+
 	SetDBNameList();
 	m_wndDB.SetCurSel(0);
-	m_wndDB.GetWindowText(m_Data.SectI.SName);
+	OnChangeDB();
+
 	m_Data.SectI.Shape = CSectUtil::GetShapeNameFromIndexReg(nShapeIndex);
 	ChangeBitmap();
 }
@@ -168,7 +175,7 @@ void CCMSectPageItemDlg::SetFirstSectData()
 	for(int i=0;i<nSize;i++)
 	{
 		CString csValue;
-		csValue.Format(_T("%d"),pSect->dSize[i]);
+		csValue.Format(_T("%g"),pSect->dSize[i]);
 		m_wndFirstSize[i].SetWindowText(csValue);
 	}
 }
@@ -176,7 +183,7 @@ void CCMSectPageItemDlg::SetFirstNameCombo()
 {
 	m_wndFirstName.ResetContent();
 	CArray<CString,CString&> aSectNameList;
-	m_pDoc->m_pSectDB->GetSectNameList(m_Data.SectI.SName,m_Data.SectI.Shape,aSectNameList);
+	m_pDoc->m_pSectDB->GetSectNameList(m_Data.SectI.DBName,m_Data.SectI.Shape,aSectNameList);
 	int nCount = static_cast<int>(aSectNameList.GetCount());
 	for(int i = 0;i<nCount;i++)
 		m_wndFirstName.AddString(aSectNameList.GetAt(i));
@@ -189,10 +196,22 @@ void CCMSectPageItemDlg::ChangeBitmap()
 		AfxMessageBox(_LS(IDS_WG_CMD__ADDD__Error___Invalid_regular_section_s));
 		return;
 	}
+	UINT aBitmapID[] = {
+		IDB_CMD_SP_ISGL_BMP01,IDB_CMD_SP_ISGL_BMP02,IDB_CMD_SP_ISGL_BMP03,IDB_CMD_SP_ISGL_BMP04,
+		IDB_CMD_SP_ISGL_BMP05,IDB_CMD_SP_ISGL_BMP06,IDB_CMD_SP_ISGL_BMP07,IDB_CMD_SP_ISGL_BMP08,
+		IDB_CMD_SP_ISGL_BMP09,IDB_CMD_SP_ISGL_BMP10,
+	};
 
+	CStatic* SectImage = (CStatic*)GetDlgItem(IDC_CMD_SP_ID_BMP);
+	//if(m_Bitmap){delete m_Bitmap;m_Bitmap = 0;}
+	//m_Bitmap = new CBitmap;
+	//CBitmap m_Bitmap1;
+	m_Bitmap.DeleteObject();
+	m_Bitmap.LoadBitmap(aBitmapID[nShapeIndex]);
+	SectImage->SetBitmap((HBITMAP)m_Bitmap);
+	//this->OnPaint();
 }
 // CCMSectPageItemDlg 消息处理程序
-
 void CCMSectPageItemDlg::OnOk()
 {
 	CDialog::OnOK();
@@ -211,8 +230,6 @@ void CCMSectPageItemDlg::OnRadio()
 	CDlgUtil::CtrlEnableDisable(this,m_aCtrlDBUser2,nUserOrDB);
 	CDlgUtil::CtrlEnableDisable(this,m_aCtrlDBUser,!nUserOrDB);
 }
-
-
 void CCMSectPageItemDlg::OnChangeShape()
 {
 	int nShapeIndex = m_cboType.GetCurSel();
@@ -224,10 +241,24 @@ void CCMSectPageItemDlg::OnChangeShape()
 	ChangeBitmap();
 	ShowDataToDlg();
 }
-
-
 void CCMSectPageItemDlg::OnChangeDB()
 {
-	m_wndDB.GetWindowText(m_Data.SectI.SName);
+	m_wndDB.GetWindowText(m_Data.SectI.DBName);
 	//OnChangeShape();
+}
+void CCMSectPageItemDlg::OnChangeFirstName()
+{
+	CString csName;
+	m_wndFirstName.GetWindowText(csName);
+	T_SECT_SECTBASE_D* pSect = &m_Data.SectI;
+	if(csName == pSect->SName)return;
+	pSect->SName = csName;
+	T_SECT_SECTBASE_D SectData;
+	SectData.initialize();
+	if(csName != _T(""))
+		m_pDoc->m_pSectDB->GetSectData_Org(pSect->DBName,pSect->SName,SectData);
+	for(int i = 0;i<D_SECT_SIZE_NUM_MAX;i++)
+		pSect->dSize[i] = SectData.dSize[i];
+	pSect->BuiltUpFlag = SectData.BuiltUpFlag;
+	SetFirstSectData();
 }
