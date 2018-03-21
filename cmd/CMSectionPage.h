@@ -3,7 +3,6 @@
 #include "afxwin.h"
 #include "CMSectViewWnd.h"
 #include "afxcmn.h"
-class CCMSectViewWnd;
 class CCMSectionPage : public CDialog
 {
 	DECLARE_DYNAMIC(CCMSectionPage)
@@ -33,4 +32,5 @@ private:
 public:
 	void OnUpdate();
 	
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
 };

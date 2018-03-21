@@ -22,9 +22,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CMPropertiesDlg.h">
-      <Filter>02 Properties\01 Material</Filter>
-    </ClInclude>
     <ClInclude Include="CMaterialPage.h">
       <Filter>02 Properties\01 Material</Filter>
     </ClInclude>
@@ -64,11 +61,11 @@
     <ClInclude Include="CMSectPageItemDlg.h">
       <Filter>02 Properties\02 Section</Filter>
     </ClInclude>
+    <ClInclude Include="CMPropertiesDlg.h">
+      <Filter>02 Properties</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CMPropertiesDlg.cpp">
-      <Filter>02 Properties\01 Material</Filter>
-    </ClCompile>
     <ClCompile Include="CMaterialPage.cpp">
       <Filter>02 Properties\01 Material</Filter>
     </ClCompile>
@@ -95,6 +92,9 @@
     </ClCompile>
     <ClCompile Include="CMSectPageItemDlg.cpp">
       <Filter>02 Properties\02 Section</Filter>
+    </ClCompile>
+    <ClCompile Include="CMPropertiesDlg.cpp">
+      <Filter>02 Properties</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -198,6 +198,7 @@
     <ClCompile Include="02Base\Rectangle.cpp" />
     <ClCompile Include="BaseDialog.cpp" />
     <ClCompile Include="BaseLib.cpp" />
+    <ClCompile Include="CobxAutoFill.cpp" />
     <ClCompile Include="CompFunc.cpp" />
     <ClCompile Include="DialogMove.cpp" />
     <ClCompile Include="DlgTabCtrl.cpp" />
@@ -229,7 +230,9 @@
     <ClInclude Include="BaseDlg.h" />
     <ClInclude Include="BaseLib.h" />
     <ClInclude Include="base_ControlEx.h" />
+    <ClInclude Include="CobxAutoFill.h" />
     <ClInclude Include="CompFunc.h" />
+    <ClInclude Include="ControlEx.h" />
     <ClInclude Include="DialogMove.h" />
     <ClInclude Include="DlgTabCtrl.h" />
     <ClInclude Include="DlgUtil.h" />

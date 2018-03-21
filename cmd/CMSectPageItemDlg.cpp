@@ -67,12 +67,15 @@ BOOL CCMSectPageItemDlg::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 	InitControls();
+	m_wndSectView.SetDataSource(&m_Data);
+	m_wndDB.GetWindowText(m_Data.SectI.DBName);
 	m_Key = m_pDoc->m_pAttrCtrl->GetStartNumSect();
+	m_Data.nStype = D_SECT_TYPE_REGULAR;
 	CString str;
 	str.Format(_T("%d"),m_Key);
 	m_wndID.SetWindowText(str);
 	ShowDataToDlg();
-
+	
 	return TRUE;
 }
 
@@ -89,17 +92,15 @@ void CCMSectPageItemDlg::InitControls()
 	SetSectionShapeCombo();
 	int nShapeIndex = D_SECT_SHAPE_REG_H;
 	m_cboType.SetCurSel(nShapeIndex);
-	CString str;
-	m_cboType.GetWindowText(str);
 	CDlgUtil::CtrlEnableDisable(this,m_aCtrlDBUser,0);
 	m_wndBuiltUp.EnableWindow(FALSE);
 
 	SetDBNameList();
 	m_wndDB.SetCurSel(0);
-	OnChangeDB();
-
 	m_Data.SectI.Shape = CSectUtil::GetShapeNameFromIndexReg(nShapeIndex);
-	ChangeBitmap();
+	CWnd* pWnd = GetDlgItem(IDC_CMD_SP_ID_PREVIEW);
+	ASSERT(pWnd);
+	m_wndSectView.Init(pWnd);
 }
 void CCMSectPageItemDlg::SetSectionShapeCombo()
 {
@@ -166,7 +167,7 @@ void CCMSectPageItemDlg::ShowDataToDlg()
 	CDlgUtil::CtrlRadioSetCheck(this,m_aCtrlDB,1);
 	SetFirstSectData();
 	SetFirstNameCombo();
-	//OnChangeShape();
+	ChangeBitmap();
 }
 void CCMSectPageItemDlg::SetFirstSectData()
 {
@@ -178,6 +179,7 @@ void CCMSectPageItemDlg::SetFirstSectData()
 		csValue.Format(_T("%g"),pSect->dSize[i]);
 		m_wndFirstSize[i].SetWindowText(csValue);
 	}
+	m_wndSectView.Invalidate();
 }
 void CCMSectPageItemDlg::SetFirstNameCombo()
 {
@@ -237,13 +239,19 @@ void CCMSectPageItemDlg::OnChangeShape()
 	if(nShapeIndex < 0)return;
 	int nCurShapeIndex = CSectUtil::GetShapeIndexFromNameReg(m_Data.SectI.Shape);
 	if(nShapeIndex == nCurShapeIndex)return;
-	m_Data.SectI.Shape = CSectUtil::GetShapeNameFromIndexReg(nShapeIndex);
-	ChangeBitmap();
+	T_SECT_SECTBASE_D* pSect = &m_Data.SectI;
+	CString csDBName = pSect->DBName;
+	pSect->initialize();
+	pSect->Shape = CSectUtil::GetShapeNameFromIndexReg(nShapeIndex);
+	pSect->DBName = csDBName;
+	//m_Data.SectI.SName.Empty();
 	ShowDataToDlg();
 }
 void CCMSectPageItemDlg::OnChangeDB()
 {
 	m_wndDB.GetWindowText(m_Data.SectI.DBName);
+	SetFirstNameCombo();
+	OnChangeFirstName();
 	//OnChangeShape();
 }
 void CCMSectPageItemDlg::OnChangeFirstName()

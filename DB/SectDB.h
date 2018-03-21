@@ -7,6 +7,8 @@ class __MY_EXT_CLASS__ CSectDB
 public:
 	void GetNameList(CArray<CString,CString&>& rarDBNameList);
 	void GetSectNameList(const CString& strName,const CString& strShape,CArray<CString,CString&>& rarSectNameList);
+	void GetSectData(const CString& strSectName,T_SECT_SECTBASE_D& pSect);
+	BOOL GetSectData_Org(const CString& strDBName,const CString& strSectName,T_SECT_SECTBASE_D& pSect);
 private:
 	CSectDB(CDBDoc* pDoc);
 	~CSectDB(void);
@@ -46,9 +48,27 @@ private:
 		short int NOFFSET ;
 		short int RESERVED;
 	};
+	struct T_SECT_FILE_SDATA
+	{
+		float Size[8];
+		float AREA; float ASY; float ASZ;
+		float RXX; float RYY; float RZZ;
+		float QYB; float QZB;
+		float CYP; float CYM; float CZP; float CZM;
+		float BUILT; float PERIOUT; float YBAR; float ZBAR;
+		float SYY; float SZZ; float ZYY; float ZZZ;
+		float ROY; float ROZ; float CWP; float TANA;
+		float ROP; float XO; float RO; float BETA;
+		float PERIIN; float RES2;
+		void Initialize()
+		{
+			memset(Size, 0, sizeof(T_SECT_FILE_SDATA));
+		}
+	};
 private:
 	void GetRegisteredDBName(CArray<CString,CString&>& rarDBName);
 	BOOL ReadDBHead(CString strDBName,CArray<T_SECT_NAME,T_SECT_NAME&>& NameArray);
+	BOOL ReadDBHead(CString strDBName,unsigned int nFilePoint,T_SECT_FILE_SDATA& rSectData);
 	void MakeFullPath(CString& strDBName);
 };
 

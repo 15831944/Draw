@@ -3,6 +3,7 @@
 #include "afxwin.h"
 #include "afxcmn.h"
 #include "../BaseLib/ControlEx.h"
+#include "CMSectViewWnd.h"
 // CCMSectPageItemDlg ¶Ô»°¿ò
 class CDBDoc;
 class CCobxAutoFill;
@@ -31,7 +32,7 @@ private:
 	CBitmap m_Bitmap;
 	CButton m_wndBuiltUp;
 	CCobxAutoFill m_wndFirstName;
-	//CComboBox m_wndFirstName;
+	CCMSectViewWnd m_wndSectView;
 	CEdit m_wndFirstSize[8];
 
 	CArray<UINT,UINT>	m_aCtrlDB;

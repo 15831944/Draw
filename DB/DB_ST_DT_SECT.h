@@ -1,5 +1,11 @@
 #pragma once
+#pragma pack(push,4)
 typedef unsigned int T_SECT_K;
+enum
+{
+	D_SECT_BUILT_BUILTUP=1,
+	D_SECT_BUILT_ROLLED,//ÔþÖÆ¸Õ
+};
 enum
 {
 	D_SECT_SHAPE_REG_L,
@@ -13,6 +19,13 @@ enum
 	D_SECT_SHAPE_REG_SB,
 	D_SECT_SHAPE_REG_SR,
 };
+enum
+{
+	D_SECT_TYPE_REGULAR =1,
+	D_SECT_TYPE_USER,
+
+};
+#pragma region CString
 //Regular
 const CString D_SECT_SHAPE_REG_L_S			= _T("L");//½Ç¸Ö
 const CString D_SECT_SHAPE_REG_C_S			= _T("C");//²Û¸Ö
@@ -37,28 +50,45 @@ const CString D_SECT_SHAPE_REG_2C_S     = _T("2C");//Êµ¸¹Ô²ÐÎ½ØÃæ
 //const CString D_SECT_SHAPE_REG_PSTF   = _T("PSTF");  // Pipe with stiffener
 //const CString D_SECT_SHAPE_REG_GEN    = _T("GEN");  // General Section (Value¿¡¼­¸¸ »ç¿ë)
 //const CString D_SECT_SHAPE_REG_UDT    = _T("UDT");  // Upside-Down T
+#pragma endregion CString
 const int D_SECT_SIZE_NUM_MAX = 8;
+struct T_SECT_STIFFNESS
+{
+	void initialize()
+	{
+
+	}
+};
 struct T_SECT_SECTBASE_D
 {
 	CString Shape;
-	CString SName;//GB-YB
-
+	CString DBName;//GB-YB
+	CString SName;//HW5x5x5
+	T_SECT_STIFFNESS Stiffness;
+	int BuiltUpFlag;  // 1=Builtup Section(D_SECT_BUILT_BUILTUP)  2=Rolled Section(D_SECT_BUILT_ROLLED)
 	double dSize[D_SECT_SIZE_NUM_MAX];
+
 	void initialize()
 	{
 		Shape.Empty();
+		DBName.Empty();
 		SName.Empty();
+		Stiffness.initialize();
+		BuiltUpFlag = 0;
 		for(int i = 0;i<D_SECT_SIZE_NUM_MAX;i++)
 			dSize[i] = 0.0;
 	}
 };
 struct T_SECT_D
 {
+	int nStype;//D_SECT_SHAPE_REG_??
 	CString csName;
 	T_SECT_SECTBASE_D SectI;
 	void initialize()
 	{
+		nStype = 0;
 		csName.Empty();
 		SectI.initialize();
 	}
 };
+#pragma pack(pop)

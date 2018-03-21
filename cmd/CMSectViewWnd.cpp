@@ -16,6 +16,7 @@ CCMSectViewWnd::~CCMSectViewWnd(void)
 {
 }
 BEGIN_MESSAGE_MAP(CCMSectViewWnd,CWnd)
+	ON_WM_PAINT()
 END_MESSAGE_MAP()
 BOOL CCMSectViewWnd::Init(CWnd* pWnd)
 {
@@ -36,4 +37,10 @@ BOOL CCMSectViewWnd::Init(CWnd* pWnd)
 void CCMSectViewWnd::SetDataSource(T_SECT_D* pData)
 {
 	m_pDataSrc = pData;
+}
+
+void CCMSectViewWnd::OnPaint()
+{
+	CPaintDC dc(this);
+
 }

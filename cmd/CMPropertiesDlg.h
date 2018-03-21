@@ -36,6 +36,8 @@ private:
 	virtual BOOL OnInitDialog();
 	virtual void OnUpdate(CWnd* pSender, LPARAM lParam, CObject* pHint);
 	//virtual void OnCancel();
+public:
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
 };
 #include "HeaderPost.h"
 #include "afxcmn.h"

@@ -38,4 +38,5 @@ public:
 	void MakeItemEx();
 	virtual BOOL OnInitDialog();
 	CString DataToStr(int i, T_MATL_K Key, const T_MATL_D& rData);
+	virtual BOOL PreTranslateMessage(MSG* pMsg);
 };

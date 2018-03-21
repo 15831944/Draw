@@ -88,3 +88,16 @@ void CCMPropertiesDlg::OnUpdate(CWnd* pSender, LPARAM lParam, CObject* pHint)
 //	DestroyWindow();
 //}
 
+
+
+BOOL CCMPropertiesDlg::PreTranslateMessage(MSG* pMsg)
+{
+	if(pMsg->message == WM_KEYDOWN)
+	{
+		int nVirtKey = (int)pMsg->wParam;
+		if(nVirtKey == VK_ESCAPE)
+			AfxMessageBox(_T("11"));
+	}
+
+	return CCMDlgBase::PreTranslateMessage(pMsg);
+}

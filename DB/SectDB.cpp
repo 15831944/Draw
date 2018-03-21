@@ -20,11 +20,48 @@ void CSectDB::GetSectNameList(const CString& strName,const CString& strShape,CAr
 			for(int j = 0;j<nCount;j++)
 				if(pNameList->GetAt(j).SectShape == strShape)
 				{
-					CString strjjj = pNameList->GetAt(j).SectName;
+					//CString strjjj = pNameList->GetAt(j).SectName;
 					rarSectNameList.Add(pNameList->GetAt(j).SectName);
 				}
 		}
 	}
+}
+void CSectDB::GetSectData(const CString& strSectName,T_SECT_SECTBASE_D& pSect)
+{
+
+}
+BOOL CSectDB::GetSectData_Org(const CString& strDBName,const CString& strSectName,T_SECT_SECTBASE_D& rSect)
+{
+	rSect.initialize();
+	int nDBName = static_cast<int>(m_arSectDBList.GetSize());
+	PNAMELIST parSectNameList = 0;
+	for(int i = 0;i<nDBName;i++)
+	{
+		if(strDBName.CompareNoCase(m_arSectDBList[i]) == 0 && m_arSectDBNameList[i] != NULL)
+		{
+			parSectNameList = m_arSectDBNameList[i];
+		}
+	}
+	int nCount = static_cast<int>(parSectNameList->GetSize());
+	T_SECT_FILE_SDATA SData;
+	for(int i = 0;i<nCount;i++)
+	{
+		CString tmpName = parSectNameList->GetAt(i).SectName;
+		if(tmpName == strSectName)
+		{
+			ReadDBHead(strDBName,parSectNameList->GetAt(i).nFilePoint,SData);
+			rSect.DBName = strSectName;
+			rSect.SName = parSectNameList->GetAt(i).SectName;
+			rSect.Shape = parSectNameList->GetAt(i).SectShape;
+			int nArraySize = sizeof(SData.Size)/sizeof(float);
+			for(int i = 0;i<nArraySize;i++)
+				rSect.dSize[i] = SData.Size[i];
+			rSect.BuiltUpFlag = D_SECT_BUILT_BUILTUP;
+			if(SData.BUILT == 0)rSect.BuiltUpFlag = D_SECT_BUILT_ROLLED;
+			return TRUE; 
+		}
+	}
+	return FALSE;
 }
 
 
@@ -112,6 +149,26 @@ BOOL CSectDB::ReadDBHead(CString strDBName,CArray<T_SECT_NAME, T_SECT_NAME &>& N
 				NameArray.Add(SectName);
 			}
 		}
+	}
+	CATCH (CFileException, e)
+	{
+		AfxMessageBox(_T("111111"));
+		bError = TRUE;
+	}
+	END_CATCH
+		return !bError;
+}
+BOOL CSectDB::ReadDBHead(CString strDBName,unsigned int nFilePoint,T_SECT_FILE_SDATA& rSectData)
+{
+	MakeFullPath(strDBName);
+	BOOL bError = FALSE;
+	TRY 
+	{
+		unsigned int nByte,nResultByte;
+		CFile File(strDBName,CFile::modeRead | CFile::typeBinary);
+		nResultByte = (unsigned int)File.Seek(nFilePoint,CFile::begin);
+		nByte = File.Read(&rSectData,sizeof(rSectData));
+		File.Close();
 	}
 	CATCH (CFileException, e)
 	{

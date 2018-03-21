@@ -22,5 +22,6 @@ private:
 public:
 	BOOL Init(CWnd* pWnd);
 	void SetDataSource(T_SECT_D* pData);
+	afx_msg void OnPaint();
 };
 #include "HeaderPost.h"

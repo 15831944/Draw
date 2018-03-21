@@ -65,6 +65,13 @@ void CCMSectionPage::OnUpdate()
 
 }
 
-
-
-
+BOOL CCMSectionPage::PreTranslateMessage(MSG* pMsg)
+{
+	if(pMsg->message == WM_KEYDOWN)
+	{
+		int nVirtKey = (int)pMsg->wParam;
+		if(nVirtKey == VK_ESCAPE)
+			return TRUE;
+	}
+	return CDialog::PreTranslateMessage(pMsg);
+}

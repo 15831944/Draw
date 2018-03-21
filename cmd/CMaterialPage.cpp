@@ -207,3 +207,15 @@ CString CCMaterialPage::DataToStr(int i, T_MATL_K Key, const T_MATL_D& rData)
 	else if (i == 4) str = rData.Data1.CodeMatlName;
 	return str;
 }
+
+BOOL CCMaterialPage::PreTranslateMessage(MSG* pMsg)
+{
+	if(pMsg->message == WM_KEYDOWN)
+	{
+		int nVirtKey = (int)pMsg->wParam;
+		if(nVirtKey == VK_ESCAPE)
+			return TRUE;
+	}
+
+	return CDialog::PreTranslateMessage(pMsg);
+}
