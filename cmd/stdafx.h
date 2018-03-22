@@ -47,7 +47,7 @@
 #include "crtdbg.h"
 #endif
 typedef UINT T_KEY;
-
+#include <math.h>
 //#include "../cmd/cmdVer.h"
 
 

@@ -36,3 +36,8 @@ int CSectUtil::GetShapeIndexFromNameReg(const CString& Shape)
 	if(i == D_SECT_REG_NUM)return -1;
 	return i;
 }
+
+BOOL CSectUtil::CalcSectData(T_SECT_D& data)
+{
+	return FALSE;
+}

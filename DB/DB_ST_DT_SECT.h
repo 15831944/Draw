@@ -1,6 +1,7 @@
 #pragma once
 #pragma pack(push,4)
 typedef unsigned int T_SECT_K;
+const double cZero = 1.0e-09;
 enum
 {
 	D_SECT_BUILT_BUILTUP=1,
@@ -82,12 +83,12 @@ struct T_SECT_SECTBASE_D
 struct T_SECT_D
 {
 	int nStype;//D_SECT_SHAPE_REG_??
-	CString csName;
+	//CString csName;
 	T_SECT_SECTBASE_D SectI;
 	void initialize()
 	{
 		nStype = 0;
-		csName.Empty();
+		//csName.Empty();
 		SectI.initialize();
 	}
 };

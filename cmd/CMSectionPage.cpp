@@ -57,8 +57,8 @@ void CCMSectionPage::OnItemchanged(NMHDR *pNMHDR, LRESULT *pResult)
 		m_Key = _wtol(m_List.GetItemText(iItem,0));
 		//get m_Data;
 	}
-	m_wndSectView.SetDataSource(&m_Data);
-	m_wndSectView.Invalidate();
+	//m_wndSectView.SetDataSource(&m_Data);
+	//m_wndSectView.Invalidate();
 }
 void CCMSectionPage::OnUpdate()
 {

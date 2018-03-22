@@ -11,7 +11,7 @@ public:
 	//         1 -> not match : select partial match, else select default
 	//         2 -> not match : clear selection and edit box
 	void  SetActionWhenKillFocus(int nMode, int nDefaultSel=-1) ;
-	
+
 private:
 	int m_nMode;
 	int m_nDefaultSel;

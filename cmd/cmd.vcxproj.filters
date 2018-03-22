@@ -64,6 +64,9 @@
     <ClInclude Include="CMPropertiesDlg.h">
       <Filter>02 Properties</Filter>
     </ClInclude>
+    <ClInclude Include="CMGeometry.h">
+      <Filter>02 Properties\02 Section</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CMaterialPage.cpp">
@@ -95,6 +98,9 @@
     </ClCompile>
     <ClCompile Include="CMPropertiesDlg.cpp">
       <Filter>02 Properties</Filter>
+    </ClCompile>
+    <ClCompile Include="CMGeometry.cpp">
+      <Filter>02 Properties\02 Section</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

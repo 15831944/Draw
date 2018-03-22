@@ -7,6 +7,7 @@ public:
 	~CSectUtil(void);
 	static int GetShapeIndexFromNameReg(const CString& Shape);
 	static CString GetShapeNameFromIndexReg(int nShape);
+	static BOOL CalcSectData(T_SECT_D& data);
 private:
 	static CString m_aRegShapeName[];
 	static const int D_SECT_REG_NUM;

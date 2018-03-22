@@ -132,6 +132,7 @@
     <ClInclude Include="CMatPageItemDlg.h" />
     <ClInclude Include="CMDlgBase.h" />
     <ClInclude Include="cmdVer.h" />
+    <ClInclude Include="CMGeometry.h" />
     <ClInclude Include="CMPropertiesDlg.h" />
     <ClInclude Include="CMSectionPage.h" />
     <ClInclude Include="CMSectPageItemDlg.h" />
@@ -147,6 +148,7 @@
     <ClCompile Include="CMaterialPage.cpp" />
     <ClCompile Include="CMatPageItemDlg.cpp" />
     <ClCompile Include="CMDlgBase.cpp" />
+    <ClCompile Include="CMGeometry.cpp" />
     <ClCompile Include="CMPropertiesDlg.cpp" />
     <ClCompile Include="CMSectionPage.cpp" />
     <ClCompile Include="CMSectPageItemDlg.cpp" />
