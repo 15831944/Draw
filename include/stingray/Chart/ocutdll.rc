@@ -1,0 +1,115 @@
+//////////////////////////////////////////////////////////////////////////////
+//
+// Objective Chart Utility Toolkit Library
+// ocutdll.rc
+// 
+//////////////////////////////////////////////////////////////////////////////
+//
+// Copyright (c) 1999-2009 Rogue Wave Software, Inc.  All Rights Reserved.
+//
+// This computer software is owned by Rogue Wave Software, Inc. and is protected by
+// U.S. copyright laws and other laws and by international treaties. This
+// computer software is furnished by Rogue Wave Software, Inc. pursuant to a written
+// license agreement and may be used, copied, transmitted, and stored
+// only in accordance with the terms of such license agreement and with
+// the inclusion of the above copyright notice.  This computer software or
+// any other copies thereof may not be provided or otherwise made available
+// to any other person.
+//
+// U.S. Government Restricted Rights.  This computer software:
+//      (a) was developed at private expense and is in all respects the
+//          proprietary information of Rogue Wave Software, Inc.;
+//      (b) was not developed with government funds;
+//      (c) is a trade secret of Rogue Wave Software, Inc. for all purposes of the
+//          Freedom of Information Act; and
+//      (d) is a commercial item and thus, pursuant to Section 12.212
+//          of the Federal Acquisition Regulations (FAR) and DFAR
+//          Supplement Section 227.7202, Government’s use, duplication or
+//          disclosure of the computer software is subject to the restrictions
+//          set forth by Rogue Wave Software, Inc.
+//
+///////////////////////////////////////////////////////////////////////////////
+//
+// This source code is only intended as a supplement to the Objective Chart
+// Classes Reference and related electronic documentation provided with the 
+// library. See these sources for detailed information regarding the Objective 
+// Chart product.
+//
+
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+// Version stamp for this .DLL
+
+#ifndef __PRODUCT_VERSION__H__
+#include <ProductVersions.h>
+#endif // __PRODUCT_VERSION__H__
+
+// NOTE: MSVC 6.0 deprecated ver.h by way of the ver.h file, i.e. ver.h simply 
+//       includes winver.h. As of Visual Studio 2003, Microsoft has done away 
+//       with ver.h altogether, so just including winver.h is sufficient.
+#include "winver.h"
+
+// Version Info for Objective Chart Utility Toolkit DLL
+VS_VERSION_INFO     VERSIONINFO
+FILEVERSION	    _OCUT_VER_COMMA
+PRODUCTVERSION	    _OCUT_VER_COMMA
+FILEFLAGSMASK       VS_FFI_FILEFLAGSMASK
+
+#ifdef _DEBUG
+FILEFLAGS         VS_FF_DEBUG
+#else
+FILEFLAGS         0 // final release
+#endif
+
+FILEOS            VOS_NT_WINDOWS32
+FILETYPE          VFT_DLL
+FILESUBTYPE       0   // not used
+  
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "040904E4" // Lang=US English, CharSet=Windows Multilingual
+		BEGIN
+			VALUE "CompanyName",     "Rogue Wave Software\0"
+			VALUE "FileVersion",	 _OCUT_VER_TEXT "\0"
+			VALUE "LegalCopyright",  "Copyright (c) 1999-2009 Rogue Wave Software, Inc.  All Rights Reserved.\0"
+
+#ifdef _DEBUG
+#ifdef UNICODE
+			// Unicode Debug
+			VALUE "FileDescription", "Objective Chart Utility Toolkit DLL - Unicode Debug Ver.\0"
+			VALUE "InternalName",    "OCUTDLL_ASUD\0"
+			VALUE "OriginalFilename","ocut"_OCUT_VER_LIB"asud.DLL\0"
+#else
+			// ANSI Debug
+			VALUE "FileDescription", "Objective Chart Utility Toolkit DLL - Debug Ver.\0"
+			VALUE "InternalName",    "OCUTDLL_ASD\0"
+			VALUE "OriginalFilename","ocut"_OCUT_VER_LIB"asd.DLL\0"
+#endif
+#else 
+#ifdef UNICODE
+			// Unicode Release
+			VALUE "FileDescription", "Objective Chart Utility Toolkit DLL - Unicode Release Ver.\0"
+			VALUE "InternalName",    "OCUTDLL_ASU\0"
+			VALUE "OriginalFilename","ocut"_OCUT_VER_LIB".DLL\0"
+#else
+			// ANSI Release
+			VALUE "FileDescription", "Objective Chart Utility Toolkit DLL - Release Ver.\0"
+			VALUE "InternalName",    "OCUTDLL_AS\0"
+			VALUE "OriginalFilename","ocut"_OCUT_VER_LIB"as.DLL\0"
+#endif
+#endif
+			VALUE "ProductName",     "Objective Chart Utility Toolkit\0"
+			VALUE "ProductVersion",  _OCUT_VER_TEXT "\0"
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x409, 1252
+			// English language (0x409) and the Windows ANSI codepage (1252)
+	END
+END
+
+/////////////////////////////////////////////////////////////////////////////
+

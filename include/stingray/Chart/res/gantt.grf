@@ -1,0 +1,4 @@
+// Gantt graph supports these axis types
+0x01000000   Automatic
+0x18000000	Gantt, value scale
+0x19000000	Gantt, date scale

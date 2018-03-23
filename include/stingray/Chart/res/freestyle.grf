@@ -1,0 +1,6 @@
+// Freestyle graph supports these axis types
+0x01000000	Automatic
+0x02000000	Classic
+0x0c000000	Classic Y on right
+0x12000000	Classic Date
+0x13000000	Classic Date on right 

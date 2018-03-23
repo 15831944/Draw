@@ -1,0 +1,6 @@
+// Ribbon graph supports these axis types
+0x01000000   Automatic
+0x04000000	Isographic ribbon (SE)
+0x05000000	Isographic ribbon (SW)
+0x06000000	3/4 stage (SE)
+0x07000000	3/4 stage (SW)

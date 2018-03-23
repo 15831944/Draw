@@ -1,0 +1,243 @@
+///////////////////////////////////////////////////////////////////////////////
+// gxXMLfra.rc
+//
+// Copyright (c) 1999-2009 Rogue Wave Software, Inc.  All Rights Reserved.
+//
+// This computer software is owned by Rogue Wave Software, Inc. and is protected by
+// U.S. copyright laws and other laws and by international treaties. This
+// computer software is furnished by Rogue Wave Software, Inc. pursuant to a written
+// license agreement and may be used, copied, transmitted, and stored
+// only in accordance with the terms of such license agreement and with
+// the inclusion of the above copyright notice.  This computer software or
+// any other copies thereof may not be provided or otherwise made available
+// to any other person.
+//
+// U.S. Government Restricted Rights.  This computer software:
+//      (a) was developed at private expense and is in all respects the
+//          proprietary information of Rogue Wave Software, Inc.;
+//      (b) was not developed with government funds;
+//      (c) is a trade secret of Rogue Wave Software, Inc. for all purposes of the
+//          Freedom of Information Act; and
+//      (d) is a commercial item and thus, pursuant to Section 12.212
+//          of the Federal Acquisition Regulations (FAR) and DFAR
+//          Supplement Section 227.7202, Government’s use, duplication or
+//          disclosure of the computer software is subject to the restrictions
+//          set forth by Rogue Wave Software, Inc.
+//
+///////////////////////////////////////////////////////////////////////////////
+//Microsoft Developer Studio generated resource script.
+//
+#include "grid\xmlser\gxxmlrc.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#include "foundation\sflres.h"
+
+#include "foundation\sfl.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+	GX_IDS_NAME			"Nom"
+	GX_IDS_KEY			"Clé"
+	GX_IDS_TOP			"Dessus"
+	GX_IDS_LEFT			"Gauche"
+	GX_IDS_BOTTOM		"Bas"
+	GX_IDS_RIGHT		"Droite"
+	GX_IDS_TYPE			"Type"
+	GX_IDS_ISVALID		"EstValid"
+	GX_IDS_ITALIC		"Italique"
+	GX_IDS_UNDERLINE	"Underline"
+	GX_IDS_STRIKEOUT	"GrèveDehors"
+	GX_IDS_WEIGHT		"Poids"
+	GX_IDS_SIZE			"Taille"
+	GX_IDS_ORIENTATION	"Orientation"
+	GX_IDS_FACENAME		"VisageNom"
+	GX_IDS_PITCHANDFAMILY	"LancementEtFamille"
+	GX_IDS_CHARSET		"CaractèrePositionnement"
+	GX_IDS_STYLE		"Modèle"
+	GX_IDS_COLOR		"Couleur"
+	GX_IDS_HATCH		"Trappe"
+	GX_IDS_PATTERN		"Configuration"
+	GX_IDS_BGCOLOR		"BGCouleur"
+	GX_IDS_ROWCOUNT		"LigneCompte"
+	GX_IDS_COLCOUNT		"ColonneCompte"
+	GX_IDS_CELLSTYLESARRAY	"CelluleModèlesAlignement"
+	GX_IDS_ROWBASESTYLESARRAY	"LigneBaseModèlesAlignement"
+	GX_IDS_COLBASESTYLESARRAY	"ColonneBaseModèlesAlignement"
+	GX_IDS_DEVNAMES		"DéveloppementNoms"
+	GX_IDS_DEVMODE		"DéveloppementMode"
+	GX_IDS_COLORARRAY	"CouleurAlignement"
+	GX_IDS_VERTLINES	"VerticalLignes"
+	GX_IDS_HORZ_LINES	"HorizantalLignes"
+	GX_IDS_BUTTONS_3D	"Boutons3D"
+	GX_IDS_MARK_ROWHEADER	"MarqueLigneEn-tête"
+	GX_IDS_MARK_COLHEADER	"MarqueColonneEn-tête"
+	GX_IDS_PROFILE_SECTION	"ProfilSection"
+	GX_IDS_ZOOM			"Zoom"
+	GX_IDS_PAGE_ORDER	"PageCommande"
+	GX_IDS_BLACKANDWHITE	"NoirEtBlanc"
+	GX_IDS_ROWHEADERS	"LigneEn-têtes"
+	GX_IDS_CENTERVERTICAL	"CentreVertical"
+	GX_IDS_CENTERHORZ	"CentreHorizontal"
+	GX_IDS_TOPMARGIN	"DessusMarge"
+	GX_IDS_LEFTMARGIN	"GaucheMarge"
+	GX_IDS_RIGHTMARGIN	"DroiteMarge"
+	GX_IDS_BOTTOMMARGIN	"BasMarge"
+	GX_IDS_PRINTFRAME	"CopieVue"
+	GX_IDS_HEADERLENGTH	"En-têteLongueur"
+	GX_IDS_FOOTERLENGTH	"Titre de bas de pageLongueur"
+	GX_IDS_FIRSTPAGE	"D'abordPage"
+	GX_IDS_COLBREAKSARRAY	"ColonneRupturesAlignement"
+	GX_IDS_ROWBREAKSARRAY	"LigneRupturesAlignement"
+	GX_IDS_HEADERDATA	"En-têteDonnées"
+	GX_IDS_FOOTERDATA	"Titre de bas de pageDonnées"
+	GX_IDS_COLUMNHEADERS	"ColonneEn-têtes"
+	GX_IDS_ALL			"Tous"
+	GX_IDS_STYLEBITS	"ModèleBits"
+	GX_IDS_INTERIORCOLOR	"IntérieurCouleur"
+	GX_IDS_CHOICELIST	"ChoixListe"
+	GX_IDS_MAXLENGTH	"MaximumLongueur"
+	GX_IDS_HORZALIGN	"HorizontalCadrage"
+	GX_IDS_VERTALIGN	"VerticalCadrage"
+	GX_IDS_READONLY		"LuSeulement"
+	GX_IDS_CONTROLID	"CommandeIdentification"
+	GX_IDS_TEXTCOLOR	"TexteCouleur"
+	GX_IDS_WRAPPED_TEXT	"EnveloppéTexte"
+	GX_IDS_ALLOWENTER	"PermettezEntrez"
+	GX_IDS_VALUE		"Valeur"
+	GX_IDS_ENABLED		"Permis"
+	GX_IDS_TRISTATE		"TriÉtat"
+	GX_IDS_AUTOSIZE		"AutoTaille"
+	GX_IDS_BORDERS		"Cadres"
+	GX_IDS_BASESTYLEID	"BaseModèleIdentification"
+	GX_IDS_BASESTYLENAME	"BaseModèleNom"
+	GX_IDS_USER_ATTRIBUTES	"UtilisateurAttributs"
+	GX_IDS_FLOAT_CELL	"FlotteurCellule"
+	GX_IDS_FLOOD_CELL	"InondationCellule"
+	GX_IDS_MERGE_CELL	"FusionCellule"
+	GX_IDS_FORMAT_ID	"FormatIdentification"
+	GX_IDS_PLACES		"Endroits"
+	GX_IDS_VALUETYPE	"ValeurType"
+	GX_IDS_DRAW3DFRAME	"Aspiration3DVue"
+	GX_IDS_BASE_STYLES_INFO	"BaseModèles_L'information"
+	GX_IDS_BASE_STYLE_INFO	"BaseModèle_L'information"
+	GX_IDS_COUNT		"Compte"
+	GX_IDS_STYLEID		"ModèleIdentification"
+	GX_IDS_RESOURCEID	"RessourceIdentification"
+	GX_IDS_SYSTEM		"Système"
+	GX_IDS_LASTID		"BoutIdentification"
+	GX_IDS_STYLEPTRARRAY "ModèlesPTAlignement"
+	GX_IDS_VERTICAL_SCROLL "VerticalDéfilement"
+	GX_IDS_THUMB_TRACKING_BOOL	"PouceCheminement_Booléen"
+	GX_IDS_TABNAME_EDITABLE_BOOL	"TabulateurNomEditable_Booléen"
+	GX_IDS_GRID_READONLY_BOOL	"GrilleLuSeulement_Booléen"
+	GX_IDS_UNDO_ENABLED_BOOL	"DéfaitesPermis_Booléen"
+	GX_IDS_NUMBERED_ROW_HEADERS_BOOL	"NumérotéLigneEn-têtes_Booléen"
+	GX_IDS_NUMBERED_COL_HEADERS_BOOL	"NumérotéColonneEn-têtes_Booléen"
+	GX_IDS_ENABLEMOVECOLS_BOOL	"PermettezMouvementColonnes_Booléen"
+	GX_IDS_ENABLEMOVEROWS_BOOL	"PermettezMouvementLignes_Booléen"
+	GX_IDS_EATFMCOA_BOOL	"MangezD'abordSourisDéclic_SurLancez_Booléen"
+	GX_IDS_TRANSPARENT_BG_BOOL	"Transparent_BG_Booléen"
+	GX_IDS_LOCKREADONLYCELLS_BOOL	"SerrureLuSeulementCellules_Booléen"
+	GX_IDS_SMART_RESIZE		"FutéRemettez à la côte"
+	GX_IDS_SELECTION_FLAGS	"SélectionIndicateurs"
+	GX_IDS_ROW_HEIGHT_TRACKING_FLAGS	"LigneTailleCheminementIndicateurs"
+	GX_IDS_COL_WIDTH_TRACKING_FLAGS		"ColonneLargeurCheminementIndicateurs"
+	GX_IDS_FROZEN_ROWS_COUNT	"CongeléLignesCompte"
+	GX_IDS_FROZEN_COLS_COUNT	"CongeléColonnesCompte"
+	GX_IDS_DEFAULT_CELL_WIDTH	"DéfautCelluleLargeur"
+	GX_IDS_DEFAULT_CELL_HEIGHT	"DéfautCelluleTaille"
+	GX_IDS_TAB_SHEET_NAME	"TabulateurFeuilleNom"
+	GX_IDS_CELL_ACTIVATION_FLAGS	"CelluleLancementIndicateurs"
+	GX_IDS_CURRENTCELLFRAME_FLAGS	"ActuelCelluleVueIndicateurs"
+	GX_IDS_MIN_ROWHEIGHT_ON_TRACKING	"MinimumLigneTaille_SurCheminement"
+	GX_IDS_MIN_COLWIDTH_ON_TRACKING		"MinimumColonneLargeur_SurCheminement"
+	GX_IDS_DRAWING_ORDER	"SchémaCommande"
+	GX_IDS_HEADER_ROWSCOUNT	"En-têteLignesCompte"
+	GX_IDS_HEADER_COLSCOUNT	"En-têteColonnesCompte"
+	GX_IDS_SELECTION_LIST	"SélectionListe"
+	GX_IDS_COVEREDCELLS_LIST	"CouvertCellulesListe"
+	GX_IDS_ROWHEIGHTS	"LigneTailles"
+	GX_IDS_COLUMNWIDTHS	"ColonneLargeurs"
+	GX_IDS_HIDDEN_ROWARRAY	"CachéLigneAlignement"
+	GX_IDS_HIDDEN_COLARRAY	"CachéColonneAlignement"
+	GX_IDS_EXCELLIKE_SCROLL_BOOL	"ExcelezCommeDéfilement_Booléen"
+	GX_IDS_SYNCCURRENTCELL_BOOL	"SynchroActuelCellule_Booléen"
+	GX_IDS_INITIALIZED	"Initialisé"
+	GX_IDS_FROZENCOLS_UNDO_INFO	"CongeléColonnesDéfaites_L'information"
+	GX_IDS_FROM	"De"
+	GX_IDS_TO	"À"
+	GX_IDS_DEST	"Destination"
+	GX_IDS_SPECIAL_MODE	"SpécialMode"
+	GX_IDS_DRAW_WYSIWYG_BOOL	"AspirationWYSIWYG_Booléen"
+	GX_IDS_ENTER_KEYACTION	"EntrezCléAction"
+	GX_IDS_UNDO_LIMIT	"DéfaitesLimite"
+	GX_IDS_SORT_COLS_ON_DBLCLK	"TriColonnesSurDoubleDéclic"
+	GX_IDS_SORT_ROWS_ON_DBLCLK	"TriLignesSurDoubleDéclic"
+	GX_IDS_EXCEL_LIKE_CURRENT_CELL "ExcelezCommeActuelCellule"
+	GX_IDS_EXCEL_LIKE_SELECTION_FRAME	"ExcelezCommeSélectionVue"
+	GX_IDS_NEWGRIDLINEMODE	"NouveauGrilleLigneMode"
+	GX_IDS_FLOATCELLSMODE	"FlotteurCellulesMode"
+	GX_IDS_FLOATCELLSDELAYEVAL	"FlotteurCellulesRetardeEval"
+	GX_IDS_FLOATCELLSONDISPLAY	"FlotteurCellulesSurAffichage"
+	GX_IDS_ROWS			"Lignes"
+	GX_IDS_COLS			"Colonnes"
+	GX_IDS_MERGE_CELLS_MODE	"FusionCellulesMode"
+	GX_IDS_MERGE_CELLS_DELAYEVAL	"FusionCellulesRetardeEval"
+	GX_IDS_MERGE_CELLS		"FusionCellules"
+	GX_IDS_HORZ_CELLS		"HorizontalCellules"
+	GX_IDS_VERT_CELLS		"VerticalCellules"
+	GX_IDS_GRID_LINE_STYLE	"GrilleLigneModèle"
+	GX_IDS_DIRECT_COPY_PASTE	"DirectCopiePâte"
+	GX_IDS_DIRECT_CUT_PASTE	"DirectCoupePâte"
+	GX_IDS_DIRECT_DRAG_DROP	"DirectDragueBaisse"
+	GX_IDS_DISPLAYEXPRESSION	"AffichageExpression"
+	GX_IDS_EXCELLIKE_HEADERS	"ExcelezCommeEn-têtes"
+	GX_IDS_ID				"Identification"
+	GX_IDS_VALUE_LWORD		"ValeurLMot"
+	GX_IDS_VALUE_HWORD		"ValeurHMot"
+	GX_IDS_FIRSTROW			"D'abordLigne"
+	GX_IDS_LASTROW			"BoutLigne"
+	GX_IDS_STRING			"Chaîne de caractères"
+	GX_IDS_ELEMENT			"Élément"
+	GX_IDS_USERPROPERTY_INFOMAP	"UtilisateurPropriétéInformation_Carte"
+	GX_IDS_CONTROLNAMES		"CommandeNoms"
+	GX_IDS_BASESTYLENAMES	"BaseModèleNoms"
+	GX_IDS_PRINT_HORZLINES	"Copie_HorizontalLignes"
+	GX_IDS_PRINT_VERTLINES	"CopieVerticalLignes"
+END
+
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

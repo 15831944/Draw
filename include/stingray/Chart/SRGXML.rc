@@ -1,0 +1,169 @@
+///////////////////////////////////////////////////////////////////////////////
+// SRGXML.rc
+//
+// Copyright (c) 1999-2009 Rogue Wave Software, Inc.  All Rights Reserved.
+//
+// This computer software is owned by Rogue Wave Software, Inc. and is protected by
+// U.S. copyright laws and other laws and by international treaties. This
+// computer software is furnished by Rogue Wave Software, Inc. pursuant to a written
+// license agreement and may be used, copied, transmitted, and stored
+// only in accordance with the terms of such license agreement and with
+// the inclusion of the above copyright notice.  This computer software or
+// any other copies thereof may not be provided or otherwise made available
+// to any other person.
+//
+// U.S. Government Restricted Rights.  This computer software:
+//      (a) was developed at private expense and is in all respects the
+//          proprietary information of Rogue Wave Software, Inc.;
+//      (b) was not developed with government funds;
+//      (c) is a trade secret of Rogue Wave Software, Inc. for all purposes of the
+//          Freedom of Information Act; and
+//      (d) is a commercial item and thus, pursuant to Section 12.212
+//          of the Federal Acquisition Regulations (FAR) and DFAR
+//          Supplement Section 227.7202, Government’s use, duplication or
+//          disclosure of the computer software is subject to the restrictions
+//          set forth by Rogue Wave Software, Inc.
+//
+///////////////////////////////////////////////////////////////////////////////
+//
+#include "srgxmlrc.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "srgxmlrc.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SRG_XMLCSCALE       "CScale"
+    IDS_SRG_XMLGPHSTYLE     "SRGraphStyle"
+    IDS_SRG_XMLGPHANNOTATION "SRGraphAnnotation"
+    IDS_SRG_XMLGPHDATA      "SRGraphData"
+    IDS_SRG_XMLGPHDATALIST  "SRGraphDataList"
+    IDS_SRG_XMLGPHDYNDATA   "SRGraphDynamicData"
+    IDS_SRG_GRAPHRECT       "SRGraphRect"
+    IDS_SRG_XMLGPHCOMP      "SRGraphComponent"
+    IDS_SRG_XMLCMPDCOMP     "SRGCompoundComponent"
+    IDS_SRG_XMLDATAMGR      "SRGDataManager"
+    IDS_SRG_XMLDYNDATAMGR   "SRGDynamicDataManager"
+    IDS_SRG_XMLAXISMGR      "SRGAxisManager"
+    IDS_SRG_XMLGRIDLINES    "SRGGridLines"
+    IDS_SRG_XMLDATAWATCHER  "SRGDataWatcher"
+    IDS_SRG_XMLGPHBKGRND    "SRGraphBackground"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SRG_XMLGPHTITLE     "SRGraphTitle"
+    IDS_SRG_XMLGPHTITLERESZ "SRGraphTitleResizeable"
+    IDS_SRG_XMLGPHLABEL     "SRGraphLabel"
+    IDS_SRG_XMLGPHLBLBLCK   "SRGraphLabelBlock"
+    IDS_SRG_XMLGPHLGND      "SRGraphLegend"
+    IDS_SRG_XMLTEXTPANEL    "SRGTextPanel"
+    IDS_SRG_XMLTICKMARKS    "SRGTickMarks"
+    IDS_SRG_XMLDCMLSCALE    "SRGDecimalScale"
+    IDS_SRG_XMLLOGSCALE     "SRGLogScale"
+    IDS_SRG_XMLDATESCALE    "SRGDateScale"
+    IDS_SRG_XMLINDEXSCALE   "SRGIndexScale"
+    IDS_SRG_GROUPSCALE      "SRGGroupScale"
+    IDS_SRG_XMLSCALEBAR     "SRGScaleBar"
+    IDS_SRG_XMLINDEXBAR     "SRGIndexBar"
+    IDS_SRG_XMLGROUPBAR     "SRGGroupBar"
+    IDS_SRG_XMLDATEBAR      "SRGDateBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SRG_XMLLOGBAR       "SRGLogBar"
+    IDS_SRG_XMLDISPLAYBASE  "SRGDisplayBase"
+    IDS_SRG_XMLGPHDISPLAY   "SRGraphDisplay"
+    IDS_SRG_XMLGRAPH        "SRGraph"
+    IDS_SRG_XMLDYNGRAPH     "SRDynamicGraph"
+    IDS_SRG_XMLLINEGPH      "SRGLineGraph"
+    IDS_SRG_XMLAREAGPH      "SRGAreaGraph"
+    IDS_SRG_XMLBUBBLEGPH    "SRGBubbleGraph"
+    IDS_SRG_XMLCANDLEGPH    "SRGCandleGraph"
+    IDS_SRG_XMLFREESTLGPH   "SRGFreeStyleGraph"
+    IDS_SRG_XMLGANTTGPH     "SRGGanttGraph"
+    IDS_SRG_XMLHBARGPH      "SRGHBarGraph"
+    IDS_SRG_XMLISOAREAGPH   "SRGIsoAreaGraph"
+    IDS_SRG_XMLISOBARGPH    "SRGIsoBarGraph"
+    IDS_SRG_XMLPIEGPH       "SRGPieGraph"
+    IDS_SRG_XMLPOLARGPH     "SRGPolarGraph"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SRG_XMLSCTTRGPH     "SRGScatterGraph"
+    IDS_SRG_XMLSTKHBARGPH   "SRGStackHBarGraph"
+    IDS_SRG_XMLSTKVBARGPH   "SRGStackVBarGraph"
+    IDS_SRG_XMLSTEPGPH      "SRGStepGraph"
+    IDS_SRG_XMLSTOCKGPH     "SRGStockGraph"
+    IDS_SRG_XMLSTRATAGPH    "SRGStrataGraph"
+    IDS_SRG_XMLSTRTHBARGPH  "SRGStrataHBarGraph"
+    IDS_SRG_XMLSTRTVBARGPH  "SRGStrataVBarGraph"
+    IDS_SRG_XMLVBARGPH      "SRGVBarGraph"
+    IDS_SRG_XMLVECTORGPH    "SRGVectorGraph"
+    IDS_SRG_XMLWEBGPH       "SRGWebGraph"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

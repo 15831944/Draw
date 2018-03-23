@@ -1,0 +1,5 @@
+#ifndef _REGEX_H
+//#pragma warning(disable: 4786)
+#pragma warning(disable: 4800)
+#include <jm/regex.h>
+#endif

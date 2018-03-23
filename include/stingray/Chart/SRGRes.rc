@@ -1,0 +1,1344 @@
+///////////////////////////////////////////////////////////////////////////////
+// SRGRes.rc
+//
+// Copyright (c) 1999-2009 Rogue Wave Software, Inc.  All Rights Reserved.
+//
+// This computer software is owned by Rogue Wave Software, Inc. and is protected by
+// U.S. copyright laws and other laws and by international treaties. This
+// computer software is furnished by Rogue Wave Software, Inc. pursuant to a written
+// license agreement and may be used, copied, transmitted, and stored
+// only in accordance with the terms of such license agreement and with
+// the inclusion of the above copyright notice.  This computer software or
+// any other copies thereof may not be provided or otherwise made available
+// to any other person.
+//
+// U.S. Government Restricted Rights.  This computer software:
+//      (a) was developed at private expense and is in all respects the
+//          proprietary information of Rogue Wave Software, Inc.;
+//      (b) was not developed with government funds;
+//      (c) is a trade secret of Rogue Wave Software, Inc. for all purposes of the
+//          Freedom of Information Act; and
+//      (d) is a commercial item and thus, pursuant to Section 12.212
+//          of the Federal Acquisition Regulations (FAR) and DFAR
+//          Supplement Section 227.7202, Government’s use, duplication or
+//          disclosure of the computer software is subject to the restrictions
+//          set forth by Rogue Wave Software, Inc.
+//
+///////////////////////////////////////////////////////////////////////////////
+//
+#include "chart\SRGRes.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#ifndef APSTUDIO_INVOKED
+#include "chart\srgxmlrc.rc2"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "chart\\SRGRes.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+SRG_IDB_SHADOW          BITMAP  DISCARDABLE     "chart\\res\\shadow.bmp"
+SRG_IDB_LIGHTSHADOW     BITMAP  DISCARDABLE     "chart\\res\\ltshadow.bmp"
+SRG_IDB_GLARE           BITMAP  DISCARDABLE     "chart\\res\\glare.bmp"
+SRG_IDB_LIGHTGLARE      BITMAP  DISCARDABLE     "chart\\res\\ltglare.bmp"
+SRG_IDB_NULLPIE         BITMAP  DISCARDABLE     "chart\\res\\nullpie.bmp"
+//SRG_IDB_NULLPIEMASK     BITMAP  DISCARDABLE     "chart\\res\\npmask.bmp"
+//SRG_IDB_HI              BITMAP  DISCARDABLE     "chart\\res\\srg_idb_.bmp"
+//SRG_IDB_LO              BITMAP  DISCARDABLE     "chart\\res\\bmp00001.bmp"
+SRG_IDB_IMAGELIST       BITMAP  DISCARDABLE     "chart\\res\\TrImgLst.bmp"
+SRG_IDB_BKNBITMAP       BITMAP  DISCARDABLE     "chart\\res\\broken.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WIGETS
+//
+
+STAR                    WIGETS  DISCARDABLE     "chart\\res\\star.ply"
+HEX                     WIGETS  DISCARDABLE     "chart\\res\\hex.ply"
+SQUARE                  WIGETS  DISCARDABLE     "chart\\res\\square.ply"
+CIRCLE                  WIGETS  DISCARDABLE     "chart\\res\\circle.ply"
+DIAMOND                 WIGETS  DISCARDABLE     "chart\\res\\diamond.ply"
+CROSS                   WIGETS  DISCARDABLE     "chart\\res\\cross.ply"
+PLUS                    WIGETS  DISCARDABLE     "chart\\res\\plus.ply"
+TRIANGLE                WIGETS  DISCARDABLE     "chart\\res\\tri.ply"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+SRG_IDD_ANNOTATIONEDIT DIALOG DISCARDABLE  0, 0, 279, 48
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Annotation Editor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Text",IDC_STATIC,7,8,15,8
+    EDITTEXT        SRG_IDC_EDIT1,28,7,187,13,ES_AUTOHSCROLL
+    LTEXT           "&Code",IDC_STATIC,7,25,18,8
+    EDITTEXT        SRG_IDC_EDIT2,28,24,40,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,222,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,222,24,50,14
+END
+
+SRG_IDD_CHOOSECOMP DIALOG DISCARDABLE  0, 0, 187, 46
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose Component"
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        SRG_IDC_COMBO1,7,7,118,57,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,130,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,24,50,14
+END
+
+SRG_IDD_COMPONENT_PROPPAGE1 DIALOG DISCARDABLE  0, 0, 212, 186
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Component"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Type",IDC_STATIC,7,8,17,8
+    EDITTEXT        SRG_IDC_EDIT1,30,7,175,13,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Position",IDC_STATIC,7,27,198,82
+    LTEXT           "Left",IDC_STATIC,18,41,13,8
+    EDITTEXT        SRG_IDC_EDIT2,50,40,40,13,ES_AUTOHSCROLL
+    LTEXT           "Top",IDC_STATIC,18,56,14,8
+    EDITTEXT        SRG_IDC_EDIT3,50,55,40,13,ES_AUTOHSCROLL
+    LTEXT           "Right",IDC_STATIC,18,71,18,8
+    EDITTEXT        SRG_IDC_EDIT4,50,70,40,13,ES_AUTOHSCROLL
+    LTEXT           "Bottom",IDC_STATIC,18,86,23,8
+    EDITTEXT        SRG_IDC_EDIT5,50,85,40,13,ES_AUTOHSCROLL
+    CONTROL         "Pixels",SRG_IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,116,40,34,10
+    CONTROL         "Millimeters",SRG_IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,
+                    116,55,48,10
+    CONTROL         "Inches",SRG_IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,116,
+                    70,37,10
+    CONTROL         "Percent",SRG_IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,116,
+                    85,39,10
+    GROUPBOX        "View angles",IDC_STATIC,7,113,198,65
+    LTEXT           "X",IDC_STATIC,18,127,8,8
+    EDITTEXT        SRG_IDC_EDIT6,50,126,40,13,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,18,142,8,8
+    EDITTEXT        SRG_IDC_EDIT7,50,141,40,13,ES_AUTOHSCROLL
+    EDITTEXT        SRG_IDC_EDIT8,50,156,40,13,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,18,157,8,8
+END
+
+SRG_IDD_COMPONENT_PROPPAGE10 DIALOG DISCARDABLE  0, 0, 212, 199
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Object Style"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Object  ",IDC_STATIC,7,8,24,8
+    COMBOBOX        SRG_IDC_COMBO1,42,7,163,60,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "&Frame ",IDC_STATIC,7,25,22,8
+    COMBOBOX        SRG_IDC_COMBO2,42,24,163,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "F&rame Width",IDC_STATIC,7,61,48,8
+    EDITTEXT        SRG_IDC_EDIT1,56,60,58,13,ES_AUTOHSCROLL
+    LTEXT           "Fram&e Color",IDC_STATIC,7,81,38,8
+    CONTROL         "Button1",SRG_IDC_BUTTON1,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,56,80,40,14
+    PUSHBUTTON      "Choose &Color",SRG_IDC_BUTTON2,101,80,50,14
+    LTEXT           "&Width",IDC_STATIC,7,106,30,8
+    EDITTEXT        SRG_IDC_EDIT2,42,105,58,13,ES_AUTOHSCROLL
+    LTEXT           "&Height",IDC_STATIC,7,121,31,8
+    EDITTEXT        SRG_IDC_EDIT3,42,120,58,13,ES_AUTOHSCROLL
+    LTEXT           "&Depth",IDC_STATIC,7,136,29,8
+    EDITTEXT        SRG_IDC_EDIT4,42,135,58,13,ES_AUTOHSCROLL
+    CONTROL         "Use &Max Dimensions",SRG_IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,126,105,79,10
+    CONTROL         "&All Objects in this List",SRG_IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,175,95,10
+END
+
+SRG_IDD_COMPONENT_PROPPAGE11 DIALOG DISCARDABLE  0, 0, 212, 154
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Interior"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Style",IDC_STATIC,7,8,16,8
+    COMBOBOX        SRG_IDC_COMBO1,33,7,172,85,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Color 1",IDC_STATIC,7,32,22,8
+    CONTROL         "Button1",SRG_IDC_BUTTON1,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,50,31,30,14
+    PUSHBUTTON      "Choose Color &1",SRG_IDC_BUTTON3,85,31,60,14
+    LTEXT           "Color 2",IDC_STATIC,7,52,23,8
+    CONTROL         "Button2",SRG_IDC_BUTTON2,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,50,51,30,14
+    PUSHBUTTON      "Choose Color &2",SRG_IDC_BUTTON4,85,51,60,14
+    LTEXT           "&Angle",IDC_STATIC,7,81,19,8
+    EDITTEXT        SRG_IDC_EDIT1,50,80,40,13,ES_AUTOHSCROLL
+    LTEXT           "&Resource",IDC_STATIC,7,101,31,8
+    EDITTEXT        SRG_IDC_EDIT2,50,100,75,13,ES_AUTOHSCROLL
+    CONTROL         "Stretch",SRG_IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,132,103,37,10
+    LTEXT           "&Name",IDC_STATIC,7,121,20,8
+    EDITTEXT        SRG_IDC_EDIT3,50,120,75,13,ES_AUTOHSCROLL
+END
+
+SRG_IDD_COMPONENT_PROPPAGE2 DIALOG DISCARDABLE  0, 0, 212, 103
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Fill Style"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Button4",SRG_IDC_BUTTON4,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,129,7,30,14
+    PUSHBUTTON      "Color &1",SRG_IDC_BUTTON1,164,7,40,14
+    CONTROL         "Button5",SRG_IDC_BUTTON5,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,129,27,30,14
+    PUSHBUTTON      "Color &2",SRG_IDC_BUTTON2,164,27,40,14
+    LTEXT           "An&gle",IDC_STATIC,138,47,19,8
+    EDITTEXT        SRG_IDC_EDIT2,164,46,40,13,ES_AUTOHSCROLL
+    EDITTEXT        SRG_IDC_EDIT1,141,79,64,13,ES_AUTOHSCROLL
+    CONTROL         "&None",SRG_IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,7,7,33,10
+    CONTROL         "&Solid color",SRG_IDC_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,7,22,49,10
+    CONTROL         "&Vertical shade",SRG_IDC_RADIO3,"Button",
+                    BS_AUTORADIOBUTTON,7,37,61,10
+    CONTROL         "&Horizontal shade",SRG_IDC_RADIO4,"Button",
+                    BS_AUTORADIOBUTTON,7,52,69,10
+    CONTROL         "&Angled shade",SRG_IDC_RADIO5,"Button",
+                    BS_AUTORADIOBUTTON,7,67,59,10
+    CONTROL         "&Resource image fill",SRG_IDC_RADIO6,"Button",
+                    BS_AUTORADIOBUTTON,7,82,77,10
+    PUSHBUTTON      "...",SRG_IDC_BUTTON3,190,62,15,13
+    LTEXT           "Resource ID:",IDC_STATIC,97,81,42,10
+END
+
+SRG_IDD_COMPONENT_PROPPAGE3 DIALOG DISCARDABLE  0, 0, 183, 128
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Border Style"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&None",SRG_IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,7,7,33,10
+    CONTROL         "Thin &Raised Border",SRG_IDC_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,7,22,79,10
+    CONTROL         "Thin &Sunken Border",SRG_IDC_RADIO3,"Button",
+                    BS_AUTORADIOBUTTON,7,37,77,10
+    CONTROL         "Thin 3&D Border",SRG_IDC_RADIO4,"Button",
+                    BS_AUTORADIOBUTTON,7,52,64,10
+    CONTROL         "Thick Ra&ised Border",SRG_IDC_RADIO5,"Button",
+                    BS_AUTORADIOBUTTON,7,67,83,10
+    CONTROL         "Thick S&unken Border",SRG_IDC_RADIO6,"Button",
+                    BS_AUTORADIOBUTTON,7,82,90,10
+    CONTROL         "Thic&k 3D Border",SRG_IDC_RADIO7,"Button",
+                    BS_AUTORADIOBUTTON,7,97,68,10
+    CONTROL         "Simple &Line Border",SRG_IDC_RADIO8,"Button",
+                    BS_AUTORADIOBUTTON,7,112,75,10
+END
+
+SRG_IDD_COMPONENT_PROPPAGE4 DIALOG DISCARDABLE  0, 0, 183, 63
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Shadow Style"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&None",SRG_IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,7,7,33,10
+    CONTROL         "&Thin Shadow",SRG_IDC_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,7,19,58,10
+    CONTROL         "&Medium Shadow",SRG_IDC_RADIO3,"Button",
+                    BS_AUTORADIOBUTTON,7,31,69,10
+    CONTROL         "Thick &Shadow",SRG_IDC_RADIO4,"Button",
+                    BS_AUTORADIOBUTTON,7,43,62,10
+END
+
+SRG_IDD_COMPONENT_PROPPAGE5 DIALOG DISCARDABLE  0, 0, 212, 181
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Font Style"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Type face",IDC_STATIC,7,5,198,85
+    LTEXT           "Name",IDC_STATIC,15,16,20,8
+    EDITTEXT        SRG_IDC_EDIT1,40,15,115,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Font...",SRG_IDC_BUTTON3,162,15,35,14
+    LTEXT           "Size",IDC_STATIC,15,41,14,8
+    EDITTEXT        SRG_IDC_EDIT2,40,40,34,13,ES_AUTOHSCROLL
+    CONTROL         "Points",SRG_IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,40,59,35,10
+    CONTROL         "Pixels",SRG_IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,40,
+                    70,34,10
+    CONTROL         "Autosize",SRG_IDC_CHECK_AUTOSIZE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,93,62,43,10
+    GROUPBOX        "Style",IDC_STATIC,7,95,63,78,WS_GROUP
+    CONTROL         "Bold",SRG_IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,110,30,10
+    CONTROL         "Italic",SRG_IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,125,30,10
+    CONTROL         "Underline",SRG_IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,140,46,10
+    CONTROL         "Strike out",SRG_IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,155,46,10
+    GROUPBOX        "Justification",IDC_STATIC,75,95,130,78
+    CONTROL         "Right",SRG_IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,82,110,33,10
+    CONTROL         "Left",SRG_IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,82,125,
+                    28,10
+    CONTROL         "Centered",SRG_IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,82,
+                    140,45,10
+    CONTROL         "Button1",SRG_IDC_BUTTON1,"Button",BS_OWNERDRAW | 
+                    WS_GROUP | WS_TABSTOP,107,40,30,14
+    PUSHBUTTON      "Font &Color",SRG_IDC_BUTTON2,147,40,50,14
+END
+
+SRG_IDD_COMPONENT_PROPPAGE6 DIALOG DISCARDABLE  0, 0, 212, 221
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Display"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Graph &Style",IDC_STATIC,7,8,38,8
+    COMBOBOX        SRG_IDC_COMBO1,54,7,151,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "A&xis Style",IDC_STATIC,7,26,31,8
+    COMBOBOX        SRG_IDC_COMBO2,54,25,151,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "La&bel Style",IDC_STATIC,7,46,36,8
+    COMBOBOX        SRG_IDC_COMBO3,54,45,151,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Scope",IDC_STATIC,7,70,198,75
+    LTEXT           "&First Group",IDC_STATIC,19,81,42,8
+    EDITTEXT        SRG_IDC_EDIT6,66,80,40,13,ES_AUTOHSCROLL
+    LTEXT           "&Last Group",IDC_STATIC,19,96,42,8
+    EDITTEXT        SRG_IDC_EDIT7,66,95,40,13,ES_AUTOHSCROLL
+    LTEXT           "First &Index",IDC_STATIC,19,111,40,8
+    EDITTEXT        SRG_IDC_EDIT8,66,110,40,13,ES_AUTOHSCROLL
+    LTEXT           "Last I&ndex",IDC_STATIC,19,126,41,8
+    EDITTEXT        SRG_IDC_EDIT9,66,125,40,13,ES_AUTOHSCROLL
+    CONTROL         "Log Scale",SRG_IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,150,52,10
+    CONTROL         "Always Show Zero",SRG_IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,160,76,10
+    CONTROL         "Show X Labels",SRG_IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,170,64,10
+    CONTROL         "Show Y Labels",SRG_IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,180,66,10
+    CONTROL         "Show Z Labels",SRG_IDC_CHECK5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,190,67,10
+    CONTROL         "Show Grid on Top",SRG_IDC_CHECK6,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,115,151,77,10
+    CONTROL         "Show X Grid Lines",SRG_IDC_CHECK7,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,115,161,74,10
+    CONTROL         "Show Y Grid Lines",SRG_IDC_CHECK8,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,115,170,74,10
+    CONTROL         "Show Z Grid Lines",SRG_IDC_CHECK9,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,115,181,77,10
+    CONTROL         "Show Tick Marks",SRG_IDC_CHECK10,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,115,191,78,10
+END
+
+SRG_IDD_COMPONENT_PROPPAGE7 DIALOG DISCARDABLE  0, 0, 212, 143
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Legend"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Legend &Type",IDC_STATIC,7,9,47,8
+    COMBOBOX        SRG_IDC_COMBO1,56,7,149,76,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Key &Style",IDC_STATIC,7,29,39,8
+    COMBOBOX        SRG_IDC_COMBO2,55,28,150,76,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Scope",IDC_STATIC,7,49,198,88
+    LTEXT           "&First Group",IDC_STATIC,19,71,44,8
+    EDITTEXT        SRG_IDC_EDIT1,66,70,40,13,ES_AUTOHSCROLL
+    LTEXT           "&Last Group",IDC_STATIC,19,86,41,8
+    EDITTEXT        SRG_IDC_EDIT2,66,85,40,13,ES_AUTOHSCROLL
+    LTEXT           "First &Index",IDC_STATIC,19,101,41,8
+    EDITTEXT        SRG_IDC_EDIT3,66,100,40,13,ES_AUTOHSCROLL
+    LTEXT           "Last I&ndex",IDC_STATIC,19,116,42,8
+    EDITTEXT        SRG_IDC_EDIT4,66,115,40,13,ES_AUTOHSCROLL
+END
+
+SRG_IDD_COMPONENT_PROPPAGE8 DIALOGEX 0, 0, 212, 183
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Label"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Location point",IDC_STATIC,7,7,198,58
+    CONTROL         "Top Left",SRG_IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,13,20,41,10
+    CONTROL         "Mid Left",SRG_IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,13,
+                    35,39,10
+    CONTROL         "Bottom Left",SRG_IDC_RADIO8,"Button",BS_AUTORADIOBUTTON,
+                    13,49,49,10
+    CONTROL         "Top Center",SRG_IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,
+                    65,20,50,10
+    CONTROL         "Mid Center",SRG_IDC_RADIO9,"Button",BS_AUTORADIOBUTTON,
+                    65,35,48,10
+    CONTROL         "Bottom Center",SRG_IDC_RADIO7,"Button",
+                    BS_AUTORADIOBUTTON,65,49,58,10
+    CONTROL         "Top Right",SRG_IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,
+                    125,20,46,10
+    CONTROL         "Mid Right",SRG_IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,
+                    125,35,44,10
+    CONTROL         "Bottom Right",SRG_IDC_RADIO6,"Button",
+                    BS_AUTORADIOBUTTON,125,49,54,10
+    LTEXT           "&Orientation (degrees)",IDC_STATIC,7,71,65,8
+    EDITTEXT        SRG_IDC_EDIT1,80,70,40,13,ES_AUTOHSCROLL
+    LTEXT           "Text Position (&X)",IDC_STATIC,7,91,63,8
+    EDITTEXT        SRG_IDC_EDIT3,80,90,40,13,ES_AUTOHSCROLL
+    LTEXT           "Text Position (&Y)",IDC_STATIC,7,111,62,8
+    EDITTEXT        SRG_IDC_EDIT4,80,110,40,13,ES_AUTOHSCROLL
+END
+
+SRG_IDD_COMPONENT_PROPPAGE9 DIALOG DISCARDABLE  0, 0, 187, 154
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Spare"
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+SRG_IDD_GRAPHEDIT DIALOG DISCARDABLE  0, 0, 215, 188
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Chart Explorer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tree1",SRG_IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    WS_BORDER | WS_TABSTOP,7,7,143,174
+    DEFPUSHBUTTON   "OK",IDOK,158,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,158,24,50,14
+END
+
+SRG_IDD_GRAPHITEMEDIT DIALOG DISCARDABLE  0, 0, 250, 46
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Editing Graph"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Draw in background mode",SRG_IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,7,95,10
+    CONTROL         "&Feedback logging",SRG_IDC_CHECK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,20,71,10
+    DEFPUSHBUTTON   "OK",IDOK,193,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,193,24,50,14
+END
+
+SRG_IDD_RESOURCE_DIALOG DIALOG DISCARDABLE  0, 0, 256, 172
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Resource Image"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Library name",IDC_STATIC,7,8,41,8
+    EDITTEXT        SRG_IDC_EDIT1,56,7,90,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",SRG_IDC_BUTTON1,145,7,35,13
+    DEFPUSHBUTTON   "OK",IDOK,199,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,199,24,50,14
+END
+
+SRG_IDD_VALUEEDIT DIALOG DISCARDABLE  0, 0, 144, 46
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Editing Data Value"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        SRG_IDC_EDIT1,7,7,71,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,87,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,87,24,50,14
+END
+
+IDD_GVW_PAGESETUP DIALOG DISCARDABLE  0, 0, 158, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Page Setup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Alignment",IDC_STATIC,7,7,90,48
+    CONTROL         "&Top",IDC_GVW_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,10,20,29,10
+    CONTROL         "&Center",IDC_GVW_RADIO2,"Button",BS_AUTORADIOBUTTON,10,
+                    30,36,10
+    CONTROL         "&Bottom",IDC_GVW_RADIO3,"Button",BS_AUTORADIOBUTTON,10,
+                    40,37,10
+    CONTROL         "&Left",IDC_GVW_RADIO5,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,55,20,27,10
+    CONTROL         "&Middle",IDC_GVW_RADIO6,"Button",BS_AUTORADIOBUTTON,55,
+                    31,37,10
+    CONTROL         "&Right",IDC_GVW_RADIO7,"Button",BS_AUTORADIOBUTTON,55,
+                    40,32,10
+    GROUPBOX        "Page size",IDC_STATIC,7,60,90,52
+    CONTROL         "&Use max size",IDC_GVW_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,71,75,10
+    COMBOBOX        IDC_GVW_COMBO1,13,85,77,80,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,101,10,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,101,27,50,14
+END
+
+IDD_GVW_SELECTQUERY1 DIALOG DISCARDABLE  0, 0, 237, 75
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Selecting"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "You have selected a mixture of groups and indices. Would you like to use...",
+                    IDC_STATIC,7,7,158,23
+    CONTROL         "&Indices only",IDC_GVW_RADIO1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,7,30,54,10
+    CONTROL         "&Groups only",IDC_GVW_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,7,44,52,10
+    CONTROL         "&Both Groups and Indices as selected.",IDC_GVW_RADIO3,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,7,58,130,10
+    DEFPUSHBUTTON   "OK",IDOK,180,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,180,24,50,14
+END
+
+IDD_GVW_PAGESETUP2 DIALOG DISCARDABLE  0, 0, 205, 217
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Page Setup for Printing Chart"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Top",IDC_GVW_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,23,31,29,10
+    CONTROL         "&Center",IDC_GVW_RADIO2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,23,42,36,10
+    CONTROL         "&Bottom",IDC_GVW_RADIO3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,23,53,37,10
+    CONTROL         "Custom Margin",IDC_GVW_RADIO4,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,23,63,63,10
+    EDITTEXT        IDC_GVW_YOFFSET,39,74,29,14,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "&Left",IDC_GVW_RADIO5,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,119,31,27,10
+    CONTROL         "&Middle",IDC_GVW_RADIO6,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,119,42,37,10
+    CONTROL         "&Right",IDC_GVW_RADIO7,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,119,53,32,10
+    CONTROL         "Custom Margin",IDC_GVW_RADIO8,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,119,63,63,10
+    EDITTEXT        IDC_GVW_XOFFSET,135,74,29,14,ES_AUTOHSCROLL | WS_GROUP
+    GROUPBOX        "Chart Size",IDC_STATIC,7,103,118,97
+    CONTROL         "Full Page",IDC_GVW_SIZE1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,21,118,45,10
+    CONTROL         "Full Width/Half Height",IDC_GVW_SIZE2,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,21,131,86,10
+    CONTROL         "Half Width/Full Height",IDC_GVW_SIZE3,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,21,142,86,10
+    CONTROL         "Custom Size",IDC_GVW_SIZE4,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,21,155,55,10
+    LTEXT           "Horizontal",IDC_STATIC,33,170,32,8
+    EDITTEXT        IDC_GVW_XSIZE,69,166,32,12,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "Vertical",IDC_STATIC,33,184,24,8
+    EDITTEXT        IDC_GVW_YSIZE,69,181,32,12,ES_AUTOHSCROLL | WS_GROUP
+    GROUPBOX        "Units",IDC_STATIC,136,160,60,40
+    CONTROL         "Centimeters",IDC_GVW_CM,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,142,172,53,10
+    CONTROL         "Inches",IDC_GVW_INCHES,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,142,184,37,10
+    DEFPUSHBUTTON   "OK",IDOK,137,108,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,137,129,50,14
+    GROUPBOX        "Position/Margins",IDC_STATIC,5,7,190,92
+    LTEXT           "Vertical",IDC_STATIC,20,19,24,8
+    LTEXT           "Horizontal",IDC_STATIC,117,19,32,8
+    LTEXT           "cm",IDC_STATIC_UNIT1,71,76,10,8
+    LTEXT           "cm",IDC_STATIC_UNIT2,167,76,10,8
+    LTEXT           "cm",IDC_STATIC_UNIT3,104,169,10,8
+    LTEXT           "cm",IDC_STATIC_UNIT4,104,183,10,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+SRG_IDD_CHOOSECOMP DLGINIT
+BEGIN
+    SRG_IDC_COMBO1, 0x403, 11, 0
+0x6142, 0x6b63, 0x7267, 0x756f, 0x646e, "\000" 
+    SRG_IDC_COMBO1, 0x403, 13, 0
+0x6144, 0x6174, 0x6420, 0x7369, 0x6c70, 0x7961, "\000" 
+    SRG_IDC_COMBO1, 0x403, 7, 0
+0x654c, 0x6567, 0x646e, "\000" 
+    SRG_IDC_COMBO1, 0x403, 6, 0
+0x6954, 0x6c74, 0x0065, 
+    SRG_IDC_COMBO1, 0x403, 6, 0
+0x614c, 0x6562, 0x006c, 
+    0
+END
+
+SRG_IDD_COMPONENT_PROPPAGE10 DLGINIT
+BEGIN
+    SRG_IDC_COMBO1, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    SRG_IDC_COMBO1, 0x403, 10, 0
+0x7541, 0x6f74, 0x616d, 0x6974, 0x0063, 
+    SRG_IDC_COMBO1, 0x403, 6, 0
+0x6f50, 0x6e69, 0x0074, 
+    SRG_IDC_COMBO1, 0x403, 17, 0
+0x6f50, 0x6e69, 0x2074, 0x6977, 0x6874, 0x7720, 0x6769, 0x7465, "\000" 
+    SRG_IDC_COMBO1, 0x403, 5, 0
+0x694c, 0x656e, "\000" 
+    SRG_IDC_COMBO1, 0x403, 7, 0
+0x4432, 0x4220, 0x7261, "\000" 
+    SRG_IDC_COMBO1, 0x403, 7, 0
+0x4433, 0x4220, 0x7261, "\000" 
+    SRG_IDC_COMBO1, 0x403, 4, 0
+0x6f52, 0x0064, 
+    SRG_IDC_COMBO1, 0x403, 5, 0
+0x7241, 0x6165, "\000" 
+    SRG_IDC_COMBO1, 0x403, 6, 0
+0x6c53, 0x6369, 0x0065, 
+    SRG_IDC_COMBO1, 0x403, 12, 0
+0x6f50, 0x796c, 0x6f67, 0x206e, 0x6142, 0x0072, 
+    SRG_IDC_COMBO1, 0x403, 8, 0
+0x4433, 0x4c20, 0x6e69, 0x0065, 
+    SRG_IDC_COMBO2, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    SRG_IDC_COMBO2, 0x403, 10, 0
+0x7541, 0x6f74, 0x616d, 0x6974, 0x0063, 
+    SRG_IDC_COMBO2, 0x403, 5, 0
+0x694c, 0x656e, "\000" 
+    SRG_IDC_COMBO2, 0x403, 8, 0
+0x6150, 0x7474, 0x7265, 0x006e, 
+    SRG_IDC_COMBO2, 0x403, 6, 0
+0x6f43, 0x6f6c, 0x0072, 
+    0
+END
+
+SRG_IDD_COMPONENT_PROPPAGE11 DLGINIT
+BEGIN
+    SRG_IDC_COMBO1, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    SRG_IDC_COMBO1, 0x403, 10, 0
+0x7541, 0x6f74, 0x616d, 0x6974, 0x0063, 
+    SRG_IDC_COMBO1, 0x403, 6, 0
+0x6f43, 0x6f6c, 0x0072, 
+    SRG_IDC_COMBO1, 0x403, 15, 0
+0x6556, 0x7472, 0x6369, 0x6c61, 0x7320, 0x6168, 0x6564, "\000" 
+    SRG_IDC_COMBO1, 0x403, 17, 0
+0x6f48, 0x6972, 0x6f7a, 0x746e, 0x6c61, 0x7320, 0x6168, 0x6564, "\000" 
+    SRG_IDC_COMBO1, 0x403, 13, 0
+0x6e41, 0x6c67, 0x6465, 0x7320, 0x6168, 0x6564, "\000" 
+    SRG_IDC_COMBO1, 0x403, 9, 0
+0x6552, 0x6f73, 0x7275, 0x6563, "\000" 
+    SRG_IDC_COMBO1, 0x403, 6, 0
+0x6d49, 0x6761, 0x0065, 
+    SRG_IDC_COMBO1, 0x403, 8, 0
+0x6150, 0x7474, 0x7265, 0x006e, 
+    0
+END
+
+SRG_IDD_COMPONENT_PROPPAGE6 DLGINIT
+BEGIN
+    SRG_IDC_COMBO1, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    SRG_IDC_COMBO1, 0x403, 10, 0
+0x694c, 0x656e, 0x7020, 0x6f6c, 0x0074, 
+    SRG_IDC_COMBO1, 0x403, 21, 0
+0x6f48, 0x6972, 0x6f7a, 0x746e, 0x6c61, 0x6220, 0x7261, 0x6320, 0x6168, 
+0x7472, "\000" 
+    SRG_IDC_COMBO1, 0x403, 19, 0
+0x6556, 0x7472, 0x6369, 0x6c61, 0x6220, 0x7261, 0x6320, 0x6168, 0x7472, 
+"\000" 
+    SRG_IDC_COMBO1, 0x403, 10, 0
+0x6950, 0x2065, 0x6863, 0x7261, 0x0074, 
+    SRG_IDC_COMBO1, 0x403, 18, 0
+0x6552, 0x6573, 0x7672, 0x6465, 0x2820, 0x6e75, 0x7375, 0x6465, 0x0029, 
+
+    SRG_IDC_COMBO1, 0x403, 17, 0
+0x7241, 0x6165, 0x7520, 0x646e, 0x7265, 0x6320, 0x7275, 0x6576, "\000" 
+    SRG_IDC_COMBO1, 0x403, 20, 0
+0x6948, 0x6867, 0x2d20, 0x4c20, 0x776f, 0x2d20, 0x5120, 0x6f75, 0x6574, 
+0x0073, 
+    SRG_IDC_COMBO1, 0x403, 18, 0
+0x6552, 0x6573, 0x7672, 0x6465, 0x2820, 0x6e75, 0x7375, 0x6465, 0x0029, 
+
+    SRG_IDC_COMBO1, 0x403, 25, 0
+0x4433, 0x6220, 0x7261, 0x6320, 0x6168, 0x7472, 0x2220, 0x614d, 0x686e, 
+0x7461, 0x6174, 0x226e, "\000" 
+    SRG_IDC_COMBO1, 0x403, 24, 0
+0x4433, 0x6120, 0x6572, 0x2061, 0x6863, 0x7261, 0x2074, 0x5222, 0x6f6f, 
+0x7466, 0x706f, 0x0022, 
+    SRG_IDC_COMBO1, 0x403, 30, 0
+0x4432, 0x7620, 0x7265, 0x6974, 0x6163, 0x206c, 0x7473, 0x6361, 0x656b, 
+0x2064, 0x6162, 0x2072, 0x6863, 0x7261, 0x0074, 
+    SRG_IDC_COMBO1, 0x403, 32, 0
+0x4432, 0x6820, 0x726f, 0x7a69, 0x6e6f, 0x6174, 0x206c, 0x7473, 0x6361, 
+0x656b, 0x2064, 0x6162, 0x2072, 0x6863, 0x7261, 0x0074, 
+    SRG_IDC_COMBO1, 0x403, 13, 0
+0x4433, 0x7020, 0x6569, 0x6320, 0x6168, 0x7472, "\000" 
+    SRG_IDC_COMBO1, 0x403, 13, 0
+0x7453, 0x6172, 0x6174, 0x6720, 0x6172, 0x6870, "\000" 
+    SRG_IDC_COMBO1, 0x403, 17, 0
+0x4433, 0x5620, 0x7265, 0x6974, 0x6163, 0x206c, 0x6162, 0x7372, "\000" 
+    SRG_IDC_COMBO1, 0x403, 19, 0
+0x4433, 0x4820, 0x726f, 0x7a69, 0x6e6f, 0x6174, 0x206c, 0x6162, 0x7372, 
+"\000" 
+    SRG_IDC_COMBO1, 0x403, 16, 0
+0x4433, 0x5220, 0x6269, 0x6f62, 0x206e, 0x6863, 0x7261, 0x0074, 
+    SRG_IDC_COMBO1, 0x403, 10, 0
+0x6557, 0x2062, 0x6863, 0x7261, 0x0074, 
+    SRG_IDC_COMBO1, 0x403, 26, 0
+0x6353, 0x7461, 0x6574, 0x2072, 0x7267, 0x7061, 0x2068, 0x6128, 0x746c, 
+0x7265, 0x616e, 0x6574, 0x0029, 
+    SRG_IDC_COMBO1, 0x403, 24, 0
+0x6353, 0x7461, 0x6574, 0x2072, 0x7267, 0x7061, 0x2068, 0x6928, 0x646e, 
+0x6365, 0x7365, 0x0029, 
+    SRG_IDC_COMBO1, 0x403, 23, 0
+0x6353, 0x7461, 0x6574, 0x2072, 0x7267, 0x7061, 0x2068, 0x6728, 0x6f72, 
+0x7075, 0x2973, "\000" 
+    SRG_IDC_COMBO1, 0x403, 18, 0
+0x6552, 0x6573, 0x7672, 0x6465, 0x2820, 0x6e75, 0x7375, 0x6465, 0x0029, 
+
+    SRG_IDC_COMBO1, 0x403, 15, 0
+0x7241, 0x6165, 0x5720, 0x6265, 0x6320, 0x6168, 0x7472, "\000" 
+    SRG_IDC_COMBO1, 0x403, 23, 0
+0x7241, 0x6165, 0x5320, 0x6f74, 0x6b63, 0x2820, 0x6968, 0x6c2d, 0x2d6f, 
+0x6f6e, 0x2977, "\000" 
+    SRG_IDC_COMBO1, 0x403, 10, 0
+0x7246, 0x6565, 0x7473, 0x6c79, 0x0065, 
+    SRG_IDC_COMBO1, 0x403, 12, 0
+0x6f50, 0x616c, 0x2072, 0x6863, 0x7261, 0x0074, 
+    SRG_IDC_COMBO1, 0x403, 24, 0
+0x6f50, 0x616c, 0x2072, 0x6863, 0x7261, 0x2074, 0x6128, 0x6572, 0x2061, 
+0x6966, 0x6c6c, 0x0029, 
+    SRG_IDC_COMBO1, 0x403, 13, 0
+0x6143, 0x646e, 0x656c, 0x6320, 0x6168, 0x7472, "\000" 
+    SRG_IDC_COMBO1, 0x403, 17, 0
+0x6948, 0x4c2d, 0x2d6f, 0x704f, 0x6e65, 0x432d, 0x6f6c, 0x6573, "\000" 
+    SRG_IDC_COMBO1, 0x403, 6, 0
+0x6147, 0x746e, 0x0074, 
+    SRG_IDC_COMBO1, 0x403, 9, 0
+0x694c, 0x656e, 0x6e4f, 0x796c, "\000" 
+    SRG_IDC_COMBO1, 0x403, 21, 0
+0x6353, 0x7461, 0x6574, 0x2d72, 0x6c41, 0x6574, 0x6e72, 0x7461, 0x2d65, 
+0x5845, "\000" 
+    SRG_IDC_COMBO1, 0x403, 17, 0
+0x6353, 0x7461, 0x6574, 0x2d72, 0x6e49, 0x6564, 0x2d78, 0x5845, "\000" 
+    SRG_IDC_COMBO1, 0x403, 17, 0
+0x6353, 0x7461, 0x6574, 0x2d72, 0x7247, 0x756f, 0x2d70, 0x5845, "\000" 
+    SRG_IDC_COMBO1, 0x403, 5, 0
+0x7453, 0x7065, "\000" 
+    SRG_IDC_COMBO1, 0x403, 14, 0
+0x7453, 0x7065, 0x4c2d, 0x6e69, 0x4f65, 0x6c6e, 0x0079, 
+    SRG_IDC_COMBO1, 0x403, 12, 0
+0x7453, 0x6172, 0x6174, 0x5620, 0x6142, 0x0072, 
+    SRG_IDC_COMBO1, 0x403, 12, 0
+0x7453, 0x6172, 0x6174, 0x4820, 0x6142, 0x0072, 
+    SRG_IDC_COMBO1, 0x403, 20, 0
+0x7453, 0x6172, 0x6174, 0x5620, 0x6142, 0x2072, 0x6728, 0x6f72, 0x7075, 
+0x0029, 
+    SRG_IDC_COMBO1, 0x403, 20, 0
+0x7453, 0x6172, 0x6174, 0x4820, 0x6142, 0x2072, 0x6728, 0x6f72, 0x7075, 
+0x0029, 
+    SRG_IDC_COMBO1, 0x403, 16, 0
+0x7542, 0x6262, 0x656c, 0x2820, 0x6172, 0x6964, 0x7375, 0x0029, 
+    SRG_IDC_COMBO1, 0x403, 14, 0
+0x7542, 0x6262, 0x656c, 0x2820, 0x7261, 0x6165, 0x0029, 
+    SRG_IDC_COMBO1, 0x403, 13, 0
+0x6556, 0x7463, 0x726f, 0x2820, 0x6e65, 0x2964, "\000" 
+    SRG_IDC_COMBO1, 0x403, 16, 0
+0x6556, 0x7463, 0x726f, 0x2820, 0x6563, 0x746e, 0x7265, 0x0029, 
+    SRG_IDC_COMBO1, 0x403, 20, 0
+0x6556, 0x7463, 0x726f, 0x2820, 0x7774, 0x206f, 0x6f70, 0x6e69, 0x7374, 
+0x0029, 
+    SRG_IDC_COMBO1, 0x403, 14, 0
+0x6853, 0x6461, 0x6465, 0x4320, 0x6e61, 0x6c64, 0x0065, 
+    SRG_IDC_COMBO2, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    SRG_IDC_COMBO2, 0x403, 25, 0
+0x7541, 0x6f74, 0x616d, 0x6974, 0x2063, 0x7861, 0x7369, 0x7320, 0x6c65, 
+0x6365, 0x6974, 0x6e6f, "\000" 
+    SRG_IDC_COMBO2, 0x403, 17, 0
+0x6c43, 0x7361, 0x6973, 0x2063, 0x2c58, 0x2059, 0x7861, 0x7369, "\000" 
+    SRG_IDC_COMBO2, 0x403, 18, 0
+0x6552, 0x6573, 0x7672, 0x6465, 0x2820, 0x6e75, 0x7375, 0x6465, 0x0029, 
+
+    SRG_IDC_COMBO2, 0x403, 22, 0
+0x6c50, 0x7461, 0x6f66, 0x6d72, 0x2820, 0x6f73, 0x7475, 0x2d68, 0x6165, 
+0x7473, 0x0029, 
+    SRG_IDC_COMBO2, 0x403, 22, 0
+0x6c50, 0x7461, 0x6f66, 0x6d72, 0x2820, 0x6f73, 0x7475, 0x2d68, 0x6577, 
+0x7473, 0x0029, 
+    SRG_IDC_COMBO2, 0x403, 19, 0
+0x7453, 0x6761, 0x2065, 0x7328, 0x756f, 0x6874, 0x6520, 0x7361, 0x2974, 
+"\000" 
+    SRG_IDC_COMBO2, 0x403, 19, 0
+0x7453, 0x6761, 0x2065, 0x7328, 0x756f, 0x6874, 0x7720, 0x7365, 0x2974, 
+"\000" 
+    SRG_IDC_COMBO2, 0x403, 18, 0
+0x6552, 0x6573, 0x7672, 0x6465, 0x2820, 0x6e75, 0x7375, 0x6465, 0x0029, 
+
+    SRG_IDC_COMBO2, 0x403, 10, 0
+0x6950, 0x2065, 0x6863, 0x7261, 0x0074, 
+    SRG_IDC_COMBO2, 0x403, 16, 0
+0x6f48, 0x6972, 0x6f7a, 0x746e, 0x6c61, 0x2820, 0x7879, 0x0029, 
+    SRG_IDC_COMBO2, 0x403, 11, 0
+0x6c43, 0x7361, 0x6973, 0x2063, 0x4433, "\000" 
+    SRG_IDC_COMBO2, 0x403, 31, 0
+0x6c43, 0x7361, 0x6973, 0x2063, 0x5928, 0x7320, 0x6163, 0x656c, 0x6f20, 
+0x206e, 0x6874, 0x2065, 0x6972, 0x6867, 0x2974, "\000" 
+    SRG_IDC_COMBO2, 0x403, 34, 0
+0x6c43, 0x7361, 0x6973, 0x2063, 0x4433, 0x2820, 0x2079, 0x6373, 0x6c61, 
+0x2065, 0x6e6f, 0x7420, 0x6568, 0x7220, 0x6769, 0x7468, 0x0029, 
+    SRG_IDC_COMBO2, 0x403, 9, 0
+0x6557, 0x2062, 0x7861, 0x7369, "\000" 
+    SRG_IDC_COMBO2, 0x403, 14, 0
+0x6353, 0x7461, 0x6574, 0x2072, 0x7267, 0x7061, 0x0068, 
+    SRG_IDC_COMBO2, 0x403, 17, 0
+0x6c43, 0x7361, 0x6973, 0x2063, 0x4433, 0x2820, 0x2c59, 0x2958, "\000" 
+    SRG_IDC_COMBO2, 0x403, 17, 0
+0x6f50, 0x616c, 0x2072, 0x6863, 0x7261, 0x2074, 0x7861, 0x7369, "\000" 
+    SRG_IDC_COMBO2, 0x403, 19, 0
+0x6c43, 0x7361, 0x6973, 0x2063, 0x6164, 0x6574, 0x7320, 0x6163, 0x656c, 
+"\000" 
+    SRG_IDC_COMBO2, 0x403, 34, 0
+0x6c43, 0x7361, 0x6973, 0x2063, 0x6164, 0x6574, 0x7320, 0x6163, 0x656c, 
+0x2820, 0x6972, 0x6867, 0x2074, 0x6168, 0x646e, 0x6465, 0x0029, 
+    SRG_IDC_COMBO2, 0x403, 22, 0
+0x6c43, 0x7361, 0x6973, 0x2063, 0x4433, 0x4420, 0x7461, 0x2065, 0x6373, 
+0x6c61, 0x0065, 
+    SRG_IDC_COMBO2, 0x403, 25, 0
+0x6c43, 0x7361, 0x6973, 0x2063, 0x4433, 0x4420, 0x7461, 0x2065, 0x6e6f, 
+0x7220, 0x6769, 0x7468, "\000" 
+    SRG_IDC_COMBO2, 0x403, 25, 0
+0x6144, 0x6574, 0x7320, 0x6163, 0x656c, 0x6f20, 0x206e, 0x4433, 0x5920, 
+0x2058, 0x7861, 0x7369, "\000" 
+    SRG_IDC_COMBO2, 0x403, 22, 0
+0x6144, 0x6574, 0x7320, 0x6163, 0x656c, 0x6f20, 0x206e, 0x5859, 0x6120, 
+0x6978, 0x0073, 
+    SRG_IDC_COMBO2, 0x403, 31, 0
+0x6147, 0x746e, 0x2074, 0x6863, 0x7261, 0x2074, 0x6977, 0x6874, 0x6e20, 
+0x6d75, 0x7265, 0x6369, 0x7320, 0x6163, 0x656c, "\000" 
+    SRG_IDC_COMBO2, 0x403, 28, 0
+0x6147, 0x746e, 0x2074, 0x6863, 0x7261, 0x2074, 0x6977, 0x6874, 0x6420, 
+0x7461, 0x2065, 0x6373, 0x6c61, 0x0065, 
+    SRG_IDC_COMBO3, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    SRG_IDC_COMBO3, 0x403, 10, 0
+0x7541, 0x6f74, 0x616d, 0x6974, 0x0063, 
+    SRG_IDC_COMBO3, 0x403, 6, 0
+0x6156, 0x756c, 0x0065, 
+    SRG_IDC_COMBO3, 0x403, 11, 0
+0x6550, 0x6372, 0x6e65, 0x6174, 0x6567, "\000" 
+    SRG_IDC_COMBO3, 0x403, 30, 0
+0x6f43, 0x626d, 0x6e69, 0x6465, 0x7620, 0x6c61, 0x6575, 0x6120, 0x646e, 
+0x7020, 0x7265, 0x6563, 0x746e, 0x6761, 0x0065, 
+    SRG_IDC_COMBO3, 0x403, 16, 0
+0x6e41, 0x6f6e, 0x6174, 0x6974, 0x6e6f, 0x7420, 0x7865, 0x0074, 
+    SRG_IDC_COMBO3, 0x403, 21, 0
+0x6e41, 0x6f6e, 0x6174, 0x6974, 0x6e6f, 0x6120, 0x646e, 0x7620, 0x6c61, 
+0x6575, "\000" 
+    SRG_IDC_COMBO3, 0x403, 31, 0
+0x6e41, 0x6f6e, 0x6174, 0x6974, 0x6e6f, 0x202c, 0x6156, 0x756c, 0x2065, 
+0x6e61, 0x2064, 0x6550, 0x6372, 0x6e65, 0x7461, "\000" 
+    SRG_IDC_COMBO3, 0x403, 23, 0
+0x6e41, 0x6f6e, 0x6174, 0x6974, 0x6e6f, 0x6120, 0x646e, 0x5020, 0x7265, 
+0x6563, 0x746e, "\000" 
+    SRG_IDC_COMBO3, 0x403, 33, 0
+0x6e41, 0x6f6e, 0x6174, 0x6974, 0x6e6f, 0x202c, 0x6176, 0x756c, 0x2065, 
+0x6e61, 0x2064, 0x6570, 0x6372, 0x6e65, 0x6174, 0x6567, "\000" 
+    SRG_IDC_COMBO3, 0x403, 26, 0
+0x6e41, 0x6f6e, 0x6174, 0x6974, 0x6e6f, 0x6120, 0x646e, 0x7020, 0x7265, 
+0x6563, 0x746e, 0x6761, 0x0065, 
+    SRG_IDC_COMBO3, 0x403, 32, 0
+0x6948, 0x6564, 0x4c20, 0x6261, 0x6c65, 0x2073, 0x4c28, 0x6261, 0x6c65, 
+0x4220, 0x6f6c, 0x6b63, 0x5320, 0x7974, 0x656c, 0x0029, 
+    SRG_IDC_COMBO3, 0x403, 32, 0
+0x6f4d, 0x6576, 0x4c20, 0x6261, 0x6c65, 0x2073, 0x4c28, 0x6261, 0x6c65, 
+0x4220, 0x6f6c, 0x6b63, 0x5320, 0x7974, 0x656c, 0x0029, 
+    0
+END
+
+SRG_IDD_COMPONENT_PROPPAGE7 DLGINIT
+BEGIN
+    SRG_IDC_COMBO1, 0x403, 10, 0
+0x6f4e, 0x6c20, 0x6765, 0x6e65, 0x0064, 
+    SRG_IDC_COMBO1, 0x403, 22, 0
+0x7541, 0x6f74, 0x616d, 0x6974, 0x2063, 0x696c, 0x656e, 0x6c20, 0x6765, 
+0x6e65, 0x0064, 
+    SRG_IDC_COMBO1, 0x403, 20, 0
+0x654c, 0x6567, 0x646e, 0x6620, 0x6f72, 0x206d, 0x6e49, 0x6564, 0x6563, 
+0x0073, 
+    SRG_IDC_COMBO1, 0x403, 19, 0
+0x654c, 0x6567, 0x646e, 0x6620, 0x6f72, 0x206d, 0x7247, 0x756f, 0x7370, 
+"\000" 
+    SRG_IDC_COMBO1, 0x403, 40, 0
+0x654c, 0x6567, 0x646e, 0x6620, 0x6f72, 0x206d, 0x6552, 0x7463, 0x6e61, 
+0x6c67, 0x2065, 0x6728, 0x6f72, 0x7075, 0x6120, 0x646e, 0x6920, 0x646e, 
+0x7865, 0x0029, 
+    SRG_IDC_COMBO2, 0x403, 7, 0
+0x6f4e, 0x4b20, 0x7965, "\000" 
+    SRG_IDC_COMBO2, 0x403, 15, 0
+0x7541, 0x6f74, 0x616d, 0x6974, 0x2063, 0x656b, 0x7379, "\000" 
+    SRG_IDC_COMBO2, 0x403, 10, 0
+0x694c, 0x656e, 0x6f20, 0x6c6e, 0x0079, 
+    SRG_IDC_COMBO2, 0x403, 5, 0
+0x6f42, 0x2078, "\000" 
+    SRG_IDC_COMBO2, 0x403, 13, 0
+0x6957, 0x6567, 0x2074, 0x7973, 0x626d, 0x6c6f, "\000" 
+    SRG_IDC_COMBO2, 0x403, 12, 0
+0x6552, 0x6573, 0x7672, 0x6465, 0x2320, 0x0035, 
+    SRG_IDC_COMBO2, 0x403, 12, 0
+0x6552, 0x6573, 0x7672, 0x6465, 0x2320, 0x0036, 
+    SRG_IDC_COMBO2, 0x403, 12, 0
+0x6552, 0x6573, 0x7672, 0x6465, 0x2320, 0x0037, 
+    SRG_IDC_COMBO2, 0x403, 12, 0
+0x6552, 0x6573, 0x7672, 0x6465, 0x2320, 0x0038, 
+    SRG_IDC_COMBO2, 0x403, 12, 0
+0x6552, 0x6573, 0x7672, 0x6465, 0x2320, 0x0039, 
+    SRG_IDC_COMBO2, 0x403, 12, 0
+0x6552, 0x6573, 0x7672, 0x6465, 0x2320, 0x0041, 
+    SRG_IDC_COMBO2, 0x403, 12, 0
+0x6552, 0x6573, 0x7672, 0x6465, 0x2320, 0x0042, 
+    SRG_IDC_COMBO2, 0x403, 10, 0
+0x7543, 0x7473, 0x6d6f, 0x2320, 0x0043, 
+    SRG_IDC_COMBO2, 0x403, 10, 0
+0x7543, 0x7473, 0x6d6f, 0x2320, 0x0044, 
+    SRG_IDC_COMBO2, 0x403, 10, 0
+0x7543, 0x7473, 0x6d6f, 0x2320, 0x0045, 
+    SRG_IDC_COMBO2, 0x403, 10, 0
+0x7543, 0x7473, 0x6d6f, 0x2320, 0x0046, 
+    0
+END
+
+IDD_GVW_PAGESETUP DLGINIT
+BEGIN
+    IDC_GVW_COMBO1, 0x403, 10, 0
+0x3233, 0x2030, 0x2058, 0x3432, 0x0030, 
+    IDC_GVW_COMBO1, 0x403, 10, 0
+0x3436, 0x2030, 0x2058, 0x3834, 0x0030, 
+    IDC_GVW_COMBO1, 0x403, 10, 0
+0x3038, 0x2030, 0x2058, 0x3036, 0x0030, 
+    IDC_GVW_COMBO1, 0x403, 11, 0
+0x3031, 0x3432, 0x5820, 0x3720, 0x3836, "\000" 
+    IDC_GVW_COMBO1, 0x403, 12, 0
+0x3441, 0x5020, 0x726f, 0x7274, 0x6961, 0x0074, 
+    IDC_GVW_COMBO1, 0x403, 13, 0
+0x3441, 0x4c20, 0x6e61, 0x7364, 0x6163, 0x6570, "\000" 
+    IDC_GVW_COMBO1, 0x403, 12, 0
+0x3541, 0x5020, 0x726f, 0x7274, 0x6961, 0x0074, 
+    IDC_GVW_COMBO1, 0x403, 13, 0
+0x3541, 0x4c20, 0x6e61, 0x7364, 0x6163, 0x6570, "\000" 
+    IDC_GVW_COMBO1, 0x403, 19, 0
+0x5355, 0x4c20, 0x7465, 0x6574, 0x2072, 0x6f50, 0x7472, 0x6172, 0x7469, 
+"\000" 
+    IDC_GVW_COMBO1, 0x403, 20, 0
+0x5355, 0x4c20, 0x7465, 0x6574, 0x2072, 0x614c, 0x646e, 0x6373, 0x7061, 
+0x0065, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+SRG_TREE_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "0"
+    BEGIN
+        MENUITEM "Load components...",          SRG_ID_LOADCOMPONENTLIST
+        MENUITEM "Save components...",          SRG_ID_SAVECOMPONENTLIST
+        MENUITEM SEPARATOR
+        MENUITEM "Add component",               SRG_ID_ADDCOMPONENT
+    END
+    POPUP "1"
+    BEGIN
+        MENUITEM "Delete",                      SRG_ID_COMPONENT_DELETE
+        MENUITEM "Properties",                  SRG_ID_COMPONENT_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "Bring to top",                SRG_ID_MOVETOTOP
+        MENUITEM "Send to back",                SRG_ID_SENDTOBACK
+        MENUITEM "Forward 1",                   SRG_ID_FORWARD1
+        MENUITEM "Back 1",                      SRG_ID_BACK1
+    END
+    POPUP "2"
+    BEGIN
+        MENUITEM "Delete",                      SRG_ID_COMPONENT_DELETE
+        MENUITEM "Properties",                  SRG_ID_COMPONENT_PROPERTIES
+        MENUITEM "Add text",                    ID_LABEL_ADDANNOTATION
+    END
+    POPUP "3"
+    BEGIN
+        MENUITEM "Delete",                      SRG_ID_COMPONENT_DELETE
+        MENUITEM "Properties",                  SRG_ID_COMPONENT_PROPERTIES
+        MENUITEM "Add Label",                   ID_LABEL_ADDLABEL
+    END
+    POPUP "4"
+    BEGIN
+        MENUITEM "Add Annotation",              ID_ADDANNOTATION
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+SRG_IDB_IMAGELIST TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_SRG_ILBUTTON01
+    BUTTON      ID_SRG_ILBUTTON02
+    BUTTON      ID_SRG_ILBUTTON03
+    BUTTON      ID_SRG_ILBUTTON04
+    SEPARATOR
+    BUTTON      ID_SRG_ILBUTTON05
+    BUTTON      ID_SRG_ILBUTTON06
+    BUTTON      ID_SRG_ILBUTTON07
+    BUTTON      ID_SRG_ILBUTTON08
+    BUTTON      ID_SRG_ILBUTTON11
+    BUTTON      ID_SRG_ILBUTTON12
+    BUTTON      ID_SRG_ILBUTTON13
+    BUTTON      ID_SRG_ILBUTTON14
+    BUTTON      ID_SRG_ILBUTTON09
+    BUTTON      ID_SRG_ILBUTTON10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    SRG_IDD_ANNOTATIONEDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 272
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 41
+    END
+
+    SRG_IDD_CHOOSECOMP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    SRG_IDD_COMPONENT_PROPPAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+
+    SRG_IDD_COMPONENT_PROPPAGE10, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    SRG_IDD_COMPONENT_PROPPAGE11, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    SRG_IDD_COMPONENT_PROPPAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    SRG_IDD_COMPONENT_PROPPAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 176
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    SRG_IDD_COMPONENT_PROPPAGE4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 176
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    SRG_IDD_COMPONENT_PROPPAGE5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+
+    SRG_IDD_COMPONENT_PROPPAGE6, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 214
+    END
+
+    SRG_IDD_COMPONENT_PROPPAGE7, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    SRG_IDD_COMPONENT_PROPPAGE8, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    SRG_IDD_COMPONENT_PROPPAGE9, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    SRG_IDD_GRAPHEDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 208
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 181
+    END
+
+    SRG_IDD_GRAPHITEMEDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    SRG_IDD_RESOURCE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 165
+    END
+
+    SRG_IDD_VALUEEDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 137
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_GVW_PAGESETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 151
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_GVW_SELECTQUERY1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 68
+    END
+
+    IDD_GVW_PAGESETUP2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 198
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 210
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// LINE_ENDS
+//
+
+TAILA                   LINE_ENDS DISCARDABLE   "chart\\res\\taila.ply"
+ARROWA                  LINE_ENDS DISCARDABLE   "chart\\res\\arrowa.ply"
+ENDBLOB                 LINE_ENDS DISCARDABLE   "chart\\res\\line_end.bin"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING50606         "PLUS"
+    IDS_STRING50607         "TRIANGLE"
+    IDS_SRG_COMPONENT       "Components"
+    IDS_SRG_DATALIST        "Data list"
+    IDS_SRG_DATA            "Data item"
+    IDS_SRG_VALUE           "Value"
+    IDS_SRG_TITLELIST       "Title"
+    IDS_WIZARD_TITLESTRING  "Objective Chart Wizard"
+    IDS_SRGEX_GENERIC       "Stingray Graph Class."
+    IDS_SRGEX_GROUP         "Out of range accessing GROUP"
+    IDS_SRGEX_INDEX         "Out of range accessing INDEX"
+    IDS_SRGEX_DYNAMIC       "Dynamic data error"
+    IDS_SRGEX_DYNAMICTYPE   "Data of an incompatible type has been sent to the data buffer"
+    IDS_SRGEX_COMPONENT     "Template syntax error\nThere is an error in the component declaration."
+    IDS_SRGEX_FILLSTYLE     "Template syntax error.\nThere is an error in the fill style declaration."
+    IDS_SRGEX_FONT          "Template syntax error.\nThere is an error in the font declaration."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SRGEX_DATA          "Template syntax error.\nThere is an error in the data component declaration."
+    IDS_SRGEX_COMMAND       "Unrecognised template command."
+    IDS_SRGEX_BORDER        "Template syntax error.\nThere is an error in the border declaration."
+    IDS_SRG_DYNAMIC_NOGROW  "SRGraphDynamicData data access error\nAttempt to access data outside of buffer.\nCall SetGrowSize() to enable buffer growth."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SRGEX_LEGEND        "Template syntax error.\nThere is an error in the legend declaration."
+    IDS_SRGEX_NONE          "An SRGraph exception occured. No infomation is available."
+    IDS_SRGEX_DYNAMICNOTREADY 
+                            "An attempt was made to use a dynamic graph without initialising the data buffer."
+    IDS_SRGEX_TYPE          "A data type not compatible with the current dynamic graph data buffer usage was used."
+    IDS_SRGEX_SYNTAX        "There is a syntax error in the template comand"
+    IDS_SRGEX_LABEL         "The labelling of this graph has reduced the display area to zero"
+    IDS_SRGEX_DEFAULT       "An un-defined exception has been invoked."
+    IDS_SRGEX_WIGET         "An error occurred while loading a wiget symbol"
+    IDS_SRGEX_DRAWING       "A drawing function was performed outside of the draw loop"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SRGEX_POLYGON       "The requested polygon resource was not available"
+    IDS_SRGEX_GRAPHTYPE     "A graph type was requested which is not compatible with the type of data or the number of data items available."
+    IDS_SRGEX_LOGSCALE      "The numeric scale supplied is not suitable for logarithmic display"
+    IDS_SRGEX_ODD           "An even number of data items is required for this operation."
+    IDS_SRGEX_NULL          "A required data item was found to contain a null value."
+    IDS_SRG_COMPONENTTYPE   "Component"
+    IDS_SRG_BACKGROUNDTYPE  "Background"
+    IDS_SRG_DISPLAYTYPE     "Display"
+    IDS_SRG_TITLETYPE       "Title"
+    IDS_SRG_LEGENDTYPE      "Legend"
+    IDS_SRG_LABELTYPE       "Label"
+    IDS_SRG_LABELBLOCKTYPE  "Label block"
+    IDS_SRG_TEXTPANELTYPE   "Text panel"
+    IDS_SRG_DATAWATCHERTYPE "Data Watcher"
+    IDS_SRG_COMPOUNDCOMPONENTTYPE "Compound component"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SRG_COMPOUNDDISPLAYTYPE "Compound display"
+    IDS_SRG_AXISMANAGERTYPE "Axis Manager"
+    IDS_SRG_GRIDLINETYPE    "Grid lines"
+    IDS_SRG_TICKMARKTYPE    "Tick marks"
+    IDS_SRG_DECIMALSCALETYPE "Decimal scale"
+    IDS_SRG_LOGSCALETYPE    "Log scale"
+    IDS_SRG_INDEXSCALETYPE  "Index scale"
+    IDS_SRG_GROUPSCALETYPE  "Group scale"
+    IDS_SRG_DATESCALETYPE   "Date scale"
+    IDS_SRG_WIGETNAMES      "STAR"
+    IDS_STRING50601         "HEX"
+    IDS_STRING50602         "SQUARE"
+    IDS_STRING50603         "CIRCLE"
+    IDS_STRING50604         "DIAMOND"
+    IDS_STRING50605         "CROSS"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SRGTSERR            "Syntax error in..>"
+    IDS_SRGTNF              "SRGraph template not found"
+    IDS_SRGMLERR            "Memory error locking graph template"
+    IDS_SRGDGERRB           "SRGraphDynamicData HiLo buffer allocation error"
+    IDS_SRGDGERRA           "SRGraphDynamicData allocation error"
+    IDS_SRGDGERR            "SRGraphDynamicData reallocation error"
+    IDS_OLDISP              "ERROR.. Cannot select overlaid displays"
+    IDS_SRG_LEGEND_DEFAULT  "Data at group %d index %d "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_1_EDIT               "Edit the component properties"
+    ID_LABEL_ADDANNOTATION  "Add an annotation to this label\nAdd Text"
+    ID_LABEL_ADDLABEL       "Add a label to this block\nAdd label"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SRG_ID_LOADCOMPONENTLIST "Read a component list"
+    SRG_ID_SAVECOMPONENTLIST "Save the component list"
+    SRG_ID_SAVECOMPONENTLISTAS "Save component to a different file"
+    SRG_ID_DELETE_COMPONENT "Delete this component"
+    SRG_ID_COMPONENT_PROPERTIES "Edit this component's properties."
+    SRG_ID_ADDCOMPONENT     "Add's a component to the list"
+    SRG_IDS_COMPONENT_PROPSHT_CAPTION "Graph Component properties"
+    ID_ADDANNOTATION        "Add an annotation to this data"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

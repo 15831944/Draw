@@ -1,0 +1,5 @@
+// XYScatterG_EX graph supports these axis types
+0x01000000   Automatic
+0x0f000000	Scatter graph axis.
+0x1a000000	Scatter (date on X axis)
+0x1b000000	Scatter (date on Y axis)

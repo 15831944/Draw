@@ -34,7 +34,7 @@ private:
 	CCobxAutoFill m_wndFirstName;
 	CCMSectViewWnd m_wndSectView;
 	CEdit m_wndFirstSize[8];
-
+	CStatic m_wndFirstTitle[8];
 	CArray<UINT,UINT>	m_aCtrlDB;
 	CArray<UINT,UINT> m_aCtrlDBUser;
 	CArray<UINT,UINT> m_aCtrlDBUser2;
@@ -54,4 +54,5 @@ public:
 	afx_msg void OnChangeShape();
 	afx_msg void OnChangeDB();
 	afx_msg void OnChangeFirstName();
+	afx_msg void OnBtnCalculate();
 };

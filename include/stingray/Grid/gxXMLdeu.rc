@@ -1,0 +1,243 @@
+///////////////////////////////////////////////////////////////////////////////
+// gxXMLdeu.rc
+//
+// Copyright (c) 1999-2009 Rogue Wave Software, Inc.  All Rights Reserved.
+//
+// This computer software is owned by Rogue Wave Software, Inc. and is protected by
+// U.S. copyright laws and other laws and by international treaties. This
+// computer software is furnished by Rogue Wave Software, Inc. pursuant to a written
+// license agreement and may be used, copied, transmitted, and stored
+// only in accordance with the terms of such license agreement and with
+// the inclusion of the above copyright notice.  This computer software or
+// any other copies thereof may not be provided or otherwise made available
+// to any other person.
+//
+// U.S. Government Restricted Rights.  This computer software:
+//      (a) was developed at private expense and is in all respects the
+//          proprietary information of Rogue Wave Software, Inc.;
+//      (b) was not developed with government funds;
+//      (c) is a trade secret of Rogue Wave Software, Inc. for all purposes of the
+//          Freedom of Information Act; and
+//      (d) is a commercial item and thus, pursuant to Section 12.212
+//          of the Federal Acquisition Regulations (FAR) and DFAR
+//          Supplement Section 227.7202, Government’s use, duplication or
+//          disclosure of the computer software is subject to the restrictions
+//          set forth by Rogue Wave Software, Inc.
+//
+///////////////////////////////////////////////////////////////////////////////
+//Microsoft Developer Studio generated resource script.
+//
+#include "grid\xmlser\gxxmlrc.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#include "foundation\sflres.h"
+
+#include "foundation\sfl.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+// German resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+	GX_IDS_NAME			"Name"
+	GX_IDS_KEY			"Taste"
+	GX_IDS_TOP			"Oberseite"
+	GX_IDS_LEFT			"Link"
+	GX_IDS_BOTTOM		"Unterseite"
+	GX_IDS_RIGHT		"Recht"
+	GX_IDS_TYPE			"Art"
+	GX_IDS_ISVALID		"IstGültig"
+	GX_IDS_ITALIC		"Italic"
+	GX_IDS_UNDERLINE	"Unterstreichung"
+	GX_IDS_STRIKEOUT	"SchlagAus"
+	GX_IDS_WEIGHT		"Gewicht"
+	GX_IDS_SIZE			"Größe"
+	GX_IDS_ORIENTATION	"Lagebestimmung"
+	GX_IDS_FACENAME		"GesichtName"
+	GX_IDS_PITCHANDFAMILY	"TaktabstandUndFamilie"
+	GX_IDS_CHARSET		"ZeichenSet"
+	GX_IDS_STYLE		"Art"
+	GX_IDS_COLOR		"Farbe"
+	GX_IDS_HATCH		"Luke"
+	GX_IDS_PATTERN		"Muster"
+	GX_IDS_BGCOLOR		"BGFarbe"
+	GX_IDS_ROWCOUNT		"ReiheZählimpuls"
+	GX_IDS_COLCOUNT		"SpalteZählimpuls"
+	GX_IDS_CELLSTYLESARRAY	"ZelleArtenArray"
+	GX_IDS_ROWBASESTYLESARRAY	"ReiheUnterseiteArtenArray"
+	GX_IDS_COLBASESTYLESARRAY	"SpalteUnterseiteArtenArray"
+	GX_IDS_DEVNAMES		"EntwicklerNamen"
+	GX_IDS_DEVMODE		"EntwicklerModus"
+	GX_IDS_COLORARRAY	"FarbeReihe"
+	GX_IDS_VERTLINES	"VertikalZeilen"
+	GX_IDS_HORZ_LINES	"HorizantalZeilen"
+	GX_IDS_BUTTONS_3D	"Tasten3D"
+	GX_IDS_MARK_ROWHEADER	"MarkierungReiheVorsatz"
+	GX_IDS_MARK_COLHEADER	"MarkierungSpalteVorsatz"
+	GX_IDS_PROFILE_SECTION	"ProfilKapitel"
+	GX_IDS_ZOOM			"Zoom"
+	GX_IDS_PAGE_ORDER	"SeiteOrdnung"
+	GX_IDS_BLACKANDWHITE	"SchwarzesUndWeiß"
+	GX_IDS_ROWHEADERS	"ReiheVorsätze"
+	GX_IDS_CENTERVERTICAL	"MitteVertikal"
+	GX_IDS_CENTERHORZ	"MitteHorizontal"
+	GX_IDS_TOPMARGIN	"OberseiteSeitenrand"
+	GX_IDS_LEFTMARGIN	"LinkSeitenrand"
+	GX_IDS_RIGHTMARGIN	"RechtSeitenrand"
+	GX_IDS_BOTTOMMARGIN	"UnterseiteSeitenrand"
+	GX_IDS_PRINTFRAME	"DruckFeld"
+	GX_IDS_HEADERLENGTH	"VorsatzLänge"
+	GX_IDS_FOOTERLENGTH	"FooterLänge"
+	GX_IDS_FIRSTPAGE	"ZuerstSeite"
+	GX_IDS_COLBREAKSARRAY	"SpalteBrücheArray"
+	GX_IDS_ROWBREAKSARRAY	"ReiheBrücheArray"
+	GX_IDS_HEADERDATA	"VorsatzDaten"
+	GX_IDS_FOOTERDATA	"FooterDaten"
+	GX_IDS_COLUMNHEADERS	"SpalteVorsätze"
+	GX_IDS_ALL			"Alle"
+	GX_IDS_STYLEBITS	"ArtBits"
+	GX_IDS_INTERIORCOLOR	"InnenFarbe"
+	GX_IDS_CHOICELIST	"WahlListe"
+	GX_IDS_MAXLENGTH	"MaximumLänge"
+	GX_IDS_HORZALIGN	"HorizontalAusrichtung"
+	GX_IDS_VERTALIGN	"VertikalAusrichtung"
+	GX_IDS_READONLY		"GelesenNur"
+	GX_IDS_CONTROLID	"SteuerungIdentifikation"
+	GX_IDS_TEXTCOLOR	"TextFarbe"
+	GX_IDS_WRAPPED_TEXT	"AufgewickeltText"
+	GX_IDS_ALLOWENTER	"Gewähren SieKommen Sie herein"
+	GX_IDS_VALUE		"Wert"
+	GX_IDS_ENABLED		"Aktiviert"
+	GX_IDS_TRISTATE		"TriZustand"
+	GX_IDS_AUTOSIZE		"AutoGröße"
+	GX_IDS_BORDERS		"Ränder"
+	GX_IDS_BASESTYLEID	"UnterseiteArtIdentifikation"
+	GX_IDS_BASESTYLENAME	"UnterseiteArtName"
+	GX_IDS_USER_ATTRIBUTES	"BenutzerAttribute"
+	GX_IDS_FLOAT_CELL	"Hin- und HerbewegungZelle"
+	GX_IDS_FLOOD_CELL	"FlutZelle"
+	GX_IDS_MERGE_CELL	"MergeZelle"
+	GX_IDS_FORMAT_ID	"FormatIdentifikation"
+	GX_IDS_PLACES		"Plätze"
+	GX_IDS_VALUETYPE	"WertArt"
+	GX_IDS_DRAW3DFRAME	"Abgehobener Betrag3DFeld"
+	GX_IDS_BASE_STYLES_INFO	"UnterseiteArtenInformationen"
+	GX_IDS_BASE_STYLE_INFO	"UnterseiteArtInformationen"
+	GX_IDS_COUNT		"Zählimpuls"
+	GX_IDS_STYLEID		"ArtIdentifikation"
+	GX_IDS_RESOURCEID	"HilfsmittelIdentifikation"
+	GX_IDS_SYSTEM		"System"
+	GX_IDS_LASTID		"LetztesIdentifikation"
+	GX_IDS_STYLEPTRARRAY "ArtenArray"
+	GX_IDS_VERTICAL_SCROLL "VertikalRolle"
+	GX_IDS_THUMB_TRACKING_BOOL	"DaumenGleichlauf_Boolesch"
+	GX_IDS_TABNAME_EDITABLE_BOOL	"TabulatorNameEditable_Boolesch"
+	GX_IDS_GRID_READONLY_BOOL	"RasterfeldGelesenNur_Boolesch"
+	GX_IDS_UNDO_ENABLED_BOOL	"UndoAktiviert_Boolesch"
+	GX_IDS_NUMBERED_ROW_HEADERS_BOOL	"NumeriertReiheVorsätze_Boolesch"
+	GX_IDS_NUMBERED_COL_HEADERS_BOOL	"NumeriertSpalteVorsätze_Boolesch"
+	GX_IDS_ENABLEMOVECOLS_BOOL	"Aktivieren SieBewegungSpalten_Boolesch"
+	GX_IDS_ENABLEMOVEROWS_BOOL	"Aktivieren SieBewegungReihen_Boolesch"
+	GX_IDS_EATFMCOA_BOOL	"Essen SieZuerstMausKlicken_AufAktivieren Sie_Boolesch"
+	GX_IDS_TRANSPARENT_BG_BOOL	"Transparent_BG_Boolesch"
+	GX_IDS_LOCKREADONLYCELLS_BOOL	"VerriegelungGelesenNurZellen_Boolesch"
+	GX_IDS_SMART_RESIZE		"IntelligentBestimmen Sie die Größe neu"
+	GX_IDS_SELECTION_FLAGS	"AuswahlMarkierungsfahnen"
+	GX_IDS_ROW_HEIGHT_TRACKING_FLAGS	"ReiheHöheGleichlaufMarkierungsfahnen"
+	GX_IDS_COL_WIDTH_TRACKING_FLAGS		"SpalteBreiteGleichlaufMarkierungsfahnen"
+	GX_IDS_FROZEN_ROWS_COUNT	"EingefrorenReihenZählimpuls"
+	GX_IDS_FROZEN_COLS_COUNT	"EingefrorenSpaltenZählimpuls"
+	GX_IDS_DEFAULT_CELL_WIDTH	"RückstellungZelleBreite"
+	GX_IDS_DEFAULT_CELL_HEIGHT	"RückstellungZelleHöhe"
+	GX_IDS_TAB_SHEET_NAME	"TabulatorBlattName"
+	GX_IDS_CELL_ACTIVATION_FLAGS	"ZelleAktivierungMarkierungsfahnen"
+	GX_IDS_CURRENTCELLFRAME_FLAGS	"AktuellZelleFeldMarkierungsfahnen"
+	GX_IDS_MIN_ROWHEIGHT_ON_TRACKING	"MinimumReiheHöhe_AufGleichlauf"
+	GX_IDS_MIN_COLWIDTH_ON_TRACKING		"MinimumSpalteBreite_AufGleichlauf"
+	GX_IDS_DRAWING_ORDER	"ZeichnungOrdnung"
+	GX_IDS_HEADER_ROWSCOUNT	"VorsatzReihenZählimpuls"
+	GX_IDS_HEADER_COLSCOUNT	"VorsatzSpaltenZählimpuls"
+	GX_IDS_SELECTION_LIST	"AuswahlListe"
+	GX_IDS_COVEREDCELLS_LIST	"BedecktZellenListe"
+	GX_IDS_ROWHEIGHTS	"ReihenHöhen"
+	GX_IDS_COLUMNWIDTHS	"SpaltenBreiten"
+	GX_IDS_HIDDEN_ROWARRAY	"VerstecktReiheReihe"
+	GX_IDS_HIDDEN_COLARRAY	"VerstecktSpalteReihe"
+	GX_IDS_EXCELLIKE_SCROLL_BOOL	"Übertreffen SieWieRolle_Boolesch"
+	GX_IDS_SYNCCURRENTCELL_BOOL	"SynchronisierungAktuellZelle_Boolesch"
+	GX_IDS_INITIALIZED	"Initialisiert"
+	GX_IDS_FROZENCOLS_UNDO_INFO	"EingefrorenSpaltenUndo_Informationen"
+	GX_IDS_FROM	"Von"
+	GX_IDS_TO	"Zu"
+	GX_IDS_DEST	"Zieleinheit"
+	GX_IDS_SPECIAL_MODE	"SpeziellModus"
+	GX_IDS_DRAW_WYSIWYG_BOOL	"Abgehobener BetragWYSIWYG_Boolesch"
+	GX_IDS_ENTER_KEYACTION	"Kommen Sie hereinTasteTätigkeit"
+	GX_IDS_UNDO_LIMIT	"UndoBegrenzung"
+	GX_IDS_SORT_COLS_ON_DBLCLK	"SortierungSpaltenAufDoppeltesKlicken"
+	GX_IDS_SORT_ROWS_ON_DBLCLK	"SortierungReihenAufDoppeltesKlicken"
+	GX_IDS_EXCEL_LIKE_CURRENT_CELL "Übertreffen SieLikeCurrentCell"
+	GX_IDS_EXCEL_LIKE_SELECTION_FRAME	"ExcelWieAuswahlFeld"
+	GX_IDS_NEWGRIDLINEMODE	"NeuRasterfeldZeileModus"
+	GX_IDS_FLOATCELLSMODE	"Hin- und HerbewegungZellenModus"
+	GX_IDS_FLOATCELLSDELAYEVAL	"Hin- und HerbewegungZellenVerzögertEval"
+	GX_IDS_FLOATCELLSONDISPLAY	"Hin- und HerbewegungZellenAufBildschirmanzeige"
+	GX_IDS_ROWS			"Reihen"
+	GX_IDS_COLS			"Spalten"
+	GX_IDS_MERGE_CELLS_MODE	"MergeZellenModus"
+	GX_IDS_MERGE_CELLS_DELAYEVAL	"MergeZellenVerzögertEval"
+	GX_IDS_MERGE_CELLS		"MergeZellen"
+	GX_IDS_HORZ_CELLS		"HorizontalZellen"
+	GX_IDS_VERT_CELLS		"VertikalZellen"
+	GX_IDS_GRID_LINE_STYLE	"RasterfeldZeileArt"
+	GX_IDS_DIRECT_COPY_PASTE	"DirektExemplarPaste"
+	GX_IDS_DIRECT_CUT_PASTE	"DirektSchnittPaste"
+	GX_IDS_DIRECT_DRAG_DROP	"DirektGegenkraftTropfen"
+	GX_IDS_DISPLAYEXPRESSION	"BildschirmanzeigeAusdruck"
+	GX_IDS_EXCELLIKE_HEADERS	"Übertreffen SieWieVorsätze"
+	GX_IDS_ID				"Identifikation"
+	GX_IDS_VALUE_LWORD		"WertLWort"
+	GX_IDS_VALUE_HWORD		"WertHWort"
+	GX_IDS_FIRSTROW			"ZuerstReihe"
+	GX_IDS_LASTROW			"LetztesReihe"
+	GX_IDS_STRING			"Zeichenkette"
+	GX_IDS_ELEMENT			"Element"
+	GX_IDS_USERPROPERTY_INFOMAP	"BenutzerEigenschaftInformationen_Karte"
+	GX_IDS_CONTROLNAMES		"SteuerungNamen"
+	GX_IDS_BASESTYLENAMES	"UnterseiteArtNamen"
+	GX_IDS_PRINT_HORZLINES	"DruckHorizontalZeilen"
+	GX_IDS_PRINT_VERTLINES	"DruckVertikalZeilen"
+END
+
+
+#endif    // German resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

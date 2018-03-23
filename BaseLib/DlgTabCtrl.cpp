@@ -42,7 +42,7 @@ int CDlgTabCtrl::AddTab(CDialog* pDlg,LPCTSTR szTabName,UINT nIDD)
 	TC_ITEM item;
 	memset(&item,0,sizeof(TC_ITEM));
 	item.mask = TCIF_TEXT | TCIF_PARAM;
-	item.pszText = (LPWSTR)szTabName;
+	item.pszText = (LPSTR)szTabName;
 	item.lParam = (LPARAM)nIDD;
 	if(InsertItem(nTabCount,&item) == -1)return -1;
 	m_aDialog.Add(pDlg);

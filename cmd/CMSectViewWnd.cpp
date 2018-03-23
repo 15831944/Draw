@@ -112,8 +112,26 @@ void ICMGeomMaker::MakePicture(T_SECT_D* pSect,CCMGeom2DArray& aGeom)
 			int nShape = CSectUtil::GetShapeIndexFromNameReg(csShape);
 			switch (nShape)
 			{
+			case D_SECT_SHAPE_REG_L:
+				MakePictureAngle(aGeom);	break;
+			case D_SECT_SHAPE_REG_C:
+				MakePictureChannel(aGeom);	break;
 			case D_SECT_SHAPE_REG_H:
 				MakePictureHBeam(aGeom);	break;
+			case D_SECT_SHAPE_REG_T:
+				MakePictureTee(aGeom);	break;
+			case D_SECT_SHAPE_REG_B:
+				MakePictureBox(aGeom);	break;
+			case D_SECT_SHAPE_REG_P:
+				MakePicturePipe(aGeom);	break;
+			case D_SECT_SHAPE_REG_2L:
+				MakePictureDblAngle(aGeom);	break;
+			case D_SECT_SHAPE_REG_2C:
+				MakePictureDblChannel(aGeom);	break;
+			case D_SECT_SHAPE_REG_SB:
+				MakePictureSolidRect(aGeom);	break;
+			case D_SECT_SHAPE_REG_SR:
+				MakePictureSolidCircle(aGeom);	break;
 			default:
 				break;
 			}
@@ -123,12 +141,100 @@ void ICMGeomMaker::MakePicture(T_SECT_D* pSect,CCMGeom2DArray& aGeom)
 		break;
 	}
 }
+void ICMGeomMaker::MakePictureAngle(CCMGeom2DArray& aGeom)
+{
+	double H,B,tw,tf,B2,tf2;
+	GetRegularData(H,B,tw,tf,B2,tf2);
+	CCMPolygon* pGeom2D = new CCMPolygon(CCM_BORDER,CCM_FILL);
+	_MakeRightAngle(H,B,tw,tf,pGeom2D);
+	aGeom.Add(pGeom2D);
+}
+void ICMGeomMaker::MakePictureChannel(CCMGeom2DArray& aGeom)
+{
+	double H,B1,tw,tf1,B2,tf2;
+	GetRegularData(H,B1,tw,tf1,B2,tf2);
+	CCMPolygon* pGeom2D = new CCMPolygon(CCM_BORDER,CCM_FILL);
+	_MakeRightChannel(H,B1,tw,tf1,B2,tf2,pGeom2D);
+	aGeom.Add(pGeom2D);
+}
 void ICMGeomMaker::MakePictureHBeam(CCMGeom2DArray& aGeom)
 {
 	double H,B1,tw,tf1,B2,tf2;
 	GetRegularData(H,B1,tw,tf1,B2,tf2);
 	CCMPolygon* pGeom2D = new CCMPolygon(CCM_BORDER,CCM_FILL);
 	_MakeHBeam(H,B1,tw,tf1,B2,tf2,pGeom2D);
+	aGeom.Add(pGeom2D);
+}
+void ICMGeomMaker::MakePictureTee(CCMGeom2DArray& aGeom)
+{
+	double H,B1,tw,tf1,B2,tf2;
+	GetRegularData(H,B1,tw,tf1,B2,tf2);
+	CCMPolygon* pGeom2D = new CCMPolygon(CCM_BORDER,CCM_FILL);
+	_MakeTee(H,B1,tw,tf1,pGeom2D);
+	aGeom.Add(pGeom2D);
+}
+void ICMGeomMaker::MakePictureBox(CCMGeom2DArray& aGeom)
+{
+	double H,B1,tw,tf1,B2,tf2;
+	GetRegularData(H,B1,tw,tf1,B2,tf2);
+	CCMPolygon* pGeom2D = new CCMPolygon(CCM_BORDER,CCM_FILL);
+	_MakeBox(H,B1,tw,tf1,pGeom2D);
+	aGeom.Add(pGeom2D);
+	pGeom2D = new CCMPolygon(CCM_BORDER,CCM_BLACK);
+	_MakeRect(tw,tf1,B1-tw,H-tf1,pGeom2D);
+	aGeom.Add(pGeom2D);
+}
+void ICMGeomMaker::MakePicturePipe(CCMGeom2DArray& aGeom)
+{
+	double H,B1,tw,tf1,B2,tf2;
+	GetRegularData(H,B1,tw,tf1,B2,tf2);
+	CCMEllipse* pGeom2D = new CCMEllipse(CCM_BORDER,CCM_FILL);
+	pGeom2D->SetRect(SCMPoint2D(0,0),SCMPoint2D(H,H));
+	aGeom.Add(pGeom2D);
+	pGeom2D = new CCMEllipse(CCM_BORDER,CCM_HOLE);
+	pGeom2D->SetRect(SCMPoint2D(B1,B1),SCMPoint2D(H-B1,H-B1));
+	aGeom.Add(pGeom2D);
+}
+void ICMGeomMaker::MakePictureDblAngle(CCMGeom2DArray& aGeom)
+{
+	double H,B1,tw,tf1,B2,tf2;
+	GetRegularData(H,B1,tw,tf1,B2,tf2);
+	double ref = B1+B2;
+	CCMPolygon* pGeom2D = new CCMPolygon(CCM_BORDER,CCM_FILL);
+	_MakeLeftAngle(H,B1,tw,tf1,pGeom2D);
+	aGeom.Add(pGeom2D);
+	pGeom2D = new CCMPolygon(CCM_BORDER,CCM_FILL);
+	_MakeRightAngle(H,B1,tw,tf1,pGeom2D);
+	pGeom2D->Transfer(SCMPoint2D(ref,0));
+	aGeom.Add(pGeom2D);
+}
+void ICMGeomMaker::MakePictureDblChannel(CCMGeom2DArray& aGeom)
+{
+	double H,B1,tw,tf1,B2,tf2;
+	GetRegularData(H,B1,tw,tf1,B2,tf2);
+	double ref = B1 + B2;
+	CCMPolygon* pGeom2D = new CCMPolygon(CCM_BORDER,CCM_FILL);
+	_MakeLeftChannel(H,B1,tw,tf1,B2,tf2,pGeom2D);
+	aGeom.Add(pGeom2D);
+	pGeom2D = new CCMPolygon(CCM_BORDER,CCM_FILL);
+	_MakeRightChannel(H,B1,tw,tf1,B2,tf2,pGeom2D);
+	pGeom2D->Transfer(SCMPoint2D(ref,0));
+	aGeom.Add(pGeom2D);
+}
+void ICMGeomMaker::MakePictureSolidRect(CCMGeom2DArray& aGeom)
+{
+	double H,B1,tw,tf1,B2,tf2;
+	GetRegularData(H,B1,tw,tf1,B2,tf2);
+	CCMPolygon* pGeom2D = new CCMPolygon(CCM_BORDER,CCM_FILL);
+	_MakeRect(0.,0.,B1,H,pGeom2D);
+	aGeom.Add(pGeom2D);
+}
+void ICMGeomMaker::MakePictureSolidCircle(CCMGeom2DArray& aGeom)
+{
+	double H,B1,tw,tf1,B2,tf2;
+	GetRegularData(H,B1,tw,tf1,B2,tf2);
+	CCMEllipse* pGeom2D = new CCMEllipse(CCM_BORDER,CCM_FILL);
+	pGeom2D->SetRect(SCMPoint2D(0,0),SCMPoint2D(H,H));
 	aGeom.Add(pGeom2D);
 }
 void ICMGeomMaker::GetRegularData(double& H,double& B1,double& tw,double& tf1,double& B2,double& tf2)
@@ -139,6 +245,31 @@ void ICMGeomMaker::GetRegularData(double& H,double& B1,double& tw,double& tf1,do
 	tf1 = m_pDataSrc->SectI.dSize[3];
 	B2 = m_pDataSrc->SectI.dSize[4];
 	tf2 = m_pDataSrc->SectI.dSize[5];
+}
+void ICMGeomMaker::_MakeRect(double minx,double miny,double maxx,double maxy,CCMPolygon* pPolygon)
+{
+	pPolygon->Add(SCMPoint2D(minx,miny));
+	pPolygon->Add(SCMPoint2D(minx,maxy));
+	pPolygon->Add(SCMPoint2D(maxx,maxy));
+	pPolygon->Add(SCMPoint2D(maxx,miny));
+}
+void ICMGeomMaker::_MakeLeftAngle(double H,double B,double tw,double tf,CCMPolygon* pPolygon)
+{
+	pPolygon->Add(SCMPoint2D(0.0,0.0));
+	pPolygon->Add(SCMPoint2D(0.0,tf));
+	pPolygon->Add(SCMPoint2D((B-tw),tf));
+	pPolygon->Add(SCMPoint2D((B-tw),H));
+	pPolygon->Add(SCMPoint2D(B,H));
+	pPolygon->Add(SCMPoint2D(B,0));
+}
+void ICMGeomMaker::_MakeRightAngle(double H,double B,double tw,double tf,CCMPolygon* pPolygon)
+{
+	pPolygon->Add(SCMPoint2D(0.0,0.0));
+	pPolygon->Add(SCMPoint2D(0.0,H));
+	pPolygon->Add(SCMPoint2D(tw,H));
+	pPolygon->Add(SCMPoint2D(tw,tf));
+	pPolygon->Add(SCMPoint2D(B,tf));
+	pPolygon->Add(SCMPoint2D(B,0));
 }
 void ICMGeomMaker::_MakeHBeam(double H,double B1,double tw,double tf1,double B2,double tf2,CCMPolygon* pPolygon)
 {
@@ -157,6 +288,50 @@ void ICMGeomMaker::_MakeHBeam(double H,double B1,double tw,double tf1,double B2,
 	pPolygon->Add(SCMPoint2D(B1,tf1));
 	pPolygon->Add(SCMPoint2D(B1,0));
 
+}
+void ICMGeomMaker::_MakeLeftChannel(double H,double B1,double tw,double tf1,double B2,double tf2,CCMPolygon* pPolygon)
+{
+	if(fabs(B2) < cZero)B2 = B1;
+	if(fabs(tf2) < cZero) tf2 = tf1;
+	pPolygon->Add(SCMPoint2D(0.0,0.0));
+	pPolygon->Add(SCMPoint2D(0.0,tf1));
+	pPolygon->Add(SCMPoint2D((B1-tw),tf1));
+	pPolygon->Add(SCMPoint2D((B1-tw),H-tf2));
+	pPolygon->Add(SCMPoint2D((B1-B2),H-tf2));
+	pPolygon->Add(SCMPoint2D((B1-B2),H));
+	pPolygon->Add(SCMPoint2D(B1,H));
+	pPolygon->Add(SCMPoint2D(B1,0));
+}
+void ICMGeomMaker::_MakeRightChannel(double H,double B1,double tw,double tf1,double B2,double tf2,CCMPolygon* pPolygon)
+{
+	if(fabs(B2) < cZero)B2 = B1;
+	if(fabs(tf2) < cZero) tf2 = tf1;
+	pPolygon->Add(SCMPoint2D(0.0,0.0));
+	pPolygon->Add(SCMPoint2D(0.0,H));
+	pPolygon->Add(SCMPoint2D(B2,H));
+	pPolygon->Add(SCMPoint2D(B2,H-tf2));
+	pPolygon->Add(SCMPoint2D(tw,H-tf2));
+	pPolygon->Add(SCMPoint2D(tw,tf1));
+	pPolygon->Add(SCMPoint2D(B1,tf1));
+	pPolygon->Add(SCMPoint2D(B1,0));
+}
+void ICMGeomMaker::_MakeTee(double H,double B,double tw,double tf,CCMPolygon* pPolygon)
+{
+	pPolygon->Add(SCMPoint2D(0.0,0.0));
+	pPolygon->Add(SCMPoint2D(0.0,tf));
+	pPolygon->Add(SCMPoint2D((B-tw)/2,tf));
+	pPolygon->Add(SCMPoint2D((B-tw)/2,H));
+	pPolygon->Add(SCMPoint2D((B+tw)/2,H));
+	pPolygon->Add(SCMPoint2D((B+tw)/2,tf));
+	pPolygon->Add(SCMPoint2D(B,tf));
+	pPolygon->Add(SCMPoint2D(B,0));
+}
+void ICMGeomMaker::_MakeBox(double H,double B,double tw,double tf,CCMPolygon* pPolygon)
+{
+	pPolygon->Add(SCMPoint2D(0.0,0.0));
+	pPolygon->Add(SCMPoint2D(0.0,H));
+	pPolygon->Add(SCMPoint2D(B,H));
+	pPolygon->Add(SCMPoint2D(B,0));
 }
 #pragma endregion ICMGeomMaker
 

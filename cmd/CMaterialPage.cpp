@@ -95,7 +95,8 @@ void CCMaterialPage::OnDelete()
 {
 	T_MATL_K Key;
 	int item = m_List.GetNextItem(-1,LVNI_ALL | LVNI_SELECTED);
-	Key = _wtol(m_List.GetItemText(item,0));
+	//Key = _wtol(m_List.GetItemText(item,0));
+	Key = _ttol(m_List.GetItemText(item,0));
 	m_pDoc->m_pDataCtrl->DelMatl(Key);
 }
 

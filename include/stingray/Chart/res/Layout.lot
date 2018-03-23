@@ -1,0 +1,52 @@
+// Layout resource. Each item consists of 8 data items arranged as follows:
+//
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                      /
+//   component name, measurement mode, border style, shadow style, fill style, left, top, right, bottom /
+//                                                                                                      /
+//   Note: the shadow style values are the actual values right shifted 4 bits                           /
+//         the fill style values are the actual values right shifted 8 bits                             /
+//                                                                                                      /
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Three rows one colum
+Background 3 0 0 1 -1 -1 -1 -1 Title 3 0 0 1 -1 -1 -1 18 display 3 0 0 1 -1 20 -1 80 legend 3 0 0 1 -1 82 -1 -1
+
+// Two rows, display and legend on the second row, display on the left
+Background 3 0 0 1 -1 -1 -1 -1 Title 3 0 0 1 -1 -1 -1 18 display 3 0 0 1 -1 20 80 -1 legend 3 0 0 1 82 20 -1 -1
+
+// One row, display on the left, title and legend on the right
+Background 3 0 0 1 -1 -1 -1 -1 Title 3 0 0 1 82 -1 -1 18 display 3 0 0 1 -1 -1 80 -1 legend 3 0 0 1 82 20 -1 -1
+
+// One row, display on the right, title on the lefttop, legend on the leftbottom
+Background 3 0 0 1 -1 -1 -1 -1 Title 3 0 0 1 2  2 18 18  display 3 0 0 1 20  2  98 98  legend 3 0 0 1 2 20 18 98
+ 
+Background 3 0 0 1 -1 -1 -1 -1 display 3 0 0 1 2 2 98 98
+
+Background 3 0 0 1 -1 -1 -1 -1 display 3 0 0 1 2 2 98 80 legend 3 0 0 1 2 82 98 98
+
+// one Column title on the top
+Background 3 0 0 1 -1 -1 -1 -1 Title 3 0 0 1 2 2 98 18 display 3 0 0 1 2 20 98 98
+
+// One column title on the bottom
+Background 3 0 0 1 -1 -1 -1 -1 Title 3 0 0 1 2 82 98 98 display 3 0 0 1 2 2 98 80
+
+// One row legend on the left
+Background 3 0 0 1 -1 -1 -1 -1 display 3 0 0 1 20 2 98 98 legend 3 0 0 1 2 2 18 98
+
+// One row legend on right
+Background 3 0 0 1 -1 -1 -1 -1 display 3 0 0 1 2 2 80 98 legend 3 0 0 1 82 2 98 98
+
+// Legend on right top of the display
+Background 3 0 0 1 -1 -1 -1 -1 Title 3 0 0 1 2 2 98 18 Display 3 0 0 1 2 20 98 98 Legend 3 0 0 1 75 24 94 45
+
+// Legend on the left top of the display
+Background 3 0 0 1 -1 -1 -1 -1 Title 3 0 0 1 2 2 98 18 Display 3 0 0 1 2 20 98 98 Legend 3 0 0 1 6 24 25 45
+
+Background 3 0 0 1 -1 -1 -1 -1 Display 3 3 1 4 1 1 97 82 Legend 3 3 1 1 1 84 97 96 
+
+
+
+
+

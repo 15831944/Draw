@@ -1,0 +1,5 @@
+// Hbar supporting axis type
+0x01000000		Automatic
+0x0b000000	     Iso Classic
+0x0a000000       YX
+0x10000000       Iso classic YX

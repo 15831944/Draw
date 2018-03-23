@@ -41,14 +41,26 @@ class CCMPolygon:public CCMGeom2D
 public:
 	CCMPolygon();
 	CCMPolygon(COLORREF PenColor,COLORREF BrushColor);
-	~CCMPolygon(){}
-	
+	~CCMPolygon();
 	int Add(SCMPoint2D& pt){return (int)m_aVertex.Add(pt);}
+	void Transfer(SCMPoint2D offset);
 private:
 	virtual SCMRect2D GetMBR();
 	virtual void Draw(CDC* pDC,const CPoint& offset,double scale);
 private:
 	CArray<SCMPoint2D,SCMPoint2D&> m_aVertex;
+};
+class CCMEllipse : public CCMGeom2D
+{
+public:
+	CCMEllipse();
+	CCMEllipse(COLORREF PenColor,COLORREF BrushColor);
+	~CCMEllipse();
+	void SetRect(SCMPoint2D min,SCMPoint2D max){m_Rect.min = min;m_Rect.max = max;}
+private:
+	virtual void Draw(CDC* pDC,const CPoint& offset,double scale);
+	virtual SCMRect2D GetMBR(){return m_Rect;}
+	SCMRect2D m_Rect;
 };
 class CCMGeom2DArray
 {
@@ -57,8 +69,8 @@ public:
 	~CCMGeom2DArray(void);
 	void Draw(CDC* pDC,const CPoint& offset,double scale);
 	void Add(CCMGeom2D* pGeom2D);
-	SCMRect2D GetMBR(){return m_aGeom2D->GetMBR();}
+	SCMRect2D GetMBR();
 	
 private:
-	CCMGeom2D* m_aGeom2D;
+	CArray<CCMGeom2D*,CCMGeom2D*> m_aGeom2D;
 };

@@ -1,0 +1,4 @@
+// Stock graph supports the following axis type
+0x01000000	Automatic
+0x02000000	Classic
+0x0c000000	Classic Y on right

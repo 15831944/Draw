@@ -1,0 +1,3 @@
+// XYScatterA graph supports these axis types
+0x01000000   Automatic
+0x0f000000	Scatter graph axis.

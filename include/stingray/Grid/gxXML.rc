@@ -1,0 +1,243 @@
+///////////////////////////////////////////////////////////////////////////////
+// gxXML.rc
+//
+// Copyright (c) 1999-2009 Rogue Wave Software, Inc.  All Rights Reserved.
+//
+// This computer software is owned by Rogue Wave Software, Inc. and is protected by
+// U.S. copyright laws and other laws and by international treaties. This
+// computer software is furnished by Rogue Wave Software, Inc. pursuant to a written
+// license agreement and may be used, copied, transmitted, and stored
+// only in accordance with the terms of such license agreement and with
+// the inclusion of the above copyright notice.  This computer software or
+// any other copies thereof may not be provided or otherwise made available
+// to any other person.
+//
+// U.S. Government Restricted Rights.  This computer software:
+//      (a) was developed at private expense and is in all respects the
+//          proprietary information of Rogue Wave Software, Inc.;
+//      (b) was not developed with government funds;
+//      (c) is a trade secret of Rogue Wave Software, Inc. for all purposes of the
+//          Freedom of Information Act; and
+//      (d) is a commercial item and thus, pursuant to Section 12.212
+//          of the Federal Acquisition Regulations (FAR) and DFAR
+//          Supplement Section 227.7202, Government’s use, duplication or
+//          disclosure of the computer software is subject to the restrictions
+//          set forth by Rogue Wave Software, Inc.
+//
+///////////////////////////////////////////////////////////////////////////////
+//Microsoft Developer Studio generated resource script.
+//
+#include "grid\xmlser\gxxmlrc.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#include "foundation\sflres.h"
+
+#include "foundation\sfl.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+	GX_IDS_NAME			"Name"
+	GX_IDS_KEY			"Key"
+	GX_IDS_TOP			"Top"
+	GX_IDS_LEFT			"Left"
+	GX_IDS_BOTTOM		"Bottom"
+	GX_IDS_RIGHT		"Right"
+	GX_IDS_TYPE			"Type"
+	GX_IDS_ISVALID		"IsValid"
+	GX_IDS_ITALIC		"Italic"
+	GX_IDS_UNDERLINE	"Underline"
+	GX_IDS_STRIKEOUT	"StrikeOut"
+	GX_IDS_WEIGHT		"Weight"
+	GX_IDS_SIZE			"Size"
+	GX_IDS_ORIENTATION	"Orientation"
+	GX_IDS_FACENAME		"FaceName"
+	GX_IDS_PITCHANDFAMILY	"PitchAndFamily"
+	GX_IDS_CHARSET		"Charset"
+	GX_IDS_STYLE		"Style"
+	GX_IDS_COLOR		"Color"
+	GX_IDS_HATCH		"Hatch"
+	GX_IDS_PATTERN		"Pattern"
+	GX_IDS_BGCOLOR		"BGColor"
+	GX_IDS_ROWCOUNT		"RowCount"
+	GX_IDS_COLCOUNT		"ColCount"
+	GX_IDS_CELLSTYLESARRAY	"CellStylesArray"
+	GX_IDS_ROWBASESTYLESARRAY	"RowBaseStylesArray"
+	GX_IDS_COLBASESTYLESARRAY	"ColBaseStylesArray"
+	GX_IDS_DEVNAMES		"DevNames"
+	GX_IDS_DEVMODE		"DevMode"
+	GX_IDS_COLORARRAY	"ColorArray"
+	GX_IDS_VERTLINES	"VerticalLines"
+	GX_IDS_HORZ_LINES	"HorizantalLines"
+	GX_IDS_BUTTONS_3D	"Buttons3D"
+	GX_IDS_MARK_ROWHEADER	"MarkRowHeader"
+	GX_IDS_MARK_COLHEADER	"MarkColHeader"
+	GX_IDS_PROFILE_SECTION	"ProfileSection"
+	GX_IDS_ZOOM			"Zoom"
+	GX_IDS_PAGE_ORDER	"PageOrder"
+	GX_IDS_BLACKANDWHITE	"BlackAndWhite"
+	GX_IDS_ROWHEADERS	"RowHeaders"
+	GX_IDS_CENTERVERTICAL	"CenterVertical"
+	GX_IDS_CENTERHORZ	"CenterHorizontal"
+	GX_IDS_TOPMARGIN	"TopMargin"
+	GX_IDS_LEFTMARGIN	"LeftMargin"
+	GX_IDS_RIGHTMARGIN	"RightMargin"
+	GX_IDS_BOTTOMMARGIN	"BottomMargin"
+	GX_IDS_PRINTFRAME	"PrintFrame"
+	GX_IDS_HEADERLENGTH	"HeaderLength"
+	GX_IDS_FOOTERLENGTH	"FooterLength"
+	GX_IDS_FIRSTPAGE	"FirstPage"
+	GX_IDS_COLBREAKSARRAY	"ColBreaksArray"
+	GX_IDS_ROWBREAKSARRAY	"RowBreaksArray"
+	GX_IDS_HEADERDATA	"HeaderData"
+	GX_IDS_FOOTERDATA	"FooterData"
+	GX_IDS_COLUMNHEADERS	"ColumnHeaders"
+	GX_IDS_ALL			"All"
+	GX_IDS_STYLEBITS	"StyleBits"
+	GX_IDS_INTERIORCOLOR	"InteriorColor"
+	GX_IDS_CHOICELIST	"ChoiceList"
+	GX_IDS_MAXLENGTH	"MaxLength"
+	GX_IDS_HORZALIGN	"HorizontalAlignment"
+	GX_IDS_VERTALIGN	"VerticalAlignment"
+	GX_IDS_READONLY		"ReadOnly"
+	GX_IDS_CONTROLID	"ControlID"
+	GX_IDS_TEXTCOLOR	"TextColor"
+	GX_IDS_WRAPPED_TEXT	"WrappedText"
+	GX_IDS_ALLOWENTER	"AllowEnter"
+	GX_IDS_VALUE		"Value"
+	GX_IDS_ENABLED		"Enabled"
+	GX_IDS_TRISTATE		"TriState"
+	GX_IDS_AUTOSIZE		"AutoSize"
+	GX_IDS_BORDERS		"Borders"
+	GX_IDS_BASESTYLEID	"BaseStyleID"
+	GX_IDS_BASESTYLENAME	"BaseStyleName"
+	GX_IDS_USER_ATTRIBUTES	"UserAttributes"
+	GX_IDS_FLOAT_CELL	"FloatCell"
+	GX_IDS_FLOOD_CELL	"FloodCell"
+	GX_IDS_MERGE_CELL	"MergeCell"
+	GX_IDS_FORMAT_ID	"FormatID"
+	GX_IDS_PLACES		"Places"
+	GX_IDS_VALUETYPE	"ValueType"
+	GX_IDS_DRAW3DFRAME	"Draw3DFrame"
+	GX_IDS_BASE_STYLES_INFO	"BaseStylesInfo"
+	GX_IDS_BASE_STYLE_INFO	"BaseStyleInfo"
+	GX_IDS_COUNT		"Count"
+	GX_IDS_STYLEID		"StyleID"
+	GX_IDS_RESOURCEID	"ResourceID"
+	GX_IDS_SYSTEM		"System"
+	GX_IDS_LASTID		"LastID"
+	GX_IDS_STYLEPTRARRAY "StylesArray"
+	GX_IDS_VERTICAL_SCROLL "VerticalScroll"
+	GX_IDS_THUMB_TRACKING_BOOL	"ThumbTracking_Bool"
+	GX_IDS_TABNAME_EDITABLE_BOOL	"TabNameEditable_Bool"
+	GX_IDS_GRID_READONLY_BOOL	"GridReadOnly_Bool"
+	GX_IDS_UNDO_ENABLED_BOOL	"UndoEnabled_Bool"
+	GX_IDS_NUMBERED_ROW_HEADERS_BOOL	"NumberedRowHeaders_Bool"
+	GX_IDS_NUMBERED_COL_HEADERS_BOOL	"NumberedColHeaders_Bool"
+	GX_IDS_ENABLEMOVECOLS_BOOL	"EnableMoveCols_Bool"
+	GX_IDS_ENABLEMOVEROWS_BOOL	"EnableMoveRows_Bool"
+	GX_IDS_EATFMCOA_BOOL	"EatFirstMouseClick_OnActivate_Bool"
+	GX_IDS_TRANSPARENT_BG_BOOL	"Transparent_background_Bool"
+	GX_IDS_LOCKREADONLYCELLS_BOOL	"LockReadOnlyCells_Bool"
+	GX_IDS_SMART_RESIZE		"SmartResize"
+	GX_IDS_SELECTION_FLAGS	"SelectionFlags"
+	GX_IDS_ROW_HEIGHT_TRACKING_FLAGS	"RowHeightTrackingFlags"
+	GX_IDS_COL_WIDTH_TRACKING_FLAGS		"ColWidthTrackingFlags"
+	GX_IDS_FROZEN_ROWS_COUNT	"FrozenRowsCount"
+	GX_IDS_FROZEN_COLS_COUNT	"FrozenColsCount"
+	GX_IDS_DEFAULT_CELL_WIDTH	"DefaultCellWidth"
+	GX_IDS_DEFAULT_CELL_HEIGHT	"DefaultCellHeight"
+	GX_IDS_TAB_SHEET_NAME	"TabSheetName"
+	GX_IDS_CELL_ACTIVATION_FLAGS	"CellActivationFlags"
+	GX_IDS_CURRENTCELLFRAME_FLAGS	"CurrentCellFrameFlags"
+	GX_IDS_MIN_ROWHEIGHT_ON_TRACKING	"MinRowHeight_OnTracking"
+	GX_IDS_MIN_COLWIDTH_ON_TRACKING		"MinColWidth_OnTracking"
+	GX_IDS_DRAWING_ORDER	"DrawingOrder"
+	GX_IDS_HEADER_ROWSCOUNT	"HeaderRowsCount"
+	GX_IDS_HEADER_COLSCOUNT	"HeaderColsCount"
+	GX_IDS_SELECTION_LIST	"SelectionList"
+	GX_IDS_COVEREDCELLS_LIST	"CoveredCellsList"
+	GX_IDS_ROWHEIGHTS	"RowHeights"
+	GX_IDS_COLUMNWIDTHS	"ColumnWidths"
+	GX_IDS_HIDDEN_ROWARRAY	"HiddenRowArray"
+	GX_IDS_HIDDEN_COLARRAY	"HiddenColArray"
+	GX_IDS_EXCELLIKE_SCROLL_BOOL	"ExcelLikeScroll_Bool"
+	GX_IDS_SYNCCURRENTCELL_BOOL	"SyncCurrentCell_Bool"
+	GX_IDS_INITIALIZED	"Initialized"
+	GX_IDS_FROZENCOLS_UNDO_INFO	"FrozenColsUndo_Info"
+	GX_IDS_FROM	"From"
+	GX_IDS_TO	"To"
+	GX_IDS_DEST	"Dest"
+	GX_IDS_SPECIAL_MODE	"SpecialMode"
+	GX_IDS_DRAW_WYSIWYG_BOOL	"DrawWYSIWYG_Bool"
+	GX_IDS_ENTER_KEYACTION	"EnterKeyAction"
+	GX_IDS_UNDO_LIMIT	"UndoLimit"
+	GX_IDS_SORT_COLS_ON_DBLCLK	"SortColsOnDblClk"
+	GX_IDS_SORT_ROWS_ON_DBLCLK	"SortRowsOnDblClk"
+	GX_IDS_EXCEL_LIKE_CURRENT_CELL "ExcelLikeCurrentCell"
+	GX_IDS_EXCEL_LIKE_SELECTION_FRAME	"ExcelLikeSelectionFrame"
+	GX_IDS_NEWGRIDLINEMODE	"NewGridLineMode"
+	GX_IDS_FLOATCELLSMODE	"FloatCellsMode"
+	GX_IDS_FLOATCELLSDELAYEVAL	"FloatCellsDelayEval"
+	GX_IDS_FLOATCELLSONDISPLAY	"FloatCellsOnDisplay"
+	GX_IDS_ROWS			"Rows"
+	GX_IDS_COLS			"Cols"
+	GX_IDS_MERGE_CELLS_MODE	"MergeCellsMode"
+	GX_IDS_MERGE_CELLS_DELAYEVAL	"MergeCellsDelayEval"
+	GX_IDS_MERGE_CELLS		"MergeCells"
+	GX_IDS_HORZ_CELLS		"HorzCells"
+	GX_IDS_VERT_CELLS		"VertCells"
+	GX_IDS_GRID_LINE_STYLE	"GridLineStyle"
+	GX_IDS_DIRECT_COPY_PASTE	"DirectCopyPaste"
+	GX_IDS_DIRECT_CUT_PASTE	"DirectCutPaste"
+	GX_IDS_DIRECT_DRAG_DROP	"DirectDragDrop"
+	GX_IDS_DISPLAYEXPRESSION	"DisplayExpression"
+	GX_IDS_EXCELLIKE_HEADERS	"ExcelLikeHeaders"
+	GX_IDS_ID				"Id"
+	GX_IDS_VALUE_LWORD		"ValueLWord"
+	GX_IDS_VALUE_HWORD		"ValueHWord"
+	GX_IDS_FIRSTROW			"FirstRow"
+	GX_IDS_LASTROW			"LastRow"
+	GX_IDS_STRING			"String"
+	GX_IDS_ELEMENT			"Element"
+	GX_IDS_USERPROPERTY_INFOMAP	"UserPropertyInfo_Map"
+	GX_IDS_CONTROLNAMES		"ControlNames"
+	GX_IDS_BASESTYLENAMES	"BaseStyleNames"
+	GX_IDS_PRINT_HORZLINES	"PrintHorzLines"
+	GX_IDS_PRINT_VERTLINES	"PrintVertLines"
+END
+
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

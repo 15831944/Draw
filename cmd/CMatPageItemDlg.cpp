@@ -106,7 +106,7 @@ void CCMatPageItemDlg::ShowDataToDlg()
 {
 	CString csValue;
 	csValue.Format(_T("%d"), m_Key);
-	m_wndID.SetWindowTextW(csValue);
+	m_wndID.SetWindowText(csValue);
 	ChangeDlgCtrls();
 }
 
@@ -164,7 +164,7 @@ void CCMatPageItemDlg::SetFrameName(int nTypeIndex)
 		strTitle = CCM_ALUMINIUM;
 	else if (nTypeIndex == CCM_TYPE_USER_I)
 		strTitle = CCM_USER;
-	m_wndStlCodeFrame.SetWindowTextW(strTitle);
+	m_wndStlCodeFrame.SetWindowText(strTitle);
 }
 
 void CCMatPageItemDlg::ChangeBitmap(int nBitmap)

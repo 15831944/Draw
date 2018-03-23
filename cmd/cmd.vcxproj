@@ -42,7 +42,7 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v110</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -83,12 +83,14 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_AFXEXT;_x64;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>../include/stingray;../include/stingray/RWUXTheme;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <ImportLibrary>..\lib\$(Configuration)\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
       <SubSystem>Windows</SubSystem>
       <ModuleDefinitionFile>.\cmd.def</ModuleDefinitionFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>..\Common Library\stingray\Debug\x64\og1201asd.lib;..\Common Library\stingray\Debug\x64\RWUXThemeSD90.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -137,6 +139,7 @@
     <ClInclude Include="CMSectionPage.h" />
     <ClInclude Include="CMSectPageItemDlg.h" />
     <ClInclude Include="CMSectViewWnd.h" />
+    <ClInclude Include="CMStiffDlg.h" />
     <ClInclude Include="ExportFunc.h" />
     <ClInclude Include="HeaderPost.h" />
     <ClInclude Include="HeaderPre.h" />
@@ -153,6 +156,7 @@
     <ClCompile Include="CMSectionPage.cpp" />
     <ClCompile Include="CMSectPageItemDlg.cpp" />
     <ClCompile Include="CMSectViewWnd.cpp" />
+    <ClCompile Include="CMStiffDlg.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="ExportFunc.cpp" />
     <ClCompile Include="stdafx.cpp">

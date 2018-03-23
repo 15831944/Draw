@@ -1,0 +1,242 @@
+///////////////////////////////////////////////////////////////////////////////
+// gxXMLnld.rc
+//
+// Copyright (c) 1999-2009 Rogue Wave Software, Inc.  All Rights Reserved.
+//
+// This computer software is owned by Rogue Wave Software, Inc. and is protected by
+// U.S. copyright laws and other laws and by international treaties. This
+// computer software is furnished by Rogue Wave Software, Inc. pursuant to a written
+// license agreement and may be used, copied, transmitted, and stored
+// only in accordance with the terms of such license agreement and with
+// the inclusion of the above copyright notice.  This computer software or
+// any other copies thereof may not be provided or otherwise made available
+// to any other person.
+//
+// U.S. Government Restricted Rights.  This computer software:
+//      (a) was developed at private expense and is in all respects the
+//          proprietary information of Rogue Wave Software, Inc.;
+//      (b) was not developed with government funds;
+//      (c) is a trade secret of Rogue Wave Software, Inc. for all purposes of the
+//          Freedom of Information Act; and
+//      (d) is a commercial item and thus, pursuant to Section 12.212
+//          of the Federal Acquisition Regulations (FAR) and DFAR
+//          Supplement Section 227.7202, Government’s use, duplication or
+//          disclosure of the computer software is subject to the restrictions
+//          set forth by Rogue Wave Software, Inc.
+//
+///////////////////////////////////////////////////////////////////////////////
+//Microsoft Developer Studio generated resource script.
+//
+#include "grid\xmlser\gxxmlrc.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#include "foundation\sflres.h"
+#include "foundation\sfl.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+	GX_IDS_NAME			"naam"
+	GX_IDS_KEY			"Toonsoort"
+	GX_IDS_TOP			"Toppunt"
+	GX_IDS_LEFT			"Verlaten"
+	GX_IDS_BOTTOM		"Zitvlak"
+	GX_IDS_RIGHT		"Vlak"
+	GX_IDS_TYPE			"Type"
+	GX_IDS_ISVALID		"ZitVigerend"
+	GX_IDS_ITALIC		"Cursiefletter"
+	GX_IDS_UNDERLINE	"Onderstrepen"
+	GX_IDS_STRIKEOUT	"WerkstakingUiterlijk"
+	GX_IDS_WEIGHT		"Zwaarte"
+	GX_IDS_SIZE			"Spanwijdte"
+	GX_IDS_ORIENTATION	"Tendens"
+	GX_IDS_FACENAME		"WijzerplaatNaamwoord"
+	GX_IDS_PITCHANDFAMILY	"ToonhoogteEnHuishouden"
+	GX_IDS_CHARSET		"Tekentroep"
+	GX_IDS_STYLE		"Uitvoering"
+	GX_IDS_COLOR		"Verfstof"
+	GX_IDS_HATCH		"Luik"
+	GX_IDS_PATTERN		"Voorbeeld"
+	GX_IDS_BGCOLOR		"BGVerfstof"
+	GX_IDS_ROWCOUNT		"RuzieTelling"
+	GX_IDS_COLCOUNT		"ZuilTelling"
+	GX_IDS_CELLSTYLESARRAY	"KerkerUitvoeringOpzetten"
+	GX_IDS_ROWBASESTYLESARRAY	"RuzieVuigStylesOpzetten"
+	GX_IDS_COLBASESTYLESARRAY	"ZuilVuigUitvoeringOpzetten"
+	GX_IDS_DEVNAMES		"OntwikkelingNaamwoord"
+	GX_IDS_DEVMODE		"OntwikkelingWijze"
+	GX_IDS_COLORARRAY	"VerfstofOpzetten"
+	GX_IDS_VERTLINES	"VerticaalStrafregels"
+	GX_IDS_HORZ_LINES	"WaterpasStrafregels"
+	GX_IDS_BUTTONS_3D	"Piccolo3D"
+	GX_IDS_MARK_ROWHEADER	"TekenRuzieRubriek"
+	GX_IDS_MARK_COLHEADER	"TekenZuilRubriek"
+	GX_IDS_PROFILE_SECTION	"ProfielVak"
+	GX_IDS_ZOOM			"Zoom"
+	GX_IDS_PAGE_ORDER	"PaginaVolgorde"
+	GX_IDS_BLACKANDWHITE	"ZwartEnWit"
+	GX_IDS_ROWHEADERS	"RuzieRubriek"
+	GX_IDS_CENTERVERTICAL	"MiddenVerticaal"
+	GX_IDS_CENTERHORZ	"MiddenWaterpas"
+	GX_IDS_TOPMARGIN	"ToppuntSpeelruimte"
+	GX_IDS_LEFTMARGIN	"VerlatenSpeelruimte"
+	GX_IDS_RIGHTMARGIN	"VlakSpeelruimte"
+	GX_IDS_BOTTOMMARGIN	"ZitvlakSpeelruimte"
+	GX_IDS_PRINTFRAME	"PrentRaamwindow"
+	GX_IDS_HEADERLENGTH	"RubriekLengte"
+	GX_IDS_FOOTERLENGTH	"VoeteneindeLengte"
+	GX_IDS_FIRSTPAGE	"VoorstePagina"
+	GX_IDS_COLBREAKSARRAY	"ZuilVerzetjeOpzetten"
+	GX_IDS_ROWBREAKSARRAY	"RuzieVerzetjeOpzetten"
+	GX_IDS_HEADERDATA	"RubriekMaterieel"
+	GX_IDS_FOOTERDATA	"VoeteneindeMaterieel"
+	GX_IDS_COLUMNHEADERS	"ZuilRubriek"
+	GX_IDS_ALL			"Helemaal"
+	GX_IDS_STYLEBITS	"UitvoeringBits"
+	GX_IDS_INTERIORCOLOR	"InwendigeVerfstof"
+	GX_IDS_CHOICELIST	"VerschotTochtband"
+	GX_IDS_MAXLENGTH	"Maximum- Lengte"
+	GX_IDS_HORZALIGN	"WaterpasRooilijn"
+	GX_IDS_VERTALIGN	"VerticaalRooilijn"
+	GX_IDS_READONLY		"LuidenUitsluitend"
+	GX_IDS_CONTROLID	"ZeggenschapIdentificatie"
+	GX_IDS_TEXTCOLOR	"TekstVerfstof"
+	GX_IDS_WRAPPED_TEXT	"SjaalTekst"
+	GX_IDS_ALLOWENTER	"VerstrekkenSteken"
+	GX_IDS_VALUE		"Waarde"
+	GX_IDS_ENABLED		"In staat stellen"
+	GX_IDS_TRISTATE		"TriStand"
+	GX_IDS_AUTOSIZE		"ZelfwerkendSpanwijdte"
+	GX_IDS_BORDERS		"Zoom"
+	GX_IDS_BASESTYLEID	"VuigUitvoeringIdentificatie"
+	GX_IDS_BASESTYLENAME	"VuigUitvoeringNaamwoord"
+	GX_IDS_USER_ATTRIBUTES	"VerbruikerKwalitatief kenmerk"
+	GX_IDS_FLOAT_CELL	"VlotterKerker"
+	GX_IDS_FLOOD_CELL	"ZondvloedKerker"
+	GX_IDS_MERGE_CELL	"Tot fusie overgaanKerker"
+	GX_IDS_FORMAT_ID	"OpmaakIdentificatie"
+	GX_IDS_PLACES		"Werkhuis"
+	GX_IDS_VALUETYPE	"WaardeType"
+	GX_IDS_DRAW3DFRAME	"Trekking3DRaamwindow"
+	GX_IDS_BASE_STYLES_INFO	"VuigUitvoeringWetenswaardigheid"
+	GX_IDS_BASE_STYLE_INFO	"VuigUitvoeringWetenswaardigheid"
+	GX_IDS_COUNT		"Telling "
+	GX_IDS_STYLEID		"UitvoeringIdentificatie"
+	GX_IDS_RESOURCEID	"UitwegIdentificatie"
+	GX_IDS_SYSTEM		"Systematiek"
+	GX_IDS_LASTID		"VorigIdentificatie"
+	GX_IDS_STYLEPTRARRAY "UitvoeringOpzetten"
+	GX_IDS_VERTICAL_SCROLL "VerticaalRol"
+	GX_IDS_THUMB_TRACKING_BOOL	"DuimVoetspoor_Bool"
+	GX_IDS_TABNAME_EDITABLE_BOOL	"TabNaamwoordEditable_Bool"
+	GX_IDS_GRID_READONLY_BOOL	"TraliehekLuidenUitsluitend_Bool"
+	GX_IDS_UNDO_ENABLED_BOOL	"TenietdoenIn staat stellen_Bool"
+	GX_IDS_NUMBERED_ROW_HEADERS_BOOL	"TelefoonnummerRuzieRubriek_Bool"
+	GX_IDS_NUMBERED_COL_HEADERS_BOOL	"TelefoonnummerZuilRubriek_Bool"
+	GX_IDS_ENABLEMOVECOLS_BOOL	"In staat stellenZetZuil_Bool"
+	GX_IDS_ENABLEMOVEROWS_BOOL	"In staat stellenZetRows_Bool"
+	GX_IDS_EATFMCOA_BOOL	"VretenVoorsteMuisTikken_VoortActiveren_Bool"
+	GX_IDS_TRANSPARENT_BG_BOOL	"Transparant_ondergrond_Bool"
+	GX_IDS_LOCKREADONLYCELLS_BOOL	"SluitingLuidenUitsluitendKerker_Bool"
+	GX_IDS_SMART_RESIZE		"ZwierigResize"
+	GX_IDS_SELECTION_FLAGS	"TeeltkeusVlag"
+	GX_IDS_ROW_HEIGHT_TRACKING_FLAGS	"RuzieStandVoetspoorVlag"
+	GX_IDS_COL_WIDTH_TRACKING_FLAGS		"ZuilWijdteVoetspoorVlag"
+	GX_IDS_FROZEN_ROWS_COUNT	"IngevrorenRowsTelling"
+	GX_IDS_FROZEN_COLS_COUNT	"IngevrorenZuilTelling"
+	GX_IDS_DEFAULT_CELL_WIDTH	"WanprestatieKerkerWijdte"
+	GX_IDS_DEFAULT_CELL_HEIGHT	"WanprestatieKerkerStand"
+	GX_IDS_TAB_SHEET_NAME	"TabWagenkleedNaamwoord"
+	GX_IDS_CELL_ACTIVATION_FLAGS	"KerkerActivationVlag"
+	GX_IDS_CURRENTCELLFRAME_FLAGS	"TegenwoordigKerkerRaamwindowVlag"
+	GX_IDS_MIN_ROWHEIGHT_ON_TRACKING	"Minimum-RuzieStand_VoortVoetspoor"
+	GX_IDS_MIN_COLWIDTH_ON_TRACKING		"Minimum-ZuilWijdte_VoortVoetspoor"
+	GX_IDS_DRAWING_ORDER	"WerkjeVolgorde"
+	GX_IDS_HEADER_ROWSCOUNT	"RubriekRowsTelling"
+	GX_IDS_HEADER_COLSCOUNT	"RubriekZuilTelling"
+	GX_IDS_SELECTION_LIST	"TeeltkeusTochtband"
+	GX_IDS_COVEREDCELLS_LIST	"OverdektKerkerTochtband"
+	GX_IDS_ROWHEIGHTS	"RuzieStand"
+	GX_IDS_COLUMNWIDTHS	"ZuilWijdte"
+	GX_IDS_HIDDEN_ROWARRAY	"VerscholenRuzieOpzetten"
+	GX_IDS_HIDDEN_COLARRAY	"VerscholenZuilOpzetten"
+	GX_IDS_EXCELLIKE_SCROLL_BOOL	"UitmuntenZoalsRol_Bool"
+	GX_IDS_SYNCCURRENTCELL_BOOL	"SyncTegenwoordigKerker_Bool"
+	GX_IDS_INITIALIZED	"Initiëren"
+	GX_IDS_FROZENCOLS_UNDO_INFO	"IngevrorenZuilTenietdoen_Wetenswaardigheid"
+	GX_IDS_FROM	"Vanuit"
+	GX_IDS_TO	"Voor"
+	GX_IDS_DEST	"Reisdoel"
+	GX_IDS_SPECIAL_MODE	"Voorkeur-Wijze"
+	GX_IDS_DRAW_WYSIWYG_BOOL	"TrekkingWYSIWYG_Bool"
+	GX_IDS_ENTER_KEYACTION	"StekenToonsoortWerking"
+	GX_IDS_UNDO_LIMIT	"TenietdoenPlafond"
+	GX_IDS_SORT_COLS_ON_DBLCLK	"SorteringZuilVoortTweevoudigTikken"
+	GX_IDS_SORT_ROWS_ON_DBLCLK	"SorteringRowsVoortTweevoudigTikken"
+	GX_IDS_EXCEL_LIKE_CURRENT_CELL "UitmuntenZoalsTegenwoordigKerker"
+	GX_IDS_EXCEL_LIKE_SELECTION_FRAME	"UitmuntenZoalsTeeltkeusRaamwindow"
+	GX_IDS_NEWGRIDLINEMODE	"OpkomendTraliehekWachtrijWijze"
+	GX_IDS_FLOATCELLSMODE	"VlotterKerkerWijze"
+	GX_IDS_FLOATCELLSDELAYEVAL	"VlotterKerkerVerwijlEvalueren"
+	GX_IDS_FLOATCELLSONDISPLAY	"VlotterKerkerVoortWeergave"
+	GX_IDS_ROWS			"Rows"
+	GX_IDS_COLS			"Zuil"
+	GX_IDS_MERGE_CELLS_MODE	"Tot fusie overgaanKerkerWijze"
+	GX_IDS_MERGE_CELLS_DELAYEVAL	"Tot fusie overgaanKerkerVerwijlEvalueren"
+	GX_IDS_MERGE_CELLS		"Tot fusie overgaanKerker"
+	GX_IDS_HORZ_CELLS		"WaterpasKerker"
+	GX_IDS_VERT_CELLS		"VerticaalKerker"
+	GX_IDS_GRID_LINE_STYLE	"TraliehekWachtrijUitvoering"
+	GX_IDS_DIRECT_COPY_PASTE	"RechtstreeksUittrekselStijfsel"
+	GX_IDS_DIRECT_CUT_PASTE	"RechtstreeksSnitStijfsel"
+	GX_IDS_DIRECT_DRAG_DROP	"RechtstreeksSlipjachtWaterdruppel"
+	GX_IDS_DISPLAYEXPRESSION	"WeergaveZegswijze"
+	GX_IDS_EXCELLIKE_HEADERS	"UitmuntenZoalsRubriek"
+	GX_IDS_ID				"Identificatie"
+	GX_IDS_VALUE_LWORD		"WaardeLWoordje"
+	GX_IDS_VALUE_HWORD		"WaardeHWoordje"
+	GX_IDS_FIRSTROW			"VoorsteRuzie"
+	GX_IDS_LASTROW			"VorigRuzie"
+	GX_IDS_STRING			"Touw"
+	GX_IDS_ELEMENT			"Element"
+	GX_IDS_USERPROPERTY_INFOMAP	"UserPropertyInfo_MapVerbruikerVermogenWetenswaardigheid_Plattegrond"
+	GX_IDS_CONTROLNAMES		"ZeggenschapNaamwoord"
+	GX_IDS_BASESTYLENAMES	"VuigUitvoeringNaamwoord"
+	GX_IDS_PRINT_HORZLINES	"PrentWaterpasStrafregels"
+	GX_IDS_PRINT_VERTLINES	"PrentVerticaalStrafregels"
+END
+
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,583 @@
+///////////////////////////////////////////////////////////////////////////////
+// ScriptHost.rc
+//
+// Copyright (c) 1999-2009 Rogue Wave Software, Inc.  All Rights Reserved.
+//
+// This computer software is owned by Rogue Wave Software, Inc. and is protected by
+// U.S. copyright laws and other laws and by international treaties. This
+// computer software is furnished by Rogue Wave Software, Inc. pursuant to a written
+// license agreement and may be used, copied, transmitted, and stored
+// only in accordance with the terms of such license agreement and with
+// the inclusion of the above copyright notice.  This computer software or
+// any other copies thereof may not be provided or otherwise made available
+// to any other person.
+//
+// U.S. Government Restricted Rights.  This computer software:
+//      (a) was developed at private expense and is in all respects the
+//          proprietary information of Rogue Wave Software, Inc.;
+//      (b) was not developed with government funds;
+//      (c) is a trade secret of Rogue Wave Software, Inc. for all purposes of the
+//          Freedom of Information Act; and
+//      (d) is a commercial item and thus, pursuant to Section 12.212
+//          of the Federal Acquisition Regulations (FAR) and DFAR
+//          Supplement Section 227.7202, Government’s use, duplication or
+//          disclosure of the computer software is subject to the restrictions
+//          set forth by Rogue Wave Software, Inc.
+//
+///////////////////////////////////////////////////////////////////////////////
+//Microsoft Developer Studio generated resource script.
+//
+#include "toolkit\ActvHost\ahostres.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+// _MSC_VER <  1300  // 1200 == VC++ 6.0, 1200-1202 == eVC++4
+// _MSC_VER == 1300  // 1300 == VC++ 7.0
+// _MSC_VER == 1310  // 1310 == VC++ 7.1
+// _MSC_VER == 1400  // 1400 == VC++ 8.0
+
+#ifndef SEC_NO_TLB
+//#ifdef _VC8
+//	#ifdef _WIN64
+//		1 TYPELIB "..\lib\vc8\x64\ScriptHost.tlb"
+//	#else
+//		1 TYPELIB "..\lib\vc8\x86\ScriptHost.tlb"
+//	#endif
+//#endif
+//#ifdef _VC71 
+//	1 TYPELIB "..\lib\vc71\x86\ScriptHost.tlb"
+//#endif
+//#ifdef _VC6
+//	1 TYPELIB "..\lib\vc6\x86\ScriptHost.tlb"
+//#endif
+//#if !defined(_VC8) && !defined(_VC71) && !defined(_VC6)
+//#error Unable to locate ScriptHost.tlb!
+//#endif
+1 TYPELIB "..\lib\ScriptHost.tlb"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "toolkit\ActvHost\ahostres.h\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\ScriptHost.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\r\n"
+    "#ifndef SEC_NO_TLB""\r\n"
+	"\r\n"
+	"// _MSC_VER <  1300  // 1200 == VC++ 6.0, 1200-1202 == eVC++4""\r\n"
+	"// _MSC_VER == 1300  // 1300 == VC++ 7.0""\r\n"
+	"// _MSC_VER == 1310  // 1310 == VC++ 7.1""\r\n"
+	"// _MSC_VER == 1400  // 1400 == VC++ 8.0""\r\n"
+	"\r\n"
+//	"#ifdef _VC8""\r\n"
+//	"#ifdef _WIN64""\r\n"
+//	"1 TYPELIB""..\\lib\\vc8\\x64\\ScriptHost.tlb""\r\n"
+//	"#else""\r\n"
+//	"1 TYPELIB""..\\lib\\vc8\\x86\\ScriptHost.tlb""\r\n"
+//	"#endif""\r\n"
+//  "#endif""\r\n"
+//	"#ifdef _VC71""\r\n"
+//	"1 TYPELIB""..\\lib\\vc71\\x86\\ScriptHost.tlb""\r\n"
+//  "#endif""\r\n"
+//	"#ifdef _VC6""\r\n"
+//	"1 TYPELIB""..\\lib\\vc6\\x86\\ScriptHost.tlb""\r\n"
+//  "#endif""\r\n"
+//	"#if !defined(_VC8) && !defined(_VC71) && !defined(_VC6)""\r\n"
+//	"#endif""\r\n"
+	"1 TYPELIB""..\\lib\\ScriptHost.tlb""\r\n"
+	"#endif""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+SECAH_IDR_MAINFRAME     BITMAP  MOVEABLE PURE   "toolkit\\ActvHost\\res\\Toolbar.bmp"
+SECAH_IDR_EDIT          BITMAP  MOVEABLE PURE   "toolkit\\ActvHost\\res\\edit.bmp"
+SECAH_IDB_ARROW         BITMAP  DISCARDABLE     "toolkit\\ActvHost\\res\\arrow.bmp"
+SECAH_IDB_NOTFOUND      BITMAP  DISCARDABLE     "toolkit\\ActvHost\\res\\notfound.bmp"
+SECAH_IDR_LAYOUT        BITMAP  FIXED IMPURE    "toolkit\\ActvHost\\res\\layout.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+SECAH_IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      SECAH_ID_VIEW_CODE
+    BUTTON      SECAH_ID_RUN
+END
+
+SECAH_IDR_EDIT TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      SECAH_ID_LAYOUT_EDIT
+END
+
+SECAH_IDR_LAYOUT TOOLBAR FIXED IMPURE  16, 15
+BEGIN
+    BUTTON      SECAH_ID_LAYOUT_ALIGN_LEFT
+    BUTTON      SECAH_ID_LAYOUT_ALIGN_RIGHT
+    BUTTON      SECAH_ID_LAYOUT_ALIGN_TOP
+    BUTTON      SECAH_ID_LAYOUT_ALIGN_BOTTOM
+    SEPARATOR
+    BUTTON      SECAH_ID_LAYOUT_CNTERINVIEW_VERT
+    BUTTON      SECAH_ID_LAYOUT_CNTERINVIEW_HORIZ
+    SEPARATOR
+    BUTTON      SECAH_ID_LAYOUT_SPACEEVENLY_ACROSS
+    BUTTON      SECAH_ID_LAYOUT_SPACEEVENLY_DOWN
+    SEPARATOR
+    BUTTON      SECAH_ID_LAYOUT_MAKESAMESIZE_WIDTH
+    BUTTON      SECAH_ID_LAYOUT_MAKESAMESIZE_HEIGHT
+    BUTTON      SECAH_ID_LAYOUT_MAKESAMESIZE_BOTH
+    SEPARATOR
+    BUTTON      SECAH_ID_LAYOUT_BRING_TO_FRONT
+    BUTTON      SECAH_ID_LAYOUT_SEND_TO_BACK
+    SEPARATOR
+    BUTTON      SECAH_ID_LAYOUT_GRID
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+SECAH_IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Delete\tDel",                SECAH_ID_EDIT_DELETE
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Insert Control",             SECAH_ID_EDIT_INSERTCONTROL
+        MENUITEM SEPARATOR
+        MENUITEM "&Run\tF5",                    SECAH_ID_RUN
+        MENUITEM SEPARATOR
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Tool Bar",                   ID_VIEW_TOOLBAR
+        MENUITEM "Tool &Box",                   SECAH_ID_VIEW_TOOLBOX
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "&Layout Bar",                 SECAH_ID_VIEW_LAYOUTBAR
+        MENUITEM "&Event Bar",                  SECAH_ID_VIEW_EVENTBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Properties",                 SECAH_ID_VIEW_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "Active Scr&ipt",              SECAH_ID_VIEW_CODE
+    END
+    POPUP "&Layout"
+    BEGIN
+        POPUP "&Align Controls"
+        BEGIN
+            MENUITEM "&Left",                       SECAH_ID_LAYOUT_ALIGN_LEFT
+
+            MENUITEM "&Right",                      SECAH_ID_LAYOUT_ALIGN_RIGHT
+
+            MENUITEM "&Top",                        SECAH_ID_LAYOUT_ALIGN_TOP
+
+            MENUITEM "&Bottom",                     SECAH_ID_LAYOUT_ALIGN_BOTTOM
+
+            MENUITEM SEPARATOR
+            MENUITEM "&Vert. Center",               SECAH_ID_LAYOUT_ALIGN_VERTCENTER
+
+            MENUITEM "&Horz. Center",               SECAH_ID_LAYOUT_ALIGN_HORCENTER
+
+        END
+        POPUP "Space &Evenly"
+        BEGIN
+            MENUITEM "&Across",                     SECAH_ID_LAYOUT_SPACEEVENLY_ACROSS
+
+            MENUITEM "&Down",                       SECAH_ID_LAYOUT_SPACEEVENLY_DOWN
+
+        END
+        POPUP "&Center in View"
+        BEGIN
+            MENUITEM "&Vertical",                   SECAH_ID_LAYOUT_CNTERINVIEW_VERT
+
+            MENUITEM "&Horizontal",                 SECAH_ID_LAYOUT_CNTERINVIEW_HORIZ
+
+        END
+        POPUP "&Make Same Size"
+        BEGIN
+            MENUITEM "&Width",                      SECAH_ID_LAYOUT_MAKESAMESIZE_WIDTH
+
+            MENUITEM "&Height",                     SECAH_ID_LAYOUT_MAKESAMESIZE_HEIGHT
+
+            MENUITEM "&Both",                       SECAH_ID_LAYOUT_MAKESAMESIZE_BOTH
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Bring to Front\tCtrl+F",      SECAH_ID_LAYOUT_BRING_TO_FRONT
+
+        MENUITEM "Send to Back\tCtrl+B",        SECAH_ID_LAYOUT_SEND_TO_BACK
+        MENUITEM SEPARATOR
+        MENUITEM "&Edit\tCtrl+E",               SECAH_ID_LAYOUT_EDIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ActiveHost...",        ID_APP_ABOUT
+    END
+END
+
+SECAH_IDR_RCLICK_TOOLBAR MENU DISCARDABLE 
+BEGIN
+    POPUP "&Item"
+    BEGIN
+        MENUITEM "Cu&t",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Paste",                      ID_EDIT_PASTE
+        MENUITEM "&Delete",                     SECAH_ID_EDIT_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Bring to &Front",             SECAH_ID_LAYOUT_BRING_TO_FRONT
+
+        MENUITEM "Send to &Back",               SECAH_ID_LAYOUT_SEND_TO_BACK
+        MENUITEM SEPARATOR
+        MENUITEM "Active Scr&ipt",              SECAH_ID_VIEW_CODE
+    END
+END
+
+SECAH_IDR_RCLICK_TOOLBAR_CONTAINER MENU DISCARDABLE 
+BEGIN
+    POPUP "&Item"
+    BEGIN
+        MENUITEM "&Properties",                 SECAH_ID_VIEW_CONT_PROPERTIES
+
+        MENUITEM SEPARATOR
+        MENUITEM "Active Scr&ipt",              SECAH_ID_VIEW_CODE
+    END
+END
+
+SECAH_IDR_NONSCRIPTED MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New Window\tCtrl+N",         ID_FILE_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ActiveHost...",        ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+SECAH_IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "A",            SECAH_ID_VIEW_PROPERTIES, VIRTKEY, CONTROL, NOINVERT
+    "B",            SECAH_ID_LAYOUT_SEND_TO_BACK, VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "E",            SECAH_ID_RUN,           VIRTKEY, CONTROL, NOINVERT
+    "F",            SECAH_ID_LAYOUT_BRING_TO_FRONT, VIRTKEY, CONTROL, 
+                                                    NOINVERT
+    "M",            SECAH_ID_VIEW_CODE,     VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      SECAH_ID_EDIT_DELETE,   VIRTKEY, NOINVERT
+    VK_DELETE,      SECAH_ID_EDIT_DELETE,   VIRTKEY, SHIFT, NOINVERT
+    VK_F5,          SECAH_ID_RUN,           VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+SECAH_IDD_FORMS_FORM DIALOG DISCARDABLE  0, 0, 214, 136
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+SECAH_IDD_PROPPAGE_FACTORY DIALOG DISCARDABLE  0, 0, 250, 62
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "TODO: Place controls to manipulate properties of Factory Control on this dialog.",
+                    IDC_STATIC,7,25,229,16
+END
+
+SECAH_IDD_INSERTCTL DIALOG DISCARDABLE  0, 0, 285, 93
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Insert Control"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,196,69,34,14
+    PUSHBUTTON      "Cancel",IDCANCEL,241,69,34,14
+    LTEXT           "Control:",IDC_STATIC,9,4,27,8
+    LISTBOX         SECAH_IDC_CONTROLS,7,14,172,73,LBS_SORT | 
+                    LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+    EDITTEXT        SECAH_IDC_ControlName,195,39,80,14,ES_AUTOHSCROLL
+    LTEXT           "Name in the script:",IDC_STATIC,197,27,73,10
+END
+
+SECAH_IDD_PropertiesDlg DIALOG DISCARDABLE  0, 0, 146, 156
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Apply",SECAH_IDC_ApplyButton,2,3,39,13
+    EDITTEXT        SECAH_IDC_EntryBox,43,3,83,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",SECAH_IDC_ExtraBtn,128,3,16,13,NOT WS_VISIBLE
+    LISTBOX         SECAH_IDC_PropList,2,22,142,133,LBS_OWNERDRAWFIXED | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        SECAH_IDC_EnumItems,43,3,101,62,CBS_DROPDOWNLIST | 
+                    CBS_SORT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+END
+
+SECAH_ID_ERROR_DLG DIALOG DISCARDABLE  0, 0, 239, 122
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "ActiveX Script Error"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&View Source",SECAH_ID_VIEWSRC,116,100,50,14
+    DEFPUSHBUTTON   "&Cancel",SECAH_ID_CLOSE,177,99,50,14
+    EDITTEXT        SECAH_ID_ERROR,10,23,218,68,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "An error has occurred in the script",SECAH_ID_CTL_LABEL,
+                    12,8,129,8
+END
+
+SECAH_IDD_EventBar DIALOG DISCARDABLE  0, 0, 302, 19
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        SECAH_IDC_Items,33,3,71,65,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        SECAH_IDC_Events,150,3,95,58,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Object:",IDC_STATIC,5,5,24,9
+    LTEXT           "Events:",IDC_STATIC,121,5,27,8
+END
+
+SECAH_IDD_CustomizeToolbox DIALOG DISCARDABLE  0, 0, 219, 106
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Customize ToolBox"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         SECAH_IDC_CONTROLS,7,7,144,92,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,162,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,162,24,50,14
+END
+
+SECAH_IDD_FORMS_START DIALOG DISCARDABLE  0, 0, 254, 179
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&New Scripted Form",SECAH_IDC_NEW_SRIPTED_FORM,7,156,82,
+                    16
+    PUSHBUTTON      "&Load Scripted Form",SECAH_IDC_LOAD_SRIPTED_FORM,165,
+                    156,82,16
+    CONTROL         "This is your application.",IDC_STATIC,"Static",
+                    SS_SIMPLE | WS_GROUP,7,4,240,10
+    LTEXT           "It has a lot of windows, framed windows and dialog boxes. All of them are static - just as this one. Once dialog template was compiled into your app, it can not be easily changed at run time.",
+                    IDC_STATIC,7,15,240,26,SS_SUNKEN
+    LTEXT           "With ActiveHost MFC extension library your application can have windows that can be modified at run time. New scripted windows can be added and invoked by other forms. These scripted windows can access the OLE ",
+                    IDC_STATIC,8,44,239,24
+    LTEXT           "automation objects that your application exposes. The glue that ties these dynamic windows together is Microsoft's ActiveX scripting model defined in COM. Currently VBScript and JavaScript engines implement this model.",
+                    IDC_STATIC,7,68,238,24
+    LTEXT           "In your script, you can invoke methods, change properties and handle events of embedded OLE controls and objects exposed by the app - all in scripting language of your choice.",
+                    IDC_STATIC,7,96,236,26
+    LTEXT           "Scripted windows can be SDI, MDI, or out of frame MDI (like this demo). All you need to do is to derive your view and document classes from our script enabled classes.",
+                    IDC_STATIC,7,124,237,25
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+SECAH_IDC_NEWCTRL       CURSOR  DISCARDABLE     "Toolkit\\ActvHost\\res\\newctrl.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+SECAH_IDR_NONSCRIPTED   ICON    DISCARDABLE     "Toolkit\\ActvHost\\res\\idr_nons.ico"
+SECAH_IDR_MAINFRAME     ICON    DISCARDABLE     "Toolkit\\ActvHost\\res\\idr_main.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SECAH_IDP_OLE_INIT_FAILED 
+                            "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    SECAH_IDS_Form_PPG_CAPTION "General"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    SECAH_IDR_NONSCRIPTED   "ActiveHost\n\nScript\n\n\nScriptHost.Document\nScript Document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SECAH_IDS_Form          "Form"
+    SECAH_IDS_Form_PPG      "Form Page"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SECAH_ID_VIEW_CODE      "Toggle between Object View / Script View\nObject View / Script View"
+    SECAH_ID_RUN            "Run Script\nRun Script (F5)"
+    SECAH_ID_VIEW_EVENTBAR  "Event bar"
+    SECAH_ID_EDIT_DELETE    "Delete Item(s)\nDelete Item(s) (Del)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SECAH_ID_LAYOUT_EDIT    "Edit OLE Objects\nEdit OLE Objects (Ctrl+E)"
+    SECAH_ID_LAYOUT_ALIGN_LEFT "Align Left\nAlign Left"
+    SECAH_ID_LAYOUT_ALIGN_RIGHT "Align Right\nAlign Right"
+    SECAH_ID_LAYOUT_ALIGN_TOP "Align Top\nAlign Top"
+    SECAH_ID_LAYOUT_ALIGN_BOTTOM "Align Bottom\nAlign Bottom"
+    SECAH_ID_LAYOUT_SPACEEVENLY_ACROSS "Space Across\nSpace Across"
+    SECAH_ID_LAYOUT_SPACEEVENLY_DOWN "Space Down\nSpace Down"
+    SECAH_ID_LAYOUT_CNTERINVIEW_HORIZ "Center Horizontal\nCenter Horizontal"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SECAH_IDC_Items         "Controls In the Form"
+    SECAH_IDC_Events        "Events"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SECAH_ID_LAYOUT_CNTERINVIEW_VERT "Center Vertical\nCenter Vertical"
+    SECAH_ID_LAYOUT_MAKESAMESIZE_WIDTH "Make Same Width\nMake Same Width"
+    SECAH_ID_LAYOUT_MAKESAMESIZE_HEIGHT "Make Same Height\nMake Same Height"
+    SECAH_ID_LAYOUT_MAKESAMESIZE_BOTH "Make Same Size\nMake Same Size"
+    SECAH_ID_LAYOUT_GRID    "Toggle Grid [on/off]\nToggle Grid"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SECAH_ID_VIEW_LAYOUTBAR "Layout bar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SECAH_ID_LAYOUT_BRING_TO_FRONT "Bring to Front\nBring to Front"
+    SECAH_ID_LAYOUT_SEND_TO_BACK "Send to Back\nSend to Back"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SECAH_IDS_DUPLICATE_NAME 
+                            "Control with this name already exists on the form"
+	SECAH_IDS_NO_PROPERTIES "Properties are not available for this control"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\ScriptHost.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -98,12 +98,12 @@ BOOL CUndoRedoDlg::OnInitDialog()
 	SetWindowPos(NULL,m_xPos,m_yPos,0,0,SWP_NOSIZE|SWP_NOZORDER|SWP_NOACTIVATE);  
 	if(m_bIsUndo)
 	{
-		m_btnUDRD.SetWindowTextW(_LS(IDS_DB_UNDOREDO__Undo));
+		m_btnUDRD.SetWindowText(_LS(IDS_DB_UNDOREDO__Undo));
 		AddUndoCommands();
 	}
 	else
 	{
-		m_btnUDRD.SetWindowTextW(_LS(IDS_DB_UNDOREDO__Redo));
+		m_btnUDRD.SetWindowText(_LS(IDS_DB_UNDOREDO__Redo));
 		AddRedoCommands();
 	}
 	if(m_List.GetCount() > 0)

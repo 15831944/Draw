@@ -41,3 +41,23 @@ BOOL CSectUtil::CalcSectData(T_SECT_D& data)
 {
 	return FALSE;
 }
+void CSectUtil::GetSizeTitleFromShapeIndexReg(int nShapeIndex,CStringArray& aSizeTitle)
+{
+	CString RegTitleForSize[][8]={
+		{_T("H"),_T("B"),_T("tw"),_T("tf"),_T(""),_T(""),_T(""),_T("")},
+		{_T("H"),_T("B1"),_T("tw"),_T("tf1"),_T("B2"),_T("tf2"),_T("r1"),_T("r2")},
+		{_T("H"),_T("B1"),_T("tw"),_T("tf1"),_T("B2"),_T("tf2"),_T("r1"),_T("r2")},
+		{_T("H"),_T("B"),_T("tw"),_T("tf"),_T(""),_T(""),_T(""),_T("")},
+		{_T("H"),_T("B"),_T("tw"),_T("tf1"),_T("C"),_T("tf2"),_T(""),_T("")},
+		{_T("D"),_T("tw"),_T(""),_T(""),_T(""),_T(""),_T(""),_T("")},
+		{_T("H"),_T("B"),_T("tw"),_T("tf"),_T("C"),_T(""),_T(""),_T("")},
+		{_T("H"),_T("B"),_T("tw"),_T("tf"),_T("C"),_T(""),_T(""),_T("")},
+		{_T("H"),_T("B"),_T(""),_T(""),_T(""),_T(""),_T(""),_T("")},
+		{_T("D"),_T(""),_T(""),_T(""),_T(""),_T(""),_T(""),_T("")},
+	};
+	for(int i = 0;RegTitleForSize[nShapeIndex][i] != _T("") && i < 8;i++)
+	{
+		aSizeTitle.Add(RegTitleForSize[nShapeIndex][i]);
+	}
+
+}

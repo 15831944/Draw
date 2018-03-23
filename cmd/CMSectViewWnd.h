@@ -24,9 +24,29 @@ public:
 	void MakePicture(T_SECT_D* pSect,CCMGeom2DArray& aGeom);
 private:
 	T_SECT_D* m_pDataSrc;
+	void MakePictureAngle(CCMGeom2DArray& aGeom);
+	void MakePictureChannel(CCMGeom2DArray& aGeom);
 	void MakePictureHBeam(CCMGeom2DArray& aGeom);
+	void MakePictureTee(CCMGeom2DArray& aGeom);
+	void MakePictureBox(CCMGeom2DArray& aGeom);
+	void MakePicturePipe(CCMGeom2DArray& aGeom);
+	void MakePictureDblAngle(CCMGeom2DArray& aGeom);
+	void MakePictureDblChannel(CCMGeom2DArray& aGeom);
+	void MakePictureSolidRect(CCMGeom2DArray& aGeom);
+	void MakePictureSolidCircle(CCMGeom2DArray& aGeom);
 	void GetRegularData(double& H,double& B1,double& tw,double& tf1,double& B2,double& tf2);
+	void _MakeRect(double minx,double miny,double maxx,double maxy,CCMPolygon* pPolygon);
+	void _MakeLeftAngle(double H,double B,double tw,double tf,CCMPolygon* pPolygon);
+	void _MakeRightAngle(double H,double B,double tw,double tf,CCMPolygon* pPolygon);
+	void _MakeLeftChannel(double H,double B1,double tw,double tf1,double B2,double tf2,CCMPolygon* pPolygon);
+	void _MakeRightChannel(double H,double B1,double tw,double tf1,double B2,double tf2,CCMPolygon* pPolygon);
 	void _MakeHBeam(double H,double B1,double tw,double tf1,double B2,double tf2,CCMPolygon* pPolygon);
+	void _MakeTee(double H,double B,double tw,double tf,CCMPolygon* pPolygon);
+	void _MakeBox(double H,double B,double tw,double tf,CCMPolygon* pPolygon);
+	void _MakeDblAngle(double H,double B,double tw,double tf,CCMPolygon* pPolygon);
+	void _MakeDblChannel(double H,double B,double tw,double tf,CCMPolygon* pPolygon);
+	void _MakeSolieRect(double H,double B,double tw,double tf,CCMPolygon* pPolygon);
+	void _MakeSolidCircle(double H,double B,double tw,double tf,CCMPolygon* pPolygon);
 };
 class __MY_EXT_CLASS__ CCMSectViewWnd : public CWnd
 {

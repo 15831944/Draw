@@ -1,0 +1,820 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "grid\gxresrc.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+#if !defined(_GX_FILTER_RESOURCES) || defined(_GX_RESIZECELL_RESOURCES)
+GX_IDC_TRACKWIDTH       CURSOR  DISCARDABLE     "GRID\\RES\\GXWIDTH.CUR"
+GX_IDC_TRACKHEIGHT      CURSOR  DISCARDABLE     "GRID\\RES\\GXHEIGHT.CUR"
+GX_IDC_TRACK_HIDDENCOL  CURSOR  DISCARDABLE    "GRID\\RES\\GXTRHDCL.CUR"
+GX_IDC_TRACK_HIDDENROW  CURSOR  DISCARDABLE    "GRID\\RES\\GXTRHDRW.CUR"
+#endif
+#if !defined(_GX_FILTER_RESOURCES) || defined(_GX_SELECTRANGE_RESOURCES)
+GX_IDC_SELDRAG          CURSOR  DISCARDABLE     "GRID\\RES\\GXSELDRG.CUR"
+GX_IDC_ROWHEADER        CURSOR  DISCARDABLE     "GRID\\RES\\GXROW.CUR"
+GX_IDC_COLHEADER        CURSOR  DISCARDABLE     "GRID\\RES\\GXCOLUMN.CUR"
+#endif
+#if !defined(_GX_FILTER_RESOURCES) || defined(_GX_TABWND_RESOURCES)
+GX_IDC_HSPLITBAR        CURSOR  DISCARDABLE     "GRID\\RES\\GXSPLITH.CUR"
+#endif
+#if !defined(_GX_FILTER_RESOURCES) || defined(_GX_OLEDND_RESOURCES)
+GX_IDC_NODROPCRSR       CURSOR  DISCARDABLE     "GRID\\RES\\GXNODROP.CUR"
+#endif
+
+#if !defined(_GX_FILTER_RESOURCES) || defined(_GX_IMOUSE_RESOURCES)
+GX_IDC_IMU              CURSOR  DISCARDABLE     "GRID\\RES\\GXIMU.CUR"
+GX_IDC_IML              CURSOR  DISCARDABLE     "GRID\\RES\\GXIML.CUR"
+GX_IDC_IMR              CURSOR  DISCARDABLE     "GRID\\RES\\GXIMR.CUR"
+GX_IDC_IMD              CURSOR  DISCARDABLE     "GRID\\RES\\GXIMD.CUR"
+GX_IDC_IMA              CURSOR  DISCARDABLE     "GRID\\RES\\GXIMA.CUR"
+#endif
+
+#if !defined(_GX_FILTER_RESOURCES) || defined(_GX_EXCELAFILL_RESOURCES)
+GX_IDC_EXCELDRAG        CURSOR  DISCARDABLE     "GRID\\RES\\GXXLDRG.CUR"
+#endif
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "grid\gxresrc.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+GX_IDB_DOWNARROW        BITMAP  DISCARDABLE     "GRID\\RES\\GXDARROW.BMP"
+GX_IDB_DOWNARROW_DISABLED BITMAP  DISCARDABLE     "GRID\\RES\\GX_IDB_D.BMP"
+
+#if !defined(_GX_FILTER_RESOURCES) || defined(_GX_RADIOBTN_RESOURCES)
+GX_IDB_3DCTRL           BITMAP  DISCARDABLE     "GRID\\RES\\GX3DCTRL.BMP"
+GX_IDB_3DCTRL95         BITMAP  DISCARDABLE     "GRID\\RES\\GX3D95.BMP"
+#endif
+
+#if !defined(_GX_FILTER_RESOURCES) || defined(_GX_ARROWHEADER_RESOURCES)
+GX_IDB_STAR             BITMAP  DISCARDABLE     "GRID\\RES\\GXSTAR.BMP"
+GX_IDB_PENCIL           BITMAP  DISCARDABLE     "GRID\\RES\\GXPENCIL.BMP"
+GX_IDB_ARROW            BITMAP  DISCARDABLE     "GRID\\RES\\GXARROW.BMP"
+#endif
+
+
+#if !defined(_GX_FILTER_RESOURCES) || defined(_GX_CHECKBOX_RESOURCES)
+GX_IDB_CHECK_95         BITMAP  DISCARDABLE     "GRID\\RES\\GXCHK95.BMP"
+GX_IDB_CHECK_NT         BITMAP  DISCARDABLE     "GRID\\RES\\GXCHKNT.BMP"
+GX_IDB_CHECK_FLAT       BITMAP  DISCARDABLE     "GRID\\RES\\GXCHK31.BMP"
+#endif
+
+
+#if !defined(_GX_FILTER_RESOURCES) || defined(_GX_STYLESHEET_RESOURCES)
+GX_IDB_TTFONT           BITMAP  DISCARDABLE     "GRID\\RES\\GXTTFONT.BMP"
+#endif
+
+#if !defined(_GX_FILTER_RESOURCES) || defined(_GX_CALENDAR_RESOURCES)
+GX_IDB_NEXTYEAR         BITMAP  DISCARDABLE     "GRID\\RES\\GXNXTYR.BMP"
+GX_IDB_NEXTMONTH        BITMAP  DISCARDABLE     "GRID\\RES\\GXNXTMON.BMP"
+GX_IDB_PREVYEAR         BITMAP  DISCARDABLE     "GRID\\RES\\GXPRVYR.BMP"
+GX_IDB_PREVMONTH        BITMAP  DISCARDABLE     "GRID\\RES\\GXPRVMON.BMP"
+#endif
+
+#if !defined(_GX_FILTER_RESOURCES) || defined(_GX_IMOUSE_RESOURCES)
+GX_IDB_ORIGIN_ALL       BITMAP  DISCARDABLE     "GRID\\RES\\GXIMALL.BMP"
+GX_IDB_ORIGIN_VERT      BITMAP  DISCARDABLE     "GRID\\RES\\GXIMVERT.BMP"
+GX_IDB_ORIGIN_HORZ      BITMAP  DISCARDABLE     "GRID\\RES\\GXIMHORZ.BMP"
+#endif
+
+#if !defined(_GX_FILTER_RESOURCES) || defined(_GX_CALCULATOR_RESOURCES)
+GX_IDB_CALC             BITMAP  DISCARDABLE     "GRID\\RES\\GXCALC.BMP"
+GX_IDB_CALCEQUALS       BITMAP  DISCARDABLE     "GRID\\RES\\GXCALCE.BMP"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+#if !defined(_GX_FILTER_RESOURCES) || defined(_GX_PROPERTYDIALOG_RESOURCES)
+GX_IDD_SETTINGS_PRINT DIALOG DISCARDABLE  0, 0, 337, 207
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Page Setup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "&Margins",IDC_STATIC,10,5,128,65,WS_GROUP
+    LTEXT           "Left",IDC_STATIC,20,26,14,8,NOT WS_GROUP
+    EDITTEXT        GX_IDC_PMARGIN_LEFT,39,23,27,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    LTEXT           "Right",IDC_STATIC,74,26,19,8,NOT WS_GROUP
+    EDITTEXT        GX_IDC_PMARGIN_RIGHT,100,22,26,12,ES_AUTOHSCROLL
+    LTEXT           "Top",IDC_STATIC,19,47,14,8,NOT WS_GROUP
+    EDITTEXT        GX_IDC_PMARGIN_TOP,39,44,27,12,ES_AUTOHSCROLL
+    LTEXT           "Bottom",IDC_STATIC,73,47,24,8,NOT WS_GROUP
+    EDITTEXT        GX_IDC_PMARGIN_BOTTOM,99,44,27,12,ES_AUTOHSCROLL
+    GROUPBOX        "Titles and &GridLines",IDC_STATIC,10,74,128,105
+    CONTROL         "&Row Headers",GX_IDC_PCHECK_ROWLABELS,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,18,89,55,10
+    CONTROL         "&Column Headers",GX_IDC_PCHECK_COLLABELS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,103,64,10
+    CONTROL         "Print Frame",GX_IDC_PCHECK_FRAME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,117,50,10
+    CONTROL         "&Vertical Lines",GX_IDC_PCHECK_VERTLINES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,131,56,10
+    CONTROL         "&Horizontal Lines",GX_IDC_PCHECK_HORZLINES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,145,64,10
+    CONTROL         "&Only Black and White",GX_IDC_PCHECK_BLACKWHITE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,159,82,10
+    GROUPBOX        "Preview",IDC_STATIC,145,6,178,103
+    CONTROL         "Grid_Preview",GX_IDC_PPREVIEW_USERCTL,"GXWND",
+                    WS_DISABLED | WS_BORDER | WS_TABSTOP,149,17,170,88
+    GROUPBOX        "&Page Order",IDC_STATIC,145,113,103,66
+    CONTROL         "First Rows, then Columns",GX_IDC_PRADIO_FIRSTROWS,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,151,132,93,10
+    CONTROL         "First Columns, then Rows",GX_IDC_PRADIO_FIRSTCOLS,
+                    "Button",BS_AUTORADIOBUTTON,151,153,93,10
+    GROUPBOX        "&Center on Page",IDC_STATIC,254,113,69,66
+    CONTROL         "&vertical",GX_IDC_PCENTER_VERTIKAL,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,263,134,36,10
+    CONTROL         "&horizontal",GX_IDC_PCENTER_HORIZONTAL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,262,154,43,10
+    CONTROL         "Save settings to profile",GX_IDC_PCHECK_SAVEDEFAULT,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,214,190,
+                    86,10
+    DEFPUSHBUTTON   "OK",IDOK,13,188,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,81,188,50,14
+END
+
+GX_IDD_SETTINGS_HEADERFOOTER DIALOG DISCARDABLE  0, 0, 337, 204
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Header / Footer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Header/Footer",IDC_STATIC,3,4,321,121
+    CONTROL         "Grid_Preview",GX_IDC_HFTABWND,"CGXTabWnd",WS_GROUP | 
+                    WS_TABSTOP,7,17,280,106
+    PUSHBUTTON      "&Font...",GX_IDC_PBTN_FONT,291,25,29,13
+    GROUPBOX        "Distance to Frame:",IDC_STATIC,3,128,214,35
+    LTEXT           "Header:",IDC_STATIC,10,146,36,8,NOT WS_GROUP
+    EDITTEXT        GX_IDC_DIST_HEADLINE,55,142,42,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    LTEXT           "Footer:",IDC_STATIC,114,146,36,8,NOT WS_GROUP
+    EDITTEXT        GX_IDC_DIST_FOOTNOTE,158,142,41,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    GROUPBOX        "Page numbering",IDC_STATIC,223,130,101,34
+    LTEXT           "First Page No.",IDC_STATIC,230,148,48,8,NOT WS_GROUP
+    EDITTEXT        GX_IDC_PAGE_FIRST,282,143,36,13,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    CONTROL         "Save settings to profile",GX_IDC_PCHECK_SAVEDEFAULT,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,207,183,
+                    86,10
+    DEFPUSHBUTTON   "OK",IDOK,6,182,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,74,182,50,14
+END
+
+GX_IDD_SETTINGS_DLG DIALOG DISCARDABLE  0, 0, 337, 212
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Display Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Titles and &GridLines",IDC_STATIC,8,7,130,93,WS_GROUP
+    CONTROL         "&3D-Buttons",GX_IDC_CHECK_3DBTNS,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,18,25,48,10
+    CONTROL         "&Vertical Lines",GX_IDC_CHECK_VERTLINES,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,18,41,56,10
+    CONTROL         "&Horizontal Lines",GX_IDC_CHECK_HORZLINES,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,18,55,64,10
+    CONTROL         "Mark Current &Row",GX_IDC_CHECK_MARKFIXEDROW,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,18,71,70,10
+    CONTROL         "Mark Current C&olumn",GX_IDC_CHECK_MARKFIXEDCOL,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,18,84,79,10
+    GROUPBOX        "Preview",IDC_STATIC,145,7,178,93,WS_GROUP
+    CONTROL         "Grid_Preview",GX_IDC_PREVIEW_USERCTL,"GXWND",WS_BORDER | 
+                    WS_VSCROLL | WS_HSCROLL | WS_GROUP,150,18,170,77
+    GROUPBOX        "Color",IDC_STATIC,7,103,131,80
+    LISTBOX         GX_IDC_LISTCOLORS,13,117,58,59,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "User1",GX_IDC_COLORBOX,"GXWND",0x0,74,114,61,63
+    CONTROL         "Save settings to profile",GX_IDC_CHECK_SAVEDEFAULT,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,216,193,
+                    86,10
+    DEFPUSHBUTTON   "OK",IDOK,15,191,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,83,191,50,14
+    CONTROL         "User Attributes",GX_IDC_USERPROPERTIES,"GXWND",WS_GROUP | 
+                    WS_TABSTOP,148,113,172,64
+    GROUPBOX        "User Properties",IDC_STATIC,145,103,178,80,WS_GROUP
+END
+
+#endif // _GX_PROPERTYDIALOG_RESOURCES
+
+
+#if !defined(_GX_FILTER_RESOURCES) || defined(_GX_STYLESHEET_RESOURCES)
+
+IDD_GXALIGNPAGE DIALOG DISCARDABLE  0, 0, 204, 128
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Align"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Horizontal",IDC_STATIC,7,9,88,72
+    CONTROL         "Standard",IDC_GXRADIOSTANDARD,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,14,23,41,10
+    CONTROL         "Left aligned",IDC_GXRADIOLEFT,"Button",
+                    BS_AUTORADIOBUTTON,14,36,50,10
+    CONTROL         "Center",IDC_GXRADIOCENTER,"Button",BS_AUTORADIOBUTTON,
+                    14,49,41,8
+    CONTROL         "Right aligned",IDC_GXRADIORIGHT,"Button",
+                    BS_AUTORADIOBUTTON,14,62,54,10
+    CONTROL         "Wrap Text",IDC_GXCHECKWRAP,"Button",BS_AUTO3STATE | 
+                    WS_GROUP | WS_TABSTOP,10,90,48,10
+    CONTROL         "Allow Enter",IDC_GXCHECKENTER,"Button",BS_AUTO3STATE | 
+                    WS_GROUP | WS_TABSTOP,10,105,48,10
+    GROUPBOX        "Vertical",IDC_STATIC,102,9,88,72
+    CONTROL         "Standard",IDC_GXRADIOVSTANDARD,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,109,24,44,10
+    CONTROL         "Top ",IDC_GXRADIOTOP,"Button",BS_AUTORADIOBUTTON,109,37,
+                    50,10
+    CONTROL         "Center",IDC_GXRADIOVCENTER,"Button",BS_AUTORADIOBUTTON,
+                    109,50,41,10
+    CONTROL         "Bottom",IDC_GXRADIOBOTTOM,"Button",BS_AUTORADIOBUTTON,
+                    109,63,54,10
+    CONTROL         "Auto Size",IDC_GXCHECKAUTOSIZE,"Button",BS_AUTO3STATE | 
+                    WS_GROUP | WS_TABSTOP,106,90,45,10
+END
+
+IDD_GXBORDERSPAGE DIALOG DISCARDABLE  0, 0, 232, 125
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Borders"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "&Border",IDC_STATIC,11,7,84,89
+    CONTROL         "",IDC_GXBTNBORDERALL,"Button",BS_OWNERDRAW | 
+                    WS_DISABLED | WS_TABSTOP,18,24,28,11
+    CONTROL         "",IDC_GXBTNBORDERLEFT,"Button",BS_OWNERDRAW | WS_GROUP | 
+                    WS_TABSTOP,18,37,28,11
+    CONTROL         "",IDC_GXBTNBORDERRIGHT,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,18,50,28,11
+    CONTROL         "",IDC_GXBTNBORDERTOP,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    18,63,28,11
+    CONTROL         "",IDC_GXBTNBORDERBOTTOM,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,18,76,28,11
+    LTEXT           "Range",IDC_GXTEXTALL,53,25,36,10,WS_DISABLED
+    LTEXT           "Left",IDC_STATIC,53,38,36,10,NOT WS_GROUP
+    LTEXT           "Right",IDC_STATIC,53,51,36,10
+    LTEXT           "Top",IDC_STATIC,53,64,36,10
+    LTEXT           "Bottom",IDC_STATIC,53,77,36,10
+    GROUPBOX        "&Type",IDC_STATIC,102,7,113,106
+    CONTROL         "",IDC_GXBTNTYPE1,"Button",BS_OWNERDRAW | WS_TABSTOP,113,
+                    24,42,11
+    CONTROL         "",IDC_GXBTNTYPE2,"Button",BS_OWNERDRAW | WS_TABSTOP,113,
+                    38,42,11
+    CONTROL         "",IDC_GXBTNTYPE3,"Button",BS_OWNERDRAW | WS_TABSTOP,113,
+                    52,42,11
+    CONTROL         "",IDC_GXBTNTYPE4,"Button",BS_OWNERDRAW | WS_TABSTOP,113,
+                    66,42,11
+    CONTROL         "",IDC_GXBTNTYPE5,"Button",BS_OWNERDRAW | WS_TABSTOP,163,
+                    24,42,11
+    CONTROL         "",IDC_GXBTNTYPE6,"Button",BS_OWNERDRAW | WS_TABSTOP,163,
+                    38,42,11
+    CONTROL         "",IDC_GXBTNTYPE7,"Button",BS_OWNERDRAW | WS_TABSTOP,163,
+                    52,42,11
+    CONTROL         "",IDC_GXBTNTYPE8,"Button",BS_OWNERDRAW | WS_TABSTOP,163,
+                    66,42,11
+    LTEXT           "&Color:",IDC_STATIC,112,90,20,8
+    COMBOBOX        IDC_GXCOMBOCOLOR,134,87,71,72,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_GXCOLORPAGE DIALOG DISCARDABLE  0, 0, 239, 155
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Color"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Interior",IDC_STATIC,10,0,204,90
+    LTEXT           "Foreground",IDC_STATIC,15,17,38,8,NOT WS_GROUP
+    CONTROL         "User1",IDC_GXUSER1,"GXWND",0x0,21,30,76,55
+    COMBOBOX        IDC_GXCOMBOPATTERN,74,9,80,135,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "User1",IDC_GXUSER2,"GXWND",0x0,128,30,76,55
+    RTEXT           "Background",IDC_STATIC,167,17,40,8,NOT WS_GROUP
+    GROUPBOX        "Preview",IDC_STATIC,120,95,94,45
+    CONTROL         "",IDC_GXUSER3,"GXWND",WS_DISABLED,125,105,84,30
+    GROUPBOX        "3D-Effect",IDC_STATIC,10,95,100,45
+    CONTROL         "Normal",IDC_GXBTN3DRADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,15,110,42,10
+    CONTROL         "Raised",IDC_GXBTN3DRADIO2,"Button",BS_AUTORADIOBUTTON,
+                    15,121,42,10
+    CONTROL         "Inset",IDC_GXBTN3DRADIO3,"Button",BS_AUTORADIOBUTTON,65,
+                    110,37,10
+    CONTROL         "Default",IDC_GXBTN3DRADIO4,"Button",BS_AUTORADIOBUTTON,
+                    65,121,40,10
+END
+
+IDD_GXCONTROLPAGE DIALOG DISCARDABLE  0, 0, 236, 153
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+CAPTION "Control"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Control Name",IDC_STATIC,10,5,110,85
+    COMBOBOX        IDC_GXCOMBOCONTROLS,15,15,100,75,CBS_SIMPLE | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Read Only",IDC_GXCHECKREADONLY,"Button",BS_AUTO3STATE | 
+                    WS_GROUP | WS_TABSTOP,15,96,45,10
+    CONTROL         "Value",IDC_GXCHECKVALUE,"Button",BS_AUTO3STATE | 
+                    WS_GROUP | WS_TABSTOP,15,111,30,10
+    EDITTEXT        IDC_GXEDITVALUE,47,110,61,12,ES_AUTOHSCROLL
+    LTEXT           "Length",IDC_STATIC,15,127,24,8
+    EDITTEXT        IDC_GXEDITMAXLENGTH,47,125,33,11,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    GROUPBOX        "List choices",IDC_STATIC,130,5,93,85
+    EDITTEXT        IDC_GXEDITLIST,135,18,83,67,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_GROUP
+    CONTROL         "TriState",IDC_GXCHECKTRISTATE,"Button",BS_AUTO3STATE | 
+                    WS_GROUP | WS_TABSTOP,130,111,45,10
+    CONTROL         "Enabled",IDC_GXCHECKENABLED,"Button",BS_AUTO3STATE | 
+                    WS_GROUP | WS_TABSTOP,130,125,45,10
+END
+
+IDD_GXFONTPAGE DIALOG DISCARDABLE  0, 0, 240, 150
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Font"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Font:",IDC_STATIC,5,5,40,9,NOT WS_GROUP
+    COMBOBOX        IDC_GXCBFACENAME,5,14,109,54,CBS_SIMPLE | 
+                    CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_SORT | 
+                    CBS_HASSTRINGS | CBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "&Outline:",IDC_STATIC,121,5,40,9,NOT WS_GROUP
+    COMBOBOX        IDC_GXCBOUTLINE,121,14,64,54,CBS_SIMPLE | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Size:",IDC_STATIC,192,5,40,9,NOT WS_GROUP
+    COMBOBOX        IDC_GXCBSIZE,192,14,32,54,CBS_SIMPLE | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Effects",IDC_STATIC,5,73,84,34
+    CONTROL         "Stri&keout",IDC_GXCHECKSTRIKEOUT,"Button",BS_AUTO3STATE | 
+                    WS_TABSTOP,9,82,49,10
+    CONTROL         "&Underline",IDC_GXCHECKUNDERLINE,"Button",BS_AUTO3STATE | 
+                    WS_TABSTOP,9,95,51,10
+    GROUPBOX        "Preview",IDC_STATIC,97,73,132,68
+    COMBOBOX        IDC_GXCBTEXTCOLOR,13,122,68,72,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Textcolor",IDC_STATIC,5,111,84,30
+    CONTROL         "AaBbCcXxYyZz",IDC_GXTEXTSAMPLE,"GXWND",0x0,103,84,122,
+                    53
+END
+
+IDD_GXSPECIALPAGE DIALOG DISCARDABLE  0, 0, 140, 124
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Based On"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Base Style",IDC_STATIC,11,8,80,110
+    COMBOBOX        IDC_GXCOMBOBASEDON,15,20,72,94,CBS_SIMPLE | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_GXSTYLESDLG DIALOG DISCARDABLE  0, 0, 190, 154
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Styles"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,123,14,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,123,33,50,14
+    GROUPBOX        "Names",50701,8,9,100,136
+    COMBOBOX        IDC_GXCOMBOSTYLENAMES,14,25,85,115,CBS_SIMPLE | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Change >>",IDC_GXBTNCHANGESTYLE,123,52,50,14
+    PUSHBUTTON      "Add >>",IDC_GXBTNADDSTYLE,123,71,50,14
+    PUSHBUTTON      "Remove",IDC_GXBTNREMOVESTYLE,123,90,50,14
+    CONTROL         "Save as default ",IDC_GXCHECKSAVESTYLESDEF,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,116,134,65,10
+    PUSHBUTTON      "Load Default",IDC_GXBTNLOADDEFSTYLES,123,109,50,14
+END
+
+IDD_GXUSERATTRPAGE DIALOG DISCARDABLE  0, 0, 236, 153
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+CAPTION "User"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "User Attributes",-1,10,5,217,140
+    CONTROL         "User Attributes",IDC_GXUSRATTR_GRIDWND,"GXWND",
+                    WS_TABSTOP,15,20,207,118
+END
+
+IDD_GXMERGEPAGE DIALOG DISCARDABLE  0, 0, 238, 148
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Merge Cells"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Merge Cells",-1,6,9,173,110
+    CONTROL         "Standard",IDC_GXRADIOMERGE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,23,41,10
+    CONTROL         "Disabled",IDC_GXRADIOMERGE5,"Button",BS_AUTORADIOBUTTON,
+                    15,35,40,10
+    CONTROL         "Horizontal, when value is equal",IDC_GXRADIOMERGE1,
+                    "Button",BS_AUTORADIOBUTTON,15,47,113,10
+    CONTROL         "Vertical, when value is equal",IDC_GXRADIOMERGE2,"Button",
+                    BS_AUTORADIOBUTTON,15,59,105,10
+    CONTROL         "Horizontal, when all cell attributes are equal",
+                    IDC_GXRADIOMERGE3,"Button",BS_AUTORADIOBUTTON,15,71,154,
+                    10
+    CONTROL         "Vertical, when all cell attributes are equal",
+                    IDC_GXRADIOMERGE4,"Button",BS_AUTORADIOBUTTON,15,83,146,
+                    10
+END
+
+IDD_GXFLOATPAGE DIALOG DISCARDABLE  0, 0, 238, 148
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Floating Cells"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Floating Cells",IDC_STATIC,6,9,173,67
+    CONTROL         "Allow cell to float other cells",IDC_GXCHECKFLOATCELL,
+                    "Button",BS_AUTO3STATE | WS_TABSTOP,13,28,104,10
+    CONTROL         "Allow cell to be flooded by other cells",
+                    IDC_GXCHECKFLOATCELL2,"Button",BS_AUTO3STATE | 
+                    WS_TABSTOP,13,50,133,10
+    LTEXT           "Note: Certain Cell Types (e.g. Comboboxes) don't allow floating cells and ignore the above settings.",
+                    IDC_STATIC,9,90,170,32
+END
+
+IDD_GXFORMATPAGE DIALOG DISCARDABLE  0, 0, 238, 148
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+CAPTION "Format"
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_GXCOMBO_FORMAT,16,22,81,112,CBS_SIMPLE | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Precision",IDC_STATIC,114,26,31,8
+    EDITTEXT        IDC_GXEDIT_PLACES,155,22,48,15,ES_AUTOHSCROLL
+    GROUPBOX        "Format Type",IDC_STATIC,6,8,215,132
+END
+
+#endif // _GX_STYLESHEET_RESOURCES
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDS_COLOR_GRIDLINES  "Grid Lines"
+    GX_IDS_COLOR_FIXEDLINES "Fixed Lines"
+    GX_IDS_COLOR_TRACKINGLINE "Tracking Line"
+    GX_IDS_COLOR_BACKGROUND "Background"
+    GX_IDS_COLOR_DRAGGINGLINE "Dragging Line"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDS_TEXT_HEADER      "Header"
+    GX_IDS_TEXT_FOOTER      "Footer"
+    GX_IDS_RECORD           "Record"
+    GX_IDS_PROCESSING       "Processing..."
+    GX_IDS_DONE             "Done."
+    GX_IDS_CANCELESC        "Press ESC to cancel"
+    GX_IDS_LEFTALIGN        "Left Aligned"
+    GX_IDS_CENTER           "Centered"
+    GX_IDS_RIGHTALIGN       "Right Aligned"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDS_FONTOUTLINE      "Normal\nItalic\nBold\nBold Italic\nNot Bold\nNot Italic"
+    GX_IDS_FONTSIZE         "8\n9\n10\n11\n12\n14\n16\n18\n20\n22\n24\n28\n36\n48\n56\n72"
+    GX_IDS_USERATTRNAME     "Attribute"
+    GX_IDS_USERATTRTITLE    "Value"
+    GX_IDS_OUTLINECURRENTCELL "Current Cell."
+    GX_IDS_INVERTNORMAL     "Invert Thin."
+    GX_IDS_INVERTTHICK      "Invert Thick."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDS_CTRL_EDIT        "Edit Control"
+    GX_IDS_CTRL_STATIC      "Static Text"
+    GX_IDS_CTRL_PUSHBTN     "Pushbutton"
+    GX_IDS_CTRL_RADIOBTN    "Radio Buttons"
+    GX_IDS_CTRL_CHECKBOX    "Checkbox, 1/0"
+    GX_IDS_CTRL_COMBOBOX    "ComboBox, no text-fit"
+    GX_IDS_CTRL_HOTSPOT     "Hotspot Edit"
+    GX_IDS_CTRL_SPINEDIT    "Spin Edit"
+    GX_IDS_CTRL_HEADER      "Header"
+    GX_IDS_CTRL_SCROLLEDIT  "Edit Control, Scrollbar"
+    GX_IDS_CTRL_LISTBOX     "Listbox"
+    GX_IDS_CTRL_CHECKBOX3D  "Checkbox, 3d-Effect"
+    GX_IDS_CTRL_RADIOBTN3D  "Radio Buttons, 3d-Effect"
+    GX_IDS_CTRL_ZEROBASED   "ComboBox, zero-based"
+    GX_IDS_CTRL_ONEBASED    "ComboBox, one-based"
+    GX_IDS_CTRL_TEXTFIT     "ComboBox, text-fit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDS_ABORTOPERATION   "Do you want to abort the operation?"
+    GX_IDS_CANNOTUNDO       "Operation is too large for the undo buffer. Do you want to continue?"
+    GX_IDM_REDO             "Redoing %1 ..."
+    GX_IDM_UNDO             "Undoing %1 ..."
+    GX_IDM_UNDOINFO         "Generating undo information ..."
+    GX_IDM_STORECELLS       "Storing cells ...."
+    GX_IDM_RESTORECELLS     "Restoring cells ..."
+    GX_IDM_CELLFORMATTING   "Cells."
+    GX_IDM_REMOVEROWS       "Removing rows ..."
+    GX_IDM_REMOVECOLS       "Removing columns ..."
+    GX_IDM_COPYTEXT         "Copying text format ..."
+    GX_IDM_COPYINTERNAL     "Copying internal format ..."
+    GX_IDM_RANGETOOBIG      "Range too big."
+    GX_IDM_CUTDATA          "Cut Data."
+    GX_IDM_CUTTINGDATA      "Cutting data ..."
+    GX_IDM_PASTINGDATA      "Pasting data from clipboard..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDM_PASTENOTMULTI    "Pasting is not possible for multi-area selections."
+    GX_IDM_PASTEDATA        "Paste."
+    GX_IDM_REPLACINGALL     "Replacing values ..."
+    GX_IDM_REPLACEALL       "Replace All"
+    GX_IDM_SEARCHING        "Searching values ..."
+    GX_IDM_SETROWHEIGHT     "Change Row Heights"
+    GX_IDM_SETCOLWIDTH      "Change Column Widths"
+    GX_IDM_SETDEFAULTROWHEIGHT "Change Default Row Height"
+    GX_IDM_SETDEFAULTCOLWIDTH "Change Default Column Width"
+    GX_IDM_MOVEROWS         "Move Rows"
+    GX_IDM_MOVECOLS         "Move Columns"
+    GX_IDM_INSERTROWS       "Insert Rows"
+    GX_IDM_INSERTCOLS       "Insert Columns"
+    GX_IDM_SETCOVEREDCELLS  "Cover Cells"
+    GX_IDM_SETSTYLERANGE    "Cells"
+    GX_IDM_SETFROZENCOLS    "Freeze Columns"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDM_SETFROZENROWS    "Freeze Rows"
+    GX_IDM_HIDEROWS         "Hide Rows"
+    GX_IDM_HIDECOLS         "Hide Columns"
+    GX_IDM_RESIZEROWS       "Resizing Rows"
+    GX_IDM_RESIZECOLS       "Resizing Columns"
+    GX_IDM_UNDOCURRENTCELL  "Current Cell"
+    GX_IDM_PASTEDIFFRANGE   "Clipboard size is different from selected range"
+    GX_IDM_DATEINVALID      "'%1' is not a valid date!"
+    GX_IDM_DATEOUTOFRANGE   "Date '%1' out of range (it is either before 1970 or after 2037)!"
+    GX_IDM_DRAGDROP_COPY    "Copy"
+    GX_IDM_DRAGDROP_MOVE    "Move"
+    GX_IDM_CLEARDATA        "Clear Cells"
+    GX_IDM_SORTROWS         "Sort Rows"
+    GX_IDM_SORTCOLS         "Sort Columns"
+    GX_IDM_NOTENOUGHMEMORY  "Not enough memory"
+    GX_IDM_CANCELED         "Canceled"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDS_INVERTDRAWBORDER "Thin Border."
+    GX_IDS_INVERTTHICKBORDER "Thick Border."
+    GX_IDS_3DFRAME          "Normal\nRaised\nInset\nnone"
+    GX_IDS_UA_VALID_MIN     "Valid: Min. Value"
+	GX_IDS_UA_RTLREADING	"RTL Reading Value"
+    GX_IDS_UA_VALID_MAX     "Valid: Max. Value"
+    GX_IDS_UA_VALID_MSG     "Valid: Warning Msg"
+    GX_IDS_UA_SPINBOUND_MIN "SpinBound: Min. Value"
+    GX_IDS_UA_SPINBOUND_MAX "SpinBound: Max. Value"
+    GX_IDS_UA_SPINBOUND_WRAP "SpinBound: Wrap Value"
+    GX_IDS_INVERTNOBORDER   "No Border."
+    GX_IDS_UA_ODBCFIELDNO   "Field No."
+    GX_IDS_UA_CHECKBOX_CHECKED "Checkbox: Checked Value"
+    GX_IDS_UA_CHECKBOX_UNCHECKED "Checkbox: Unchecked Value"
+    GX_IDS_UA_SPINSTART     "SpinEdit: start value"
+    GX_IDS_UA_TOOLTIPTEXT   "Tooltip-Text"
+    GX_IDS_UA_INPUTMASK     "Maskedit: Input Mask"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDS_STYLE_STANDARD   "Standard"
+    GX_IDS_STYLE_ROWHEADER  "Row Header"
+    GX_IDS_STYLE_COLHEADER  "Column Header"
+    GX_IDS_STYLE_DBBOOLEAN  "Boolean Fields"
+    GX_IDS_STYLE_DBNUMERIC  "Numeric Fields"
+    GX_IDS_STYLE_DBCURRENCY "Currency Fields"
+    GX_IDS_STYLE_DBDATE     "Date Fields"
+    GX_IDS_STYLE_DBTEXT     "Text fields"
+    GX_IDS_STYLE_DBBINARY   "Binary Fields"
+    GX_IDS_STYLE_DBMEMO     "Memo Fields"
+    GX_IDS_STYLE_DBGUID     "GUID Fields"
+    GX_IDS_STYLE_CHAPTER    "Chapter Fields"
+    GX_IDS_STYLE_DELETEDROWS "Deleted Rows Appearance"
+    GX_IDS_STYLE_CONSTRAINTVIOL "Constraint Violation"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDS_CTRL_CBS_DROPDOWN "MFC ComboBox"
+    GX_IDS_CTRL_CBS_DROPDOWNLIST "MFC DropDownList"
+    GX_IDS_CTRL_ODBCARROWHEADER "Arrow Header"
+    GX_IDS_CTRL_ONEBASED_EX "Combo, disp.choice, 1-base"
+    GX_IDS_CTRL_ZEROBASED_EX "Combo, disp.choice, 0-base"
+    GX_IDS_CTRL_BROWSEARROWHEADER "Row Header"
+    GX_IDS_CTRL_RICHEDIT    "Rich Edit"
+    GX_IDS_CTRL_MASKEDIT    "Masked Edit"
+    GX_IDS_CTRL_PROGRESS    "Progressbar"
+    GX_IDS_CTRL_PASSWORD    "Password Edit"
+    GX_IDS_CTRL_COLORWELL   "Colorwell"
+    GX_IDS_CTRL_CBS_TABBED_DROPDOWN "Tabbed MFC ComboBox"
+    GX_IDS_CTRL_CBS_TABBED_DROPDOWNLIST "Tabbed MFC DropDownList"
+    GX_IDS_CTRL_TABBED_COMBOBOX "Tabbed ComboBox"
+    GX_IDS_CTRL_CHECKLIST_COMBOBOX "Dropdown CheckListBox"
+    GX_IDS_CTRL_DATETIME    "Date Time Control with popup calendar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDS_UA_INPUTPROMPT   "Maskedit: Prompt Char"
+    GX_IDS_UA_PROGRESS_MIN  "Progress: Lower Bound"
+    GX_IDS_UA_PROGRESS_MAX  "Progress: Upper Bound"
+    GX_IDS_UA_PROGRESS_CAPTIONMASK "Progress: Caption"
+    GX_IDS_UA_TABLIST_KEYCOL "TabList: Key Column"
+    GX_IDS_UA_TABLIST_TEXTCOL "TabList: Text Column"
+    GX_IDS_UA_TABLIST_SHOWALLCOLS "TabList: Show all columns"
+    GX_IDS_UA_TABLIST_TITLEROW "TabList: Display Column Titles"
+    GX_IDS_UA_TABLIST_COLWIDTHS "TabList: Column Widths"
+    GX_IDS_UA_TABLIST_SORTCOL "TabList: Sort Columns"
+    GX_IDS_UA_DATENOEDIT    "DateTime: Non editable fields"
+    GX_IDS_UA_DATEMIN       "DateTime: Minimum allowed date"
+    GX_IDS_UA_DATEMAX       "DateTime: Maximum allowed date"
+    GX_IDS_UA_DATEVALIDMODE "DateTime: Validation mode"
+    GX_IDS_UA_DATEFORMATTYPE "DateTime: Date format type"
+    GX_IDS_UA_CUSTOMFORMAT  "DateTime: Custom date format "
+	GX_IDS_UA_PRECISION		"DateTime: Precision format"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDM_CHANGESTYLESMAP  "Styles Map Changes"
+    GX_IDM_CHANGEPROPERTIES "Property Settings"
+    GX_IDM_CHANGEBASESTYLE  "Base Style"
+    GX_IDM_SETRANGENAME     "Set Range Name"
+    GX_IDM_DELETERANGENAME  "Delete Range Name"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDS_CTRL_DATETIMENOCAL "Date time control without calendar"
+    GX_IDS_CTRL_CURRENCY    "Currency control"
+	GX_IDS_CTRL_RADIOBTNEX    "Radio Buttons, with active state"
+	GX_IDS_CTRL_RADIOBTN3DEX  "Radio Buttons, 3d-Effect and active state"
+	GX_IDS_PMBUTTON_CONTROL "Plus Minus Button"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDS_CHOICE_DATENOEDIT 
+                            "No Edit\nFixed Year\nFixed Month\nFixed Day\nFixed Hour\nFixed Minute\nFixed Second"
+    GX_IDS_CHOICE_DATEVALIDMODE 
+                            "No Validation\t0\nTime\t1\nDate\t2\nDate and Time\t3\n"
+    GX_IDS_CHOICE_DATEFORMATTYPE 
+							"Time\t0\nShortDate\t1\nLongDate\t2\nCustom\t3\nDateTime\t4\n"
+    GX_IDS_FONTORIENTATION  "0\n45\n90\n135\n180\n225\n270\n315\n"
+    GX_IDS_UA_FASTINPUT     "DateTime: Fast Input"
+    GX_IDS_UA_CURSEP        "Currency: Separators"
+    GX_IDS_UA_CURRENCYDEF   "Currency: Attributes"
+    GX_IDS_UA_CURPOSFORMAT  "Currency: Positive Format"
+    GX_IDS_UA_CURNEGFORMAT  "Currency: Negative Format"
+    GX_IDS_UA_CURNUMDECIMALS "Currency: Number of decimals"
+    GX_IDS_UA_CURNUMFRACT   "Currency: Number of fractional digits "
+    GX_IDS_UA_CURSHOWCALC   "Currency: Enable calculator button"
+    GX_IDS_CHOICE_CURNEGFORMAT 
+                            "($1)\n-$1\n$-1\n$1-\n(1$)\n-1$\n1-$\n1$-\n-1 $\n-$ 1\n$ 1-\n"
+    GX_IDS_CHOICE_CURPOSFORMAT "$1\n1$\n$ 1\n1 $\n(1$)\n"
+    GX_IDS_UA_CURMON        "Currency: Monetary Symbol. "
+    GX_IDS_UA_TABLIST_CHOICELISTID "TabList: Unique choicelist id"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDS_CHOICE_FORMAT    "Default\nScientific\nFixed\nGeneral\nDollars\nComma\nHex\nLogic\nDD-MMM-YY\nDD-MMM\nMMM-YY\nMM/DD/YY\nHidden\nHH:MM:SS\nPercent\nText\nDD.MM.YYYY\nYYYY-MM-DD\nMM/DD/YY HH:MM\nUser1\nUser2\nUser3\nUser4\n"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDS_CALCENTER        "Enter"
+    GX_IDS_CALCERROR        "Error "
+    GX_IDS_UA_ELLIPSISTYPE  "Type of ellipses that will be drawn"
+    GX_IDS_CHOICE_ELLIPSE   "No ellipse\nDotted....\nPound###"
+    GX_IDS_UA_DAOOLEBMP     "Dao bitmap user attribute"
+    GX_IDS_CTRL_DAOBITMAP   "Dao bitmap control"
+    GX_IDS_CTRL_DAOOBJECT   "Dao object preview control"
+	GX_IDS_TABTEXT          "Tab %u"
+	GX_IDS_UA_NEGATIVE_TEXT "Formatting color for negative numbers"
+	GX_IDS_CTRL_CHECKBOXEX	"Checkbox with modify state"
+	GX_IDS_CTRL_CHECKBOX3DEX "3D Checkbox with modify state"
+	GX_IDS_UA_OLEVIEWERID	"The ID for the external ole viewer"
+	GX_IDS_BINDESCRIP		"Binary"
+	GX_IDS_ERRORBINDATA		"The binary data is not valid."
+	GX_IDS_ERRORREPORTHR	"OG Error: Returned hr: %x\n"
+    GX_IDS_UA_RADIOBUTTON_ALIGN "RadioButton: Alignment"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDS_WKBOOKINSERTTAG  "Insert"
+	GX_IDS_OLECOPYFAILED	"The copy operation failed"
+	GX_IDS_OLECUTFAILED		"The cut operation failed"
+	GX_IDS_INSERTOBJCAPTION	"Objective Grid Insert Object"
+	GX_IDS_ACTIVEVIEWERPRESENT "You have already spawned a viewer. Please use this for editing"
+	GX_IDS_OLEUIFAILED		 "Failed to invoke insert object dialog."
+	GX_IDS_COPYFAILED       "Unable to create a back up copy of existing file.  If you continue existing data will be overwritten without creating a back up file on disk. Do you want to continue save?"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+	GX_IDS_EGXGENERICFAILURE					"An unknown failure ocurred. Operation cancelled."
+	GX_IDS_EGXUSERABORT                    "The operation was canceled by the user"
+	GX_IDS_EGXFILEEXISTBUTISINVALID        "The specified file exists but is inoperable. Please check if you have read/write access permission."
+	GX_IDS_EGXFILEEXISTBUTISNOTEXCELFILE   "The specified file exists but is not a valid Excel File."
+	GX_IDS_EGXFAILDOCCREATE                "Failed to create Excel file"
+	GX_IDS_EGXSTREAMFAILCREATE             "Failed to create stream"
+	GX_IDS_EGXWRITEHANDLERNOTFOUND         "Failed to locate handler for read write operation"
+	GX_IDS_EGXWRITENODATA                  "Unable to access data to write"
+	GX_IDS_EGXWRITESTREAM                  "Unable to write to the data stream"
+	GX_IDS_EGXINVALIDGRID                  "Invalid grid object was passed in"
+	GX_IDS_EGXINVALIDPARAM                 "Invalid parameter object was passed in"
+	GX_IDS_EGXINVALIDPROP                  "Invalid properties object was passed in"
+	GX_IDS_EGXINVALIDSTYLESMAP             "Invalid stylesmap object was passed in"
+	GX_IDS_EGXREADSTREAM                   "Unable to read from stream"
+	GX_IDS_EGXWRITEINVALIDDATA            	"Invalid data was passed in for the write operation"
+	GX_IDS_EGXFILEWRITEERROR					"Unspecified error ocurred when writing file"
+	GX_IDS_EGXINVALIDDATA					"Invalid data was accessed. Please check if required resources are available"
+	GX_IDS_EGXFILEREADERROR					"Unspecified error ocurred when reading file"
+	GX_IDS_EGXCODEERROR						"Fatal error. This was caused by program code. Please contact program vendor"
+	GX_IDS_EGXVERERROR						"Unable to read file. Please check if this is a Excel 97 file. Earlier versions are not supported"
+	GX_IDS_EGXNWINDOWERROR					"A new window cannot be opened on this data. This operation is unsupported"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    GX_IDS_UA_RADIOBUTTONTEXTALIGN			"RadioButton: Text Alignment"
+	GX_IDS_UA_BUTTONFACECOLOR				"Pushbutton face color"
+	GX_IDS_UA_FORCESTRVALUEASNUMBER         "Force DateTime input as number"
+END
+
+
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

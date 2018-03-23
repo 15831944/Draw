@@ -21,14 +21,14 @@ void CMSGParser::AddPath(LPCTSTR lpszPath)
 bool CMSGParser::Load()
 {
 	wchar_t cLine[_LINE_BUFFER_SIZE];
-	CString line, left, id, temp, value;
+	CStringW line, left, id, temp, value;
 	int length,find;
 	int size = (int)m_svFile.size();
 	for(int i = 0; i < size; i++)
 	{
 		CString filepath = m_svFile[i];
 		FILE* fp;
-		_wfopen_s(&fp,CString(m_svFile[i]),L"rt,ccs=UNICODE");
+		_wfopen_s(&fp,CStringW(m_svFile[i]),L"rt,ccs=UNICODE");
 		if(fp == NULL)
 			continue;
 		else
@@ -41,7 +41,7 @@ bool CMSGParser::Load()
 				line.Trim();//È¥µô/n
 				if( line != L"" && line[0] != L';' && line != L"/*" && line != L"*/")
 				{
-					left = line.Left( line.Find(L"=") );
+					left = line.Left( line.Find(L"="));
 					find = left.Find(L"/**/");
 					id = left;
 					length = left.GetLength();

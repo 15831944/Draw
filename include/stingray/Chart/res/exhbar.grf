@@ -1,0 +1,6 @@
+// Ex_HBar graph supports these axis types
+0x01000000		Automatic
+0x0a000000       YX
+0x17000000		 Date YX
+0x10000000       Iso Classic YX
+0x16000000		 Iso Date YX

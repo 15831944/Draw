@@ -1,0 +1,49 @@
+//Graph Types, three graph type has not implemented---0x00050000	HISTOGRAM       Histogram----0x00080000	OSCILLISCOPE    Oscilliscope-----0x00160000	TIMESPAN           Horizontal time-span bars---
+0x00000000	NONE                No style defined
+0x00010000	LINE                  Line plot
+0x00020000	HBAR                 Horizontal bar
+0x00030000	VBAR                 Vertical bar
+0x00040000	PIE                      Pie chart
+0x00060000	AREA                 Area under a curve
+0x00070000	STOCK              Highs Lows stock
+0x00090000	ISO_BAR             3D "manhattan" graph
+0x000a0000	ISO_AREA           3D "Rooftop" graph
+0x000b0000	STACK_VBAR       2D stacked vertical bars
+0x000c0000	STACK_HBAR      2D stacked horizontal bars
+0x000d0000	ISO_PIE                3D isographic pie chart
+0x000e0000	STRATA	              Strata graph
+0x000f0000	EX_VBAR              Extended VBar (Pseudo 3D)
+0x00100000	EX_HBAR             Extended HBar (pseudo 3D)
+0x00110000	RIBBON	              Ribbon(rooftop no sides/ends)
+0x00120000  WEB                      Web charts
+0x00130000	XYSCATTERA      XY scatter (x, y)
+0x00140000  XYSCATTERI       XY Scatter (index, index+1)
+0x00150000  XYSCATTERG     XY Scatter (group, group+1)
+0x00170000	AREAWEB            Polar(area display)
+0x00180000	AREASTOCK        Area style stock quote (hi-lo)
+0x00190000	FREESTYLE        Classic(free style objects)
+0x001a0000	POLAR                 Polar(phase & magnitude)
+0x001b0000	AREAPOLAR           Polar (filled areas)
+0x001c0000	CANDLE	                       Candle chart style
+0x001d0000	HILO_OPENCLOSE        Hi Lo Open Close
+0x001e0000	GANTT                           Gantt chart
+0x001f0000	LINEONLY                     Line only(no wigets)
+0x00200000	XYSCATTERA_EX        Scatter (x,y)(log+linear)
+0x00210000	XYSCATTERI_EX         Scatter(index, index+1)(log+linear)
+0x00220000	XYSCATTERG_EX        Scatter(group, group+1)(log+linear)
+0x00230000	STEP                             Step chart
+0x00240000	STEPLO                        Step chart line only
+0x00250000  STRATAVBAR              Strata Vbar(one index/per bar)
+0x00260000  STRATAHBAR              Strata Hbar(one index/per bar)
+0x00270000  STRATAVBARG            Strata Vbar(one group/per bar)
+0x00280000  STRATAHBARG            Strata Hbar(one group/per bar)
+0x00290000  BUBBLE                 Bubble Radius
+0x002a0000  BUBBLE                 Bubble Area
+0x002b0000  BUBBLE                Vector - anchor at tail
+0x002c0000  BUBBLE                Vector - anchor at center
+0x002d0000  BUBBLE                Vector with point & offset
+0x002e0000	SHADED_CANDLE		Shaded candle chart
+0x002f0000  STRATAVBAR			100% Strata Vbar(one index/per bar)
+0x00300000  STRATAHBAR			100% Strata Hbar(one index/per bar)
+0x00310000  STRATAVBARG			100% Strata Vbar(one group/per bar)
+0x00320000  STRATAHBARG			100% Strata Hbar(one group/per bar)

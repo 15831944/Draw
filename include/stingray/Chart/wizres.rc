@@ -1,0 +1,660 @@
+///////////////////////////////////////////////////////////////////////////////
+// wizres.rc
+//
+// Copyright (c) 1999-2009 Rogue Wave Software, Inc.  All Rights Reserved.
+//
+// This computer software is owned by Rogue Wave Software, Inc. and is protected by
+// U.S. copyright laws and other laws and by international treaties. This
+// computer software is furnished by Rogue Wave Software, Inc. pursuant to a written
+// license agreement and may be used, copied, transmitted, and stored
+// only in accordance with the terms of such license agreement and with
+// the inclusion of the above copyright notice.  This computer software or
+// any other copies thereof may not be provided or otherwise made available
+// to any other person.
+//
+// U.S. Government Restricted Rights.  This computer software:
+//      (a) was developed at private expense and is in all respects the
+//          proprietary information of Rogue Wave Software, Inc.;
+//      (b) was not developed with government funds;
+//      (c) is a trade secret of Rogue Wave Software, Inc. for all purposes of the
+//          Freedom of Information Act; and
+//      (d) is a commercial item and thus, pursuant to Section 12.212
+//          of the Federal Acquisition Regulations (FAR) and DFAR
+//          Supplement Section 227.7202, Government’s use, duplication or
+//          disclosure of the computer software is subject to the restrictions
+//          set forth by Rogue Wave Software, Inc.
+//
+///////////////////////////////////////////////////////////////////////////////
+//
+#include "chart\wizres.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "chart\wizres.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SRG_FILL_STYLE DIALOG DISCARDABLE  0, 0, 208, 151
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "Fill Style"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Setting Of:",IDC_STATIC,6,17,35,10
+    COMBOBOX        IDC_SRG_COMPONENT,42,18,63,49,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "",IDC_SRG_PANELFILL,7,31,98,19,NOT WS_VISIBLE
+    CONTROL         "Title",IDC_SRG_PANELTITLEFILL,"Button",
+                    BS_AUTORADIOBUTTON | NOT WS_VISIBLE | WS_GROUP,20,38,29,
+                    10
+    CONTROL         "Body",IDC_SRG_PANELBODYFILL,"Button",BS_AUTORADIOBUTTON | 
+                    NOT WS_VISIBLE,66,38,32,10
+    LTEXT           "Angle value:",IDC_STATIC,8,58,41,9
+    EDITTEXT        IDC_SRG_ANGLEVALUE,51,56,54,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "File Name ...",IDC_SRG_FILENAMESELECT,6,77,43,12
+    EDITTEXT        IDC_SRG_FILENAME,51,78,54,12,ES_AUTOHSCROLL
+    GROUPBOX        "Fill style",IDC_STATIC,113,12,88,79
+    CONTROL         "None",IDC_SRG_NONEFILL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,116,22,31,14
+    CONTROL         "Solid",IDC_SRG_SOLIDFILL,"Button",BS_AUTORADIOBUTTON,
+                    116,38,30,14
+    CONTROL         "Angle",IDC_SRG_ANGLEFILL,"Button",BS_AUTORADIOBUTTON,
+                    116,55,35,14
+    CONTROL         "Resource",IDC_SRG_RESOURCEFILL,"Button",
+                    BS_AUTORADIOBUTTON,116,75,49,14
+    CONTROL         "Horizontal",IDC_SRG_HORIZONTALFILL,"Button",
+                    BS_AUTORADIOBUTTON,151,23,46,14
+    CONTROL         "Vertical",IDC_SRG_VERTICALFILL,"Button",
+                    BS_AUTORADIOBUTTON,151,39,40,14
+    CONTROL         "Image",IDC_SRG_IMAGEFILL,"Button",BS_AUTORADIOBUTTON,
+                    152,57,35,10
+    GROUPBOX        "For resource fill, use",IDC_STATIC,6,95,195,22,WS_GROUP
+    CONTROL         "Stretch",IDC_SRG_STRETCHFILL,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,74,103,37,10
+    CONTROL         "Tile",IDC_SRG_TILEFILL,"Button",BS_AUTORADIOBUTTON,138,
+                    103,28,10
+    PUSHBUTTON      "Start Color",IDC_SRG_STARTCOLOR,6,122,36,16,WS_GROUP
+    CONTROL         "Button1",IDC_SRG_STARTCOLORSHOW,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,61,122,36,16
+    PUSHBUTTON      "End Color",IDC_SRG_ENDCOLOR,113,122,36,16
+    CONTROL         "Button2",IDC_SRG_ENDCOLORSHOW,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,165,122,36,16
+END
+
+IDD_SRG_FONT_STYLE DIALOG DISCARDABLE  0, 0, 206, 150
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "Font style"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Setting Of:",IDC_STATIC,8,14,37,11
+    COMBOBOX        IDC_SRG_COMPONENT,51,14,75,51,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "",IDC_SRG_FORPANELTITLE,133,8,70,22,NOT WS_VISIBLE
+    CONTROL         "Title",IDC_SRG_PANELTITLE,"Button",BS_AUTORADIOBUTTON | 
+                    NOT WS_VISIBLE | WS_GROUP,139,16,27,10
+    CONTROL         "Body",IDC_SRG_PANELBODY,"Button",BS_AUTORADIOBUTTON | 
+                    NOT WS_VISIBLE,169,16,30,10
+    LTEXT           "Type name:",IDC_STATIC,8,36,38,9
+    EDITTEXT        IDC_SRG_FONTNAME,51,35,75,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Choose Font ...",IDC_SRG_FONTSELECT,133,35,54,12
+    LTEXT           "Size:",IDC_STATIC,10,53,20,11
+    EDITTEXT        IDC_SRG_FONTSIZE,51,52,75,12,ES_AUTOHSCROLL
+    CONTROL         "Auto size",IDC_SRG_AUTOSIZE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,134,53,49,9
+    CONTROL         "Bold",IDC_SRG_FONT_BOLD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,9,73,30,9
+    CONTROL         "Underline",IDC_SRG_FONT_UNDERLINE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,51,73,45,9
+    CONTROL         "Italic",IDC_SRG_FONT_ITALIC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,9,90,31,11
+    CONTROL         "Strike out",IDC_SRG_FONT_STRIKEOUT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,51,90,45,11
+    PUSHBUTTON      "Font Color",IDC_SRG_FONTCOLOR,105,86,44,15
+    CONTROL         "Button2",IDC_SRG_FONTCOLORSHOW,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,157,86,41,15
+    GROUPBOX        "Alignment",IDC_SRG_ALIGNMENT,5,111,194,27
+    CONTROL         "Left",IDC_SRG_ALIGNLEFT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,21,121,36,10
+    CONTROL         "Right",IDC_SRG_ALIGNRIGHT,"Button",BS_AUTORADIOBUTTON,
+                    85,121,36,10
+    CONTROL         "Center",IDC_SRG_ALIGNCENTER,"Button",BS_AUTORADIOBUTTON,
+                    146,121,36,10
+END
+
+IDD_SRG_ADVANCED DIALOG DISCARDABLE  0, 0, 208, 151
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Misc"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Use ScrollView",IDC_SRG_USESCROLL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,142,3,64,10
+    LTEXT           "Components Order:",IDC_STATIC,2,21,66,8
+    LISTBOX         IDC_SRG_ARRANGECOMPONENT,2,31,79,67,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Move to head",IDC_SRG_ADVANCEHEAD,82,30,50,12
+    PUSHBUTTON      "Move up",IDC_SRG_ADVANCEUP,82,44,50,12
+    PUSHBUTTON      "Move down",IDC_SRG_ADVANCEDOWN,82,58,50,12
+    PUSHBUTTON      "Move to end",IDC_SRG_ADVANCEEND,82,72,50,12
+    PUSHBUTTON      "Add to Graph",IDC_SRG_ADDCOMPONENT,1,4,52,12
+    COMBOBOX        IDC_SRG_OBJECTLIST,54,4,78,65,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "Delete",IDC_SRG_DELETECOMPONENT,82,86,50,12
+    CONTROL         "Show content while draging",IDC_SRG_SHOWDRAGINGCONTENT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,112,117,9
+    CONTROL         "Show grid",IDC_SRG_ADVANCEGRID,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,124,50,10
+    LTEXT           "Grid Width:",IDC_SRG_ADVANCEGRIDSTATIC,64,125,39,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_SRG_ADVANCEGRIDWIDTH,106,125,22,12,ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE
+    CONTROL         "Snap to grid",IDC_SRG_ADVANCESNAPTOGRID,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,7,136,56,9
+    GROUPBOX        "Dragging option",IDC_STATIC,1,100,131,48
+END
+
+IDD_SRG_DISPLAYEXTRA DIALOG DISCARDABLE  0, 0, 208, 53
+STYLE WS_CHILD | WS_DISABLED | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Chart:",IDC_SRG_GRAPHTYPESTATIC,3,4,18,10
+    COMBOBOX        IDC_SRG_GRAPHTYPE,22,4,73,78,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | CBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Axis:",IDC_SRG_AXISTYPESTATIC,3,18,16,10
+    COMBOBOX        IDC_SRG_AXISTYPE,22,18,73,64,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Show zero",IDC_SRG_SHOWZERO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,100,2,47,10
+    CONTROL         "Relative index",IDC_SRG_RELINDEX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,147,2,60,10
+    CONTROL         "X grid",IDC_SRG_SHOWXGRID,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,100,14,33,10
+    CONTROL         "Y grid",IDC_SRG_SHOWYGRID,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,147,14,31,10
+    CONTROL         "X ticks",IDC_SRG_TICKX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,100,25,35,10
+    CONTROL         "Y ticks",IDC_SRG_TICKY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,147,25,33,10
+    CONTROL         "Whole object inside",IDC_SRG_OBJECTINSIDEVIEW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,129,38,75,10
+    CONTROL         "Use max size",IDC_SRG_USEMAXSIZE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,3,38,56,10
+    LTEXT           "Max size:",IDC_STATIC,62,38,29,8
+    EDITTEXT        IDC_SRG_MAXOBJECTSIZE,93,38,27,12,ES_AUTOHSCROLL
+END
+
+IDD_SRG_LEGENDEXTRA DIALOG DISCARDABLE  0, 0, 208, 53
+STYLE WS_CHILD | WS_DISABLED | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Legend style",IDC_SRG_LEGENDSTYLESTATIC,8,5,45,9
+    COMBOBOX        IDC_SRG_LEGENDSTYLE,56,3,86,67,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Key style",IDC_SRG_KEYSTYLESTATIC,8,19,37,8
+    COMBOBOX        IDC_SRG_KEYSTYLE,56,18,86,71,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Key first",IDC_SRG_KEYFIRST,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,83,38,47,8
+    LTEXT           "Rows",IDC_SRG_ROWSTATIC,150,21,18,8
+    EDITTEXT        IDC_SRG_LEGENDROW,172,18,28,12,ES_AUTOHSCROLL
+    LTEXT           "Columns",IDC_SRG_COLUMNSTATIC,141,38,29,8
+    EDITTEXT        IDC_SRG_LEGENDCOLUMN,173,37,28,12,ES_AUTOHSCROLL
+    LTEXT           "Key Size",IDC_SRG_KEYSIZESTATIC,8,38,31,8
+    EDITTEXT        IDC_SRG_KEYSIZE,41,36,32,12,ES_AUTOHSCROLL
+    CONTROL         "Rect Lock",IDC_SRG_LEGENDRECTLOCK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,149,5,50,10
+END
+
+IDD_SRG_MAIN DIALOG DISCARDABLE  0, 0, 209, 152
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "General"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Setting of:",IDC_STATIC,5,9,54,10
+    COMBOBOX        IDC_SRG_COMPONENT,63,8,109,66,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Measure:",IDC_STATIC,3,31,29,8
+    COMBOBOX        IDC_SRG_MEASUREMENT,33,31,51,60,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Border:",IDC_STATIC,3,44,27,8
+    COMBOBOX        IDC_SRG_BORDERSTYLE,33,44,51,73,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Shadow:",IDC_STATIC,3,59,28,9
+    COMBOBOX        IDC_SRG_SHADOWSTYLE,33,57,51,51,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Component Rect",IDC_STATIC,91,26,115,44
+    LTEXT           "Left:",IDC_STATIC,95,38,17,10
+    EDITTEXT        IDC_SRG_LEFT,113,38,30,12,ES_AUTOHSCROLL
+    LTEXT           "Top:",IDC_STATIC,95,52,17,10
+    EDITTEXT        IDC_SRG_TOP,113,52,30,12,ES_AUTOHSCROLL
+    LTEXT           "Right:",IDC_STATIC,147,39,21,10
+    EDITTEXT        IDC_SRG_RIGHT,172,39,30,12,ES_AUTOHSCROLL
+    LTEXT           "Bottom:",IDC_STATIC,147,52,24,11
+    EDITTEXT        IDC_SRG_BOTTOM,172,52,30,12,ES_AUTOHSCROLL
+    GROUPBOX        "Scope",IDC_SRG_SCOPESTATIC,3,69,203,25
+    LTEXT           "MinI:",IDC_SRG_MINISTATIC,7,79,16,8
+    EDITTEXT        IDC_SRG_MININDEX,25,79,22,12,ES_AUTOHSCROLL
+    LTEXT           "MaxI:",IDC_SRG_MAXISTATIC,55,79,20,8
+    EDITTEXT        IDC_SRG_MAXINDEX,78,79,22,12,ES_AUTOHSCROLL
+    LTEXT           "MinG:",IDC_SRG_MINGSTATIC,106,79,19,8
+    EDITTEXT        IDC_SRG_MINGROUP,127,79,22,12,ES_AUTOHSCROLL
+    LTEXT           "MaxG:",IDC_SRG_MAXGSTATIC,156,79,22,8
+    EDITTEXT        IDC_SRG_MAXGROUP,179,79,22,12,ES_AUTOHSCROLL
+    LTEXT           "",IDC_SRG_MAINEXTRAAREA,6,99,203,52
+END
+
+IDD_SRG_TEXTPANELEXTRA DIALOG DISCARDABLE  0, 0, 208, 76
+STYLE WS_CHILD | WS_DISABLED | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Body:",IDC_STATIC,2,7,19,8
+    EDITTEXT        IDC_SRG_BODYTEXT,22,6,120,28,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    CONTROL         "Use Title",IDC_SRG_USETITLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,22,35,39,8
+    CONTROL         "Body Resize",IDC_SRG_PANELBODYRESIZE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,70,35,51,8
+    LTEXT           "Title:",IDC_SRG_PANELTITLESTATIC,2,46,18,8
+    EDITTEXT        IDC_SRG_TITLETEXT,22,44,120,12,ES_AUTOHSCROLL
+    GROUPBOX        "Title Orientation",IDC_SRG_PANELTITLEORIENTATION,146,6,
+                    58,49
+    CONTROL         "Top",IDC_SRG_PANELTITLETOP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,150,15,30,8
+    CONTROL         "Left",IDC_SRG_PANELTITLELEFT,"Button",
+                    BS_AUTORADIOBUTTON,150,25,27,8
+    CONTROL         "Right",IDC_SRG_PANELTITLERIGHT,"Button",
+                    BS_AUTORADIOBUTTON,150,35,30,8
+    CONTROL         "Bottom",IDC_SRG_PANELTITLEBOTTOM,"Button",
+                    BS_AUTORADIOBUTTON,150,45,34,8
+END
+
+IDD_SRG_TITLEEXTRA DIALOG DISCARDABLE  0, 0, 192, 76
+STYLE WS_CHILD | WS_DISABLED | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Chart Title",IDC_SRG_TITLESTATIC,20,30,32,9
+    EDITTEXT        IDC_SRG_TITLENAME,58,29,93,12,ES_AUTOHSCROLL
+END
+
+IDD_SRG_FINISHPAGE DIALOG DISCARDABLE  0, 0, 235, 156
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Done"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "",IDC_SRG_FINISHLABEL,45,18,145,68
+    PUSHBUTTON      "Configure",IDC_SRG_ADVANCED_BUTTON,92,119,50,14,
+                    WS_GROUP
+END
+
+
+IDD_SRG_STANDARDCHART DIALOG DISCARDABLE  0, 0, 206, 151
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Standard Chart"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_SRG_STANDARDCHARTS,31,25,140,105,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "",IDC_SRG_STANDARDCHARTLABEL,31,3,140,15,SS_SUNKEN
+END
+
+IDD_SRG_LAYOUTPAGE DIALOGEX 0, 0, 206, 151
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "Layout"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "",IDC_SRG_LAYOUTLABEL,15,2,172,15,SS_SUNKEN
+    PUSHBUTTON      "<<",IDC_SRG_LAYOUTPREVIOUS,16,18,36,13
+    PUSHBUTTON      "More  >>",IDC_SRG_LAYOUTNEXT,147,18,36,13
+    LTEXT           "",IDC_SRG_LAYOUTIMAGE0,16,32,55,47,SS_NOTIFY | 
+                    WS_BORDER,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "",IDC_SRG_LAYOUTIMAGE1,74,32,55,47,SS_NOTIFY | 
+                    WS_BORDER,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "",IDC_SRG_LAYOUTIMAGE2,132,32,55,47,SS_NOTIFY | 
+                    WS_BORDER,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "",IDC_SRG_LAYOUTIMAGE3,16,82,55,47,SS_NOTIFY | 
+                    WS_BORDER,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "",IDC_SRG_LAYOUTIMAGE4,74,82,55,47,SS_NOTIFY | 
+                    WS_BORDER,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "",IDC_SRG_LAYOUTIMAGE5,132,82,55,47,SS_NOTIFY | 
+                    WS_BORDER,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    LTEXT           "Background:",IDC_STATIC,15,134,41,8
+    LTEXT           "",IDC_SRG_LAYOUTBACKGROUND,59,134,8,8,SS_NOTIFY | 
+                    SS_SUNKEN
+    LTEXT           "Title:",IDC_STATIC,73,134,17,8
+    LTEXT           "",IDC_SRG_LAYOUTTITLE,92,134,8,8,SS_NOTIFY | SS_SUNKEN
+    LTEXT           "Display:",IDC_STATIC,107,134,28,8
+    LTEXT           "",IDC_SRG_LAYOUTDISPLAY,137,134,8,8,SS_NOTIFY | 
+                    SS_SUNKEN
+    LTEXT           "Legend:",IDC_STATIC,150,134,27,8
+    LTEXT           "",IDC_SRG_LAYOUTLEGEND,179,134,8,8,SS_NOTIFY | 
+                    SS_SUNKEN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// GRAPHTYPE
+//
+
+AREA                    GRAPHTYPE DISCARDABLE   "chart\\res\\area.grf"
+BORDERSTYLE             GRAPHTYPE DISCARDABLE   "chart\\res\\border.sty"
+GRAPH_TYPES             GRAPHTYPE DISCARDABLE   "chart\\res\\stdGraph.grf"
+HBAR                    GRAPHTYPE DISCARDABLE   "chart\\res\\hbar.grf"
+KEYSTYLE                GRAPHTYPE DISCARDABLE   "chart\\res\\legend.key"
+LEGENDSTYLE             GRAPHTYPE DISCARDABLE   "chart\\res\\legend.sty"
+LINE                    GRAPHTYPE DISCARDABLE   "chart\\res\\line.grf"
+MEASUREMENT             GRAPHTYPE DISCARDABLE   "chart\\res\\measure.sty"
+NONE                    GRAPHTYPE DISCARDABLE   "chart\\res\\none.grf"
+PIE                     GRAPHTYPE DISCARDABLE   "chart\\res\\pie.grf"
+SHADOWSTYLE             GRAPHTYPE DISCARDABLE   "chart\\res\\shadow.sty"
+STOCK                   GRAPHTYPE DISCARDABLE   "chart\\res\\stock.grf"
+VBAR                    GRAPHTYPE DISCARDABLE   "chart\\res\\vbar.grf"
+HISTOGRAM               GRAPHTYPE DISCARDABLE   "chart\\res\\histogram.grf"
+OSCILLISCOPE            GRAPHTYPE DISCARDABLE   "chart\\res\\ocilliscope.grf"
+ISO_BAR                 GRAPHTYPE DISCARDABLE   "chart\\res\\isobar.grf"
+ISO_AREA                GRAPHTYPE DISCARDABLE   "chart\\res\\isoarea.grf"
+STACK_VBAR              GRAPHTYPE DISCARDABLE   "chart\\res\\stackvbar.grf"
+STACK_HBAR              GRAPHTYPE DISCARDABLE   "chart\\res\\stackhbar.grf"
+ISO_PIE                 GRAPHTYPE DISCARDABLE   "chart\\res\\isopie.grf"
+STRATA                  GRAPHTYPE DISCARDABLE   "chart\\res\\strata.grf"
+EX_VBAR                 GRAPHTYPE DISCARDABLE   "chart\\res\\exvbar.grf"
+EX_HBAR                 GRAPHTYPE DISCARDABLE   "chart\\res\\exhbar.grf"
+RIBBON                  GRAPHTYPE DISCARDABLE   "chart\\res\\ribbon.grf"
+WEB                     GRAPHTYPE DISCARDABLE   "chart\\res\\web.grf"
+XYSCATTERA              GRAPHTYPE DISCARDABLE   "chart\\res\\xyscattera.grf"
+XYSCATTERI              GRAPHTYPE DISCARDABLE   "chart\\res\\xyscatteri.grf"
+XYSCATTERG              GRAPHTYPE DISCARDABLE   "chart\\res\\xyscatterg.grf"
+TIMESPAN                GRAPHTYPE DISCARDABLE   "chart\\res\\timespan.grf"
+AREAWEB                 GRAPHTYPE DISCARDABLE   "chart\\res\\areaweb.grf"
+AREASTOCK               GRAPHTYPE DISCARDABLE   "chart\\res\\areastock.grf"
+FREESTYLE               GRAPHTYPE DISCARDABLE   "chart\\res\\freestyle.grf"
+POLAR                   GRAPHTYPE DISCARDABLE   "chart\\res\\polar.grf"
+AREAPOLAR               GRAPHTYPE DISCARDABLE   "chart\\res\\areapolar.grf"
+CANDLE                  GRAPHTYPE DISCARDABLE   "chart\\res\\candle.grf"
+HILO_OPENCLOSE          GRAPHTYPE DISCARDABLE   "chart\\res\\hilopenclose.grf"
+GANTT                   GRAPHTYPE DISCARDABLE   "chart\\res\\gantt.grf"
+LINEONLY                GRAPHTYPE DISCARDABLE   "chart\\res\\lineonly.grf"
+XYSCATTERA_EX           GRAPHTYPE DISCARDABLE   "chart\\res\\xyscatteraex.grf"
+XYSCATTERI_EX           GRAPHTYPE DISCARDABLE   "chart\\res\\xyscatteriex.grf"
+XYSCATTERG_EX           GRAPHTYPE DISCARDABLE   "chart\\res\\xyscattergex.grf"
+STEP                    GRAPHTYPE DISCARDABLE   "chart\\res\\step.grf"
+STEPLO                  GRAPHTYPE DISCARDABLE   "chart\\res\\steplo.grf"
+STRATAVBAR              GRAPHTYPE DISCARDABLE   "chart\\res\\stratavbar.grf"
+STRATAHBAR              GRAPHTYPE DISCARDABLE   "chart\\res\\stratahbar.grf"
+STRATAHBARG             GRAPHTYPE DISCARDABLE   "chart\\res\\stratahbarg.grf"
+STRATAVBARG             GRAPHTYPE DISCARDABLE   "chart\\res\\stratavbarg.grf"
+LAYOUT                  GRAPHTYPE DISCARDABLE   "chart\\res\\Layout.lot"
+BUBBLE                  GRAPHTYPE DISCARDABLE   "chart\\res\\bubble.grf"
+SHADED_CANDLE           GRAPHTYPE DISCARDABLE   "chart\\res\\shaded_c.grf"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_SRG_WIZARDVIEWMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "wizard"
+    BEGIN
+        MENUITEM "Zoom out",                    ID_GRAPH_ZOOMOUT
+        MENUITEM "Stop tracking",               ID_SRG_WIZSTOPTRACKING
+        MENUITEM "Copy Chart to clipboard",     ID_SRG_WIZARDCOPY
+        MENUITEM "Save Chart As Dib file",      ID_FILE_SAVE_AS_DIB
+        MENUITEM "Save Chart As Jpeg File",     ID_FILE_SAVE_AS_JPEG
+        MENUITEM "Save layout to file",         ID_SRG_WIZCOPYLAYOUT
+        MENUITEM "Print",                       ID_SRG_WIZARD_PRINT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SRG_DISPLAYEXTRA, DIALOG
+    BEGIN
+        RIGHTMARGIN, 207
+        BOTTOMMARGIN, 52
+    END
+
+    IDD_SRG_LEGENDEXTRA, DIALOG
+    BEGIN
+        RIGHTMARGIN, 207
+        BOTTOMMARGIN, 52
+    END
+
+    IDD_SRG_MAIN, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_SRG_TEXTPANELEXTRA, DIALOG
+    BEGIN
+        RIGHTMARGIN, 207
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_SRG_FINISHPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 149
+    END
+
+    IDD_SRG_STANDARDCHART, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_SRG_LAYOUTPAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 205
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SRG_REMOVE_COMPONENT_CONFIRMATION 
+                            "Remove the following component from your graph?"
+    IDS_SRG_ADD_COMPONENT_CONFIRMATION 
+                            "Add the following component to your graph?"
+    IDS_SRG_REMOVE_COMPOUNDCOMPONENT_CONFIRMATION 
+                            "If you remove this component, wizard cannot add it back again.\nDo you want to remove it from your graph?"
+    IDS_SRG_NODISPLAY_INFO  "Your graph does not have a display.\n\n A display is required in a graph. \n\nDo you want me add a display for you?\n\nIf you say no, the wizard will exit without modifying your graph."
+    IDS_SRG_WIZARD_CLOSE_CONFIRMATION 
+                            "Do you want to save your modifications?"
+    IDS_SRG_CANDLE_DATA_CONFIRMATION 
+                            "Does your data suit the Candle graph format.\nIf no, the default StepLO style will be used.\n\nPLEASE NOTE THAT IF YOU SAY YES BUT THE DATA DOESNT SUIT, \nTHE WIZARD WILL NOT WORK!!!"
+    IDS_SRG_HILOOPENCLOSE_DATA_CONFIRMATION 
+                            "Does your data suit the High-Low Open-Close graph format.\n If no, the default StepLO style will be used.\n\nPLEASE NOTE THAT IF YOU SAY YES BUT THE DATA DOESNT SUIT, \nTHE WIZARD WILL NOT WORK!!!"
+    IDS_SRG_STANDARDCHARTLABELMSG "Select your chart type"
+    IDS_SRG_WIZARD_NEXT     "Next"
+    IDS_SRG_WIZARD_BACK     "Back"
+    IDS_SRG_BACKGROUND_KEY  "Click here to change the background color"
+    IDS_SRG_TITLE_KEY       "Click here to change the title color"
+    IDS_SRG_DISPLAY_KEY     "Click here to change the display color"
+    IDS_SRG_LEGEND_KEY      "Click here to change the legend color"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SRG_FINISHLABELMSG  "Click the Configure button to do configure chart components. Click Finish to exit the Wizard."
+	IDS_SRG_FINISH_TITLE	"Layout complete"
+	IDS_SRG_LAYOUTLABELMSG  "Select a layout for your chart."
+	IDS_SRG_WIZARD_TITLE	"Objective Chart Wizard"
+    ID_SRG_WIZCOPYLAYOUT    "Copy chart layout to clipboard"
+    ID_SRG_WIZSTOPTRACKING  "Stop rect tracking"
+    ID_SRG_WIZARD_PRINT     "Print"
+    ID_SRG_WIZARD_PRINTPREVIEW "Print Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SRG_MAXINDEX        "Maximum index of scope"
+    IDS_SRG_MINGROUP        "Minimum group of scope"
+    IDS_SRG_MAXGROUP        "Maximum group of scope"
+    IDS_SRG_GRAPHTYPE       "Choose the graph type you want here"
+    IDS_SRG_AXISTYPE        "Choose the axis style for you graph"
+    IDS_SRG_SHOWZERO        "Check here to force chart to always show zero"
+    IDS_SRG_RELINDEX        "Check here, chart will show relative indices"
+    IDS_SRG_SHOWXGRID       "Check here to show x grid line"
+    IDS_SRG_SHOWYGRID       "Check here to show y grid line"
+    IDS_SRG_TICKX           "Check here to show ticks on x axis"
+    IDS_SRG_TICKY           "Check here to show ticks on y axis"
+    IDS_SRG_LEGENDSTYLE     "Choose different legend style here"
+    IDS_SRG_KEYSTYLE        "Choose different legend key style here"
+    IDS_SRG_KEYFIRST        "Check to draw legend key before text"
+    IDS_SRG_LEGENDROW       "Rows of legend key"
+    IDS_SRG_LEGENDCOLUMN    "Columns of legend key"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SRG_KEYSIZE         "Legend key size"
+    IDS_SRG_BODYTEXT        "Text for the TextPanel body"
+    IDS_SRG_TITLETEXT       "Text for the TextPanel title"
+    IDS_SRG_USETITLE        "Check to show title in the TextPanel"
+    IDS_SRG_PANELBODYRESIZE "Check to allow TextPanel body resize"
+    IDS_SRG_PANELTITLEORIENTATION "Select different title orientation here"
+    IDS_SRG_TITLENAME       "This is a sample title for your chart"
+    IDS_SRG_ADDCOMPONENT    "Add the selected component to the chart"
+    IDS_SRG_OBJECTLIST      "Available components you can add to chart"
+    IDS_SRG_ADVANCED_COMPONENT "Reorder the components by dragging"
+    IDS_SRG_USESCROLL       "Switch the view area"
+    IDS_SRG_SHOWDRAGINGCONTENT 
+                            "Check to show the content of component while dragging"
+    IDS_SRG_ADVANCEGRID     "Check to draw grid in the view area"
+    IDS_SRG_ADVANCESNAPTOGRID 
+                            "Force component to align to grid while dragging"
+    IDS_SRG_ADVANCEGRIDWIDTH "Change the grid width in the view area"
+    IDS_SRG_ADVANCEHEAD     "Move the highlighted component to top"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SRG_ADVANCEUP       "Move the highlighted component up one position"
+    IDS_SRG_ADVANCEDOWN     "Move the highlighted component down on position"
+    IDS_SRG_ADVANCEEND      "Move the highlighted component to bottom"
+    IDS_SRG_DELETECOMPONENT "Remove the highlighted component from the graph"
+    IDS_SRG_USEMAXSIZE      "Restrict the max object size"
+    IDS_SRG_MAXOBJECTSIZE   "The maximum object size in pixels"
+    IDS_SRG_OBJECTINSIDEVIEW "Make view area include the whole object body"
+    IDS_SRG_IMAGEFILL       "Use a external image file to fill(.bmp, .dib, .jpg)"
+    IDS_SRG_FILENAMESELECT_CAPTION1 "File name ..."
+    IDS_SRG_FILENAMESELECT_CAPTION2 "Res Name"
+    IDS_SRG_INSTRUCTION1    "[Misc Pag] allows you to modify the component list of your graph."
+    IDS_SRG_INSTRUCTION2    "Hold SHIFT key while click on a component to Hilight this component"
+    IDS_SRG_INSTRUCTION3    "Right click on the view area to bring more menu"
+    IDS_SRG_INSTRUCTION4    "While a component is hilighted, you can use mouse to move and resize it."
+    IDS_SRG_INSTRUCTION5    "Click outside the hilighted component to dehilight it, or use 'Stop tracking"" on the context menu"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SRG_LAYOUTNEXT      "Show next page of layout"
+    IDS_SRG_LAYOUTPREVIOUS  "Show previous page of layout"
+    IDS_SRG_LAYOUTTITLE     "Select a layout for your chart"
+    IDS_SRG_STANDARDCHART_TITLE "Select the chart type"
+    IDS_SRG_WIZARD_FINISH   "Finish"
+    IDS_SRG_WIZARD_OK       "OK"
+    IDS_SRG_SELECT_COMPONENT "Select the component you want to configure"
+    IDS_SRG_MEASUREMENT     "Change measurement"
+    IDS_SRG_BORDERSTYLE     "Change border style"
+    IDS_SRG_SHADOWSTYLE     "Change shadow style"
+    IDS_SRG_LEFT            "Left of the component rect"
+    IDS_SRG_RIGHT           "Right of the component rect"
+    IDS_SRG_TOP             "Top of the component rect"
+    IDS_SRG_BOTTOM          "Bottom of the component rect"
+    IDS_SRG_MININDEX        "Minimum index of scope"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

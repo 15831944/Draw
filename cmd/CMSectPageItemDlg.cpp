@@ -12,6 +12,7 @@
 #include "../DB/DataCtrl.h"
 #include "../DB/SectUtil.h"
 #include "../DB/DB_ST_DT_SECT.h"
+#include "CMStiffDlg.h"
 // CCMSectPageItemDlg ¶Ô»°¿ò
 
 IMPLEMENT_DYNAMIC(CCMSectPageItemDlg, CDialog)
@@ -55,10 +56,14 @@ void CCMSectPageItemDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CMD_SP_ID_CODE, m_wndDB);
 	DDX_Control(pDX, IDC_CMD_SP_ID_CBO_NAME, m_wndFirstName);
 	//DDX_Control(pDX, IDC_CMD_SP_ID_BMP, m_Bitmap);
-	UINT aFirstID[] = {IDC_EDIT1,IDC_EDIT2,IDC_EDIT3,IDC_EDIT4,IDC_EDIT5,IDC_EDIT6,IDC_EDIT7,IDC_EDIT8};
+	UINT aFirstID[][8] ={
+		{IDC_EDIT1,IDC_EDIT2,IDC_EDIT3,IDC_EDIT4,IDC_EDIT5,IDC_EDIT6,IDC_EDIT7,IDC_EDIT8},
+		{IDC_SIZE_TITLE1,IDC_SIZE_TITLE2,IDC_SIZE_TITLE3,IDC_SIZE_TITLE4,IDC_SIZE_TITLE5,IDC_SIZE_TITLE6,IDC_SIZE_TITLE7,IDC_SIZE_TITLE8},
+	};
 	for(int i = 0;i<8;i++)
 	{
-		DDX_Control(pDX, aFirstID[i],m_wndFirstSize[i]);
+		DDX_Control(pDX, aFirstID[0][i],m_wndFirstSize[i]);
+		DDX_Control(pDX, aFirstID[1][i],m_wndFirstTitle[i]);
 	}
 	
 }
@@ -86,6 +91,7 @@ BEGIN_MESSAGE_MAP(CCMSectPageItemDlg, CDialog)
 	ON_CBN_SELCHANGE(IDC_CMD_SP_ID_TYPE, &CCMSectPageItemDlg::OnChangeShape)
 	ON_CBN_SELCHANGE(IDC_CMD_SP_ID_CODE, &CCMSectPageItemDlg::OnChangeDB)
 	ON_CBN_SELCHANGE(IDC_CMD_SP_ID_CBO_NAME, &CCMSectPageItemDlg::OnChangeFirstName)
+	ON_BN_CLICKED(IDC_CMD_SP_ID_BTN_CALC, &CCMSectPageItemDlg::OnBtnCalculate)
 END_MESSAGE_MAP()
 void CCMSectPageItemDlg::InitControls()
 {
@@ -179,6 +185,20 @@ void CCMSectPageItemDlg::SetFirstSectData()
 		csValue.Format(_T("%g"),pSect->dSize[i]);
 		m_wndFirstSize[i].SetWindowText(csValue);
 	}
+	CStringArray aSizeTitle;
+	int nShapeIndex = CSectUtil::GetShapeIndexFromNameReg(pSect->Shape);
+	CSectUtil::GetSizeTitleFromShapeIndexReg(nShapeIndex,aSizeTitle);
+	int i = 0;
+	for(;i<aSizeTitle.GetSize();i++)
+	{
+		m_wndFirstTitle[i].ShowWindow(TRUE);
+		m_wndFirstSize[i].ShowWindow(TRUE);
+	}
+	for(;i<8;i++)
+	{
+		m_wndFirstTitle[i].ShowWindow(FALSE);
+		m_wndFirstSize[i].ShowWindow(FALSE);
+	}
 	m_wndSectView.Invalidate();
 }
 void CCMSectPageItemDlg::SetFirstNameCombo()
@@ -269,4 +289,9 @@ void CCMSectPageItemDlg::OnChangeFirstName()
 		pSect->dSize[i] = SectData.dSize[i];
 	pSect->BuiltUpFlag = SectData.BuiltUpFlag;
 	SetFirstSectData();
+}
+void CCMSectPageItemDlg::OnBtnCalculate()
+{
+	CCMStiffDlg dlg(m_pDoc,&m_Data,this);
+	dlg.DoModal();
 }
